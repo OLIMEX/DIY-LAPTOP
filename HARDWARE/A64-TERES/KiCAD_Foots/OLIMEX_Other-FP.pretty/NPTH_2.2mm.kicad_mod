@@ -1,0 +1,10 @@
+(module NPTH_2.2mm (layer F.Cu) (tedit 57BAD184)
+  (fp_text reference MountingHole (at 0 -2) (layer F.SilkS) hide
+    (effects (font (size 0.8 0.8) (thickness 0.2)))
+  )
+  (fp_text value NPTH_2.2mm (at 0 2) (layer F.Fab) hide
+    (effects (font (size 0.5 0.5) (thickness 0.125)))
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask)
+    (clearance 1.55))
+)

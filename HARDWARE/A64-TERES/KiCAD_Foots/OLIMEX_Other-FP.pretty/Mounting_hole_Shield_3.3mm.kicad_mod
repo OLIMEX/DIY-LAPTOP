@@ -1,0 +1,17 @@
+(module Mounting_hole_Shield_3.3mm (layer F.Cu) (tedit 58132682)
+  (fp_text reference MountingHoleShield** (at 0.254 -4.191) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value Mounting_hole_Shield_3.3mm (at 0.254 4.318) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad GND1 thru_hole circle (at 0 0) (size 6.3 6.3) (drill 3.3) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at 0 -2.413) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at 0 2.413) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at -1.651 -1.651) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at 1.651 -1.651) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at -1.651 1.778) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at 1.651 1.651) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at 2.413 0) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+  (pad GND1 thru_hole circle (at -2.413 0) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
+)

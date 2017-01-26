@@ -1,0 +1,9 @@
+(module BADGE-PIN-CLIPS (layer F.Cu) (tedit 5800DC01)
+  (fp_text reference BADGE-PIN (at -0.254 -4.064) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value BADGE-PIN-CLIPS (at 0 4.318) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 smd circle (at 0 0) (size 5.8 5.8) (layers F.Cu F.Paste F.Mask))
+)

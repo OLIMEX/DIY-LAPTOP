@@ -1,0 +1,21 @@
+M48
+;DRILL file {KiCad no-vcs-found-undefined} date Tue Nov  8 14:50:59 2016
+;FORMAT={-:-/ absolute / metric / decimal}
+FMAT,2
+METRIC,TZ
+T1C1.100
+T2C2.200
+%
+G90
+G05
+M71
+T2
+X117.Y-171.
+X122.Y-103.
+T1
+X105.55Y-106.905G85X105.55Y-106.495
+G05
+X105.55Y-113.505G85X105.55Y-113.095
+G05
+T0
+M30

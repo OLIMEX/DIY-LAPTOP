@@ -1,0 +1,17 @@
+(module TP_SMD_10.00x5.00mm (layer F.Cu) (tedit 55ED4D31)
+  (descr SIP4)
+  (tags SIP4)
+   (attr virtual)
+  (fp_text reference TP* (at -2.794 -4.064) (layer F.SilkS)
+    (effects (font (size 1.27 1.27) (thickness 0.254)))
+  )
+  (fp_text value VAL** (at -1.905 4.191) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.254)))
+  )
+  (pad 1 smd rect (at 0 0) (size 10 5) (layers F.Cu F.SilkS F.Mask))
+  (model Housings_SIP/SIP9_Housing.wrl
+    (at (xyz 0 0 0))
+    (scale (xyz 0 0 0))
+    (rotate (xyz 0 0 0))
+  )
+)

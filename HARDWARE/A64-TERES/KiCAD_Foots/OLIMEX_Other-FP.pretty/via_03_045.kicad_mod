@@ -1,0 +1,12 @@
+(module via_03_045 (layer F.Cu) (tedit 55ED37D1)
+  (attr virtual)
+  (zone_connect 2)
+  (fp_text reference "" (at 0 0.5) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "" (at 0 -0.7874) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 0 thru_hole circle (at 0 0) (size 0.45 0.45) (drill 0.3) (layers *.Cu)
+    (zone_connect 2))
+)

@@ -1,0 +1,9 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;",,,,,,,,,,,,";"via_04_055";13;"";;;
+2;"MountingHole,MountingHole,MountingHole";"Mounting_hole_TERES";3;"Mounting_hole_3.3mm";;;
+3;",,,";"Fiducial1x3_transp";4;"";;;
+4;"C1,C2";"C_0603_5MIL_DWS";2;"10nF";;;
+5;"P2";"FLEXCON-0.5-12";1;"CONN_01X12";;;
+6;"P1";"FLEXCON_5x1mm";1;"CONN_01X05";;;
+7;"SWR1,SWL1";"tacktil_5x5_teres";2;"SW_PUSH";;;
+8;"MountingHole,MountingHole";"NPTH_2.2mm";2;"Mounting_hole_2.5mm";;;

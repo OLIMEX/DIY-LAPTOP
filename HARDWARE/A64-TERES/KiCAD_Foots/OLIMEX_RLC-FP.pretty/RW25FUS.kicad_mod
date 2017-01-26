@@ -1,0 +1,13 @@
+(module RW25FUS (layer F.Cu) (tedit 55FBFDD2)
+  (attr smd)
+  (fp_text reference R1 (at 0.04 2.75) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "RW25FUS 10R" (at 0 -3.81) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_circle (center -2 -0.01) (end -5.08 0) (layer F.Fab) (width 0.15))
+  (fp_line (start -0.73 0) (end 1.27 0) (layer F.SilkS) (width 0.15))
+  (pad 1 thru_hole circle (at -2 0) (size 1.524 1.524) (drill 0.9) (layers *.Cu *.Mask F.SilkS))
+  (pad 2 thru_hole circle (at 2.54 0) (size 1.524 1.524) (drill 0.9) (layers *.Cu *.Mask F.SilkS))
+)

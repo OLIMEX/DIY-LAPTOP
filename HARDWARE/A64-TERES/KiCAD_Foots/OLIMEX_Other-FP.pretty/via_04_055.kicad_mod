@@ -1,0 +1,12 @@
+(module OLIMEX_Other-FP:via_03_045 (layer F.Cu) (tedit 569CE07A)
+  (attr virtual)
+  (zone_connect 2)
+  (fp_text reference "" (at 0 0.5) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "" (at 0 -0.7874) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 0 thru_hole circle (at 0 0) (size 0.55 0.55) (drill 0.4) (layers *.Cu)
+    (zone_connect 2))
+)

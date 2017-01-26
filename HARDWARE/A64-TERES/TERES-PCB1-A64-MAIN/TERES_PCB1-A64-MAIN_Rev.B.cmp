@@ -1,0 +1,3499 @@
+Cmp-Mod V01 Created by PcbNew   date =  6.12.2016 (вт) 13:39:19 EET
+
+BeginCmp
+TimeStamp = 5706C446
+Path = /5623625A/570C44C2
+Reference = CON1;
+ValeurCmp = CONN_01X40;
+IdModule  = OLIMEX_Connectors-FP:FPV-WZA21-40-LF;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36401
+Path = /57E60F97/57E65879
+Reference = U17;
+ValeurCmp = ANX6345;
+IdModule  = OLIMEX_IC-FP:BGA_8x8mm_81p_0.8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5707347B
+Path = /563556AE/57E5A05B
+Reference = LED2;
+ValeurCmp = GREEN;
+IdModule  = OLIMEX_LEDs-FP:LED_0603_KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 5716200B
+Path = /56344A84/57186717
+Reference = HALLSW1;
+ValeurCmp = TCS40DPR;
+IdModule  = OLIMEX_Transistors-FP:SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232715
+Path = /5623625A/562677EF
+Reference = C37;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 570733F6
+Path = /563556AE/57105790
+Reference = LED3;
+ValeurCmp = GREEN;
+IdModule  = OLIMEX_LEDs-FP:LED_0603_KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 5707359C
+Path = /56344A84/563AD42A
+Reference = CHGLED1;
+ValeurCmp = LED/RED/0603;
+IdModule  = OLIMEX_LEDs-FP:LED_0603_KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 5707345A
+Path = /56344A84/564E896E
+Reference = PWRLED1;
+ValeurCmp = LED/Green/0603;
+IdModule  = OLIMEX_LEDs-FP:LED_0603_KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 57073439
+Path = /563556AE/57E5A054
+Reference = LED1;
+ValeurCmp = GREEN;
+IdModule  = OLIMEX_LEDs-FP:LED_0603_KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ED5D
+Path = /563556AE/562DF810
+Reference = U11;
+ValeurCmp = RTL8723BS(ComboModule);
+IdModule  = OLIMEX_IC-FP:RL-SM02BD(RTL8723BS);
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ECCE
+Path = /5623625A/562877B3
+Reference = U5;
+ValeurCmp = MTFC4GACAANA-4M_IT(TBGA100);
+IdModule  = OLIMEX_IC-FP:TBGA100;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EC4B
+Path = /5623F962
+Reference = U3;
+ValeurCmp = K4B4G1646Q-HYK0(FBGA-96_256Mx16_DDR3-1600_11-11-11);
+IdModule  = OLIMEX_IC-FP:FBGA96(HYNIX_SAMSUNG_512MX16_DDR3);
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EBD6
+Path = /5623E748
+Reference = U2;
+ValeurCmp = K4B4G1646Q-HYK0(FBGA-96_256Mx16_DDR3-1600_11-11-11);
+IdModule  = OLIMEX_IC-FP:FBGA96(HYNIX_SAMSUNG_512MX16_DDR3);
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EB61
+Path = /5639F494
+Reference = U1;
+ValeurCmp = AllWinner-A64(FBGA396);
+IdModule  = OLIMEX_IC-FP:FBGA396;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E1E8
+Path = /56344A84/563A3EB3
+Reference = Q3;
+ValeurCmp = 4SB24.000F20E15/5x3.2mm/20ppm/20pF;
+IdModule  = OLIMEX_Crystal-FP:Q5x3.25;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E1DC
+Path = /56344A84/563B4F58
+Reference = Q2;
+ValeurCmp = MC-306_32.768KHZ/SMD_8038/6pF;
+IdModule  = OLIMEX_Crystal-FP:MC306-HS;
+EndCmp
+
+BeginCmp
+TimeStamp = 570CD0E7
+Path = /57E60F97/57E655C7
+Reference = eDP1;
+ValeurCmp = LCD_CONN;
+IdModule  = OLIMEX_Connectors-FP:eDP-TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 57069683
+Path = /56344A84/570BE7A7
+Reference = DC5;
+ValeurCmp = PWR-JACK-THERES;
+IdModule  = OLIMEX_Connectors-FP:DC-055-TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 57068113
+Path = /563556AE/56C5CE15
+Reference = USB1;
+ValeurCmp = USB_A_THERES;
+IdModule  = OLIMEX_Connectors-FP:USB-A-TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ED0A
+Path = /563556AE/562E5B2B
+Reference = U9;
+ValeurCmp = SY6280AAC(SOT23-5);
+IdModule  = OLIMEX_IC-FP:SOT-23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DFE9
+Path = /563556AE/562A8733
+Reference = FET1;
+ValeurCmp = BSS138(SOT23-3);
+IdModule  = OLIMEX_Transistors-FP:SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ECEC
+Path = /563556AE/5628E1FA
+Reference = U7;
+ValeurCmp = RCLAMP0524P(SLP2510P8);
+IdModule  = OLIMEX_Devices-FP:SLP2510P8;
+EndCmp
+
+BeginCmp
+TimeStamp = 57066B52
+Path = /563556AE/5635EE84
+Reference = HDMI1;
+ValeurCmp = HDMI-SWM-19;
+IdModule  = OLIMEX_Connectors-FP:HDMI-MINI-TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EF1C
+Path = /5623625A/5710DD12
+Reference = U19;
+ValeurCmp = TS4871;
+IdModule  = OLIMEX_IC-FP:SO-8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706F021
+Path = /5623625A/5710F266
+Reference = SPK1;
+ValeurCmp = SPK1;
+IdModule  = OLIMEX_Connectors-FP:CON-SPK-TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EE28
+Path = /56344A84/5634523B
+Reference = U14;
+ValeurCmp = AXP803(QFN68_8x8mm);
+IdModule  = OLIMEX_IC-FP:QFN68;
+EndCmp
+
+BeginCmp
+TimeStamp = 57071ECF
+Path = /56344A84/563FE62B
+Reference = BATTERY1;
+ValeurCmp = BATTCON;
+IdModule  = OLIMEX_Connectors-FP:BATCONN-TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ED86
+Path = /563556AE/56FAC945
+Reference = U12;
+ValeurCmp = GL850G-SO28;
+IdModule  = OLIMEX_IC-FP:SSOP28;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E1CA
+Path = /563556AE/5717A191
+Reference = Q1;
+ValeurCmp = 12MHz-20pf;
+IdModule  = OLIMEX_Crystal-FP:TSX-3.2x2.5mm_GND(3);
+EndCmp
+
+BeginCmp
+TimeStamp = 57233283
+Path = /56344A84/563A3D1D
+Reference = RESET1;
+ValeurCmp = IT1185AU2;
+IdModule  = OLIMEX_Buttons-FP:uTACTIL;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F6266A
+Path = /56344A84/563FE258
+Reference = D4;
+ValeurCmp = 1N5822/SS34/SMA;
+IdModule  = OLIMEX_Diodes-FP:SMA-KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 57065AC1
+Path = /563556AE/570B5776
+Reference = USB3;
+ValeurCmp = USB3;
+IdModule  = OLIMEX_Connectors-FP:FLEXCON-0.5-6;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EEE8
+Path = /5623625A/5710902E
+Reference = U18;
+ValeurCmp = TS4871;
+IdModule  = OLIMEX_IC-FP:SO-8;
+EndCmp
+
+BeginCmp
+TimeStamp = 581CC9CB
+Path = /5623625A/562A4D90
+Reference = RM7;
+ValeurCmp = RA1206_(4x0603)_4B8_100k;
+IdModule  = OLIMEX_RLC-FP:R_MATRIX_4;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E913
+Path = /5623625A/562D5696
+Reference = RM6;
+ValeurCmp = RA0805_(4X0402)_22R;
+IdModule  = OLIMEX_RLC-FP:RA0805_(4X0402)_xx;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E0DF
+Path = /563556AE/562A38EC
+Reference = L6;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ECDB
+Path = /563556AE/562A2D83
+Reference = U6;
+ValeurCmp = SY6280AAC(SOT23-5);
+IdModule  = OLIMEX_IC-FP:SOT-23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = 572AE480
+Path = /56344A84/572B1B48
+Reference = EUEXT1;
+ValeurCmp = CONN_01X12;
+IdModule  = OLIMEX_Connectors-FP:FPV-WZB21-12-LF;
+EndCmp
+
+BeginCmp
+TimeStamp = 57641609
+Path = /563556AE/562B8B62
+Reference = USB-OTG1;
+ValeurCmp = MICRO_USB/MISB-SWMM-5AB_LF;
+IdModule  = OLIMEX_Connectors-FP:USB-MICRO_MISB-SWMM-5B_LF;
+EndCmp
+
+BeginCmp
+TimeStamp = 57070629
+Path = /56344A84/570C6EB2
+Reference = PB1;
+ValeurCmp = CONN_01X06;
+IdModule  = OLIMEX_Connectors-FP:FLEXCON-0.5-6;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D00C
+Path = /563556AE/56357002
+Reference = ANT1;
+ValeurCmp = PCB_WIFI_ANT;
+IdModule  = OLIMEX_Connectors-FP:U.FL-R-SMT-1;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E3BD
+Path = 
+Reference = Ref**;
+ValeurCmp = Val**;
+IdModule  = OLIMEX_LOGOs-FP:LOGO_ANTISTATIC_1;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F4EA56
+Path = /56344A84/56505B02
+Reference = L16;
+ValeurCmp = HSMRH103R-2R5M;
+IdModule  = OLIMEX_RLC-FP:HSMRH103R;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F50E58
+Path = /57E60F97/57E65626
+Reference = L11;
+ValeurCmp = HSMRH103R-220M;
+IdModule  = OLIMEX_RLC-FP:HSMRH103R;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D730
+Path = /57E60F97/57E7690E
+Reference = C93;
+ValeurCmp = 4.7uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572328B7
+Path = /57E60F97/57E7666B
+Reference = C80;
+ValeurCmp = 10nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD60
+Path = /56344A84/563BD58C
+Reference = C176;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57064E64
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:Mounting_hole_3.3mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706AB09
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_Other-FP:Fiducial1x3_transp;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706AB0F
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_Other-FP:Fiducial1x3_transp;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706AB15
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_Other-FP:Fiducial1x3_transp;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706AB1B
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_Other-FP:Fiducial1x3_transp;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706AB28
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_Other-FP:Fiducial1x3_transp;
+EndCmp
+
+BeginCmp
+TimeStamp = 5706AB2F
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_Other-FP:Fiducial1x3_transp;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D06F
+Path = /56212042
+Reference = C5;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D0D2
+Path = /5621D040
+Reference = C10;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D149
+Path = /5620AFE1
+Reference = C16;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D1AC
+Path = /5621D016
+Reference = C21;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D20F
+Path = /561E516F
+Reference = C26;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D222
+Path = /561E4F91
+Reference = C27;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D2D5
+Path = /5623625A/5624F9D4
+Reference = C36;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D2FC
+Path = /5623625A/5624D751
+Reference = C38;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D34B
+Path = /5623625A/56259DCC
+Reference = C42;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D35E
+Path = /5623625A/5625190E
+Reference = C43;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D385
+Path = /5623625A/562AE025
+Reference = C45;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D3AC
+Path = /5623625A/563273DE
+Reference = C47;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D3D3
+Path = /5623625A/562CF00D
+Reference = C49;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D422
+Path = /5623625A/562D8575
+Reference = C53;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D435
+Path = /5623625A/56323795
+Reference = C54;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D448
+Path = /5623625A/562DAC1E
+Reference = C55;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D45B
+Path = /5623625A/56324060
+Reference = C56;
+ValeurCmp = 2.2uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D46E
+Path = /5623625A/562A7FFE
+Reference = C57;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D495
+Path = /5623625A/562DF18B
+Reference = C59;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D4BC
+Path = /5623625A/56321E0F
+Reference = C61;
+ValeurCmp = 2.2uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D4F7
+Path = /5623625A/562980D7
+Reference = C64;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D546
+Path = /563556AE/562B08C4
+Reference = C68;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D559
+Path = /563556AE/562B07D3
+Reference = C69;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D56C
+Path = /563556AE/562AF788
+Reference = C70;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D57F
+Path = /563556AE/562CA6C9
+Reference = C71;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D5E2
+Path = /563556AE/56FBAF88
+Reference = C76;
+ValeurCmp = 10uF;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D5F5
+Path = /563556AE/562E5B46
+Reference = C77;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D608
+Path = /563556AE/562E5BB3
+Reference = C78;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D6E2
+Path = /563556AE/563106DF
+Reference = C89;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D709
+Path = /563556AE/5630D966
+Reference = C91;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D757
+Path = /57E60F97/57E7833C
+Reference = C95;
+ValeurCmp = 22uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D7E1
+Path = /5623625A/5710CA5A
+Reference = C102;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D8A8
+Path = /56344A84/5716507F
+Reference = C112;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D8BB
+Path = /5623625A/5710A259
+Reference = C113;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D8F6
+Path = /56344A84/5648BA11
+Reference = C116;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D91D
+Path = /56344A84/5633FDF1
+Reference = C118;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D930
+Path = /56344A84/56341859
+Reference = C119;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D943
+Path = /56344A84/56474C64
+Reference = C120;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D956
+Path = /56344A84/56354FF4
+Reference = C121;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D969
+Path = /56344A84/5635550B
+Reference = C122;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D990
+Path = /56344A84/56346D7F
+Reference = C124;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D9A3
+Path = /56344A84/56372173
+Reference = C125;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D9B6
+Path = /56344A84/56372548
+Reference = C126;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D9DD
+Path = /56344A84/563483AE
+Reference = C128;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717D9F0
+Path = /56344A84/563805F8
+Reference = C129;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DA17
+Path = /56344A84/56380712
+Reference = C131;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DA3E
+Path = /56344A84/563851AA
+Reference = C133;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DA65
+Path = /56344A84/5638EA24
+Reference = C135;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DA78
+Path = /56344A84/56390085
+Reference = C136;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DA8B
+Path = /56344A84/56412400
+Reference = C137;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DA9E
+Path = /56344A84/5639CB65
+Reference = C138;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DAB1
+Path = /56344A84/563901A5
+Reference = C139;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DAC4
+Path = /56344A84/56527228
+Reference = C140;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DAD7
+Path = /56344A84/564123FA
+Reference = C142;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DAEA
+Path = /56344A84/565277CE
+Reference = C143;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DAFD
+Path = /56344A84/5639A65F
+Reference = C144;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB10
+Path = /56344A84/56392585
+Reference = C145;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB23
+Path = /56344A84/56412412
+Reference = C146;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB36
+Path = /56344A84/563A7509
+Reference = C147;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB49
+Path = /56344A84/5641240C
+Reference = C148;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB5C
+Path = /56344A84/563B72CA
+Reference = C149;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB6F
+Path = /56344A84/5639A0AE
+Reference = C150;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB82
+Path = /56344A84/563BBB44
+Reference = C151;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DB95
+Path = /56344A84/563BBCB9
+Reference = C152;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DBA8
+Path = /56344A84/5639B0B3
+Reference = C153;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DBBB
+Path = /56344A84/563A62EA
+Reference = C154;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DBF6
+Path = /56344A84/563A62F0
+Reference = C157;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC1D
+Path = /56344A84/563B6ADE
+Reference = C159;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC30
+Path = /56344A84/563DB1E6
+Reference = C160;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC43
+Path = /56344A84/563B6C1C
+Reference = C161;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC56
+Path = /56344A84/563B6D5D
+Reference = C162;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC69
+Path = /56344A84/563DC09A
+Reference = C163;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC7C
+Path = /56344A84/563B6E9D
+Reference = C164;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DC8F
+Path = /56344A84/563B6FE0
+Reference = C165;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DCA2
+Path = /56344A84/563E5957
+Reference = C166;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DCB5
+Path = /56344A84/563BB252
+Reference = C167;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DCC8
+Path = /56344A84/563E8161
+Reference = C168;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DCDB
+Path = /56344A84/563C7536
+Reference = C169;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DCEE
+Path = /56344A84/56480158
+Reference = C170;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD01
+Path = /56344A84/563B320A
+Reference = C171;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD14
+Path = /56344A84/563E75DF
+Reference = C172;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD27
+Path = /56344A84/563961BA
+Reference = C173;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD3A
+Path = /56344A84/563E8433
+Reference = C174;
+ValeurCmp = NA(10uF/6.3V/0603);
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD4D
+Path = /56344A84/563A983D
+Reference = C175;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD87
+Path = /56344A84/56405D18
+Reference = C178;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DD9A
+Path = /56344A84/5647D388
+Reference = C179;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DDAD
+Path = /56344A84/56400107
+Reference = C180;
+ValeurCmp = 47uF/6.3V/0805;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DDC0
+Path = /56344A84/563EC84F
+Reference = C181;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DDD3
+Path = /56344A84/563F3D09
+Reference = C182;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DE4A
+Path = /56344A84/563BF48F
+Reference = C188;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DE71
+Path = /56344A84/563C666A
+Reference = C190;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DE98
+Path = /56344A84/563CEADF
+Reference = C192;
+ValeurCmp = 10uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DEBE
+Path = /5623625A/5710DD52
+Reference = C194;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DEE5
+Path = /5623625A/5710DD1C
+Reference = C196;
+ValeurCmp = 1uF/6.3V/0603;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DF60
+Path = /56344A84/564D81EC
+Reference = D1;
+ValeurCmp = SMBJ6.0A;
+IdModule  = OLIMEX_Diodes-FP:DO214AA;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717DF6E
+Path = /56344A84/5650D0E2
+Reference = D2;
+ValeurCmp = 1N5822/SS34/SMA;
+IdModule  = OLIMEX_Diodes-FP:SMA-KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E01C
+Path = /563556AE/562A3B17
+Reference = FUSE1;
+ValeurCmp = FSMD035;
+IdModule  = OLIMEX_Devices-FP:FUSE-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E032
+Path = /56344A84/56339D0F
+Reference = FUSE2;
+ValeurCmp = NA(5025);
+IdModule  = OLIMEX_Devices-FP:FUSE-5025;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E099
+Path = /5623625A/5625960A
+Reference = L1;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E0A7
+Path = /5623625A/5629ADF7
+Reference = L2;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E0B5
+Path = /5623625A/562CAA6F
+Reference = L3;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E0D1
+Path = /5623625A/562CB3CC
+Reference = L5;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E0FB
+Path = /563556AE/562E5B31
+Reference = L8;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E109
+Path = /563556AE/562E2F01
+Reference = L9;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E117
+Path = /563556AE/56FBA193
+Reference = L10;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E131
+Path = /5623625A/5710EA00
+Reference = L12;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E14B
+Path = /56344A84/5634DBEA
+Reference = L14;
+ValeurCmp = SWPA3015S1R5NT(1.5uH/2.30A/DCR<0.1R/CD32);
+IdModule  = OLIMEX_RLC-FP:CD32;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E164
+Path = /56344A84/5637EC1A
+Reference = L15;
+ValeurCmp = SWPA4018S1R5NT(1.5uH/3.35A/DCR<0.1R/CD43);
+IdModule  = OLIMEX_RLC-FP:CD42(43);
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E18D
+Path = /56344A84/5638F5FB
+Reference = L17;
+ValeurCmp = SWPA4018S1R5NT(1.5uH/3.35A/DCR<0.1R/CD43);
+IdModule  = OLIMEX_RLC-FP:CD42(43);
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E1A6
+Path = /56344A84/56398FA6
+Reference = L18;
+ValeurCmp = SWPA4018S1R5NT(1.5uH/3.35A/DCR<0.1R/CD43);
+IdModule  = OLIMEX_RLC-FP:CD42(43);
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E1AC
+Path = /56344A84/56398F68
+Reference = L19;
+ValeurCmp = SWPA3015S1R5NT(1.5uH/2.30A/DCR<0.1R/CD32);
+IdModule  = OLIMEX_RLC-FP:CD32;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E1B2
+Path = /56344A84/563A62E4
+Reference = L20;
+ValeurCmp = SWPA3015S1R5NT(1.5uH/2.30A/DCR<0.1R/CD32);
+IdModule  = OLIMEX_RLC-FP:CD32;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E78D
+Path = /56344A84/56383ED8
+Reference = R78;
+ValeurCmp = 0.01R/1%/1206;
+IdModule  = OLIMEX_RLC-FP:R_1206_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E9C8
+Path = /56344A84/56378401
+Reference = T1;
+ValeurCmp = WPM1481(DFN2X2-6L);
+IdModule  = OLIMEX_Transistors-FP:DFN2x2-6L;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EC5C
+Path = /57E60F97/57E655C0
+Reference = U4;
+ValeurCmp = RCLAMP0524P(SLP2510P8);
+IdModule  = OLIMEX_Devices-FP:SLP2510P8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ECFD
+Path = /563556AE/5628F373
+Reference = U8;
+ValeurCmp = RCLAMP0524P(SLP2510P8);
+IdModule  = OLIMEX_Devices-FP:SLP2510P8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717ED1B
+Path = /563556AE/56292E9E
+Reference = U10;
+ValeurCmp = RCLAMP0524P(SLP2510P8);
+IdModule  = OLIMEX_Devices-FP:SLP2510P8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EDB2
+Path = /56344A84/564F3B13
+Reference = U13;
+ValeurCmp = MT3608(SOT23-6);
+IdModule  = OLIMEX_IC-FP:SOT23-6;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EE39
+Path = /57E60F97/57E655B9
+Reference = U15;
+ValeurCmp = RCLAMP0524P(SLP2510P8);
+IdModule  = OLIMEX_Devices-FP:SLP2510P8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EE65
+Path = /57E60F97/57E6564F
+Reference = U16;
+ValeurCmp = MT3608;
+IdModule  = OLIMEX_IC-FP:SOT23-6;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717EF2B
+Path = /56344A84/563F0E01
+Reference = UBOOT1;
+ValeurCmp = IT1185AU2;
+IdModule  = OLIMEX_Buttons-FP:uTACTIL;
+EndCmp
+
+BeginCmp
+TimeStamp = 572324EE
+Path = /5621202A
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232501
+Path = /56212030
+Reference = C2;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232514
+Path = /56212036
+Reference = C3;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232527
+Path = /5621203C
+Reference = C4;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723253A
+Path = /5621D028
+Reference = C6;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723254D
+Path = /5621D02E
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232560
+Path = /5621D034
+Reference = C8;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232573
+Path = /5621D03A
+Reference = C9;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232586
+Path = /562050DC
+Reference = C11;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232599
+Path = /56208905
+Reference = C12;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572325AC
+Path = /5620A865
+Reference = C13;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572325BF
+Path = /5620AB64
+Reference = C14;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572325D2
+Path = /5620ADAF
+Reference = C15;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572325E5
+Path = /5621CFFE
+Reference = C17;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572325F8
+Path = /5621D004
+Reference = C18;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723260B
+Path = /5621D00A
+Reference = C19;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723261E
+Path = /5621D010
+Reference = C20;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232631
+Path = /561E6CD8
+Reference = C22;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232644
+Path = /5620575E
+Reference = C23;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232657
+Path = /56207D58
+Reference = C24;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723266A
+Path = /5621CFF8
+Reference = C25;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723267D
+Path = /561E4EAA
+Reference = C28;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232690
+Path = /561E57FE
+Reference = C29;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572326A3
+Path = /561E4E92
+Reference = C30;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572326B6
+Path = /561E4D88
+Reference = C31;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572326C9
+Path = /56217802
+Reference = C32;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572326DC
+Path = /56217880
+Reference = C33;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572326EF
+Path = /5623625A/56274CAA
+Reference = C34;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232702
+Path = /5623625A/5624F9CD
+Reference = C35;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232728
+Path = /5623625A/570B868E
+Reference = C39;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723273B
+Path = /5623625A/570B8263
+Reference = C40;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232761
+Path = /5623625A/56251915
+Reference = C44;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232774
+Path = /5623625A/562CBE9C
+Reference = C46;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232787
+Path = /57E60F97/57E74E81
+Reference = C48;
+ValeurCmp = 100nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723279A
+Path = /5623625A/56326ED5
+Reference = C50;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572327AD
+Path = /5623625A/562D84AB
+Reference = C51;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572327C0
+Path = /5623625A/56299DA1
+Reference = C52;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572327D3
+Path = /57E60F97/57E74F29
+Reference = C58;
+ValeurCmp = 10nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572327E6
+Path = /5623625A/5629AC30
+Reference = C60;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723280C
+Path = /57E60F97/57E76665
+Reference = C63;
+ValeurCmp = 100nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723281F
+Path = /5623625A/562D6A02
+Reference = C65;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232832
+Path = /5623625A/562D74CB
+Reference = C66;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232845
+Path = /563556AE/562A7F62
+Reference = C67;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232858
+Path = /563556AE/562C1028
+Reference = C72;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723286B
+Path = /563556AE/562FE240
+Reference = C73;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723287E
+Path = /563556AE/562E5B37
+Reference = C74;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232891
+Path = /563556AE/56FB780A
+Reference = C75;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572328A4
+Path = /563556AE/562AFE85
+Reference = C79;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572328CA
+Path = /563556AE/56FBA9CF
+Reference = C81;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572328DD
+Path = /563556AE/56FB8637
+Reference = C82;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572328F0
+Path = /563556AE/56FB854E
+Reference = C83;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232916
+Path = /563556AE/56FBE6E0
+Reference = C86;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723293C
+Path = /563556AE/56FC1E75
+Reference = C88;
+ValeurCmp = 33pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723294F
+Path = /563556AE/563106D8
+Reference = C90;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232962
+Path = /563556AE/5630B6FE
+Reference = C92;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232975
+Path = /563556AE/56FC20B6
+Reference = C94;
+ValeurCmp = 33pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232988
+Path = /57E60F97/57E7691A
+Reference = C97;
+ValeurCmp = 10nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572329AE
+Path = /57E60F97/57E65817
+Reference = C99;
+ValeurCmp = 22pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572329C1
+Path = /57E60F97/57E6581E
+Reference = C100;
+ValeurCmp = 22pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572329FA
+Path = /57E60F97/57E76930
+Reference = C104;
+ValeurCmp = 100nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A0D
+Path = /563556AE/56352FE6
+Reference = C105;
+ValeurCmp = 10pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A20
+Path = /563556AE/563548A1
+Reference = C106;
+ValeurCmp = 0.8pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A33
+Path = /563556AE/56356AA6
+Reference = C107;
+ValeurCmp = 1.5pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A59
+Path = /563556AE/5632D099
+Reference = C109;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A6C
+Path = /563556AE/562EF294
+Reference = C110;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A7F
+Path = /57E60F97/57E76936
+Reference = C111;
+ValeurCmp = 10nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232A92
+Path = /56344A84/5710EAEA
+Reference = C114;
+ValeurCmp = (na)100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232AA5
+Path = /56344A84/56487BF4
+Reference = C115;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232AB8
+Path = /56344A84/56474269
+Reference = C117;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232ACB
+Path = /56344A84/56412406
+Reference = C123;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232ADE
+Path = /56344A84/5641267A
+Reference = C127;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232AF1
+Path = /56344A84/56414A11
+Reference = C130;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B04
+Path = /56344A84/56414BD5
+Reference = C132;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B17
+Path = /56344A84/56414D9C
+Reference = C134;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B2A
+Path = /56344A84/563DE6BB
+Reference = C155;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B3D
+Path = /56344A84/563A3D11
+Reference = C156;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B50
+Path = /56344A84/563DF5F7
+Reference = C158;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B63
+Path = /56344A84/56349CAB
+Reference = C177;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B76
+Path = /56344A84/563B4F5E
+Reference = C183;
+ValeurCmp = 10pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B89
+Path = /56344A84/563B4F64
+Reference = C184;
+ValeurCmp = 10pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232B9C
+Path = /56344A84/563A7C9B
+Reference = C185;
+ValeurCmp = 33pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232BAF
+Path = /56344A84/563BBC30
+Reference = C186;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232BC2
+Path = /56344A84/563A8A96
+Reference = C187;
+ValeurCmp = 33pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232BD5
+Path = /56344A84/563C7380
+Reference = C189;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232BE8
+Path = /56344A84/563CC9C5
+Reference = C191;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232BFB
+Path = /56344A84/56444AAF
+Reference = C195;
+ValeurCmp = (na)100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C0E
+Path = /56344A84/565313EB
+Reference = C197;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C21
+Path = /5623625A/57115FCF
+Reference = C199;
+ValeurCmp = 100pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C34
+Path = /5623625A/571169D8
+Reference = C200;
+ValeurCmp = 100pF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C47
+Path = /563556AE/5717DA9B
+Reference = L13;
+ValeurCmp = 3.3nH;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C5A
+Path = /5624BE4B
+Reference = R1;
+ValeurCmp = 2k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C6D
+Path = /56248FB8
+Reference = R2;
+ValeurCmp = 100R/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C80
+Path = /561FC00A
+Reference = R3;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232C93
+Path = /561FC1D8
+Reference = R4;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232CA6
+Path = /56202766
+Reference = R5;
+ValeurCmp = 2k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232CB9
+Path = /5621253F
+Reference = R6;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232CCC
+Path = /561E646E
+Reference = R7;
+ValeurCmp = 240R/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232CDF
+Path = /562022B6
+Reference = R8;
+ValeurCmp = 2k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232CF2
+Path = /5620155B
+Reference = R9;
+ValeurCmp = 240R/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D05
+Path = /5621CFC2
+Reference = R10;
+ValeurCmp = 240R/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D18
+Path = /56215851
+Reference = R11;
+ValeurCmp = 2k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D2B
+Path = /5621584B
+Reference = R12;
+ValeurCmp = 2k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D3E
+Path = /562017A0
+Reference = R13;
+ValeurCmp = NA(243R/1%);
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D51
+Path = /5621CFC8
+Reference = R14;
+ValeurCmp = NA(243R/1%);
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D64
+Path = /5623625A/570D9E10
+Reference = R15;
+ValeurCmp = 47K;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232D77
+Path = /57E60F97/57E710C4
+Reference = R18;
+ValeurCmp = 1M;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232DB0
+Path = /5623625A/5625C32D
+Reference = R21;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232DC3
+Path = /57E60F97/57E6DA47
+Reference = R22;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232DD6
+Path = /5623625A/5625E2FF
+Reference = R23;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232DE9
+Path = /56344A84/5718070A
+Reference = R24;
+ValeurCmp = (na)10K;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232DFC
+Path = /5623625A/5629E1B4
+Reference = R25;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E0F
+Path = /5623625A/5629D410
+Reference = R26;
+ValeurCmp = 1.5k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E22
+Path = /5623625A/562DD07F
+Reference = R27;
+ValeurCmp = 200k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E35
+Path = /5623625A/56FB4512
+Reference = R28;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E48
+Path = /5623625A/562AAA6B
+Reference = R29;
+ValeurCmp = 1.5k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E5B
+Path = /5623625A/562AFF2D
+Reference = R30;
+ValeurCmp = 100k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E6E
+Path = /5623625A/562AEB62
+Reference = R31;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E81
+Path = /5623625A/562F785C
+Reference = R32;
+ValeurCmp = 1M;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232E94
+Path = /5623625A/56295124
+Reference = R33;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232EA7
+Path = /56344A84/5714344B
+Reference = R34;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232EBA
+Path = /5623625A/562F3AB3
+Reference = R35;
+ValeurCmp = 100k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232ECD
+Path = /563556AE/562BB8B9
+Reference = R37;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232EE0
+Path = /563556AE/562BA85A
+Reference = R38;
+ValeurCmp = 4.7k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232EF3
+Path = /563556AE/56FBF591
+Reference = R39;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F06
+Path = /563556AE/570DEF98
+Reference = R40;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F19
+Path = /563556AE/562B6C8F
+Reference = R41;
+ValeurCmp = 13k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F2C
+Path = /563556AE/562BD770
+Reference = R42;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F3F
+Path = /563556AE/56FBC670
+Reference = R43;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F52
+Path = /563556AE/56FBC598
+Reference = R44;
+ValeurCmp = 47k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F78
+Path = /563556AE/562AB70C
+Reference = R46;
+ValeurCmp = 47k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F8B
+Path = /563556AE/562B760A
+Reference = R47;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232F9E
+Path = /56344A84/570D3390
+Reference = R48;
+ValeurCmp = na(0R);
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232FB1
+Path = /563556AE/562E5B6A
+Reference = R49;
+ValeurCmp = 10k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232FC4
+Path = /563556AE/562B4CA2
+Reference = R50;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232FD7
+Path = /563556AE/5629F4FB
+Reference = R51;
+ValeurCmp = 4.7k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232FEA
+Path = /563556AE/562A0B74
+Reference = R52;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232FFD
+Path = /57E60F97/57E6DD23
+Reference = R53;
+ValeurCmp = 100k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233010
+Path = /563556AE/562E558C
+Reference = R54;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233023
+Path = /563556AE/57E5A062
+Reference = R55;
+ValeurCmp = 1.5k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233036
+Path = /563556AE/57E5A069
+Reference = R56;
+ValeurCmp = 1.5k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233049
+Path = /563556AE/571056B0
+Reference = R57;
+ValeurCmp = 1.5k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723306F
+Path = /5623625A/5710BF0B
+Reference = R59;
+ValeurCmp = 22.1K/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233082
+Path = /563556AE/5635C1F1
+Reference = R60;
+ValeurCmp = NA(0R);
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233095
+Path = /563556AE/5630B31E
+Reference = R61;
+ValeurCmp = NA(10k);
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572330A8
+Path = /5623625A/5710C6EB
+Reference = R63;
+ValeurCmp = 12k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572330CE
+Path = /5623625A/5710DD3E
+Reference = R65;
+ValeurCmp = 22.1K/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572330E1
+Path = /5623625A/5710DD4B
+Reference = R66;
+ValeurCmp = 12k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572330F4
+Path = /5623625A/57134F1B
+Reference = R67;
+ValeurCmp = 47k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233107
+Path = /5623625A/5713775E
+Reference = R68;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723311A
+Path = /56344A84/5714505A
+Reference = R69;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723312D
+Path = /56344A84/564E8974
+Reference = R74;
+ValeurCmp = 2k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233140
+Path = /56344A84/564CB3AA
+Reference = R75;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233153
+Path = /56344A84/564D151A
+Reference = R77;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233166
+Path = /56344A84/56514D33
+Reference = R80;
+ValeurCmp = 8.25k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233179
+Path = /56344A84/56515FA5
+Reference = R81;
+ValeurCmp = 1.1k/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723318C
+Path = /56344A84/563B0DEE
+Reference = R82;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723319F
+Path = /56344A84/5639E7B5
+Reference = R84;
+ValeurCmp = na(1k);
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572331B2
+Path = /56344A84/563C0739
+Reference = R85;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572331C5
+Path = /56344A84/56393C06
+Reference = R88;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572331D8
+Path = /56344A84/563A3D17
+Reference = R89;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572331EB
+Path = /56344A84/563952B6
+Reference = R90;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 572331FE
+Path = /56344A84/56349CD7
+Reference = R91;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233211
+Path = /56344A84/563F4C0E
+Reference = R92;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233224
+Path = /56344A84/563B7CDD
+Reference = R93;
+ValeurCmp = 10M;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233237
+Path = /56344A84/5640556E
+Reference = R95;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723324A
+Path = /56344A84/563DDC97
+Reference = R96;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5723325D
+Path = /56344A84/563DF7E2
+Reference = R97;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57233270
+Path = /56344A84/563DF9D9
+Reference = R98;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E403
+Path = /5623625A/5767E9CB
+Reference = R62;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E417
+Path = /5623625A/5767ED6D
+Reference = R70;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E42B
+Path = /5623625A/5767EE6C
+Reference = R71;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E43F
+Path = /5623625A/5767EF6A
+Reference = R72;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E453
+Path = /5623625A/5767F06B
+Reference = R73;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E467
+Path = /5623625A/5767F213
+Reference = R76;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767E47B
+Path = /5623625A/576815EA
+Reference = R79;
+ValeurCmp = NA;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57232929
+Path = /563556AE/56FBE511
+Reference = C87;
+ValeurCmp = 1uF;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767EBFF
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_LOGOs-FP:LOGO_OPENHARDWARE_8x8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767EFF7
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_LOGOs-FP:LOGO_PBFREE;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767F45D
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_LOGOs-FP:LOGO_RECYCLEBIN_1;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767F949
+Path = 
+Reference = Ref**;
+ValeurCmp = Val**;
+IdModule  = OLIMEX_LOGOs-FP:LOGO_ROHS_1;
+EndCmp
+
+BeginCmp
+TimeStamp = 5767FF4C
+Path = 
+Reference = [NoRef];
+ValeurCmp = [NoVal];
+IdModule  = OLIMEX_LOGOs-FP:OLIMEX_LOGO_TB;
+EndCmp
+
+BeginCmp
+TimeStamp = 57683153
+Path = /57E60F97/57E6DC59
+Reference = R83;
+ValeurCmp = 12K_1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57683167
+Path = /57E60F97/57E6DCBF
+Reference = R86;
+ValeurCmp = 1k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5717E4C1
+Path = /5623625A/5633822F
+Reference = R36;
+ValeurCmp = 0R(Board_Mounted);
+IdModule  = OLIMEX_RLC-FP:0R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 57064E8D
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:Mounting_hole_2.8mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57177D11
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:NPTH_2.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57064E54
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:Mounting_hole_5.6mm_TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 57177D30
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:NPTH_2.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57064E5B
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:Mounting_hole_5.6mm_TERES;
+EndCmp
+
+BeginCmp
+TimeStamp = 57064EB3
+Path = 
+Reference = MountingHole;
+ValeurCmp = Mounting_hole_3.3mm;
+IdModule  = OLIMEX_Other-FP:Mounting_hole_TERES_4.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F362FB
+Path = /57E60F97/57E74D26
+Reference = C41;
+ValeurCmp = 4.7uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36300
+Path = /57E60F97/57E7665F
+Reference = C62;
+ValeurCmp = 4.7uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36305
+Path = /57E60F97/57E78055
+Reference = C84;
+ValeurCmp = 22uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3630A
+Path = /563556AE/56FBE1CB
+Reference = C85;
+ValeurCmp = 10uF;
+IdModule  = OLIMEX_RLC-FP:R_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3630F
+Path = /57E60F97/57E76914
+Reference = C96;
+ValeurCmp = 100nF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36319
+Path = /57E60F97/57E7692A
+Reference = C101;
+ValeurCmp = 4.7uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3631E
+Path = /57E60F97/57E79CD2
+Reference = C103;
+ValeurCmp = 22uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36323
+Path = /57E60F97/57E79CD8
+Reference = C108;
+ValeurCmp = 22uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3632D
+Path = /57E60F97/57E655EC
+Reference = C141;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36333
+Path = /57E60F97/57E65611
+Reference = C202;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36339
+Path = /57E60F97/57E65618
+Reference = C203;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36345
+Path = /57E60F97/57E6561F
+Reference = C205;
+ValeurCmp = 22uF/6.3V;
+IdModule  = OLIMEX_RLC-FP:C_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3634B
+Path = /57E60F97/57E656B4
+Reference = C206;
+ValeurCmp = (na) 2.2uF/50V;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36351
+Path = /57E60F97/57E65603
+Reference = C207;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36357
+Path = /57E60F97/57E6560A
+Reference = C208;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3635D
+Path = /57E60F97/57E65836
+Reference = C209;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36363
+Path = /57E60F97/57E655FC
+Reference = C210;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36369
+Path = /57E60F97/57E655F5
+Reference = C211;
+ValeurCmp = 100nF;
+IdModule  = OLIMEX_RLC-FP:C_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36399
+Path = /57E60F97/57E65774
+Reference = R16;
+ValeurCmp = (na)100K;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3639E
+Path = /57E60F97/57E6577B
+Reference = R17;
+ValeurCmp = (na)100K;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363B2
+Path = /57E60F97/57E8C33A
+Reference = R87;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363B8
+Path = /57E60F97/57E6793F
+Reference = R94;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363BE
+Path = /57E60F97/57E69D76
+Reference = R99;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363C4
+Path = /57E60F97/57E5471C
+Reference = R100;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363CA
+Path = /57E60F97/57E54D8F
+Reference = R101;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363D0
+Path = /563556AE/57E56B46
+Reference = R102;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363D6
+Path = /563556AE/57E57023
+Reference = R103;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363DC
+Path = /563556AE/57E574FF
+Reference = R104;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363E2
+Path = /563556AE/57E57505
+Reference = R105;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F363E8
+Path = /5623625A/57F6390D
+Reference = R106;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F36400
+Path = /56344A84/57E531BC
+Reference = R110;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3A82C
+Path = /57E60F97/57E74275
+Reference = FB1;
+ValeurCmp = FB0603/600R/200mA;
+IdModule  = OLIMEX_RLC-FP:L_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3A839
+Path = /57E60F97/57E7426F
+Reference = FB2;
+ValeurCmp = FB0603/600R/200mA;
+IdModule  = OLIMEX_RLC-FP:L_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3A846
+Path = /57E60F97/57E73DEB
+Reference = FB3;
+ValeurCmp = FB0603/600R/200mA;
+IdModule  = OLIMEX_RLC-FP:L_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3A853
+Path = /57E60F97/57E73D75
+Reference = FB4;
+ValeurCmp = FB0603/600R/200mA;
+IdModule  = OLIMEX_RLC-FP:L_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F3A860
+Path = /57E60F97/57E655E5
+Reference = L4;
+ValeurCmp = FB0603/600R/200mA;
+IdModule  = OLIMEX_RLC-FP:L_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F4B0A3
+Path = /57E60F97/57E6563B
+Reference = C204;
+ValeurCmp = 2.2uF/50V;
+IdModule  = OLIMEX_RLC-FP:R_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F52CD6
+Path = /57E60F97/57F53D13
+Reference = Q4;
+ValeurCmp = 27.000MHz/20ppm;
+IdModule  = OLIMEX_Crystal-FP:TSX-3.2x2.5mm_GND(3);
+EndCmp
+
+BeginCmp
+TimeStamp = 57F55BCE
+Path = /5623625A/57F635CE
+Reference = R58;
+ValeurCmp = 22R;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F5F4B3
+Path = /57E60F97/57E6F725
+Reference = FB5;
+ValeurCmp = FB0603/600R/200mA;
+IdModule  = OLIMEX_RLC-FP:L_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F6265D
+Path = /57E60F97/57E65648
+Reference = D3;
+ValeurCmp = 1N5822/SS34/SMA;
+IdModule  = OLIMEX_Diodes-FP:SMA-KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F62677
+Path = /57E60F97/57E656BB
+Reference = D5;
+ValeurCmp = NA(1N5822/SS34/SMA);
+IdModule  = OLIMEX_Diodes-FP:SMA-KA;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F62684
+Path = /57E60F97/57E6562D
+Reference = R19;
+ValeurCmp = 22.1K /1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F62697
+Path = /57E60F97/57E65634
+Reference = R20;
+ValeurCmp = 1.1K/1%;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F6473B
+Path = /563556AE/56FC1287
+Reference = R45;
+ValeurCmp = 680R/1%;
+IdModule  = OLIMEX_RLC-FP:R_0603_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F75109
+Path = /5623625A/5710A9DE
+Reference = C193;
+ValeurCmp = 47uF;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F7511B
+Path = /5623625A/5710DD28
+Reference = C198;
+ValeurCmp = 47uF;
+IdModule  = OLIMEX_RLC-FP:C_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F7513A
+Path = /5623625A/57F749D2
+Reference = L21;
+ValeurCmp = FB0805/600R/2A;
+IdModule  = OLIMEX_RLC-FP:L_0805_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 57F7C0EB
+Path = /5623625A/57F7B063
+Reference = R107;
+ValeurCmp = 47K;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5805F833
+Path = /563556AE/57FE2813
+Reference = R108;
+ValeurCmp = 10k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 5805F847
+Path = /563556AE/57FE0A3E
+Reference = R109;
+ValeurCmp = 2.2k;
+IdModule  = OLIMEX_RLC-FP:R_0402_5MIL_DWS;
+EndCmp
+
+BeginCmp
+TimeStamp = 58175280
+Path = /56344A84/563FBA33
+Reference = DBG_UART1;
+ValeurCmp = NA(HN1x3);
+IdModule  = OLIMEX_Connectors-FP:HN1x3(SMD);
+EndCmp
+
+BeginCmp
+TimeStamp = 5817A041
+Path = /57E60F97/58174CA7
+Reference = HOLE1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 581843AA
+Path = /57E60F97/58185224
+Reference = HOLE2;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 58185349
+Path = /57E60F97/58188503
+Reference = HOLE3;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 5818534E
+Path = /57E60F97/581885CD
+Reference = HOLE4;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 58185353
+Path = /57E60F97/5818869A
+Reference = HOLE5;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 58185358
+Path = /57E60F97/5818876A
+Reference = HOLE6;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 5818535D
+Path = /57E60F97/5818883D
+Reference = HOLE7;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 58185362
+Path = /57E60F97/58188913
+Reference = HOLE8;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 58187DEC
+Path = /57E60F97/5818BB52
+Reference = HOLE9;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:Oval_Drill;
+EndCmp
+
+BeginCmp
+TimeStamp = 581CCA00
+Path = /563556AE/562EB66B
+Reference = RM9;
+ValeurCmp = RA1206_(4x0603)_4B8_100k;
+IdModule  = OLIMEX_RLC-FP:R_MATRIX_4;
+EndCmp
+
+BeginCmp
+TimeStamp = 581CCA35
+Path = /563556AE/563630D6
+Reference = RM12;
+ValeurCmp = RA1206_(4x0603)_4B8_100k;
+IdModule  = OLIMEX_RLC-FP:R_MATRIX_4;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5BC
+Path = /56344A84/5821E0EE
+Reference = +3.3V1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5C1
+Path = /56344A84/58223A25
+Reference = +5V_USBOTG1;
+ValeurCmp = +5V_USBOTG;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5C6
+Path = /56344A84/5821ECDA
+Reference = 1.1V_CPUX1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5CB
+Path = /56344A84/58220F21
+Reference = 1.1V_SYS1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5D0
+Path = /56344A84/5821FC67
+Reference = DDR3_VCC1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5D5
+Path = /56344A84/5822255B
+Reference = IPS1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E5DA
+Path = /56344A84/58225879
+Reference = VBAT1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E703
+Path = /56344A84/5822891A
+Reference = DC51;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+BeginCmp
+TimeStamp = 5821E840
+Path = /56344A84/5822AE70
+Reference = GND1;
+ValeurCmp = TESTPAD;
+IdModule  = OLIMEX_Other-FP:TESTPAD_40-ROUND;
+EndCmp
+
+EndListe

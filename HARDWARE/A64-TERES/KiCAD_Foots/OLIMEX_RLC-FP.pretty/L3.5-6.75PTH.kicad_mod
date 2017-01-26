@@ -1,0 +1,12 @@
+(module L3.5-6.75PTH (layer F.Cu) (tedit 55F6836C)
+  (attr smd)
+  (fp_text reference REF** (at 0.0635 5.0165) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value L3.5-6.75PTH (at 0 -4.445) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_circle (center 0 0) (end -3.3525 -0.0635) (layer F.SilkS) (width 0.1))
+  (pad 1 thru_hole rect (at -1.75 0) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask F.SilkS))
+  (pad 2 thru_hole circle (at 1.75 0) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask F.SilkS))
+)

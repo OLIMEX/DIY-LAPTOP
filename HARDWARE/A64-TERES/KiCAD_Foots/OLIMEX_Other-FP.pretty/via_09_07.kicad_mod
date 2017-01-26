@@ -1,0 +1,11 @@
+(module via_09_07 (layer F.Cu) (tedit 556FDE01)
+  (attr virtual)
+  (fp_text reference Ref** (at 0 0.5) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value Val** (at 0 -0.7874) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 0 thru_hole circle (at 0 0) (size 0.9 0.9) (drill 0.7) (layers *.Cu)
+    (zone_connect 2))
+)

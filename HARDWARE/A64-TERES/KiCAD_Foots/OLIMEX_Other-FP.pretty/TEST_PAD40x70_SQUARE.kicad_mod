@@ -1,0 +1,11 @@
+(module TEST_PAD40x70_SQUARE (layer F.Cu) (tedit 58393967)
+  (attr virtual)
+  (fp_text reference TP* (at 0.254 -1.651) (layer F.SilkS)
+    (effects (font (size 1.27 1.27) (thickness 0.254)))
+  )
+  (fp_text value Val** (at 0 1) (layer F.Fab) hide
+    (effects (font (size 0.254 0.254) (thickness 0.05)))
+  )
+  (pad 1 thru_hole rect (at 0 0) (size 1.778 1.778) (drill 1) (layers *.Cu *.Mask)
+    (solder_mask_margin 0.0508))
+)

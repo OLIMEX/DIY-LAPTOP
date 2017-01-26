@@ -1,0 +1,10 @@
+(module TESTPAD_40-ROUND (layer F.Cu) (tedit 56B0B7E9)
+   (attr virtual)
+  (fp_text reference TP1 (at -0.635 2.032 90) (layer F.SilkS)
+    (effects (font (size 1.016 1.016) (thickness 0.254)))
+  )
+  (fp_text value TP1 (at 0.254 1.016) (layer F.Fab) hide
+    (effects (font (size 1.27 1.27) (thickness 0.254)))
+  )
+  (pad 1 smd circle (at 0 0) (size 1 1) (layers F.Cu F.Mask))
+)

@@ -1,0 +1,8 @@
+(module FLEX-eDP30 (layer F.Cu) (tedit 57061942)
+  (fp_text reference REF** (at 0 5) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value FLEX-eDP30 (at 0 2.2) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+)

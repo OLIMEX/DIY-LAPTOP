@@ -1,0 +1,9 @@
+(module OLIMEX_Other-FP:Oval_Drill locked (layer F.Cu) (tedit 58216CF0)
+  (fp_text reference HOLE9 (at -0.038 -1.154) (layer F.SilkS) hide
+    (effects (font (size 0.254 0.254) (thickness 0.0254)))
+  )
+  (fp_text value TESTPAD (at 0.127 -2.667) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 thru_hole oval (at 0 0) (size 3.5 1.5) (drill oval 3 1) (layers *.Cu *.Mask))
+)

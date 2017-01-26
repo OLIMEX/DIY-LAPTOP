@@ -1,0 +1,11 @@
+(module Mounting_hole_TERES_4.6mm (layer F.Cu) (tedit 57BAD287)
+  (attr virtual)
+  (fp_text reference MountingHole (at 0.05 -3.7) (layer F.Fab) hide
+    (effects (font (size 0.8 0.8) (thickness 0.2)))
+  )
+  (fp_text value Mounting_hole_4.6mm (at 0.45 3.45) (layer F.Fab) hide
+    (effects (font (size 0.5 0.5) (thickness 0.125)))
+  )
+  (pad "" thru_hole circle (at 0 0) (size 6 6) (drill 4.6) (layers *.Cu *.Mask)
+    (clearance 1.55))
+)
