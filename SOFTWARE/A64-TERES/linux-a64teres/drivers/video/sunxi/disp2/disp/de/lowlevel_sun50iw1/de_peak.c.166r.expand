@@ -1,0 +1,2996 @@
+
+;; Function de_peak_set_reg_base (de_peak_set_reg_base, funcdef_no=1708, decl_uid=28367, cgraph_uid=1708)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+deleting block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 49 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 49 8 2 2 (set (reg:DI 78)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 49 3 2 (set (reg/v:SI 75 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:31 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 76 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:31 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 77 [ base ])
+        (reg:DI 2 x2 [ base ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:31 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg:DI 0 x0)
+        (reg:DI 78)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:31 -1
+     (nil))
+(call_insn 7 6 10 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:31 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(call_insn 10 7 11 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("bsp_disp_get_print_level") [flags 0x41]  <function_decl 0x2ac74bd15000 bsp_disp_get_print_level>) [0 bsp_disp_get_print_level S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil)
+    (nil))
+(insn 11 10 12 2 (set (reg:SI 73 [ D.28888 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 73 [ D.28888 ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (expr_list:REG_BR_PROB (const_int 9996 [0x270c])
+        (nil))
+ -> 30)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:DI 80)
+        (high:DI (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 16 15 17 4 (set (reg/f:DI 79)
+        (lo_sum:DI (reg:DI 80)
+            (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>)
+        (nil)))
+(insn 17 16 18 4 (set (reg:DI 82)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 18 17 19 4 (set (reg/f:DI 81)
+        (lo_sum:DI (reg:DI 82)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 19 18 20 4 (set (reg:DI 0 x0)
+        (reg/f:DI 79)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 1 x1)
+        (reg/f:DI 81)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 2 x2)
+        (const_int 32 [0x20])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(call_insn 22 21 23 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 23 22 24 4 (set (reg:DI 84)
+        (high:DI (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2ac74bec4a18 *.LC1>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 24 23 25 4 (set (reg/f:DI 83)
+        (lo_sum:DI (reg:DI 84)
+            (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2ac74bec4a18 *.LC1>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2ac74bec4a18 *.LC1>)
+        (nil)))
+(insn 25 24 26 4 (set (reg:DI 0 x0)
+        (reg/f:DI 83)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 1 x1)
+        (reg/v:SI 75 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:SI 2 x2)
+        (reg/v:SI 76 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 3 x3)
+        (reg/v/f:DI 77 [ base ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil))
+(call_insn 29 28 30 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:32 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 3 x3))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(code_label 30 29 31 5 2 "" [1 uses])
+(note 31 30 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 5 (set (reg:DI 86)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (nil))
+(insn 33 32 34 5 (set (reg/f:DI 85)
+        (lo_sum:DI (reg:DI 86)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 34 33 35 5 (set (reg:DI 87)
+        (zero_extend:DI (reg/v:SI 76 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:DI 88)
+        (zero_extend:DI (reg/v:SI 75 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:DI 89)
+        (ashift:DI (reg:DI 88)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:DI 90)
+        (plus:DI (reg:DI 89)
+            (reg:DI 87))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (nil))
+(insn 38 37 39 5 (set (mem/f/j:DI (plus:DI (mult:DI (reg:DI 90)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 85)) [0 peak_dev S8 A64])
+        (reg/v/f:DI 77 [ base ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:33 -1
+     (nil))
+(insn 39 38 43 5 (set (reg:SI 74 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:35 -1
+     (nil))
+(insn 43 39 46 5 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:36 -1
+     (nil))
+(insn 46 43 0 5 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:36 -1
+     (nil))
+
+;; Function de_peak_update_regs (de_peak_update_regs, funcdef_no=1709, decl_uid=28370, cgraph_uid=1709)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+deleting block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 183 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 183 7 2 2 (set (reg:DI 88)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 183 3 2 (set (reg/v:SI 86 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:39 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 87 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:39 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 6 2 (set (reg:DI 0 x0)
+        (reg:DI 88)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:39 -1
+     (nil))
+(call_insn 6 5 9 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:39 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 9 6 10 2 (set (reg:DI 90)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 89)
+        (lo_sum:DI (reg:DI 90)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 11 10 12 2 (set (reg:DI 91)
+        (reg/f:DI 89)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 92)
+        (plus:DI (reg/f:DI 89)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 93)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 94)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 96)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 95)
+        (mult:DI (reg:DI 93)
+            (reg:DI 96))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 98)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 97)
+        (mult:DI (reg:DI 94)
+            (reg:DI 98))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 99)
+        (plus:DI (reg:DI 95)
+            (reg:DI 97))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 100)
+        (plus:DI (reg/f:DI 92)
+            (reg:DI 99))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 21 20 22 2 (set (reg/f:DI 101)
+        (plus:DI (reg:DI 100)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 102)
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/f:DI 101)
+                    (const_int 4 [0x4])) [0 peak_block[sel_4(D)][chno_5(D)].dirty+0 S1 A32]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 102)
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (nil))
+(jump_insn 24 23 25 2 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 89)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:40 -1
+     (expr_list:REG_BR_PROB (const_int 8629 [0x21b5])
+        (nil))
+ -> 89)
+(note 25 24 26 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 4 (set (reg:DI 104)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 27 26 28 4 (set (reg/f:DI 103)
+        (lo_sum:DI (reg:DI 104)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 28 27 29 4 (set (reg:DI 105)
+        (reg/f:DI 103)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 29 28 30 4 (set (reg/f:DI 106)
+        (plus:DI (reg/f:DI 103)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:DI 107)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 108)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:DI 110)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 109)
+        (mult:DI (reg:DI 107)
+            (reg:DI 110))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:DI 112)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 35 34 36 4 (set (reg:DI 111)
+        (mult:DI (reg:DI 108)
+            (reg:DI 112))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:DI 113)
+        (plus:DI (reg:DI 109)
+            (reg:DI 111))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:DI 114)
+        (plus:DI (reg/f:DI 106)
+            (reg:DI 113))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 38 37 39 4 (set (reg/f:DI 115)
+        (plus:DI (reg:DI 114)
+            (const_int 8 [0x8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 39 38 40 4 (set (reg/f:DI 116)
+        (mem/j:DI (reg/f:DI 115) [0 peak_block[sel_4(D)][chno_5(D)].off+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:DI 118)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 41 40 42 4 (set (reg/f:DI 117)
+        (lo_sum:DI (reg:DI 118)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 42 41 43 4 (set (reg:DI 119)
+        (reg/f:DI 117)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 43 42 44 4 (set (reg/f:DI 120)
+        (plus:DI (reg/f:DI 117)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:DI 121)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:DI 122)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:DI 124)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 47 46 48 4 (set (reg:DI 123)
+        (mult:DI (reg:DI 121)
+            (reg:DI 124))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 48 47 49 4 (set (reg:DI 126)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 49 48 50 4 (set (reg:DI 125)
+        (mult:DI (reg:DI 122)
+            (reg:DI 126))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:DI 127)
+        (plus:DI (reg:DI 123)
+            (reg:DI 125))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 51 50 52 4 (set (reg:DI 128)
+        (plus:DI (reg/f:DI 120)
+            (reg:DI 127))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 52 51 53 4 (set (reg/f:DI 129)
+        (plus:DI (reg:DI 128)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 53 52 54 4 (set (reg:DI 130 [ D.28894 ])
+        (zero_extend:DI (mem/j:SI (reg/f:DI 129) [0 peak_block[sel_4(D)][chno_5(D)].size+0 S4 A64]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 54 53 55 4 (set (reg:DI 132)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 55 54 56 4 (set (reg/f:DI 131)
+        (lo_sum:DI (reg:DI 132)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 56 55 57 4 (set (reg:DI 133)
+        (reg/f:DI 131)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 57 56 58 4 (set (reg/f:DI 134)
+        (plus:DI (reg/f:DI 131)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 58 57 59 4 (set (reg:DI 135)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 59 58 60 4 (set (reg:DI 136)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 60 59 61 4 (set (reg:DI 138)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 61 60 62 4 (set (reg:DI 137)
+        (mult:DI (reg:DI 135)
+            (reg:DI 138))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 62 61 63 4 (set (reg:DI 140)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 63 62 64 4 (set (reg:DI 139)
+        (mult:DI (reg:DI 136)
+            (reg:DI 140))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 64 63 65 4 (set (reg:DI 141)
+        (plus:DI (reg:DI 137)
+            (reg:DI 139))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 65 64 66 4 (set (reg/f:DI 142)
+        (plus:DI (reg/f:DI 134)
+            (reg:DI 141))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 66 65 67 4 (set (reg/f:DI 143)
+        (mem/f/j:DI (reg/f:DI 142) [0 peak_block[sel_4(D)][chno_5(D)].val+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 67 66 68 4 (set (reg:DI 144)
+        (reg/f:DI 116)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 68 67 69 4 (set (reg:DI 145)
+        (reg/f:DI 143)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 69 68 70 4 (set (reg:DI 146)
+        (reg:DI 130 [ D.28894 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 70 69 71 4 (set (reg:DI 0 x0)
+        (reg:DI 144)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 71 70 72 4 (set (reg:DI 1 x1)
+        (reg:DI 145)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 72 71 73 4 (set (reg:DI 2 x2)
+        (reg:DI 146)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(call_insn 73 72 74 4 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ac74bedc400 memcpy>) [0 memcpy S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (set (reg:DI 0 x0)
+            (reg:DI 0 x0))
+        (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+            (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(insn 74 73 75 4 (set (reg:DI 147)
+        (reg:DI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:41 -1
+     (nil))
+(insn 75 74 76 4 (set (reg:DI 149)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 76 75 77 4 (set (reg/f:DI 148)
+        (lo_sum:DI (reg:DI 149)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 77 76 78 4 (set (reg:DI 150)
+        (reg/f:DI 148)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 78 77 79 4 (set (reg/f:DI 151)
+        (plus:DI (reg/f:DI 148)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 79 78 80 4 (set (reg:DI 152)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 80 79 81 4 (set (reg:DI 153)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 81 80 82 4 (set (reg:DI 155)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 82 81 83 4 (set (reg:DI 154)
+        (mult:DI (reg:DI 152)
+            (reg:DI 155))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 83 82 84 4 (set (reg:DI 157)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 84 83 85 4 (set (reg:DI 156)
+        (mult:DI (reg:DI 153)
+            (reg:DI 157))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 85 84 86 4 (set (reg:DI 158)
+        (plus:DI (reg:DI 154)
+            (reg:DI 156))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 86 85 87 4 (set (reg:DI 159)
+        (plus:DI (reg/f:DI 151)
+            (reg:DI 158))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 87 86 88 4 (set (reg/f:DI 160)
+        (plus:DI (reg:DI 159)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(insn 88 87 89 4 (set (mem/j:QI (plus:DI (reg/f:DI 160)
+                (const_int 4 [0x4])) [0 peak_block[sel_4(D)][chno_5(D)].dirty+0 S1 A32])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:42 -1
+     (nil))
+(code_label 89 88 90 5 8 "" [1 uses])
+(note 90 89 91 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 91 90 92 5 (set (reg:DI 162)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 92 91 93 5 (set (reg/f:DI 161)
+        (lo_sum:DI (reg:DI 162)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 93 92 94 5 (set (reg:DI 163)
+        (reg/f:DI 161)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 94 93 95 5 (set (reg/f:DI 164)
+        (plus:DI (reg/f:DI 161)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 95 94 96 5 (set (reg:DI 165)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 96 95 97 5 (set (reg:DI 166)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 97 96 98 5 (set (reg:DI 168)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 98 97 99 5 (set (reg:DI 167)
+        (mult:DI (reg:DI 165)
+            (reg:DI 168))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 99 98 100 5 (set (reg:DI 170)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 100 99 101 5 (set (reg:DI 169)
+        (mult:DI (reg:DI 166)
+            (reg:DI 170))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 101 100 102 5 (set (reg:DI 171)
+        (plus:DI (reg:DI 167)
+            (reg:DI 169))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 102 101 103 5 (set (reg:DI 172)
+        (plus:DI (reg/f:DI 164)
+            (reg:DI 171))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 103 102 104 5 (set (reg/f:DI 173)
+        (plus:DI (reg:DI 172)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 104 103 105 5 (set (reg:SI 174)
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/f:DI 173)
+                    (const_int 4 [0x4])) [0 peak_gain_block[sel_4(D)][chno_5(D)].dirty+0 S1 A32]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(insn 105 104 106 5 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 174)
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (nil))
+(jump_insn 106 105 107 5 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 171)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:44 -1
+     (expr_list:REG_BR_PROB (const_int 8010 [0x1f4a])
+        (nil))
+ -> 171)
+(note 107 106 108 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 6 (set (reg:DI 176)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 109 108 110 6 (set (reg/f:DI 175)
+        (lo_sum:DI (reg:DI 176)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 110 109 111 6 (set (reg:DI 177)
+        (reg/f:DI 175)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 111 110 112 6 (set (reg/f:DI 178)
+        (plus:DI (reg/f:DI 175)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 112 111 113 6 (set (reg:DI 179)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 113 112 114 6 (set (reg:DI 180)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 114 113 115 6 (set (reg:DI 182)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 115 114 116 6 (set (reg:DI 181)
+        (mult:DI (reg:DI 179)
+            (reg:DI 182))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 116 115 117 6 (set (reg:DI 184)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 117 116 118 6 (set (reg:DI 183)
+        (mult:DI (reg:DI 180)
+            (reg:DI 184))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 118 117 119 6 (set (reg:DI 185)
+        (plus:DI (reg:DI 181)
+            (reg:DI 183))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 119 118 120 6 (set (reg:DI 186)
+        (plus:DI (reg/f:DI 178)
+            (reg:DI 185))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 120 119 121 6 (set (reg/f:DI 187)
+        (plus:DI (reg:DI 186)
+            (const_int 8 [0x8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 121 120 122 6 (set (reg/f:DI 188)
+        (mem/j:DI (reg/f:DI 187) [0 peak_gain_block[sel_4(D)][chno_5(D)].off+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 122 121 123 6 (set (reg:DI 190)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 123 122 124 6 (set (reg/f:DI 189)
+        (lo_sum:DI (reg:DI 190)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 124 123 125 6 (set (reg:DI 191)
+        (reg/f:DI 189)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 125 124 126 6 (set (reg/f:DI 192)
+        (plus:DI (reg/f:DI 189)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 126 125 127 6 (set (reg:DI 193)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 127 126 128 6 (set (reg:DI 194)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 128 127 129 6 (set (reg:DI 196)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 129 128 130 6 (set (reg:DI 195)
+        (mult:DI (reg:DI 193)
+            (reg:DI 196))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 130 129 131 6 (set (reg:DI 198)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 131 130 132 6 (set (reg:DI 197)
+        (mult:DI (reg:DI 194)
+            (reg:DI 198))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 132 131 133 6 (set (reg:DI 199)
+        (plus:DI (reg:DI 195)
+            (reg:DI 197))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 133 132 134 6 (set (reg:DI 200)
+        (plus:DI (reg/f:DI 192)
+            (reg:DI 199))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 134 133 135 6 (set (reg/f:DI 201)
+        (plus:DI (reg:DI 200)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 135 134 136 6 (set (reg:DI 202 [ D.28894 ])
+        (zero_extend:DI (mem/j:SI (reg/f:DI 201) [0 peak_gain_block[sel_4(D)][chno_5(D)].size+0 S4 A64]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 136 135 137 6 (set (reg:DI 204)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 137 136 138 6 (set (reg/f:DI 203)
+        (lo_sum:DI (reg:DI 204)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 138 137 139 6 (set (reg:DI 205)
+        (reg/f:DI 203)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 139 138 140 6 (set (reg/f:DI 206)
+        (plus:DI (reg/f:DI 203)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 140 139 141 6 (set (reg:DI 207)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 141 140 142 6 (set (reg:DI 208)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 142 141 143 6 (set (reg:DI 210)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 143 142 144 6 (set (reg:DI 209)
+        (mult:DI (reg:DI 207)
+            (reg:DI 210))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 144 143 145 6 (set (reg:DI 212)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 145 144 146 6 (set (reg:DI 211)
+        (mult:DI (reg:DI 208)
+            (reg:DI 212))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 146 145 147 6 (set (reg:DI 213)
+        (plus:DI (reg:DI 209)
+            (reg:DI 211))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 147 146 148 6 (set (reg/f:DI 214)
+        (plus:DI (reg/f:DI 206)
+            (reg:DI 213))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 148 147 149 6 (set (reg/f:DI 215)
+        (mem/f/j:DI (reg/f:DI 214) [0 peak_gain_block[sel_4(D)][chno_5(D)].val+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 149 148 150 6 (set (reg:DI 216)
+        (reg/f:DI 188)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 150 149 151 6 (set (reg:DI 217)
+        (reg/f:DI 215)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 151 150 152 6 (set (reg:DI 218)
+        (reg:DI 202 [ D.28894 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 152 151 153 6 (set (reg:DI 0 x0)
+        (reg:DI 216)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 153 152 154 6 (set (reg:DI 1 x1)
+        (reg:DI 217)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 154 153 155 6 (set (reg:DI 2 x2)
+        (reg:DI 218)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(call_insn 155 154 156 6 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ac74bedc400 memcpy>) [0 memcpy S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (set (reg:DI 0 x0)
+            (reg:DI 0 x0))
+        (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+            (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(insn 156 155 157 6 (set (reg:DI 219)
+        (reg:DI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:45 -1
+     (nil))
+(insn 157 156 158 6 (set (reg:DI 221)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 158 157 159 6 (set (reg/f:DI 220)
+        (lo_sum:DI (reg:DI 221)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 159 158 160 6 (set (reg:DI 222)
+        (reg/f:DI 220)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 160 159 161 6 (set (reg/f:DI 223)
+        (plus:DI (reg/f:DI 220)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 161 160 162 6 (set (reg:DI 224)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 162 161 163 6 (set (reg:DI 225)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 163 162 164 6 (set (reg:DI 227)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 164 163 165 6 (set (reg:DI 226)
+        (mult:DI (reg:DI 224)
+            (reg:DI 227))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 165 164 166 6 (set (reg:DI 229)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 166 165 167 6 (set (reg:DI 228)
+        (mult:DI (reg:DI 225)
+            (reg:DI 229))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 167 166 168 6 (set (reg:DI 230)
+        (plus:DI (reg:DI 226)
+            (reg:DI 228))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 168 167 169 6 (set (reg:DI 231)
+        (plus:DI (reg/f:DI 223)
+            (reg:DI 230))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 169 168 170 6 (set (reg/f:DI 232)
+        (plus:DI (reg:DI 231)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(insn 170 169 171 6 (set (mem/j:QI (plus:DI (reg/f:DI 232)
+                (const_int 4 [0x4])) [0 peak_gain_block[sel_4(D)][chno_5(D)].dirty+0 S1 A32])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:46 -1
+     (nil))
+(code_label 171 170 172 7 9 "" [1 uses])
+(note 172 171 173 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 173 172 177 7 (set (reg:SI 85 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:49 -1
+     (nil))
+(insn 177 173 180 7 (set (reg/i:SI 0 x0)
+        (reg:SI 85 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:50 -1
+     (nil))
+(insn 180 177 0 7 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:50 -1
+     (nil))
+
+;; Function de_peak_init (de_peak_init, funcdef_no=1710, decl_uid=28374, cgraph_uid=1710)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+deleting block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 203 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 203 10 2 2 (set (reg:DI 89)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 203 3 2 (set (reg/v:SI 86 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:53 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 87 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:53 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 88 [ reg_base ])
+        (reg:DI 2 x2 [ reg_base ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:53 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg:DI 0 x0)
+        (reg:DI 89)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:53 -1
+     (nil))
+(call_insn 7 6 12 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:53 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 12 7 13 2 (set (reg:SI 90 [ D.28907 ])
+        (plus:SI (reg/v:SI 86 [ sel ])
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:57 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 91 [ D.28907 ])
+        (ashift:SI (reg:SI 90 [ D.28907 ])
+            (const_int 20 [0x14]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:57 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 92 [ D.28908 ])
+        (zero_extend:DI (reg:SI 91 [ D.28907 ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:57 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 77 [ D.28908 ])
+        (plus:DI (reg:DI 92 [ D.28908 ])
+            (reg/v:DI 88 [ reg_base ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:57 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/v:DI 78 [ base ])
+        (plus:DI (reg:DI 77 [ D.28908 ])
+            (const_int 679936 [0xa6000]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:57 -1
+     (nil))
+(call_insn 17 16 18 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("bsp_disp_get_print_level") [flags 0x41]  <function_decl 0x2ac74bd15000 bsp_disp_get_print_level>) [0 bsp_disp_get_print_level S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil)
+    (nil))
+(insn 18 17 19 2 (set (reg:SI 79 [ D.28906 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 79 [ D.28906 ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(jump_insn 20 19 21 2 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (expr_list:REG_BR_PROB (const_int 9996 [0x270c])
+        (nil))
+ -> 39)
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 4 (set (reg:DI 94)
+        (high:DI (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 23 22 24 4 (set (reg/f:DI 93)
+        (lo_sum:DI (reg:DI 94)
+            (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>)
+        (nil)))
+(insn 24 23 25 4 (set (reg:DI 96)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 25 24 26 4 (set (reg/f:DI 95)
+        (lo_sum:DI (reg:DI 96)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 26 25 27 4 (set (reg:DI 97)
+        (reg/f:DI 95)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 27 26 28 4 (set (reg/f:DI 98)
+        (plus:DI (reg/f:DI 95)
+            (const_int 24 [0x18]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 0 x0)
+        (reg/f:DI 93)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 1 x1)
+        (reg/f:DI 98)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:SI 2 x2)
+        (const_int 58 [0x3a])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(call_insn 31 30 32 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 32 31 33 4 (set (reg:DI 100)
+        (high:DI (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2ac74bee55f0 *.LC2>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 33 32 34 4 (set (reg/f:DI 99)
+        (lo_sum:DI (reg:DI 100)
+            (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2ac74bee55f0 *.LC2>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2ac74bee55f0 *.LC2>)
+        (nil)))
+(insn 34 33 35 4 (set (reg:DI 0 x0)
+        (reg/f:DI 99)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 35 34 36 4 (set (reg:SI 1 x1)
+        (reg/v:SI 86 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:SI 2 x2)
+        (reg/v:SI 87 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:DI 3 x3)
+        (reg/v:DI 78 [ base ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil))
+(call_insn 38 37 39 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:58 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 3 x3))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(code_label 39 38 40 5 11 "" [1 uses])
+(note 40 39 41 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 5 (set (reg:DI 102)
+        (high:DI (symbol_ref:DI ("kmalloc_caches") [flags 0xc0]  <var_decl 0x2ac74ba07850 kmalloc_caches>))) include/linux/slab_def.h:139 -1
+     (nil))
+(insn 42 41 43 5 (set (reg/f:DI 101)
+        (lo_sum:DI (reg:DI 102)
+            (symbol_ref:DI ("kmalloc_caches") [flags 0xc0]  <var_decl 0x2ac74ba07850 kmalloc_caches>))) include/linux/slab_def.h:139 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("kmalloc_caches") [flags 0xc0]  <var_decl 0x2ac74ba07850 kmalloc_caches>)
+        (nil)))
+(insn 43 42 44 5 (set (reg:DI 0 x0)
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 101)
+                (const_int 48 [0x30])) [0 kmalloc_caches+48 S8 A64])) include/linux/slab_def.h:141 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:SI 1 x1)
+        (const_int 32976 [0x80d0])) include/linux/slab_def.h:141 -1
+     (nil))
+(insn 45 44 46 5 (set (reg:DI 2 x2)
+        (const_int 48 [0x30])) include/linux/slab_def.h:141 -1
+     (nil))
+(call_insn 46 45 47 5 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("kmem_cache_alloc_trace") [flags 0x41]  <function_decl 0x2ac74ba12c00 kmem_cache_alloc_trace>) [0 kmem_cache_alloc_trace S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) include/linux/slab_def.h:141 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 47 46 48 5 (set (reg/v/f:DI 84 [ ret ])
+        (reg:DI 0 x0)) include/linux/slab_def.h:141 -1
+     (nil))
+(insn 48 47 49 5 (set (reg:CC 66 cc)
+        (compare:CC (reg/v/f:DI 84 [ ret ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:61 -1
+     (nil))
+(jump_insn 49 48 50 5 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 70)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:61 -1
+     (expr_list:REG_BR_PROB (const_int 9996 [0x270c])
+        (nil))
+ -> 70)
+(note 50 49 51 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 6 (set (reg:DI 104)
+        (high:DI (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 52 51 53 6 (set (reg/f:DI 103)
+        (lo_sum:DI (reg:DI 104)
+            (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>)
+        (nil)))
+(insn 53 52 54 6 (set (reg:DI 106)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 54 53 55 6 (set (reg/f:DI 105)
+        (lo_sum:DI (reg:DI 106)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 55 54 56 6 (set (reg:DI 107)
+        (reg/f:DI 105)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 56 55 57 6 (set (reg/f:DI 108)
+        (plus:DI (reg/f:DI 105)
+            (const_int 24 [0x18]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 57 56 58 6 (set (reg:DI 0 x0)
+        (reg/f:DI 103)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 58 57 59 6 (set (reg:DI 1 x1)
+        (reg/f:DI 108)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 59 58 60 6 (set (reg:SI 2 x2)
+        (const_int 62 [0x3e])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(call_insn 60 59 61 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 61 60 62 6 (set (reg:DI 110)
+        (high:DI (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2ac74bee5688 *.LC3>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 62 61 63 6 (set (reg/f:DI 109)
+        (lo_sum:DI (reg:DI 110)
+            (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2ac74bee5688 *.LC3>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2ac74bee5688 *.LC3>)
+        (nil)))
+(insn 63 62 64 6 (set (reg:DI 0 x0)
+        (reg/f:DI 109)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 64 63 65 6 (set (reg:SI 1 x1)
+        (reg/v:SI 86 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 65 64 66 6 (set (reg:SI 2 x2)
+        (reg/v:SI 87 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(insn 66 65 67 6 (set (reg:SI 3 x3)
+        (const_int 48 [0x30])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil))
+(call_insn 67 66 8 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:62 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(insn 8 67 68 6 (set (reg:SI 73 [ D.28906 ])
+        (const_int -1 [0xffffffffffffffff])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:63 -1
+     (nil))
+(jump_insn 68 8 69 6 (set (pc)
+        (label_ref 191)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:63 -1
+     (nil)
+ -> 191)
+(barrier 69 68 70)
+(code_label 70 69 71 7 12 "" [1 uses])
+(note 71 70 72 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 7 (set (reg:DI 112)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 73 72 74 7 (set (reg/f:DI 111)
+        (lo_sum:DI (reg:DI 112)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 74 73 75 7 (set (reg:DI 113)
+        (reg/f:DI 111)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 75 74 76 7 (set (reg/f:DI 114)
+        (plus:DI (reg/f:DI 111)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:DI 115)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 77 76 78 7 (set (reg:DI 116)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 78 77 79 7 (set (reg:DI 118)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 79 78 80 7 (set (reg:DI 117)
+        (mult:DI (reg:DI 115)
+            (reg:DI 118))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 80 79 81 7 (set (reg:DI 120)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 81 80 82 7 (set (reg:DI 119)
+        (mult:DI (reg:DI 116)
+            (reg:DI 120))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 82 81 83 7 (set (reg:DI 121)
+        (plus:DI (reg:DI 117)
+            (reg:DI 119))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 83 82 84 7 (set (reg:DI 122)
+        (plus:DI (reg/f:DI 114)
+            (reg:DI 121))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 84 83 85 7 (set (reg/f:DI 123)
+        (plus:DI (reg:DI 122)
+            (const_int 8 [0x8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 85 84 86 7 (set (mem/j:DI (reg/f:DI 123) [0 peak_block[sel_4(D)][chno_16(D)].off+0 S8 A64])
+        (reg/v:DI 78 [ base ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:66 -1
+     (nil))
+(insn 86 85 87 7 (set (reg:DI 125)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 87 86 88 7 (set (reg/f:DI 124)
+        (lo_sum:DI (reg:DI 125)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 88 87 89 7 (set (reg:DI 126)
+        (reg/f:DI 124)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 89 88 90 7 (set (reg/f:DI 127)
+        (plus:DI (reg/f:DI 124)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 90 89 91 7 (set (reg:DI 128)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 91 90 92 7 (set (reg:DI 129)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 92 91 93 7 (set (reg:DI 131)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 93 92 94 7 (set (reg:DI 130)
+        (mult:DI (reg:DI 128)
+            (reg:DI 131))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 94 93 95 7 (set (reg:DI 133)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 95 94 96 7 (set (reg:DI 132)
+        (mult:DI (reg:DI 129)
+            (reg:DI 133))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 96 95 97 7 (set (reg:DI 134)
+        (plus:DI (reg:DI 130)
+            (reg:DI 132))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 97 96 98 7 (set (reg/f:DI 135)
+        (plus:DI (reg/f:DI 127)
+            (reg:DI 134))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 98 97 99 7 (set (mem/f/j:DI (reg/f:DI 135) [0 peak_block[sel_4(D)][chno_16(D)].val+0 S8 A64])
+        (reg/v/f:DI 84 [ ret ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:67 -1
+     (nil))
+(insn 99 98 100 7 (set (reg:DI 137)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 100 99 101 7 (set (reg/f:DI 136)
+        (lo_sum:DI (reg:DI 137)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 101 100 102 7 (set (reg:DI 138)
+        (reg/f:DI 136)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 102 101 103 7 (set (reg/f:DI 139)
+        (plus:DI (reg/f:DI 136)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 103 102 104 7 (set (reg:DI 140)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 104 103 105 7 (set (reg:DI 141)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 105 104 106 7 (set (reg:DI 143)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 106 105 107 7 (set (reg:DI 142)
+        (mult:DI (reg:DI 140)
+            (reg:DI 143))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 107 106 108 7 (set (reg:DI 145)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 108 107 109 7 (set (reg:DI 144)
+        (mult:DI (reg:DI 141)
+            (reg:DI 145))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 109 108 110 7 (set (reg:DI 146)
+        (plus:DI (reg:DI 142)
+            (reg:DI 144))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 110 109 111 7 (set (reg:DI 147)
+        (plus:DI (reg/f:DI 139)
+            (reg:DI 146))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 111 110 112 7 (set (reg/f:DI 148)
+        (plus:DI (reg:DI 147)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 112 111 113 7 (set (reg:SI 149)
+        (const_int 16 [0x10])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 113 112 114 7 (set (mem/j:SI (reg/f:DI 148) [0 peak_block[sel_4(D)][chno_16(D)].size+0 S4 A64])
+        (reg:SI 149)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:68 -1
+     (nil))
+(insn 114 113 115 7 (set (reg:DI 151)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 115 114 116 7 (set (reg/f:DI 150)
+        (lo_sum:DI (reg:DI 151)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 116 115 117 7 (set (reg:DI 152)
+        (reg/f:DI 150)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 117 116 118 7 (set (reg/f:DI 153)
+        (plus:DI (reg/f:DI 150)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 118 117 119 7 (set (reg:DI 154)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 119 118 120 7 (set (reg:DI 155)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 120 119 121 7 (set (reg:DI 157)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 121 120 122 7 (set (reg:DI 156)
+        (mult:DI (reg:DI 154)
+            (reg:DI 157))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 122 121 123 7 (set (reg:DI 159)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 123 122 124 7 (set (reg:DI 158)
+        (mult:DI (reg:DI 155)
+            (reg:DI 159))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 124 123 125 7 (set (reg:DI 160)
+        (plus:DI (reg:DI 156)
+            (reg:DI 158))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 125 124 126 7 (set (reg:DI 161)
+        (plus:DI (reg/f:DI 153)
+            (reg:DI 160))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 126 125 127 7 (set (reg/f:DI 162)
+        (plus:DI (reg:DI 161)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 127 126 128 7 (set (mem/j:QI (plus:DI (reg/f:DI 162)
+                (const_int 4 [0x4])) [0 peak_block[sel_4(D)][chno_16(D)].dirty+0 S1 A32])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:69 -1
+     (nil))
+(insn 128 127 129 7 (set (reg:DI 164)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 129 128 130 7 (set (reg/f:DI 163)
+        (lo_sum:DI (reg:DI 164)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 130 129 131 7 (set (reg:DI 165)
+        (reg/f:DI 163)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 131 130 132 7 (set (reg/f:DI 166)
+        (plus:DI (reg/f:DI 163)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 132 131 133 7 (set (reg:DI 167)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 133 132 134 7 (set (reg:DI 168)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 134 133 135 7 (set (reg:DI 170)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 135 134 136 7 (set (reg:DI 169)
+        (mult:DI (reg:DI 167)
+            (reg:DI 170))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 136 135 137 7 (set (reg:DI 172)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 137 136 138 7 (set (reg:DI 171)
+        (mult:DI (reg:DI 168)
+            (reg:DI 172))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 138 137 139 7 (set (reg:DI 173)
+        (plus:DI (reg:DI 169)
+            (reg:DI 171))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 139 138 140 7 (set (reg:DI 174)
+        (plus:DI (reg/f:DI 166)
+            (reg:DI 173))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 140 139 141 7 (set (reg/f:DI 175)
+        (plus:DI (reg:DI 174)
+            (const_int 8 [0x8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 141 140 142 7 (set (reg:DI 177)
+        (plus:DI (reg:DI 77 [ D.28908 ])
+            (const_int 679936 [0xa6000]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 142 141 143 7 (set (reg:DI 176 [ D.28908 ])
+        (plus:DI (reg:DI 177)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (expr_list:REG_EQUAL (plus:DI (reg:DI 77 [ D.28908 ])
+            (const_int 679952 [0xa6010]))
+        (nil)))
+(insn 143 142 144 7 (set (mem/j:DI (reg/f:DI 175) [0 peak_gain_block[sel_4(D)][chno_16(D)].off+0 S8 A64])
+        (reg:DI 176 [ D.28908 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:71 -1
+     (nil))
+(insn 144 143 145 7 (set (reg:DI 179)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 145 144 146 7 (set (reg/f:DI 178)
+        (lo_sum:DI (reg:DI 179)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 146 145 147 7 (set (reg:DI 180)
+        (reg/f:DI 178)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 147 146 148 7 (set (reg/f:DI 181)
+        (plus:DI (reg/f:DI 178)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 148 147 149 7 (set (reg:DI 182)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 149 148 150 7 (set (reg:DI 183)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 150 149 151 7 (set (reg:DI 185)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 151 150 152 7 (set (reg:DI 184)
+        (mult:DI (reg:DI 182)
+            (reg:DI 185))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 152 151 153 7 (set (reg:DI 187)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 153 152 154 7 (set (reg:DI 186)
+        (mult:DI (reg:DI 183)
+            (reg:DI 187))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 154 153 155 7 (set (reg:DI 188)
+        (plus:DI (reg:DI 184)
+            (reg:DI 186))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 155 154 156 7 (set (reg/f:DI 189)
+        (plus:DI (reg/f:DI 181)
+            (reg:DI 188))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 156 155 157 7 (set (reg:DI 190 [ D.28909 ])
+        (plus:DI (reg/v/f:DI 84 [ ret ])
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 157 156 158 7 (set (mem/f/j:DI (reg/f:DI 189) [0 peak_gain_block[sel_4(D)][chno_16(D)].val+0 S8 A64])
+        (reg:DI 190 [ D.28909 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:72 -1
+     (nil))
+(insn 158 157 159 7 (set (reg:DI 192)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 159 158 160 7 (set (reg/f:DI 191)
+        (lo_sum:DI (reg:DI 192)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 160 159 161 7 (set (reg:DI 193)
+        (reg/f:DI 191)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 161 160 162 7 (set (reg/f:DI 194)
+        (plus:DI (reg/f:DI 191)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 162 161 163 7 (set (reg:DI 195)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 163 162 164 7 (set (reg:DI 196)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 164 163 165 7 (set (reg:DI 198)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 165 164 166 7 (set (reg:DI 197)
+        (mult:DI (reg:DI 195)
+            (reg:DI 198))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 166 165 167 7 (set (reg:DI 200)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 167 166 168 7 (set (reg:DI 199)
+        (mult:DI (reg:DI 196)
+            (reg:DI 200))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 168 167 169 7 (set (reg:DI 201)
+        (plus:DI (reg:DI 197)
+            (reg:DI 199))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 169 168 170 7 (set (reg:DI 202)
+        (plus:DI (reg/f:DI 194)
+            (reg:DI 201))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 170 169 171 7 (set (reg/f:DI 203)
+        (plus:DI (reg:DI 202)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 171 170 172 7 (set (reg:SI 204)
+        (const_int 32 [0x20])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 172 171 173 7 (set (mem/j:SI (reg/f:DI 203) [0 peak_gain_block[sel_4(D)][chno_16(D)].size+0 S4 A64])
+        (reg:SI 204)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:73 -1
+     (nil))
+(insn 173 172 174 7 (set (reg:DI 206)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 174 173 175 7 (set (reg/f:DI 205)
+        (lo_sum:DI (reg:DI 206)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 175 174 176 7 (set (reg:DI 207)
+        (reg/f:DI 205)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 176 175 177 7 (set (reg/f:DI 208)
+        (plus:DI (reg/f:DI 205)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 177 176 178 7 (set (reg:DI 209)
+        (zero_extend:DI (reg/v:SI 87 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 178 177 179 7 (set (reg:DI 210)
+        (zero_extend:DI (reg/v:SI 86 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 179 178 180 7 (set (reg:DI 212)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 180 179 181 7 (set (reg:DI 211)
+        (mult:DI (reg:DI 209)
+            (reg:DI 212))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 181 180 182 7 (set (reg:DI 214)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 182 181 183 7 (set (reg:DI 213)
+        (mult:DI (reg:DI 210)
+            (reg:DI 214))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 183 182 184 7 (set (reg:DI 215)
+        (plus:DI (reg:DI 211)
+            (reg:DI 213))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 184 183 185 7 (set (reg:DI 216)
+        (plus:DI (reg/f:DI 208)
+            (reg:DI 215))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 185 184 186 7 (set (reg/f:DI 217)
+        (plus:DI (reg:DI 216)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 186 185 187 7 (set (mem/j:QI (plus:DI (reg/f:DI 217)
+                (const_int 4 [0x4])) [0 peak_gain_block[sel_4(D)][chno_16(D)].dirty+0 S1 A32])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:74 -1
+     (nil))
+(insn 187 186 188 7 (set (reg:SI 0 x0)
+        (reg/v:SI 86 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:76 -1
+     (nil))
+(insn 188 187 189 7 (set (reg:SI 1 x1)
+        (reg/v:SI 87 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:76 -1
+     (nil))
+(insn 189 188 190 7 (set (reg:DI 2 x2)
+        (reg/v/f:DI 84 [ ret ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:76 -1
+     (nil))
+(call_insn 190 189 9 7 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_peak_set_reg_base") [flags 0x3]  <function_decl 0x2ac74bde2c00 de_peak_set_reg_base>) [0 de_peak_set_reg_base S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:76 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 9 190 191 7 (set (reg:SI 73 [ D.28906 ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:78 -1
+     (nil))
+(code_label 191 9 192 8 13 "" [1 uses])
+(note 192 191 193 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 193 192 197 8 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 73 [ D.28906 ])) -1
+     (nil))
+(insn 197 193 200 8 (set (reg/i:SI 0 x0)
+        (reg:SI 85 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:79 -1
+     (nil))
+(insn 200 197 0 8 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:79 -1
+     (nil))
+
+;; Function de_peak_enable (de_peak_enable, funcdef_no=1711, decl_uid=28378, cgraph_uid=1711)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+deleting block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 72 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 72 8 2 2 (set (reg:DI 81)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 72 3 2 (set (reg/v:SI 78 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:92 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 79 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:92 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 80 [ en ])
+        (reg:SI 2 x2 [ en ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:92 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg:DI 0 x0)
+        (reg:DI 81)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:92 -1
+     (nil))
+(call_insn 7 6 10 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:92 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(call_insn 10 7 11 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("bsp_disp_get_print_level") [flags 0x41]  <function_decl 0x2ac74bd15000 bsp_disp_get_print_level>) [0 bsp_disp_get_print_level S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil)
+    (nil))
+(insn 11 10 12 2 (set (reg:SI 73 [ D.28914 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 73 [ D.28914 ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (expr_list:REG_BR_PROB (const_int 9996 [0x270c])
+        (nil))
+ -> 32)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:DI 83)
+        (high:DI (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 16 15 17 4 (set (reg/f:DI 82)
+        (lo_sum:DI (reg:DI 83)
+            (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2ac74bec4980 *.LC0>)
+        (nil)))
+(insn 17 16 18 4 (set (reg:DI 85)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 18 17 19 4 (set (reg/f:DI 84)
+        (lo_sum:DI (reg:DI 85)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 19 18 20 4 (set (reg:DI 86)
+        (reg/f:DI 84)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 20 19 21 4 (set (reg/f:DI 87)
+        (plus:DI (reg/f:DI 84)
+            (const_int 40 [0x28]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:DI 0 x0)
+        (reg/f:DI 82)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:DI 1 x1)
+        (reg/f:DI 87)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 2 x2)
+        (const_int 93 [0x5d])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(call_insn 24 23 25 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 25 24 26 4 (set (reg:DI 89)
+        (high:DI (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2ac74bee5ab0 *.LC4>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 26 25 27 4 (set (reg/f:DI 88)
+        (lo_sum:DI (reg:DI 89)
+            (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2ac74bee5ab0 *.LC4>))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2ac74bee5ab0 *.LC4>)
+        (nil)))
+(insn 27 26 28 4 (set (reg:DI 0 x0)
+        (reg/f:DI 88)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 1 x1)
+        (reg/v:SI 78 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 2 x2)
+        (reg/v:SI 79 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:SI 3 x3)
+        (reg/v:SI 80 [ en ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil))
+(call_insn 31 30 32 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2ac74aa53800 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:93 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(code_label 32 31 33 5 18 "" [1 uses])
+(note 33 32 34 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 5 (set (reg:DI 91)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 35 34 36 5 (set (reg/f:DI 90)
+        (lo_sum:DI (reg:DI 91)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 36 35 37 5 (set (reg:DI 92)
+        (zero_extend:DI (reg/v:SI 79 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:DI 93)
+        (zero_extend:DI (reg/v:SI 78 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 94)
+        (ashift:DI (reg:DI 93)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:DI 95)
+        (plus:DI (reg:DI 94)
+            (reg:DI 92))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 40 39 41 5 (set (reg/f:DI 74 [ D.28915 ])
+        (mem/f/j:DI (plus:DI (mult:DI (reg:DI 95)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 90)) [0 peak_dev S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:QI 96)
+        (subreg:QI (reg/v:SI 80 [ en ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:SI 97)
+        (and:SI (subreg:SI (reg:QI 96) 0)
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 43 42 44 5 (set (reg:SI 76 [ D.28917 ])
+        (zero_extend:SI (subreg:QI (reg:SI 97) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:SI 98)
+        (mem/v/j:SI (reg/f:DI 74 [ D.28915 ]) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 45 44 46 5 (set (zero_extract:SI (reg:SI 98)
+            (const_int 1 [0x1])
+            (const_int 0 [0]))
+        (reg:SI 76 [ D.28917 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 46 45 47 5 (set (mem/v/j:SI (reg/f:DI 74 [ D.28915 ]) [0 +0 S4 A32])
+        (reg:SI 98)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:94 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:DI 100)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 48 47 49 5 (set (reg/f:DI 99)
+        (lo_sum:DI (reg:DI 100)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 49 48 50 5 (set (reg:DI 101)
+        (reg/f:DI 99)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 50 49 51 5 (set (reg/f:DI 102)
+        (plus:DI (reg/f:DI 99)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:DI 103)
+        (zero_extend:DI (reg/v:SI 79 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:DI 104)
+        (zero_extend:DI (reg/v:SI 78 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 53 52 54 5 (set (reg:DI 106)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 54 53 55 5 (set (reg:DI 105)
+        (mult:DI (reg:DI 103)
+            (reg:DI 106))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 55 54 56 5 (set (reg:DI 108)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 56 55 57 5 (set (reg:DI 107)
+        (mult:DI (reg:DI 104)
+            (reg:DI 108))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 57 56 58 5 (set (reg:DI 109)
+        (plus:DI (reg:DI 105)
+            (reg:DI 107))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 58 57 59 5 (set (reg:DI 110)
+        (plus:DI (reg/f:DI 102)
+            (reg:DI 109))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 59 58 60 5 (set (reg/f:DI 111)
+        (plus:DI (reg:DI 110)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 60 59 61 5 (set (reg:QI 112)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 61 60 62 5 (set (mem/j:QI (plus:DI (reg/f:DI 111)
+                (const_int 4 [0x4])) [0 peak_block[sel_6(D)][chno_7(D)].dirty+0 S1 A32])
+        (reg:QI 112)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:95 -1
+     (nil))
+(insn 62 61 66 5 (set (reg:SI 77 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:96 -1
+     (nil))
+(insn 66 62 69 5 (set (reg/i:SI 0 x0)
+        (reg:SI 77 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:97 -1
+     (nil))
+(insn 69 66 0 5 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:97 -1
+     (nil))
+
+;; Function de_peak_set_size (de_peak_set_size, funcdef_no=1712, decl_uid=28383, cgraph_uid=1712)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 59 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 59 9 2 2 (set (reg:DI 85)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 59 3 2 (set (reg/v:SI 81 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:111 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 82 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:111 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 83 [ width ])
+        (reg:SI 2 x2 [ width ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:111 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 84 [ height ])
+        (reg:SI 3 x3 [ height ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:111 -1
+     (nil))
+(note 6 5 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 6 8 2 (set (reg:DI 0 x0)
+        (reg:DI 85)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:111 -1
+     (nil))
+(call_insn 8 7 11 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:111 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 11 8 12 2 (set (reg:DI 87)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 86)
+        (lo_sum:DI (reg:DI 87)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 13 12 14 2 (set (reg:DI 88)
+        (zero_extend:DI (reg/v:SI 82 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 89)
+        (zero_extend:DI (reg/v:SI 81 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 90)
+        (ashift:DI (reg:DI 89)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 91)
+        (plus:DI (reg:DI 90)
+            (reg:DI 88))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 17 16 18 2 (set (reg/f:DI 73 [ D.28921 ])
+        (mem/f/j:DI (plus:DI (mult:DI (reg:DI 91)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 86)) [0 peak_dev S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:HI 92)
+        (subreg:HI (reg/v:SI 83 [ width ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 93)
+        (plus:SI (subreg:SI (reg:HI 92) 0)
+            (const_int -1 [0xffffffffffffffff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:HI 94)
+        (subreg:HI (reg:SI 93) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 95)
+        (and:SI (subreg:SI (reg:HI 94) 0)
+            (const_int 4095 [0xfff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 76 [ D.28923 ])
+        (zero_extend:SI (subreg:HI (reg:SI 95) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 96)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28921 ])
+                (const_int 4 [0x4])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 24 23 25 2 (set (zero_extract:SI (reg:SI 96)
+            (const_int 12 [0xc])
+            (const_int 0 [0]))
+        (reg:SI 76 [ D.28923 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 25 24 26 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28921 ])
+                (const_int 4 [0x4])) [0 +0 S4 A32])
+        (reg:SI 96)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:112 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:HI 97)
+        (subreg:HI (reg/v:SI 84 [ height ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 98)
+        (plus:SI (subreg:SI (reg:HI 97) 0)
+            (const_int -1 [0xffffffffffffffff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:HI 99)
+        (subreg:HI (reg:SI 98) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:SI 100)
+        (and:SI (subreg:SI (reg:HI 99) 0)
+            (const_int 4095 [0xfff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 79 [ D.28923 ])
+        (zero_extend:SI (subreg:HI (reg:SI 100) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:SI 101)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28921 ])
+                (const_int 4 [0x4])) [0 +-2 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 32 31 33 2 (set (zero_extract:SI (reg:SI 101)
+            (const_int 12 [0xc])
+            (const_int 16 [0x10]))
+        (reg:SI 79 [ D.28923 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 33 32 34 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28921 ])
+                (const_int 4 [0x4])) [0 +-2 S4 A32])
+        (reg:SI 101)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:113 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:DI 103)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 35 34 36 2 (set (reg/f:DI 102)
+        (lo_sum:DI (reg:DI 103)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 36 35 37 2 (set (reg:DI 104)
+        (reg/f:DI 102)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 37 36 38 2 (set (reg/f:DI 105)
+        (plus:DI (reg/f:DI 102)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:DI 106)
+        (zero_extend:DI (reg/v:SI 82 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:DI 107)
+        (zero_extend:DI (reg/v:SI 81 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 40 39 41 2 (set (reg:DI 109)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:DI 108)
+        (mult:DI (reg:DI 106)
+            (reg:DI 109))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:DI 111)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:DI 110)
+        (mult:DI (reg:DI 107)
+            (reg:DI 111))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 112)
+        (plus:DI (reg:DI 108)
+            (reg:DI 110))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 45 44 46 2 (set (reg:DI 113)
+        (plus:DI (reg/f:DI 105)
+            (reg:DI 112))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 46 45 47 2 (set (reg/f:DI 114)
+        (plus:DI (reg:DI 113)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 47 46 48 2 (set (reg:QI 115)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 48 47 49 2 (set (mem/j:QI (plus:DI (reg/f:DI 114)
+                (const_int 4 [0x4])) [0 peak_block[sel_2(D)][chno_3(D)].dirty+0 S1 A32])
+        (reg:QI 115)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:114 -1
+     (nil))
+(insn 49 48 53 2 (set (reg:SI 80 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:115 -1
+     (nil))
+(insn 53 49 56 2 (set (reg/i:SI 0 x0)
+        (reg:SI 80 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:116 -1
+     (nil))
+(insn 56 53 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:116 -1
+     (nil))
+
+;; Function de_peak_set_window (de_peak_set_window, funcdef_no=1713, decl_uid=28388, cgraph_uid=1713)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+deleting block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 91 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 91 9 2 2 (set (reg:DI 97)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 91 3 2 (set (reg/v:SI 93 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:130 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 94 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:130 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 95 [ win_enable ])
+        (reg:SI 2 x2 [ win_enable ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:130 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:TI 96 [ window ])
+        (reg:TI 3 x3 [ window ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:130 -1
+     (nil))
+(note 6 5 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 6 8 2 (set (reg:DI 0 x0)
+        (reg:DI 97)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:130 -1
+     (nil))
+(call_insn 8 7 11 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:130 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 11 8 12 2 (set (reg:SI 90 [ window$x ])
+        (subreg:SI (reg/v:TI 96 [ window ]) 0)) -1
+     (nil))
+(insn 12 11 13 2 (set (subreg:DI (reg:SI 91 [ window$y ]) 0)
+        (sign_extract:DI (subreg:DI (reg/v:TI 96 [ window ]) 0)
+            (const_int 32 [0x20])
+            (const_int 32 [0x20]))) -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 99)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 98)
+        (lo_sum:DI (reg:DI 99)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 15 14 16 2 (set (reg:DI 100)
+        (zero_extend:DI (reg/v:SI 94 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 101)
+        (zero_extend:DI (reg/v:SI 93 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 102)
+        (ashift:DI (reg:DI 101)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 103)
+        (plus:DI (reg:DI 102)
+            (reg:DI 100))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:DI 73 [ D.28926 ])
+        (mem/f/j:DI (plus:DI (mult:DI (reg:DI 103)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 98)) [0 peak_dev S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:QI 104)
+        (subreg:QI (reg/v:SI 95 [ win_enable ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 105)
+        (and:SI (subreg:SI (reg:QI 104) 0)
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 75 [ D.28928 ])
+        (zero_extend:SI (subreg:QI (reg:SI 105) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 106)
+        (mem/v/j:SI (reg/f:DI 73 [ D.28926 ]) [0 +-1 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 24 23 25 2 (set (zero_extract:SI (reg:SI 106)
+            (const_int 1 [0x1])
+            (const_int 8 [0x8]))
+        (reg:SI 75 [ D.28928 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 25 24 26 2 (set (mem/v/j:SI (reg/f:DI 73 [ D.28926 ]) [0 +-1 S4 A32])
+        (reg:SI 106)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:131 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:CC 66 cc)
+        (compare:CC (reg/v:SI 95 [ win_enable ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:133 -1
+     (nil))
+(jump_insn 27 26 28 2 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 64)
+            (pc))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:133 -1
+     (expr_list:REG_BR_PROB (const_int 3900 [0xf3c])
+        (nil))
+ -> 64)
+(note 28 27 29 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 4 (set (reg:SI 76 [ D.28929 ])
+        (zero_extend:SI (subreg:HI (reg:SI 90 [ window$x ]) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:HI 107)
+        (subreg/s/u:HI (reg:SI 76 [ D.28929 ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 108)
+        (and:SI (subreg:SI (reg:HI 107) 0)
+            (const_int 4095 [0xfff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:SI 77 [ D.28930 ])
+        (zero_extend:SI (subreg:HI (reg:SI 108) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:SI 109)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 8 [0x8])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 34 33 35 4 (set (zero_extract:SI (reg:SI 109)
+            (const_int 12 [0xc])
+            (const_int 0 [0]))
+        (reg:SI 77 [ D.28930 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 35 34 36 4 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 8 [0x8])) [0 +0 S4 A32])
+        (reg:SI 109)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:135 -1
+     (nil))
+(insn 36 35 37 4 (set (reg:SI 78 [ D.28929 ])
+        (zero_extend:SI (subreg:HI (reg:SI 91 [ window$y ]) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 37 36 38 4 (set (reg:HI 110)
+        (subreg/s/u:HI (reg:SI 78 [ D.28929 ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:SI 111)
+        (and:SI (subreg:SI (reg:HI 110) 0)
+            (const_int 4095 [0xfff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 39 38 40 4 (set (reg:SI 79 [ D.28930 ])
+        (zero_extend:SI (subreg:HI (reg:SI 111) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:SI 112)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 8 [0x8])) [0 +-2 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 41 40 42 4 (set (zero_extract:SI (reg:SI 112)
+            (const_int 12 [0xc])
+            (const_int 16 [0x10]))
+        (reg:SI 79 [ D.28930 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 42 41 43 4 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 8 [0x8])) [0 +-2 S4 A32])
+        (reg:SI 112)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:136 -1
+     (nil))
+(insn 43 42 44 4 (set (reg:HI 113 [ D.28929 ])
+        (subreg:HI (reg/v:TI 96 [ window ]) 8)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 44 43 45 4 (set (reg:SI 114)
+        (plus:SI (reg:SI 76 [ D.28929 ])
+            (subreg:SI (reg:HI 113 [ D.28929 ]) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:HI 115)
+        (subreg:HI (reg:SI 114) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:SI 116)
+        (plus:SI (subreg:SI (reg:HI 115) 0)
+            (const_int -1 [0xffffffffffffffff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 47 46 48 4 (set (reg:HI 117)
+        (subreg:HI (reg:SI 116) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 48 47 49 4 (set (reg:SI 118)
+        (and:SI (subreg:SI (reg:HI 117) 0)
+            (const_int 4095 [0xfff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 49 48 50 4 (set (reg:SI 84 [ D.28930 ])
+        (zero_extend:SI (subreg:HI (reg:SI 118) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 50 49 51 4 (set (reg:SI 119)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 12 [0xc])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 51 50 52 4 (set (zero_extract:SI (reg:SI 119)
+            (const_int 12 [0xc])
+            (const_int 0 [0]))
+        (reg:SI 84 [ D.28930 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 52 51 53 4 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 12 [0xc])) [0 +0 S4 A32])
+        (reg:SI 119)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:137 -1
+     (nil))
+(insn 53 52 54 4 (set (subreg:DI (reg:SI 120 [ D.28931 ]) 0)
+        (zero_extract:DI (subreg:DI (reg/v:TI 96 [ window ]) 8)
+            (const_int 32 [0x20])
+            (const_int 32 [0x20]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 54 53 55 4 (set (reg:HI 121)
+        (subreg:HI (reg:SI 120 [ D.28931 ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:SI 122)
+        (plus:SI (reg:SI 78 [ D.28929 ])
+            (subreg:SI (reg:HI 121) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 56 55 57 4 (set (reg:HI 123)
+        (subreg:HI (reg:SI 122) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 57 56 58 4 (set (reg:SI 124)
+        (plus:SI (subreg:SI (reg:HI 123) 0)
+            (const_int -1 [0xffffffffffffffff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 58 57 59 4 (set (reg:HI 125)
+        (subreg:HI (reg:SI 124) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 59 58 60 4 (set (reg:SI 126)
+        (and:SI (subreg:SI (reg:HI 125) 0)
+            (const_int 4095 [0xfff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 60 59 61 4 (set (reg:SI 89 [ D.28930 ])
+        (zero_extend:SI (subreg:HI (reg:SI 126) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 61 60 62 4 (set (reg:SI 127)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 12 [0xc])) [0 +-2 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 62 61 63 4 (set (zero_extract:SI (reg:SI 127)
+            (const_int 12 [0xc])
+            (const_int 16 [0x10]))
+        (reg:SI 89 [ D.28930 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(insn 63 62 64 4 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28926 ])
+                (const_int 12 [0xc])) [0 +-2 S4 A32])
+        (reg:SI 127)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:138 -1
+     (nil))
+(code_label 64 63 65 5 24 "" [1 uses])
+(note 65 64 66 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 5 (set (reg:DI 129)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 67 66 68 5 (set (reg/f:DI 128)
+        (lo_sum:DI (reg:DI 129)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 68 67 69 5 (set (reg:DI 130)
+        (reg/f:DI 128)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 69 68 70 5 (set (reg/f:DI 131)
+        (plus:DI (reg/f:DI 128)
+            (const_int 64 [0x40]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 70 69 71 5 (set (reg:DI 132)
+        (zero_extend:DI (reg/v:SI 94 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 71 70 72 5 (set (reg:DI 133)
+        (zero_extend:DI (reg/v:SI 93 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 72 71 73 5 (set (reg:DI 135)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 73 72 74 5 (set (reg:DI 134)
+        (mult:DI (reg:DI 132)
+            (reg:DI 135))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 74 73 75 5 (set (reg:DI 137)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 75 74 76 5 (set (reg:DI 136)
+        (mult:DI (reg:DI 133)
+            (reg:DI 137))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 76 75 77 5 (set (reg:DI 138)
+        (plus:DI (reg:DI 134)
+            (reg:DI 136))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 77 76 78 5 (set (reg:DI 139)
+        (plus:DI (reg/f:DI 131)
+            (reg:DI 138))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 78 77 79 5 (set (reg/f:DI 140)
+        (plus:DI (reg:DI 139)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 79 78 80 5 (set (reg:QI 141)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 80 79 81 5 (set (mem/j:QI (plus:DI (reg/f:DI 140)
+                (const_int 4 [0x4])) [0 peak_block[sel_3(D)][chno_4(D)].dirty+0 S1 A32])
+        (reg:QI 141)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:140 -1
+     (nil))
+(insn 81 80 85 5 (set (reg:SI 92 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:141 -1
+     (nil))
+(insn 85 81 88 5 (set (reg/i:SI 0 x0)
+        (reg:SI 92 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:142 -1
+     (nil))
+(insn 88 85 0 5 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:142 -1
+     (nil))
+
+;; Function de_peak_set_para (de_peak_set_para, funcdef_no=1714, decl_uid=28394, cgraph_uid=1714)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 84 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 84 10 2 2 (set (reg:DI 85)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 84 3 2 (set (reg/v:SI 80 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 81 [ chno ])
+        (reg:SI 1 x1 [ chno ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 82 [ gain ])
+        (reg:SI 2 x2 [ gain ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 83 [ hp_ratio ])
+        (reg:SI 3 x3 [ hp_ratio ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:SI 84 [ bp0_ratio ])
+        (reg:SI 4 x4 [ bp0_ratio ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (nil))
+(note 7 6 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 7 9 2 (set (reg:DI 0 x0)
+        (reg:DI 85)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (nil))
+(call_insn 9 8 12 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:160 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 12 9 13 2 (set (reg:DI 87)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 86)
+        (lo_sum:DI (reg:DI 87)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 14 13 15 2 (set (reg:DI 88)
+        (zero_extend:DI (reg/v:SI 81 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 89)
+        (zero_extend:DI (reg/v:SI 80 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 90)
+        (ashift:DI (reg:DI 89)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 91)
+        (plus:DI (reg:DI 90)
+            (reg:DI 88))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 73 [ D.28934 ])
+        (mem/f/j:DI (plus:DI (mult:DI (reg:DI 91)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 86)) [0 peak_dev S8 A64])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 74 [ D.28935 ])
+        (zero_extend:SI (subreg:QI (reg/v:SI 82 [ gain ]) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 92)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 32 [0x20])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 21 20 22 2 (set (zero_extract:SI (reg:SI 92)
+            (const_int 8 [0x8])
+            (const_int 0 [0]))
+        (reg:SI 74 [ D.28935 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 22 21 24 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 32 [0x20])) [0 +0 S4 A32])
+        (reg:SI 92)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:161 -1
+     (nil))
+(insn 24 22 25 2 (set (reg:SI 94)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +-3 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:162 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 95)
+        (and:SI (reg:SI 94)
+            (const_int 2147483647 [0x7fffffff]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:162 -1
+     (nil))
+(insn 26 25 27 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +-3 S4 A32])
+        (reg:SI 95)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:162 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:QI 96)
+        (subreg:QI (reg/v:SI 83 [ hp_ratio ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:163 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 97)
+        (and:SI (subreg:SI (reg:QI 96) 0)
+            (const_int 63 [0x3f]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:163 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:SI 76 [ D.28936 ])
+        (zero_extend:SI (subreg:QI (reg:SI 97) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:163 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 98)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +-2 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:163 -1
+     (nil))
+(insn 31 30 32 2 (set (zero_extract:SI (reg:SI 98)
+            (const_int 6 [0x6])
+            (const_int 16 [0x10]))
+        (reg:SI 76 [ D.28936 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:163 -1
+     (nil))
+(insn 32 31 33 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +-2 S4 A32])
+        (reg:SI 98)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:163 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:QI 99)
+        (subreg:QI (reg/v:SI 84 [ bp0_ratio ]) 0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:164 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 100)
+        (and:SI (subreg:SI (reg:QI 99) 0)
+            (const_int 63 [0x3f]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:164 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 78 [ D.28936 ])
+        (zero_extend:SI (subreg:QI (reg:SI 100) 0))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:164 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:SI 101)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +-1 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:164 -1
+     (nil))
+(insn 37 36 38 2 (set (zero_extract:SI (reg:SI 101)
+            (const_int 6 [0x6])
+            (const_int 8 [0x8]))
+        (reg:SI 78 [ D.28936 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:164 -1
+     (nil))
+(insn 38 37 40 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +-1 S4 A32])
+        (reg:SI 101)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:164 -1
+     (nil))
+(insn 40 38 41 2 (set (reg:SI 103)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:166 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:SI 104)
+        (and:SI (reg:SI 103)
+            (const_int -64 [0xffffffffffffffc0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:166 -1
+     (nil))
+(insn 42 41 44 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 16 [0x10])) [0 +0 S4 A32])
+        (reg:SI 104)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:166 -1
+     (nil))
+(insn 44 42 45 2 (set (reg:SI 106)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 36 [0x24])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:167 -1
+     (nil))
+(insn 45 44 46 2 (set (reg:SI 107)
+        (and:SI (reg:SI 106)
+            (const_int -32 [0xffffffffffffffe0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:167 -1
+     (nil))
+(insn 46 45 47 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 36 [0x24])) [0 +0 S4 A32])
+        (reg:SI 107)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:167 -1
+     (nil))
+(insn 47 46 48 2 (set (reg:SI 108)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 36 [0x24])) [0 +-2 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:168 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:SI 109)
+        (const_int 128 [0x80])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:168 -1
+     (nil))
+(insn 49 48 50 2 (set (zero_extract:SI (reg:SI 108)
+            (const_int 8 [0x8])
+            (const_int 16 [0x10]))
+        (reg:SI 109)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:168 -1
+     (nil))
+(insn 50 49 51 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 36 [0x24])) [0 +-2 S4 A32])
+        (reg:SI 108)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:168 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:SI 110)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 40 [0x28])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:169 -1
+     (nil))
+(insn 52 51 53 2 (set (reg:SI 111)
+        (const_int 31 [0x1f])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:169 -1
+     (nil))
+(insn 53 52 54 2 (set (zero_extract:SI (reg:SI 110)
+            (const_int 6 [0x6])
+            (const_int 0 [0]))
+        (reg:SI 111)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:169 -1
+     (nil))
+(insn 54 53 55 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 40 [0x28])) [0 +0 S4 A32])
+        (reg:SI 110)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:169 -1
+     (nil))
+(insn 55 54 56 2 (set (reg:SI 112)
+        (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 44 [0x2c])) [0 +0 S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:170 -1
+     (nil))
+(insn 56 55 57 2 (set (reg:SI 113)
+        (const_int 4 [0x4])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:170 -1
+     (nil))
+(insn 57 56 58 2 (set (zero_extract:SI (reg:SI 112)
+            (const_int 8 [0x8])
+            (const_int 0 [0]))
+        (reg:SI 113)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:170 -1
+     (nil))
+(insn 58 57 59 2 (set (mem/v/j:SI (plus:DI (reg/f:DI 73 [ D.28934 ])
+                (const_int 44 [0x2c])) [0 +0 S4 A32])
+        (reg:SI 112)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:170 -1
+     (nil))
+(insn 59 58 60 2 (set (reg:DI 115)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 60 59 61 2 (set (reg/f:DI 114)
+        (lo_sum:DI (reg:DI 115)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 61 60 62 2 (set (reg:DI 116)
+        (reg/f:DI 114)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 62 61 63 2 (set (reg/f:DI 117)
+        (plus:DI (reg/f:DI 114)
+            (const_int 256 [0x100]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 63 62 64 2 (set (reg:DI 118)
+        (zero_extend:DI (reg/v:SI 81 [ chno ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 64 63 65 2 (set (reg:DI 119)
+        (zero_extend:DI (reg/v:SI 80 [ sel ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 65 64 66 2 (set (reg:DI 121)
+        (const_int 24 [0x18])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 66 65 67 2 (set (reg:DI 120)
+        (mult:DI (reg:DI 118)
+            (reg:DI 121))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 67 66 68 2 (set (reg:DI 123)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 68 67 69 2 (set (reg:DI 122)
+        (mult:DI (reg:DI 119)
+            (reg:DI 123))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 69 68 70 2 (set (reg:DI 124)
+        (plus:DI (reg:DI 120)
+            (reg:DI 122))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 70 69 71 2 (set (reg:DI 125)
+        (plus:DI (reg/f:DI 117)
+            (reg:DI 124))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 71 70 72 2 (set (reg/f:DI 126)
+        (plus:DI (reg:DI 125)
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 72 71 73 2 (set (reg:QI 127)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 73 72 74 2 (set (mem/j:QI (plus:DI (reg/f:DI 126)
+                (const_int 4 [0x4])) [0 peak_gain_block[sel_2(D)][chno_3(D)].dirty+0 S1 A32])
+        (reg:QI 127)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:172 -1
+     (nil))
+(insn 74 73 78 2 (set (reg:SI 79 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:173 -1
+     (nil))
+(insn 78 74 81 2 (set (reg/i:SI 0 x0)
+        (reg:SI 79 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:174 -1
+     (nil))
+(insn 81 78 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:174 -1
+     (nil))
+
+;; Function de_peak_info2para (de_peak_info2para, funcdef_no=1715, decl_uid=28398, cgraph_uid=1715)
+
+Partition 0: size 36 align 8
+	peak_para
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 81 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 81 8 2 2 (set (reg:DI 88)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 81 3 2 (set (reg/v:SI 85 [ sharp ])
+        (reg:SI 0 x0 [ sharp ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:187 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:TI 86 [ window ])
+        (reg:TI 1 x1 [ window ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:187 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 87 [ para ])
+        (reg:DI 3 x3 [ para ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:187 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg:DI 0 x0)
+        (reg:DI 88)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:187 -1
+     (nil))
+(call_insn 7 6 10 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:187 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 10 7 11 2 (set (reg:DI 89)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 90)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/j/c:SI (reg/f:DI 90) [0 peak_para+0 S4 A64])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 91)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 92)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 93)
+        (const_int 36 [0x24])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 16 15 17 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 92)
+                (const_int 4 [0x4])) [0 peak_para+4 S4 A32])
+        (reg:SI 93)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 94)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 95)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 96)
+        (const_int 48 [0x30])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 20 19 21 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 95)
+                (const_int 8 [0x8])) [0 peak_para+8 S4 A64])
+        (reg:SI 96)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 97)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 22 21 23 2 (set (reg/f:DI 98)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 23 22 24 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 98)
+                (const_int 12 [0xc])) [0 peak_para+12 S4 A32])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 99)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 25 24 26 2 (set (reg/f:DI 100)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 101)
+        (const_int 4 [0x4])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 27 26 28 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 100)
+                (const_int 16 [0x10])) [0 peak_para+16 S4 A64])
+        (reg:SI 101)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:DI 102)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 29 28 30 2 (set (reg/f:DI 103)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 104)
+        (const_int 14 [0xe])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 31 30 32 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 103)
+                (const_int 20 [0x14])) [0 peak_para+20 S4 A32])
+        (reg:SI 104)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 105)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 33 32 34 2 (set (reg/f:DI 106)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 34 33 35 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 106)
+                (const_int 24 [0x18])) [0 peak_para+24 S4 A64])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 107)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 36 35 37 2 (set (reg/f:DI 108)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:SI 109)
+        (const_int 12 [0xc])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 38 37 39 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 108)
+                (const_int 28 [0x1c])) [0 peak_para+28 S4 A32])
+        (reg:SI 109)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:DI 110)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 40 39 41 2 (set (reg/f:DI 111)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:SI 112)
+        (const_int 2 [0x2])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 42 41 43 2 (set (mem/j/c:SI (plus:DI (reg/f:DI 111)
+                (const_int 32 [0x20])) [0 peak_para+32 S4 A64])
+        (reg:SI 112)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:189 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:SI 113 [ D.28939 ])
+        (lshiftrt:SI (reg/v:SI 85 [ sharp ])
+            (const_int 4 [0x4]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:196 -1
+     (nil))
+(insn 44 43 45 2 (set (reg/v:SI 75 [ mode ])
+        (and:SI (reg:SI 113 [ D.28939 ])
+            (const_int 15 [0xf]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:196 -1
+     (nil))
+(insn 45 44 46 2 (set (reg:CC 66 cc)
+        (compare:CC (reg/v:SI 75 [ mode ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:197 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:SI 115 [ D.28941 ])
+        (ne:SI (reg:CC 66 cc)
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:197 -1
+     (nil))
+(insn 47 46 48 2 (set (mem/j:SI (reg/v/f:DI 87 [ para ]) [0 para_17(D)->peak_en+0 S4 A32])
+        (reg:SI 115 [ D.28941 ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:197 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:DI 116)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 49 48 50 2 (set (reg/f:DI 117)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 50 49 51 2 (set (reg:DI 118)
+        (sign_extend:DI (reg/v:SI 75 [ mode ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:DI 119)
+        (ashift:DI (reg:DI 118)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 52 51 53 2 (set (reg/f:DI 120)
+        (plus:DI (reg/f:DI 117)
+            (reg:DI 119))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 53 52 54 2 (set (reg:SI 121)
+        (mem/j:SI (reg/f:DI 120) [0 peak_para S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 54 53 55 2 (set (mem/j:SI (plus:DI (reg/v/f:DI 87 [ para ])
+                (const_int 4 [0x4])) [0 para_17(D)->gain+0 S4 A32])
+        (reg:SI 121)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:199 -1
+     (nil))
+(insn 55 54 56 2 (set (reg:DI 122)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 56 55 57 2 (set (reg/f:DI 123)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 57 56 58 2 (set (reg:DI 124)
+        (sign_extend:DI (reg/v:SI 75 [ mode ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 58 57 59 2 (set (reg:DI 125)
+        (plus:DI (reg:DI 124)
+            (const_int 3 [0x3]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 59 58 60 2 (set (reg:DI 126)
+        (ashift:DI (reg:DI 125)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 60 59 61 2 (set (reg/f:DI 127)
+        (plus:DI (reg/f:DI 123)
+            (reg:DI 126))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 61 60 62 2 (set (reg:SI 128)
+        (mem/j:SI (reg/f:DI 127) [0 peak_para S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 62 61 63 2 (set (mem/j:SI (plus:DI (reg/v/f:DI 87 [ para ])
+                (const_int 8 [0x8])) [0 para_17(D)->hp_ratio+0 S4 A32])
+        (reg:SI 128)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:200 -1
+     (nil))
+(insn 63 62 64 2 (set (reg:DI 129)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 64 63 65 2 (set (reg/f:DI 130)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -40 [0xffffffffffffffd8]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 65 64 66 2 (set (reg:DI 131)
+        (sign_extend:DI (reg/v:SI 75 [ mode ]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 66 65 67 2 (set (reg:DI 132)
+        (plus:DI (reg:DI 131)
+            (const_int 6 [0x6]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 67 66 68 2 (set (reg:DI 133)
+        (ashift:DI (reg:DI 132)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 68 67 69 2 (set (reg/f:DI 134)
+        (plus:DI (reg/f:DI 130)
+            (reg:DI 133))) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 69 68 70 2 (set (reg:SI 135)
+        (mem/j:SI (reg/f:DI 134) [0 peak_para S4 A32])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 70 69 71 2 (set (mem/j:SI (plus:DI (reg/v/f:DI 87 [ para ])
+                (const_int 12 [0xc])) [0 para_17(D)->bp0_ratio+0 S4 A32])
+        (reg:SI 135)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:201 -1
+     (nil))
+(insn 71 70 75 2 (set (reg:SI 84 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:203 -1
+     (nil))
+(insn 75 71 78 2 (set (reg/i:SI 0 x0)
+        (reg:SI 84 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:204 -1
+     (nil))
+(insn 78 75 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/lowlevel_sun50iw1/de_peak.c:204 -1
+     (nil))

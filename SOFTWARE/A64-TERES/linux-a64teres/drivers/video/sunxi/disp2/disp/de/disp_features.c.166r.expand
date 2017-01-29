@@ -1,0 +1,556 @@
+
+;; Function bsp_disp_feat_get_num_screens (bsp_disp_feat_get_num_screens, funcdef_no=0, decl_uid=1404, cgraph_uid=0)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 19 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 19 5 2 2 (set (reg:DI 75)
+        (reg:DI 30 x30)) -1
+     (nil))
+(note 2 19 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 4 2 (set (reg:DI 0 x0)
+        (reg:DI 75)) drivers/video/sunxi/disp2/disp/de/disp_features.c:4 -1
+     (nil))
+(call_insn 4 3 7 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:4 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(call_insn 7 4 8 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_get_num_devices") [flags 0x41]  <function_decl 0x2acd3060dd00 de_feat_get_num_devices>) [0 de_feat_get_num_devices S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:5 -1
+     (nil)
+    (nil))
+(insn 8 7 9 2 (set (reg:SI 73 [ D.1482 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:5 -1
+     (nil))
+(insn 9 8 13 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1482 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:5 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:6 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:6 -1
+     (nil))
+
+;; Function bsp_disp_feat_get_num_channels (bsp_disp_feat_get_num_channels, funcdef_no=1, decl_uid=1406, cgraph_uid=1)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 21 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 21 6 2 2 (set (reg:DI 76)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 21 3 2 (set (reg/v:SI 75 [ disp ])
+        (reg:SI 0 x0 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:9 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 76)) drivers/video/sunxi/disp2/disp/de/disp_features.c:9 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:9 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 75 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:10 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_get_num_chns") [flags 0x41]  <function_decl 0x2acd3060de00 de_feat_get_num_chns>) [0 de_feat_get_num_chns S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:10 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 73 [ D.1485 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:10 -1
+     (nil))
+(insn 11 10 15 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1485 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:10 -1
+     (nil))
+(insn 15 11 18 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:11 -1
+     (nil))
+(insn 18 15 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:11 -1
+     (nil))
+
+;; Function bsp_disp_feat_get_num_layers (bsp_disp_feat_get_num_layers, funcdef_no=2, decl_uid=1408, cgraph_uid=2)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 21 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 21 6 2 2 (set (reg:DI 76)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 21 3 2 (set (reg/v:SI 75 [ disp ])
+        (reg:SI 0 x0 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:14 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 76)) drivers/video/sunxi/disp2/disp/de/disp_features.c:14 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:14 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 75 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:15 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_get_num_layers") [flags 0x41]  <function_decl 0x2acd3066c100 de_feat_get_num_layers>) [0 de_feat_get_num_layers S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:15 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 73 [ D.1488 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:15 -1
+     (nil))
+(insn 11 10 15 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1488 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:15 -1
+     (nil))
+(insn 15 11 18 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:16 -1
+     (nil))
+(insn 18 15 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:16 -1
+     (nil))
+
+;; Function bsp_disp_feat_get_num_layers_by_chn (bsp_disp_feat_get_num_layers_by_chn, funcdef_no=3, decl_uid=1411, cgraph_uid=3)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 23 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 23 7 2 2 (set (reg:DI 77)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 23 3 2 (set (reg/v:SI 75 [ disp ])
+        (reg:SI 0 x0 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:19 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 76 [ chn ])
+        (reg:SI 1 x1 [ chn ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:19 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 6 2 (set (reg:DI 0 x0)
+        (reg:DI 77)) drivers/video/sunxi/disp2/disp/de/disp_features.c:19 -1
+     (nil))
+(call_insn 6 5 9 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:19 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 9 6 10 2 (set (reg:SI 0 x0)
+        (reg/v:SI 75 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:20 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 1 x1)
+        (reg/v:SI 76 [ chn ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:20 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_get_num_layers_by_chn") [flags 0x41]  <function_decl 0x2acd3066c200 de_feat_get_num_layers_by_chn>) [0 de_feat_get_num_layers_by_chn S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:20 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 12 11 13 2 (set (reg:SI 73 [ D.1491 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:20 -1
+     (nil))
+(insn 13 12 17 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1491 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:20 -1
+     (nil))
+(insn 17 13 20 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:21 -1
+     (nil))
+(insn 20 17 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:21 -1
+     (nil))
+
+;; Function bsp_disp_feat_is_supported_output_types (bsp_disp_feat_is_supported_output_types, funcdef_no=4, decl_uid=1414, cgraph_uid=4)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 23 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 23 7 2 2 (set (reg:DI 77)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 23 3 2 (set (reg/v:SI 75 [ disp ])
+        (reg:SI 0 x0 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:24 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 76 [ output_type ])
+        (reg:SI 1 x1 [ output_type ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:24 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 6 2 (set (reg:DI 0 x0)
+        (reg:DI 77)) drivers/video/sunxi/disp2/disp/de/disp_features.c:24 -1
+     (nil))
+(call_insn 6 5 9 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:24 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 9 6 10 2 (set (reg:SI 0 x0)
+        (reg/v:SI 75 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:25 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 1 x1)
+        (reg/v:SI 76 [ output_type ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:25 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_is_supported_output_types") [flags 0x41]  <function_decl 0x2acd3066c600 de_feat_is_supported_output_types>) [0 de_feat_is_supported_output_types S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:25 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 12 11 13 2 (set (reg:SI 73 [ D.1494 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:25 -1
+     (nil))
+(insn 13 12 17 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1494 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:25 -1
+     (nil))
+(insn 17 13 20 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:26 -1
+     (nil))
+(insn 20 17 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:26 -1
+     (nil))
+
+;; Function disp_feat_is_support_smbl (disp_feat_is_support_smbl, funcdef_no=5, decl_uid=1418, cgraph_uid=5)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 21 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 21 6 2 2 (set (reg:DI 76)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 21 3 2 (set (reg/v:SI 75 [ disp ])
+        (reg:SI 0 x0 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:29 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 76)) drivers/video/sunxi/disp2/disp/de/disp_features.c:29 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:29 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 75 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:30 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_is_support_smbl") [flags 0x41]  <function_decl 0x2acd3066c500 de_feat_is_support_smbl>) [0 de_feat_is_support_smbl S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:30 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 73 [ D.1497 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:30 -1
+     (nil))
+(insn 11 10 15 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1497 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:30 -1
+     (nil))
+(insn 15 11 18 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:31 -1
+     (nil))
+(insn 18 15 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:31 -1
+     (nil))
+
+;; Function bsp_disp_feat_is_support_capture (bsp_disp_feat_is_support_capture, funcdef_no=6, decl_uid=1416, cgraph_uid=6)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 21 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 21 6 2 2 (set (reg:DI 76)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 21 3 2 (set (reg/v:SI 75 [ disp ])
+        (reg:SI 0 x0 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:34 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 76)) drivers/video/sunxi/disp2/disp/de/disp_features.c:34 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:34 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 75 [ disp ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:35 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("de_feat_is_support_wb") [flags 0x41]  <function_decl 0x2acd3066c700 de_feat_is_support_wb>) [0 de_feat_is_support_wb S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:35 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 73 [ D.1500 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:35 -1
+     (nil))
+(insn 11 10 15 2 (set (reg:SI 74 [ <retval> ])
+        (reg:SI 73 [ D.1500 ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:35 -1
+     (nil))
+(insn 15 11 18 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:36 -1
+     (nil))
+(insn 18 15 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:36 -1
+     (nil))
+
+;; Function disp_init_feat (disp_init_feat, funcdef_no=7, decl_uid=1420, cgraph_uid=7)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 17 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 17 5 2 2 (set (reg:DI 74)
+        (reg:DI 30 x30)) -1
+     (nil))
+(note 2 17 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 4 2 (set (reg:DI 0 x0)
+        (reg:DI 74)) drivers/video/sunxi/disp2/disp/de/disp_features.c:39 -1
+     (nil))
+(call_insn 4 3 7 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_features.c:39 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 7 4 11 2 (set (reg:SI 73 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/disp_features.c:60 -1
+     (nil))
+(insn 11 7 14 2 (set (reg/i:SI 0 x0)
+        (reg:SI 73 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_features.c:61 -1
+     (nil))
+(insn 14 11 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_features.c:61 -1
+     (nil))

@@ -1,0 +1,10 @@
+#
+#  Touchscreen driver configuration
+#
+config  TOUCHSCREEN_GSLX680NEW
+       tristate  "gslX680NEW touchscreen driver"      
+       depends on INPUT && I2C
+       default m
+       help
+         gsl168X,gsl268X,gsl368X touchscreen new driver,optimize anti-shake    
+         

@@ -1,0 +1,11 @@
+#
+#  Touchscreen driver configuration
+#
+
+config  TOUCHSCREEN_GT818_TS
+       tristate  "gt818 touchscreen driver"      
+       depends on INPUT && I2C
+       default m
+       help
+         gt818 touchscreen driver    
+

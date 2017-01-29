@@ -1,0 +1,8 @@
+
+config SUNXI_SCR
+	tristate "allwinnertech smartcard driver"
+	default n
+	help
+	  This is an option for use by developers; most people should
+	  say N here.  This adds a lot of debugging output to dmesg.
+

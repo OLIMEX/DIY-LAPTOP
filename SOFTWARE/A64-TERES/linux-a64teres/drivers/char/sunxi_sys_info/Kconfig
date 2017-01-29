@@ -1,0 +1,7 @@
+#
+# sunxi system information driver.
+#
+
+config SUNXI_SYS_INFO
+	tristate "sunxi system info driver"
+	default y

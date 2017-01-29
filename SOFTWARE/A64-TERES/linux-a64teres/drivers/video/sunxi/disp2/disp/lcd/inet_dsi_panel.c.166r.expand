@@ -1,0 +1,2411 @@
+
+;; Function LCD_user_defined_func (LCD_user_defined_func, funcdef_no=1717, decl_uid=30305, cgraph_uid=1717)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 21 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 21 9 2 2 (set (reg:DI 78)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 21 3 2 (set (reg/v:SI 74 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:446 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 75 [ para1 ])
+        (reg:SI 1 x1 [ para1 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:446 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 76 [ para2 ])
+        (reg:SI 2 x2 [ para2 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:446 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 77 [ para3 ])
+        (reg:SI 3 x3 [ para3 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:446 -1
+     (nil))
+(note 6 5 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 6 8 2 (set (reg:DI 0 x0)
+        (reg:DI 78)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:446 -1
+     (nil))
+(call_insn 8 7 11 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:446 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 11 8 15 2 (set (reg:SI 73 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:447 -1
+     (nil))
+(insn 15 11 18 2 (set (reg/i:SI 0 x0)
+        (reg:SI 73 [ <retval> ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:448 -1
+     (nil))
+(insn 18 15 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:448 -1
+     (nil))
+
+;; Function LCD_close_flow (LCD_close_flow, funcdef_no=1710, decl_uid=30269, cgraph_uid=1710)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 42 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 42 6 2 2 (set (reg:DI 75)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 42 3 2 (set (reg/v:SI 74 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:86 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 75)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:86 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:86 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:DI 77)
+        (high:DI (symbol_ref:DI ("LCD_bl_close") [flags 0x3]  <function_decl 0x2aad5d7a3c00 LCD_bl_close>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:87 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 76)
+        (lo_sum:DI (reg:DI 77)
+            (symbol_ref:DI ("LCD_bl_close") [flags 0x3]  <function_decl 0x2aad5d7a3c00 LCD_bl_close>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:87 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("LCD_bl_close") [flags 0x3]  <function_decl 0x2aad5d7a3c00 LCD_bl_close>)
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:87 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 1 x1)
+        (reg/f:DI 76)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:87 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 2 x2)
+        (const_int 200 [0xc8])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:87 -1
+     (nil))
+(call_insn 13 12 14 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_CLOSE_FUNC") [flags 0x41]  <function_decl 0x2aad5d799900 LCD_CLOSE_FUNC>) [0 LCD_CLOSE_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:87 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 14 13 15 2 (set (reg:DI 79)
+        (high:DI (symbol_ref:DI ("sunxi_lcd_tcon_disable") [flags 0x41]  <function_decl 0x2aad5d791a00 sunxi_lcd_tcon_disable>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:88 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 78)
+        (lo_sum:DI (reg:DI 79)
+            (symbol_ref:DI ("sunxi_lcd_tcon_disable") [flags 0x41]  <function_decl 0x2aad5d791a00 sunxi_lcd_tcon_disable>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:88 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("sunxi_lcd_tcon_disable") [flags 0x41]  <function_decl 0x2aad5d791a00 sunxi_lcd_tcon_disable>)
+        (nil)))
+(insn 16 15 17 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:88 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 1 x1)
+        (reg/f:DI 78)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:88 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 2 x2)
+        (const_int 10 [0xa])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:88 -1
+     (nil))
+(call_insn 19 18 20 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_CLOSE_FUNC") [flags 0x41]  <function_decl 0x2aad5d799900 LCD_CLOSE_FUNC>) [0 LCD_CLOSE_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:88 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 20 19 21 2 (set (reg:DI 81)
+        (high:DI (symbol_ref:DI ("LCD_panel_exit") [flags 0x3]  <function_decl 0x2aad5d7a3e00 LCD_panel_exit>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:89 -1
+     (nil))
+(insn 21 20 22 2 (set (reg/f:DI 80)
+        (lo_sum:DI (reg:DI 81)
+            (symbol_ref:DI ("LCD_panel_exit") [flags 0x3]  <function_decl 0x2aad5d7a3e00 LCD_panel_exit>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:89 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("LCD_panel_exit") [flags 0x3]  <function_decl 0x2aad5d7a3e00 LCD_panel_exit>)
+        (nil)))
+(insn 22 21 23 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:89 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:DI 1 x1)
+        (reg/f:DI 80)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:89 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 2 x2)
+        (const_int 200 [0xc8])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:89 -1
+     (nil))
+(call_insn 25 24 26 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_CLOSE_FUNC") [flags 0x41]  <function_decl 0x2aad5d799900 LCD_CLOSE_FUNC>) [0 LCD_CLOSE_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:89 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 26 25 27 2 (set (reg:DI 83)
+        (high:DI (symbol_ref:DI ("LCD_power_off") [flags 0x3]  <function_decl 0x2aad5d7a3a00 LCD_power_off>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:90 -1
+     (nil))
+(insn 27 26 28 2 (set (reg/f:DI 82)
+        (lo_sum:DI (reg:DI 83)
+            (symbol_ref:DI ("LCD_power_off") [flags 0x3]  <function_decl 0x2aad5d7a3a00 LCD_power_off>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:90 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("LCD_power_off") [flags 0x3]  <function_decl 0x2aad5d7a3a00 LCD_power_off>)
+        (nil)))
+(insn 28 27 29 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:90 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:DI 1 x1)
+        (reg/f:DI 82)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:90 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 2 x2)
+        (const_int 500 [0x1f4])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:90 -1
+     (nil))
+(call_insn 31 30 32 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_CLOSE_FUNC") [flags 0x41]  <function_decl 0x2aad5d799900 LCD_CLOSE_FUNC>) [0 LCD_CLOSE_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:90 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 32 31 36 2 (set (reg:SI 73 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:92 -1
+     (nil))
+(insn 36 32 39 2 (set (reg/i:SI 0 x0)
+        (reg:SI 73 [ <retval> ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:93 -1
+     (nil))
+(insn 39 36 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:93 -1
+     (nil))
+
+;; Function LCD_power_off (LCD_power_off, funcdef_no=1712, decl_uid=30239, cgraph_uid=1712)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 42 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 42 6 2 2 (set (reg:DI 74)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 42 3 2 (set (reg/v:SI 73 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:111 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 74)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:111 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:111 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:DI 76)
+        (high:DI (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2aad5d7eab48 *.LC1>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:112 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 75)
+        (lo_sum:DI (reg:DI 76)
+            (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2aad5d7eab48 *.LC1>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:112 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2aad5d7eab48 *.LC1>)
+        (nil)))
+(insn 10 9 11 2 (set (reg:DI 0 x0)
+        (reg/f:DI 75)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:112 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aad5c2c2000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:112 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(insn 12 11 13 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:113 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 1 x1)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:113 -1
+     (nil))
+(call_insn 14 13 15 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_pin_cfg") [flags 0x41]  <function_decl 0x2aad5d799400 sunxi_lcd_pin_cfg>) [0 sunxi_lcd_pin_cfg S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:113 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 15 14 16 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:114 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 1 x1)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:114 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 2 x2)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:114 -1
+     (nil))
+(call_insn 18 17 19 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_gpio_set_value") [flags 0x41]  <function_decl 0x2aad5d799600 sunxi_lcd_gpio_set_value>) [0 sunxi_lcd_gpio_set_value S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:114 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 19 18 20 2 (set (reg:SI 0 x0)
+        (const_int 20 [0x14])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:115 -1
+     (nil))
+(call_insn 20 19 21 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:115 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 21 20 22 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:116 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 1 x1)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:116 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 2 x2)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:116 -1
+     (nil))
+(call_insn 24 23 25 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_gpio_set_value") [flags 0x41]  <function_decl 0x2aad5d799600 sunxi_lcd_gpio_set_value>) [0 sunxi_lcd_gpio_set_value S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:116 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 25 24 26 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:117 -1
+     (nil))
+(call_insn 26 25 27 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:117 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 27 26 28 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:118 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 1 x1)
+        (const_int 2 [0x2])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:118 -1
+     (nil))
+(call_insn 29 28 30 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_power_disable") [flags 0x41]  <function_decl 0x2aad5d791e00 sunxi_lcd_power_disable>) [0 sunxi_lcd_power_disable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:118 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 30 29 31 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:119 -1
+     (nil))
+(call_insn 31 30 32 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:119 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 32 31 33 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:120 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:SI 1 x1)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:120 -1
+     (nil))
+(call_insn 34 33 35 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_power_disable") [flags 0x41]  <function_decl 0x2aad5d791e00 sunxi_lcd_power_disable>) [0 sunxi_lcd_power_disable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:120 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 35 34 36 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:121 -1
+     (nil))
+(call_insn 36 35 37 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:121 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 37 36 38 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:122 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:SI 1 x1)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:122 -1
+     (nil))
+(call_insn 39 38 0 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_power_disable") [flags 0x41]  <function_decl 0x2aad5d791e00 sunxi_lcd_power_disable>) [0 sunxi_lcd_power_disable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:122 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+
+;; Function LCD_panel_exit (LCD_panel_exit, funcdef_no=1716, decl_uid=30247, cgraph_uid=1716)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 20 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 20 6 2 2 (set (reg:DI 74)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 20 3 2 (set (reg/v:SI 73 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:435 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 74)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:435 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:435 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:436 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:QI 1 x1)
+        (const_int 40 [0x28])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:436 -1
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_dsi_dcs_write_0para") [flags 0x41]  <function_decl 0x2aad5d794500 sunxi_lcd_dsi_dcs_write_0para>) [0 sunxi_lcd_dsi_dcs_write_0para S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:436 -1
+     (nil)
+    (expr_list:REG_DEP_OUTPUT (use (reg:QI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 11 10 12 2 (set (reg:SI 0 x0)
+        (const_int 20 [0x14])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:437 -1
+     (nil))
+(call_insn 12 11 13 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:437 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:438 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:QI 1 x1)
+        (const_int 16 [0x10])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:438 -1
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_dsi_dcs_write_0para") [flags 0x41]  <function_decl 0x2aad5d794500 sunxi_lcd_dsi_dcs_write_0para>) [0 sunxi_lcd_dsi_dcs_write_0para S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:438 -1
+     (nil)
+    (expr_list:REG_DEP_OUTPUT (use (reg:QI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 16 15 17 2 (set (reg:SI 0 x0)
+        (const_int 80 [0x50])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:439 -1
+     (nil))
+(call_insn 17 16 0 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:439 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+
+;; Function LCD_bl_close (LCD_bl_close, funcdef_no=1714, decl_uid=30243, cgraph_uid=1714)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 16 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 16 6 2 2 (set (reg:DI 74)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 16 3 2 (set (reg/v:SI 73 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:133 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 74)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:133 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:133 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:134 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_backlight_disable") [flags 0x41]  <function_decl 0x2aad5d791c00 sunxi_lcd_backlight_disable>) [0 sunxi_lcd_backlight_disable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:134 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 0 x0)
+        (const_int 20 [0x14])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:135 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:135 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 12 11 13 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:136 -1
+     (nil))
+(call_insn 13 12 0 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_pwm_disable") [flags 0x41]  <function_decl 0x2aad5d794000 sunxi_lcd_pwm_disable>) [0 sunxi_lcd_pwm_disable S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:136 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+
+;; Function LCD_open_flow (LCD_open_flow, funcdef_no=1709, decl_uid=30266, cgraph_uid=1709)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 46 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 46 6 2 2 (set (reg:DI 75)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 46 3 2 (set (reg/v:SI 74 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:75 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 75)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:75 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:75 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:DI 77)
+        (high:DI (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2aad5d81e000 *.LC2>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:76 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 76)
+        (lo_sum:DI (reg:DI 77)
+            (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2aad5d81e000 *.LC2>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:76 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2aad5d81e000 *.LC2>)
+        (nil)))
+(insn 10 9 11 2 (set (reg:DI 0 x0)
+        (reg/f:DI 76)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:76 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aad5c2c2000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:76 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(insn 12 11 13 2 (set (reg:DI 79)
+        (high:DI (symbol_ref:DI ("LCD_power_on") [flags 0x3]  <function_decl 0x2aad5d7a3900 LCD_power_on>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:77 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 78)
+        (lo_sum:DI (reg:DI 79)
+            (symbol_ref:DI ("LCD_power_on") [flags 0x3]  <function_decl 0x2aad5d7a3900 LCD_power_on>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:77 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("LCD_power_on") [flags 0x3]  <function_decl 0x2aad5d7a3900 LCD_power_on>)
+        (nil)))
+(insn 14 13 15 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:77 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 1 x1)
+        (reg/f:DI 78)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:77 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 2 x2)
+        (const_int 20 [0x14])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:77 -1
+     (nil))
+(call_insn 17 16 18 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_OPEN_FUNC") [flags 0x41]  <function_decl 0x2aad5d799800 LCD_OPEN_FUNC>) [0 LCD_OPEN_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:77 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 18 17 19 2 (set (reg:DI 81)
+        (high:DI (symbol_ref:DI ("LCD_panel_init") [flags 0x3]  <function_decl 0x2aad5d7a3d00 LCD_panel_init>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:78 -1
+     (nil))
+(insn 19 18 20 2 (set (reg/f:DI 80)
+        (lo_sum:DI (reg:DI 81)
+            (symbol_ref:DI ("LCD_panel_init") [flags 0x3]  <function_decl 0x2aad5d7a3d00 LCD_panel_init>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:78 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("LCD_panel_init") [flags 0x3]  <function_decl 0x2aad5d7a3d00 LCD_panel_init>)
+        (nil)))
+(insn 20 19 21 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:78 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 1 x1)
+        (reg/f:DI 80)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:78 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 2 x2)
+        (const_int 100 [0x64])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:78 -1
+     (nil))
+(call_insn 23 22 24 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_OPEN_FUNC") [flags 0x41]  <function_decl 0x2aad5d799800 LCD_OPEN_FUNC>) [0 LCD_OPEN_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:78 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 24 23 25 2 (set (reg:DI 83)
+        (high:DI (symbol_ref:DI ("sunxi_lcd_tcon_enable") [flags 0x41]  <function_decl 0x2aad5d791900 sunxi_lcd_tcon_enable>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:79 -1
+     (nil))
+(insn 25 24 26 2 (set (reg/f:DI 82)
+        (lo_sum:DI (reg:DI 83)
+            (symbol_ref:DI ("sunxi_lcd_tcon_enable") [flags 0x41]  <function_decl 0x2aad5d791900 sunxi_lcd_tcon_enable>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:79 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("sunxi_lcd_tcon_enable") [flags 0x41]  <function_decl 0x2aad5d791900 sunxi_lcd_tcon_enable>)
+        (nil)))
+(insn 26 25 27 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:79 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 1 x1)
+        (reg/f:DI 82)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:79 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 2 x2)
+        (const_int 150 [0x96])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:79 -1
+     (nil))
+(call_insn 29 28 30 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_OPEN_FUNC") [flags 0x41]  <function_decl 0x2aad5d799800 LCD_OPEN_FUNC>) [0 LCD_OPEN_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:79 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 30 29 31 2 (set (reg:DI 85)
+        (high:DI (symbol_ref:DI ("LCD_bl_open") [flags 0x3]  <function_decl 0x2aad5d7a3b00 LCD_bl_open>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:80 -1
+     (nil))
+(insn 31 30 32 2 (set (reg/f:DI 84)
+        (lo_sum:DI (reg:DI 85)
+            (symbol_ref:DI ("LCD_bl_open") [flags 0x3]  <function_decl 0x2aad5d7a3b00 LCD_bl_open>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:80 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("LCD_bl_open") [flags 0x3]  <function_decl 0x2aad5d7a3b00 LCD_bl_open>)
+        (nil)))
+(insn 32 31 33 2 (set (reg:SI 0 x0)
+        (reg/v:SI 74 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:80 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:DI 1 x1)
+        (reg/f:DI 84)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:80 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 2 x2)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:80 -1
+     (nil))
+(call_insn 35 34 36 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("LCD_OPEN_FUNC") [flags 0x41]  <function_decl 0x2aad5d799800 LCD_OPEN_FUNC>) [0 LCD_OPEN_FUNC S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:80 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 36 35 40 2 (set (reg:SI 73 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:82 -1
+     (nil))
+(insn 40 36 43 2 (set (reg/i:SI 0 x0)
+        (reg:SI 73 [ <retval> ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:83 -1
+     (nil))
+(insn 43 40 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:83 -1
+     (nil))
+
+;; Function LCD_bl_open (LCD_bl_open, funcdef_no=1713, decl_uid=30241, cgraph_uid=1713)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 16 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 16 6 2 2 (set (reg:DI 74)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 16 3 2 (set (reg/v:SI 73 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:126 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 74)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:126 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:126 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:127 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_pwm_enable") [flags 0x41]  <function_decl 0x2aad5d791f00 sunxi_lcd_pwm_enable>) [0 sunxi_lcd_pwm_enable S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:127 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 0 x0)
+        (const_int 50 [0x32])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:128 -1
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:128 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 12 11 13 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:129 -1
+     (nil))
+(call_insn 13 12 0 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_backlight_enable") [flags 0x41]  <function_decl 0x2aad5d791b00 sunxi_lcd_backlight_enable>) [0 sunxi_lcd_backlight_enable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:129 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+
+;; Function LCD_panel_init (LCD_panel_init, funcdef_no=1715, decl_uid=30245, cgraph_uid=1715)
+
+Partition 0: size 24 align 8
+	val
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 8->13 redirected to 14
+deleting block 13
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 63 0 69 NOTE_INSN_DELETED)
+(note 69 63 172 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 172 69 64 2 (set (reg:DI 148)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 64 172 65 2 (set (reg/v:SI 147 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:399 -1
+     (nil))
+(note 65 64 66 2 NOTE_INSN_FUNCTION_BEG)
+(insn 66 65 67 2 (set (reg:DI 0 x0)
+        (reg:DI 148)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:399 -1
+     (nil))
+(call_insn 67 66 71 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:399 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 71 67 72 2 (set (reg:DI 150)
+        (high:DI (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2aad5d81ebe0 *.LC3>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:400 -1
+     (nil))
+(insn 72 71 73 2 (set (reg/f:DI 149)
+        (lo_sum:DI (reg:DI 150)
+            (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2aad5d81ebe0 *.LC3>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:400 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2aad5d81ebe0 *.LC3>)
+        (nil)))
+(insn 73 72 74 2 (set (reg:DI 0 x0)
+        (reg/f:DI 149)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:400 -1
+     (nil))
+(call_insn 74 73 75 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aad5c2c2000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:400 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(insn 75 74 76 2 (set (reg:DI 152)
+        (high:DI (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2aad5d81ec78 *.LC4>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:404 -1
+     (nil))
+(insn 76 75 77 2 (set (reg/f:DI 151)
+        (lo_sum:DI (reg:DI 152)
+            (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2aad5d81ec78 *.LC4>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:404 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2aad5d81ec78 *.LC4>)
+        (nil)))
+(insn 77 76 78 2 (set (reg:DI 0 x0)
+        (reg/f:DI 151)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:404 -1
+     (nil))
+(call_insn 78 77 79 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aad5c2c2000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:404 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(insn 79 78 80 2 (set (reg:DI 154)
+        (high:DI (symbol_ref/f:DI ("*.LC5") [flags 0x82]  <var_decl 0x2aad5d81ed10 *.LC5>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(insn 80 79 81 2 (set (reg/f:DI 153)
+        (lo_sum:DI (reg:DI 154)
+            (symbol_ref/f:DI ("*.LC5") [flags 0x82]  <var_decl 0x2aad5d81ed10 *.LC5>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC5") [flags 0x82]  <var_decl 0x2aad5d81ed10 *.LC5>)
+        (nil)))
+(insn 81 80 82 2 (set (reg:DI 156)
+        (high:DI (symbol_ref/f:DI ("*.LC6") [flags 0x82]  <var_decl 0x2aad5d81eda8 *.LC6>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(insn 82 81 83 2 (set (reg/f:DI 155)
+        (lo_sum:DI (reg:DI 156)
+            (symbol_ref/f:DI ("*.LC6") [flags 0x82]  <var_decl 0x2aad5d81eda8 *.LC6>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC6") [flags 0x82]  <var_decl 0x2aad5d81eda8 *.LC6>)
+        (nil)))
+(insn 83 82 84 2 (set (reg:DI 157)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -24 [0xffffffffffffffe8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(insn 84 83 85 2 (set (reg:DI 0 x0)
+        (reg/f:DI 153)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(insn 85 84 86 2 (set (reg:DI 1 x1)
+        (reg/f:DI 155)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(insn 86 85 87 2 (set (reg:DI 2 x2)
+        (reg:DI 157)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(call_insn 87 86 88 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("script_get_item") [flags 0x41]  <function_decl 0x2aad5d565500 script_get_item>) [0 script_get_item S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 88 87 89 2 (set (reg/v:SI 136 [ type ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:405 -1
+     (nil))
+(insn 89 88 90 2 (set (reg:CC 66 cc)
+        (compare:CC (reg/v:SI 136 [ type ])
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:406 -1
+     (nil))
+(jump_insn 90 89 91 2 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 98)
+            (pc))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:406 -1
+     (expr_list:REG_BR_PROB (const_int 3333 [0xd05])
+        (nil))
+ -> 98)
+(note 91 90 92 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 92 91 93 4 (set (reg:DI 159)
+        (high:DI (symbol_ref/f:DI ("*.LC7") [flags 0x82]  <var_decl 0x2aad5d81ee40 *.LC7>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:407 -1
+     (nil))
+(insn 93 92 94 4 (set (reg/f:DI 158)
+        (lo_sum:DI (reg:DI 159)
+            (symbol_ref/f:DI ("*.LC7") [flags 0x82]  <var_decl 0x2aad5d81ee40 *.LC7>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:407 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC7") [flags 0x82]  <var_decl 0x2aad5d81ee40 *.LC7>)
+        (nil)))
+(insn 94 93 95 4 (set (reg:DI 0 x0)
+        (reg/f:DI 158)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:407 -1
+     (nil))
+(call_insn 95 94 96 4 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aad5c2c2000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:407 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(jump_insn 96 95 97 4 (set (pc)
+        (label_ref 107)) -1
+     (nil)
+ -> 107)
+(barrier 97 96 98)
+(code_label 98 97 99 5 9 "" [1 uses])
+(note 99 98 100 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 100 99 101 5 (set (reg:DI 161)
+        (high:DI (symbol_ref/f:DI ("*.LC8") [flags 0x82]  <var_decl 0x2aad5d81eed8 *.LC8>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (nil))
+(insn 101 100 102 5 (set (reg/f:DI 160)
+        (lo_sum:DI (reg:DI 161)
+            (symbol_ref/f:DI ("*.LC8") [flags 0x82]  <var_decl 0x2aad5d81eed8 *.LC8>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC8") [flags 0x82]  <var_decl 0x2aad5d81eed8 *.LC8>)
+        (nil)))
+(insn 102 101 103 5 (set (reg:DI 162)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (nil))
+(insn 103 102 104 5 (set (reg/f:DI 163)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -24 [0xffffffffffffffe8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (nil))
+(insn 104 103 105 5 (set (reg:DI 0 x0)
+        (reg/f:DI 160)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (nil))
+(insn 105 104 106 5 (set (reg:DI 1 x1)
+        (mem/f/j/c:DI (reg/f:DI 163) [0 val.str+0 S8 A64])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (nil))
+(call_insn 106 105 107 5 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aad5c2c2000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:409 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+        (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+            (nil))))
+(code_label 107 106 108 6 10 "" [1 uses])
+(note 108 107 109 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 109 108 110 6 (set (reg:SI 0 x0)
+        (reg/v:SI 147 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:412 -1
+     (nil))
+(call_insn 110 109 111 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_dsi_clk_enable") [flags 0x41]  <function_decl 0x2aad5d799200 sunxi_lcd_dsi_clk_enable>) [0 sunxi_lcd_dsi_clk_enable S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:412 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 111 110 112 6 (set (reg:SI 0 x0)
+        (const_int 20 [0x14])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:413 -1
+     (nil))
+(call_insn 112 111 113 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:413 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 113 112 114 6 (set (reg:SI 0 x0)
+        (reg/v:SI 147 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:414 -1
+     (nil))
+(insn 114 113 115 6 (set (reg:QI 1 x1)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:414 -1
+     (nil))
+(call_insn 115 114 116 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_dsi_dcs_write_0para") [flags 0x41]  <function_decl 0x2aad5d794500 sunxi_lcd_dsi_dcs_write_0para>) [0 sunxi_lcd_dsi_dcs_write_0para S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:414 -1
+     (nil)
+    (expr_list:REG_DEP_OUTPUT (use (reg:QI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 116 115 117 6 (set (reg:SI 0 x0)
+        (const_int 10 [0xa])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:415 -1
+     (nil))
+(call_insn 117 116 118 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:415 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 118 117 119 6 (set (reg:DI 165)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) -1
+     (nil))
+(insn 119 118 120 6 (set (reg/f:DI 164)
+        (lo_sum:DI (reg:DI 165)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 120 119 68 6 (set (reg:DI 145 [ ivtmp.31 ])
+        (reg/f:DI 164)) -1
+     (nil))
+(insn 68 120 165 6 (set (reg/v:SI 135 [ i ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:417 -1
+     (nil))
+(code_label 165 68 121 7 14 "" [1 uses])
+(note 121 165 122 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 122 121 123 7 (set (reg:DI 167)
+        (high:DI (symbol_ref/f:DI ("*.LC9") [flags 0x82]  <var_decl 0x2aad5d837000 *.LC9>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(insn 123 122 124 7 (set (reg/f:DI 166)
+        (lo_sum:DI (reg:DI 167)
+            (symbol_ref/f:DI ("*.LC9") [flags 0x82]  <var_decl 0x2aad5d837000 *.LC9>))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC9") [flags 0x82]  <var_decl 0x2aad5d837000 *.LC9>)
+        (nil)))
+(insn 124 123 125 7 (set (reg:DI 168)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(insn 125 124 126 7 (set (reg/f:DI 169)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -24 [0xffffffffffffffe8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(insn 126 125 127 7 (set (reg:DI 0 x0)
+        (reg/f:DI 166)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(insn 127 126 128 7 (set (reg:DI 1 x1)
+        (mem/f/j/c:DI (reg/f:DI 169) [0 val.str+0 S8 A64])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(call_insn/i 128 127 129 7 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2aad5c0cd000 strcmp>) [0 __builtin_strcmp S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+        (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+            (nil))))
+(insn 129 128 130 7 (set (reg:SI 170)
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(insn 130 129 131 7 (set (reg:SI 139 [ D.30417 ])
+        (reg:SI 170)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(insn 131 130 132 7 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 139 [ D.30417 ])
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (nil))
+(jump_insn 132 131 133 7 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 161)
+            (pc))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:419 -1
+     (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+        (nil))
+ -> 161)
+(note 133 132 134 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 134 133 135 8 (set (reg/f:DI 146 [ D.30421 ])
+        (reg:DI 145 [ ivtmp.31 ])) -1
+     (nil))
+(insn 135 134 136 8 (set (reg:SI 140 [ D.30418 ])
+        (mem:SI (plus:DI (reg/f:DI 146 [ D.30421 ])
+                (const_int 4 [0x4])) [0 MEM[base: _34, offset: 4B]+0 S4 A32])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:420 -1
+     (nil))
+(insn 136 135 137 8 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 140 [ D.30418 ])
+            (const_int 255 [0xff]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:420 -1
+     (nil))
+(jump_insn 137 136 138 8 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref:DI 170)
+            (pc))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:420 3 {*condjump}
+     (expr_list:REG_BR_PROB (const_int 900 [0x384])
+        (nil))
+ -> 170)
+(note 138 137 139 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 140 9 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 140 [ D.30418 ])
+            (const_int 254 [0xfe]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:422 -1
+     (nil))
+(jump_insn 140 139 141 9 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 147)
+            (pc))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:422 -1
+     (expr_list:REG_BR_PROB (const_int 7200 [0x1c20])
+        (nil))
+ -> 147)
+(note 141 140 142 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 142 141 143 10 (set (reg:SI 171 [ D.30418 ])
+        (zero_extend:SI (mem:QI (plus:DI (reg/f:DI 146 [ D.30421 ])
+                    (const_int 8 [0x8])) [0 MEM[base: _34, offset: 8B]+0 S1 A8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:423 -1
+     (nil))
+(insn 143 142 144 10 (set (reg:SI 0 x0)
+        (reg:SI 171 [ D.30418 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:423 -1
+     (nil))
+(call_insn 144 143 145 10 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:423 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(jump_insn 145 144 146 10 (set (pc)
+        (label_ref 161)) -1
+     (nil)
+ -> 161)
+(barrier 146 145 147)
+(code_label 147 146 148 11 13 "" [1 uses])
+(note 148 147 149 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 149 148 150 11 (set (reg:DI 173)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 150 149 151 11 (set (reg/f:DI 172)
+        (lo_sum:DI (reg:DI 173)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 151 150 152 11 (set (reg:DI 174)
+        (zero_extend:DI (reg/v:SI 135 [ i ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 152 151 153 11 (set (reg:DI 176)
+        (const_int 72 [0x48])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 153 152 154 11 (set (reg:DI 175)
+        (mult:DI (reg:DI 174)
+            (reg:DI 176))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 154 153 155 11 (set (reg:DI 177)
+        (plus:DI (reg/f:DI 172)
+            (reg:DI 175))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 155 154 156 11 (set (reg:DI 178 [ D.30420 ])
+        (plus:DI (reg:DI 177)
+            (const_int 8 [0x8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 156 155 157 11 (set (reg:SI 0 x0)
+        (reg/v:SI 147 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 157 156 158 11 (set (reg:QI 1 x1)
+        (mem:QI (reg/f:DI 146 [ D.30421 ]) [0 MEM[base: _34, offset: 0B]+0 S1 A8])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 158 157 159 11 (set (reg:DI 2 x2)
+        (reg:DI 178 [ D.30420 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(insn 159 158 160 11 (set (reg:SI 3 x3)
+        (reg:SI 140 [ D.30418 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil))
+(call_insn 160 159 161 11 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("dsi_dcs_wr") [flags 0x41]  <function_decl 0x2aad5d74f500 dsi_dcs_wr>) [0 dsi_dcs_wr S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:425 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+        (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+            (expr_list:REG_DEP_OUTPUT (use (reg:QI 1 x1))
+                (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                    (nil))))))
+(code_label 161 160 162 12 11 "" [2 uses])
+(note 162 161 163 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 163 162 164 12 (set (reg/v:SI 135 [ i ])
+        (plus:SI (reg/v:SI 135 [ i ])
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:417 -1
+     (nil))
+(insn 164 163 166 12 (set (reg:DI 145 [ ivtmp.31 ])
+        (plus:DI (reg:DI 145 [ ivtmp.31 ])
+            (const_int 72 [0x48]))) -1
+     (nil))
+(jump_insn 166 164 167 12 (set (pc)
+        (label_ref 165)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:429 -1
+     (nil)
+ -> 165)
+(barrier 167 166 170)
+(code_label 170 167 171 14 8 "" [1 uses])
+(note 171 170 0 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+
+;; Function LCD_power_on (LCD_power_on, funcdef_no=1711, decl_uid=30237, cgraph_uid=1711)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 40 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 40 6 2 2 (set (reg:DI 74)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 40 3 2 (set (reg/v:SI 73 [ sel ])
+        (reg:SI 0 x0 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:96 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 74)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:96 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:96 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:97 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 1 x1)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:97 -1
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_power_enable") [flags 0x41]  <function_decl 0x2aad5d791d00 sunxi_lcd_power_enable>) [0 sunxi_lcd_power_enable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:97 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 11 10 12 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:98 -1
+     (nil))
+(call_insn 12 11 13 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:98 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:99 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 1 x1)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:99 -1
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_power_enable") [flags 0x41]  <function_decl 0x2aad5d791d00 sunxi_lcd_power_enable>) [0 sunxi_lcd_power_enable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:99 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 16 15 17 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:100 -1
+     (nil))
+(call_insn 17 16 18 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:100 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 18 17 19 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:101 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 1 x1)
+        (const_int 2 [0x2])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:101 -1
+     (nil))
+(call_insn 20 19 21 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("sunxi_lcd_power_enable") [flags 0x41]  <function_decl 0x2aad5d791d00 sunxi_lcd_power_enable>) [0 sunxi_lcd_power_enable S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:101 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+(insn 21 20 22 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:102 -1
+     (nil))
+(call_insn 22 21 23 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:102 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 23 22 24 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:103 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 1 x1)
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:103 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 2 x2)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:103 -1
+     (nil))
+(call_insn 26 25 27 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_gpio_set_value") [flags 0x41]  <function_decl 0x2aad5d799600 sunxi_lcd_gpio_set_value>) [0 sunxi_lcd_gpio_set_value S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:103 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 27 26 28 2 (set (reg:SI 0 x0)
+        (const_int 20 [0x14])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:104 -1
+     (nil))
+(call_insn 28 27 29 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:104 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 29 28 30 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:105 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 1 x1)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:105 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:SI 2 x2)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:105 -1
+     (nil))
+(call_insn 32 31 33 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_gpio_set_value") [flags 0x41]  <function_decl 0x2aad5d799600 sunxi_lcd_gpio_set_value>) [0 sunxi_lcd_gpio_set_value S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:105 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+                (nil)))))
+(insn 33 32 34 2 (set (reg:SI 0 x0)
+        (const_int 5 [0x5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:106 -1
+     (nil))
+(call_insn 34 33 35 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_delay_ms") [flags 0x41]  <function_decl 0x2aad5d791700 sunxi_lcd_delay_ms>) [0 sunxi_lcd_delay_ms S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:106 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 35 34 36 2 (set (reg:SI 0 x0)
+        (reg/v:SI 73 [ sel ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:107 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:SI 1 x1)
+        (const_int 1 [0x1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:107 -1
+     (nil))
+(call_insn 37 36 0 2 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sunxi_lcd_pin_cfg") [flags 0x41]  <function_decl 0x2aad5d799400 sunxi_lcd_pin_cfg>) [0 sunxi_lcd_pin_cfg S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:107 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 1 x1))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+            (nil))))
+
+;; Function LCD_cfg_panel_info (LCD_cfg_panel_info, funcdef_no=1708, decl_uid=30250, cgraph_uid=1708)
+
+Partition 1: size 96 align 8
+	lcd_cmap_tbl
+Partition 0: size 36 align 8
+	lcd_gamma_tbl
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 9 0 15 NOTE_INSN_DELETED)
+(note 15 9 226 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 226 15 10 2 (set (reg:DI 109)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 10 226 11 2 (set (reg/v/f:DI 108 [ info ])
+        (reg:DI 0 x0 [ info ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:18 -1
+     (nil))
+(note 11 10 12 2 NOTE_INSN_FUNCTION_BEG)
+(insn 12 11 13 2 (set (reg:DI 0 x0)
+        (reg:DI 109)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:18 -1
+     (nil))
+(call_insn 13 12 17 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:18 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 17 13 18 2 (set (reg:DI 110)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 111)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/j/c:QI (reg/f:DI 111) [0 lcd_gamma_tbl+0 S1 A64])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 112)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 21 20 22 2 (set (reg/f:DI 113)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 113)
+                (const_int 1 [0x1])) [0 lcd_gamma_tbl+1 S1 A8])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:DI 114)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 24 23 25 2 (set (reg/f:DI 115)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:QI 116)
+        (const_int 15 [0xf])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 26 25 27 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 115)
+                (const_int 2 [0x2])) [0 lcd_gamma_tbl+2 S1 A16])
+        (reg:QI 116)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 117)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 28 27 29 2 (set (reg/f:DI 118)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:QI 119)
+        (const_int 15 [0xf])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 30 29 31 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 118)
+                (const_int 3 [0x3])) [0 lcd_gamma_tbl+3 S1 A8])
+        (reg:QI 119)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 120)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 32 31 33 2 (set (reg/f:DI 121)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:QI 122)
+        (const_int 30 [0x1e])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 34 33 35 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 121)
+                (const_int 4 [0x4])) [0 lcd_gamma_tbl+4 S1 A32])
+        (reg:QI 122)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 123)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 36 35 37 2 (set (reg/f:DI 124)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:QI 125)
+        (const_int 30 [0x1e])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 38 37 39 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 124)
+                (const_int 5 [0x5])) [0 lcd_gamma_tbl+5 S1 A8])
+        (reg:QI 125)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:DI 126)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 40 39 41 2 (set (reg/f:DI 127)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:QI 128)
+        (const_int 45 [0x2d])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 42 41 43 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 127)
+                (const_int 6 [0x6])) [0 lcd_gamma_tbl+6 S1 A16])
+        (reg:QI 128)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:DI 129)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 44 43 45 2 (set (reg/f:DI 130)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 45 44 46 2 (set (reg:QI 131)
+        (const_int 45 [0x2d])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 46 45 47 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 130)
+                (const_int 7 [0x7])) [0 lcd_gamma_tbl+7 S1 A8])
+        (reg:QI 131)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 47 46 48 2 (set (reg:DI 132)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 48 47 49 2 (set (reg/f:DI 133)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 49 48 50 2 (set (reg:QI 134)
+        (const_int 60 [0x3c])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 50 49 51 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 133)
+                (const_int 8 [0x8])) [0 lcd_gamma_tbl+8 S1 A64])
+        (reg:QI 134)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:DI 135)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 52 51 53 2 (set (reg/f:DI 136)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 53 52 54 2 (set (reg:QI 137)
+        (const_int 60 [0x3c])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 54 53 55 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 136)
+                (const_int 9 [0x9])) [0 lcd_gamma_tbl+9 S1 A8])
+        (reg:QI 137)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 55 54 56 2 (set (reg:DI 138)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 56 55 57 2 (set (reg/f:DI 139)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 57 56 58 2 (set (reg:QI 140)
+        (const_int 75 [0x4b])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 58 57 59 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 139)
+                (const_int 10 [0xa])) [0 lcd_gamma_tbl+10 S1 A16])
+        (reg:QI 140)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 59 58 60 2 (set (reg:DI 141)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 60 59 61 2 (set (reg/f:DI 142)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 61 60 62 2 (set (reg:QI 143)
+        (const_int 75 [0x4b])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 62 61 63 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 142)
+                (const_int 11 [0xb])) [0 lcd_gamma_tbl+11 S1 A8])
+        (reg:QI 143)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 63 62 64 2 (set (reg:DI 144)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 64 63 65 2 (set (reg/f:DI 145)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 65 64 66 2 (set (reg:QI 146)
+        (const_int 90 [0x5a])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 66 65 67 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 145)
+                (const_int 12 [0xc])) [0 lcd_gamma_tbl+12 S1 A32])
+        (reg:QI 146)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 67 66 68 2 (set (reg:DI 147)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 68 67 69 2 (set (reg/f:DI 148)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 69 68 70 2 (set (reg:QI 149)
+        (const_int 90 [0x5a])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 70 69 71 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 148)
+                (const_int 13 [0xd])) [0 lcd_gamma_tbl+13 S1 A8])
+        (reg:QI 149)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 71 70 72 2 (set (reg:DI 150)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 72 71 73 2 (set (reg/f:DI 151)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 73 72 74 2 (set (reg:QI 152)
+        (const_int 105 [0x69])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 74 73 75 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 151)
+                (const_int 14 [0xe])) [0 lcd_gamma_tbl+14 S1 A16])
+        (reg:QI 152)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 75 74 76 2 (set (reg:DI 153)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 76 75 77 2 (set (reg/f:DI 154)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 77 76 78 2 (set (reg:QI 155)
+        (const_int 105 [0x69])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 78 77 79 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 154)
+                (const_int 15 [0xf])) [0 lcd_gamma_tbl+15 S1 A8])
+        (reg:QI 155)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 79 78 80 2 (set (reg:DI 156)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 80 79 81 2 (set (reg/f:DI 157)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 81 80 82 2 (set (reg:QI 158)
+        (const_int 120 [0x78])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 82 81 83 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 157)
+                (const_int 16 [0x10])) [0 lcd_gamma_tbl+16 S1 A64])
+        (reg:QI 158)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 83 82 84 2 (set (reg:DI 159)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 84 83 85 2 (set (reg/f:DI 160)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 85 84 86 2 (set (reg:QI 161)
+        (const_int 120 [0x78])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 86 85 87 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 160)
+                (const_int 17 [0x11])) [0 lcd_gamma_tbl+17 S1 A8])
+        (reg:QI 161)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 87 86 88 2 (set (reg:DI 162)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 88 87 89 2 (set (reg/f:DI 163)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 89 88 90 2 (set (reg:QI 164)
+        (const_int -121 [0xffffffffffffff87])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 90 89 91 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 163)
+                (const_int 18 [0x12])) [0 lcd_gamma_tbl+18 S1 A16])
+        (reg:QI 164)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 91 90 92 2 (set (reg:DI 165)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 92 91 93 2 (set (reg/f:DI 166)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 93 92 94 2 (set (reg:QI 167)
+        (const_int -121 [0xffffffffffffff87])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 94 93 95 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 166)
+                (const_int 19 [0x13])) [0 lcd_gamma_tbl+19 S1 A8])
+        (reg:QI 167)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 95 94 96 2 (set (reg:DI 168)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 96 95 97 2 (set (reg/f:DI 169)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 97 96 98 2 (set (reg:QI 170)
+        (const_int -106 [0xffffffffffffff96])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 98 97 99 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 169)
+                (const_int 20 [0x14])) [0 lcd_gamma_tbl+20 S1 A32])
+        (reg:QI 170)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 99 98 100 2 (set (reg:DI 171)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 100 99 101 2 (set (reg/f:DI 172)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 101 100 102 2 (set (reg:QI 173)
+        (const_int -106 [0xffffffffffffff96])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 102 101 103 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 172)
+                (const_int 21 [0x15])) [0 lcd_gamma_tbl+21 S1 A8])
+        (reg:QI 173)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 103 102 104 2 (set (reg:DI 174)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 104 103 105 2 (set (reg/f:DI 175)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 105 104 106 2 (set (reg:QI 176)
+        (const_int -91 [0xffffffffffffffa5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 106 105 107 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 175)
+                (const_int 22 [0x16])) [0 lcd_gamma_tbl+22 S1 A16])
+        (reg:QI 176)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 107 106 108 2 (set (reg:DI 177)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 108 107 109 2 (set (reg/f:DI 178)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 109 108 110 2 (set (reg:QI 179)
+        (const_int -91 [0xffffffffffffffa5])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 110 109 111 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 178)
+                (const_int 23 [0x17])) [0 lcd_gamma_tbl+23 S1 A8])
+        (reg:QI 179)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 111 110 112 2 (set (reg:DI 180)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 112 111 113 2 (set (reg/f:DI 181)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 113 112 114 2 (set (reg:QI 182)
+        (const_int -76 [0xffffffffffffffb4])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 114 113 115 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 181)
+                (const_int 24 [0x18])) [0 lcd_gamma_tbl+24 S1 A64])
+        (reg:QI 182)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 115 114 116 2 (set (reg:DI 183)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 116 115 117 2 (set (reg/f:DI 184)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 117 116 118 2 (set (reg:QI 185)
+        (const_int -76 [0xffffffffffffffb4])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 118 117 119 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 184)
+                (const_int 25 [0x19])) [0 lcd_gamma_tbl+25 S1 A8])
+        (reg:QI 185)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 119 118 120 2 (set (reg:DI 186)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 120 119 121 2 (set (reg/f:DI 187)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 121 120 122 2 (set (reg:QI 188)
+        (const_int -61 [0xffffffffffffffc3])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 122 121 123 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 187)
+                (const_int 26 [0x1a])) [0 lcd_gamma_tbl+26 S1 A16])
+        (reg:QI 188)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 123 122 124 2 (set (reg:DI 189)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 124 123 125 2 (set (reg/f:DI 190)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 125 124 126 2 (set (reg:QI 191)
+        (const_int -61 [0xffffffffffffffc3])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 126 125 127 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 190)
+                (const_int 27 [0x1b])) [0 lcd_gamma_tbl+27 S1 A8])
+        (reg:QI 191)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 127 126 128 2 (set (reg:DI 192)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 128 127 129 2 (set (reg/f:DI 193)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 129 128 130 2 (set (reg:QI 194)
+        (const_int -46 [0xffffffffffffffd2])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 130 129 131 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 193)
+                (const_int 28 [0x1c])) [0 lcd_gamma_tbl+28 S1 A32])
+        (reg:QI 194)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 131 130 132 2 (set (reg:DI 195)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 132 131 133 2 (set (reg/f:DI 196)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 133 132 134 2 (set (reg:QI 197)
+        (const_int -46 [0xffffffffffffffd2])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 134 133 135 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 196)
+                (const_int 29 [0x1d])) [0 lcd_gamma_tbl+29 S1 A8])
+        (reg:QI 197)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 135 134 136 2 (set (reg:DI 198)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 136 135 137 2 (set (reg/f:DI 199)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 137 136 138 2 (set (reg:QI 200)
+        (const_int -31 [0xffffffffffffffe1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 138 137 139 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 199)
+                (const_int 30 [0x1e])) [0 lcd_gamma_tbl+30 S1 A16])
+        (reg:QI 200)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 139 138 140 2 (set (reg:DI 201)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 140 139 141 2 (set (reg/f:DI 202)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 141 140 142 2 (set (reg:QI 203)
+        (const_int -31 [0xffffffffffffffe1])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 142 141 143 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 202)
+                (const_int 31 [0x1f])) [0 lcd_gamma_tbl+31 S1 A8])
+        (reg:QI 203)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 143 142 144 2 (set (reg:DI 204)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 144 143 145 2 (set (reg/f:DI 205)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 145 144 146 2 (set (reg:QI 206)
+        (const_int -16 [0xfffffffffffffff0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 146 145 147 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 205)
+                (const_int 32 [0x20])) [0 lcd_gamma_tbl+32 S1 A64])
+        (reg:QI 206)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 147 146 148 2 (set (reg:DI 207)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 148 147 149 2 (set (reg/f:DI 208)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 149 148 150 2 (set (reg:QI 209)
+        (const_int -16 [0xfffffffffffffff0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 150 149 151 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 208)
+                (const_int 33 [0x21])) [0 lcd_gamma_tbl+33 S1 A8])
+        (reg:QI 209)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 151 150 152 2 (set (reg:DI 210)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 152 151 153 2 (set (reg/f:DI 211)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 153 152 154 2 (set (reg:QI 212)
+        (const_int -1 [0xffffffffffffffff])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 154 153 155 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 211)
+                (const_int 34 [0x22])) [0 lcd_gamma_tbl+34 S1 A16])
+        (reg:QI 212)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 155 154 156 2 (set (reg:DI 213)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 156 155 157 2 (set (reg/f:DI 214)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 157 156 158 2 (set (reg:QI 215)
+        (const_int -1 [0xffffffffffffffff])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 158 157 159 2 (set (mem/j/c:QI (plus:DI (reg/f:DI 214)
+                (const_int 35 [0x23])) [0 lcd_gamma_tbl+35 S1 A8])
+        (reg:QI 215)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:21 -1
+     (nil))
+(insn 159 158 160 2 (set (reg:DI 216)
+        (reg/f:DI 68 virtual-stack-vars)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 160 159 161 2 (set (reg/f:DI 217)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -96 [0xffffffffffffffa0]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 161 160 162 2 (set (reg:DI 219)
+        (high:DI (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 162 161 163 2 (set (reg/f:DI 218)
+        (lo_sum:DI (reg:DI 219)
+            (symbol_ref:DI ("*.LANCHOR1") [flags 0x182]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR1") [flags 0x182])
+        (nil)))
+(insn 163 162 164 2 (set (reg:DI 220)
+        (reg/f:DI 217)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 164 163 165 2 (set (reg:DI 221)
+        (reg/f:DI 218)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 165 164 166 2 (set (reg:DI 222)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 166 165 167 2 (set (reg:DI 0 x0)
+        (reg:DI 220)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 167 166 168 2 (set (reg:DI 1 x1)
+        (reg:DI 221)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 168 167 169 2 (set (reg:DI 2 x2)
+        (reg:DI 222)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(call_insn 169 168 170 2 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2aad5d853100 memcpy>) [0 memcpy S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (set (reg:DI 0 x0)
+            (reg:DI 0 x0))
+        (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+            (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(insn 170 169 171 2 (set (reg:DI 223)
+        (reg:DI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:44 -1
+     (nil))
+(insn 171 170 172 2 (set (reg:DI 105 [ ivtmp.55 ])
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -136 [0xffffffffffffff78]))) -1
+     (nil))
+(insn 172 171 207 2 (set (reg:DI 107 [ D.30458 ])
+        (plus:DI (reg:DI 105 [ ivtmp.55 ])
+            (const_int 34 [0x22]))) -1
+     (nil))
+(code_label 207 172 173 4 21 "" [1 uses])
+(note 173 207 174 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 174 173 175 4 (set (reg/f:DI 106 [ D.30457 ])
+        (reg:DI 105 [ ivtmp.55 ])) -1
+     (nil))
+(insn 175 174 176 4 (set (reg:SI 84 [ D.30453 ])
+        (zero_extend:SI (mem:QI (reg/f:DI 106 [ D.30457 ]) [0 MEM[base: _82, offset: 0B]+0 S1 A8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:59 -1
+     (nil))
+(insn 176 175 177 4 (set (reg:SI 224 [ D.30454 ])
+        (zero_extend:SI (mem:QI (plus:DI (reg/f:DI 106 [ D.30457 ])
+                    (const_int 2 [0x2])) [0 MEM[base: _82, offset: 2B]+0 S1 A8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:59 -1
+     (nil))
+(insn 177 176 14 4 (set (reg/v:SI 87 [ num ])
+        (minus:SI (reg:SI 224 [ D.30454 ])
+            (reg:SI 84 [ D.30453 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:59 -1
+     (nil))
+(insn 14 177 178 4 (set (reg/v:SI 81 [ j ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:61 -1
+     (nil))
+(jump_insn 178 14 179 4 (set (pc)
+        (label_ref 197)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:61 -1
+     (nil)
+ -> 197)
+(barrier 179 178 199)
+(code_label 199 179 180 5 19 "" [1 uses])
+(note 180 199 181 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 181 180 182 5 (set (reg:SI 88 [ D.30453 ])
+        (zero_extend:SI (mem:QI (plus:DI (reg/f:DI 106 [ D.30457 ])
+                    (const_int 1 [0x1])) [0 MEM[base: _82, offset: 1B]+0 S1 A8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:64 -1
+     (nil))
+(insn 182 181 183 5 (set (reg:SI 225 [ D.30454 ])
+        (zero_extend:SI (mem:QI (plus:DI (reg/f:DI 106 [ D.30457 ])
+                    (const_int 3 [0x3])) [0 MEM[base: _82, offset: 3B]+0 S1 A8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:64 -1
+     (nil))
+(insn 183 182 184 5 (set (reg:SI 226 [ D.30454 ])
+        (minus:SI (reg:SI 225 [ D.30454 ])
+            (reg:SI 88 [ D.30453 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:64 -1
+     (nil))
+(insn 184 183 185 5 (set (reg:SI 227 [ D.30455 ])
+        (mult:SI (reg/v:SI 81 [ j ])
+            (reg:SI 226 [ D.30454 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:64 -1
+     (nil))
+(insn 185 184 186 5 (set (reg:SI 229 [ D.30455 ])
+        (udiv:SI (reg:SI 227 [ D.30455 ])
+            (reg/v:SI 87 [ num ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:64 -1
+     (nil))
+(insn 186 185 187 5 (set (reg/v:SI 97 [ value ])
+        (plus:SI (reg:SI 229 [ D.30455 ])
+            (reg:SI 88 [ D.30453 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:64 -1
+     (nil))
+(insn 187 186 188 5 (set (reg:SI 230 [ D.30455 ])
+        (plus:SI (reg/v:SI 81 [ j ])
+            (reg:SI 84 [ D.30453 ]))) -1
+     (nil))
+(insn 188 187 189 5 (set (reg:DI 231)
+        (zero_extend:DI (reg:SI 230 [ D.30455 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 189 188 190 5 (set (reg:DI 233)
+        (ashift:DI (reg:DI 231)
+            (const_int 2 [0x2]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 190 189 191 5 (set (reg/f:DI 232)
+        (plus:DI (reg/v/f:DI 108 [ info ])
+            (reg:DI 233))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 191 190 192 5 (set (reg:SI 234 [ D.30455 ])
+        (ashift:SI (reg/v:SI 97 [ value ])
+            (const_int 16 [0x10]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 192 191 193 5 (set (reg:SI 235 [ D.30455 ])
+        (ashift:SI (reg/v:SI 97 [ value ])
+            (const_int 8 [0x8]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 193 192 194 5 (set (reg:SI 236 [ D.30455 ])
+        (plus:SI (reg:SI 234 [ D.30455 ])
+            (reg:SI 235 [ D.30455 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 194 193 195 5 (set (reg:SI 237 [ D.30455 ])
+        (plus:SI (reg:SI 236 [ D.30455 ])
+            (reg/v:SI 97 [ value ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 195 194 196 5 (set (mem/j:SI (plus:DI (reg/f:DI 232)
+                (const_int 4 [0x4])) [0 info_66(D)->lcd_gamma_tbl S4 A32])
+        (reg:SI 237 [ D.30455 ])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:65 -1
+     (nil))
+(insn 196 195 197 5 (set (reg/v:SI 81 [ j ])
+        (plus:SI (reg/v:SI 81 [ j ])
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:61 -1
+     (nil))
+(code_label 197 196 198 6 18 "" [1 uses])
+(note 198 197 200 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 200 198 201 6 (set (reg:CC 66 cc)
+        (compare:CC (reg/v:SI 81 [ j ])
+            (reg/v:SI 87 [ num ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:61 -1
+     (nil))
+(jump_insn 201 200 202 6 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 199)
+            (pc))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:61 -1
+     (expr_list:REG_BR_PROB (const_int 9900 [0x26ac])
+        (nil))
+ -> 199)
+(note 202 201 203 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 203 202 204 7 (set (reg:DI 105 [ ivtmp.55 ])
+        (plus:DI (reg:DI 105 [ ivtmp.55 ])
+            (const_int 2 [0x2]))) -1
+     (nil))
+(insn 204 203 205 7 (set (reg:CC 66 cc)
+        (compare:CC (reg:DI 105 [ ivtmp.55 ])
+            (reg:DI 107 [ D.30458 ]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:58 -1
+     (nil))
+(jump_insn 205 204 206 7 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref 210)
+            (pc))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:58 -1
+     (expr_list:REG_BR_PROB (const_int 589 [0x24d])
+        (nil))
+ -> 210)
+(note 206 205 208 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 208 206 209 8 (set (pc)
+        (label_ref 207)) -1
+     (nil)
+ -> 207)
+(barrier 209 208 210)
+(code_label 210 209 211 9 20 "" [1 uses])
+(note 211 210 212 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 212 211 213 9 (set (reg:SI 238)
+        (const_int 16777215 [0xffffff])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:68 -1
+     (nil))
+(insn 213 212 214 9 (set (mem/j:SI (plus:DI (reg/v/f:DI 108 [ info ])
+                (const_int 1024 [0x400])) [0 info_66(D)->lcd_gamma_tbl+1020 S4 A32])
+        (reg:SI 238)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:68 -1
+     (nil))
+(insn 214 213 215 9 (set (reg:DI 239)
+        (plus:DI (reg/v/f:DI 108 [ info ])
+            (const_int 1032 [0x408]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 215 214 216 9 (set (reg:DI 240)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -96 [0xffffffffffffffa0]))) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 216 215 217 9 (set (reg:DI 241)
+        (reg:DI 239)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 217 216 218 9 (set (reg:DI 242)
+        (reg:DI 240)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 218 217 219 9 (set (reg:DI 243)
+        (const_int 96 [0x60])) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 219 218 220 9 (set (reg:DI 0 x0)
+        (reg:DI 241)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 220 219 221 9 (set (reg:DI 1 x1)
+        (reg:DI 242)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(insn 221 220 222 9 (set (reg:DI 2 x2)
+        (reg:DI 243)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))
+(call_insn 222 221 223 9 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2aad5d853100 memcpy>) [0 memcpy S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (set (reg:DI 0 x0)
+            (reg:DI 0 x0))
+        (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+            (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(insn 223 222 0 9 (set (reg:DI 244)
+        (reg:DI 0 x0)) drivers/video/sunxi/disp2/disp/lcd/inet_dsi_panel.c:70 -1
+     (nil))

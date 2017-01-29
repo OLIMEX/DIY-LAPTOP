@@ -1,0 +1,12 @@
+#
+#  Touchscreen driver configuration
+#
+
+config  TOUCHSCREEN_GT911_TS
+       tristate  "gt911 touchscreen driver"      
+       depends on INPUT && I2C
+	   depends on ARCH_SUN8IW8
+       default m
+       help
+         gt911 touchscreen driver    
+

@@ -1,0 +1,10 @@
+#
+#  Touchscreen tu_ts driver configuration
+#
+
+config TOUCHSCREEN_TU_TS
+       tristate  "tu_ts touchscreen driver"
+       default m
+       depends on INPUT && I2C
+       help
+         BCD touchscreen driver

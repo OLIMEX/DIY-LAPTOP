@@ -1,0 +1,6 @@
+config CRYPTO_SUNXI
+	tristate "SUNXI SS controller"
+	depends on ARCH_SUNXI
+	help
+	  To compile this driver as a module, choose M here: the module
+	  will be called caam.
