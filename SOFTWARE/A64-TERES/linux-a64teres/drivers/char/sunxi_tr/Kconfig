@@ -1,9 +1,0 @@
-#
-# Transform configuration for sunxi platform
-#
-
-config SUNXI_TRANSFORM
-  tristate "Transform Driver Support(sunxi)"
-  default n
-  ---help---
-

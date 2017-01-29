@@ -1,1 +1,0 @@
-obj-y := clk_sun50iw1.o clk_factor.o clk_periph.o clk.o clk_fixed_rate.o
