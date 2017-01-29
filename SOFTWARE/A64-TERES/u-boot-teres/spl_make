@@ -1,0 +1,85 @@
+
+OBJTREE		:= $(if $(BUILD_DIR),$(BUILD_DIR),$(CURDIR))
+SPLDIR		:= $(OBJTREE)/sunxi_spl
+SRCTREE		:= $(CURDIR)
+TOPDIR		:= $(SRCTREE)
+LNDIR		:= $(OBJTREE)
+export	TOPDIR SRCTREE OBJTREE SPLDIR
+
+include $(SPLDIR)/config.mk
+include $(TOPDIR)/include/autoconf.mk
+include $(TOPDIR)/include/autoconf.mk.dep
+
+
+export ARCH CPU BOARD SOC
+
+MAKEFLAGS +=  --no-print-directory
+include $(SPLDIR)/config.mk
+
+all:
+
+
+spl_lib: $(TIMESTAMP_FILE) $(VERSION_FILE)
+		@echo $(ARCH) $(CPU) $(BOARD) $(SOC)
+		@echo nand=$(CONFIG_STORAGE_MEDIA_NAND) mmc=$(CONFIG_STORAGE_MEDIA_MMC) nor=$(CONFIG_STORAGE_MEDIA_SPINOR)
+		$(MAKE)  -C  sunxi_spl/spl all
+
+fes:
+		$(MAKE) -C sunxi_spl/fes_init all
+		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/fes_init/fes1.bin fes1_$(CONFIG_TARGET_NAME).bin > /dev/null
+		@cp -v fes1_$(CONFIG_TARGET_NAME).bin $(TOPDIR)/../../tools/pack/chips/$(CONFIG_TARGET_NAME)/bin/fes1_$(CONFIG_TARGET_NAME).bin
+
+boot0:
+		$(MAKE)  -C  sunxi_spl/boot0 all
+ifdef CONFIG_STORAGE_MEDIA_NAND
+		@git show HEAD --pretty=format:"%H" | head -n 1 > cur.log
+		@../add_hash.sh -f sunxi_spl/boot0/boot0_nand.bin -m boot0
+		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/boot0/boot0_nand.bin boot0_nand_$(CONFIG_TARGET_NAME).bin > /dev/null
+		@cp -v boot0_nand_$(CONFIG_TARGET_NAME).bin $(TOPDIR)/../../tools/pack/chips/$(CONFIG_TARGET_NAME)/bin/boot0_nand_$(CONFIG_TARGET_NAME).bin
+endif
+ifdef CONFIG_STORAGE_MEDIA_MMC
+		@git show HEAD --pretty=format:"%H" | head -n 1 > cur.log
+		@../add_hash.sh -f sunxi_spl/boot0/boot0_sdcard.bin -m boot0
+		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/boot0/boot0_sdcard.bin boot0_sdcard_$(CONFIG_TARGET_NAME).bin > /dev/null
+		@cp -v boot0_sdcard_$(CONFIG_TARGET_NAME).bin $(TOPDIR)/../../tools/pack/chips/$(CONFIG_TARGET_NAME)/bin/boot0_sdcard_$(CONFIG_TARGET_NAME).bin
+endif
+ifdef CONFIG_STORAGE_MEDIA_SPINOR
+		@git show HEAD --pretty=format:"%H" | head -n 1 > cur.log
+		@../add_hash.sh -f sunxi_spl/boot0/boot0_spinor.bin -m boot0
+		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/boot0/boot0_spinor.bin boot0_spinor_$(CONFIG_TARGET_NAME).bin > /dev/null
+		@cp -v boot0_spinor_$(CONFIG_TARGET_NAME).bin $(TOPDIR)/../../tools/pack/chips/$(CONFIG_TARGET_NAME)/bin/boot0_spinor_$(CONFIG_TARGET_NAME).bin
+endif
+sboot:
+		$(MAKE) -C sunxi_spl/sbrom all
+		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/sbrom/sboot.bin sboot_$(CONFIG_TARGET_NAME).bin > /dev/null
+		@cp -v sboot_$(CONFIG_TARGET_NAME).bin $(TOPDIR)/../../tools/pack/chips/$(CONFIG_TARGET_NAME)/bin/sboot_$(CONFIG_TARGET_NAME).bin
+
+ifeq ($(CONFIG_SUNXI_SECURE_SYSTEM),y)
+spl:    fes boot0 sboot
+else
+spl:    fes boot0
+endif
+
+
+
+mkdepend :
+
+
+depend:
+
+#
+# Auto-generate the autoconf.mk file (which is included by all makefiles)
+#
+# This target actually generates 2 files; autoconf.mk and autoconf.mk.dep.
+# the dep file is only include in this top level makefile to determine when
+# to regenerate the autoconf.mk file.
+
+
+$(SPLDIR)/autoconf.mk: $(obj)include/config.h $(obj)include/configs/$(SOC).h
+	@echo Generating $@ ; \
+    set -e ; \
+    : Extract the config macros ; \
+    $(CPP) $(ALL_CFLAGS) -DDO_DEPS_ONLY -dM $(SRCTREE)/include/common.h > $@.tmp && \
+	sed -n -f $(SRCTREE)/tools/scripts/define2mk.sed $@.tmp > $@; \
+	rm $@.tmp
+
