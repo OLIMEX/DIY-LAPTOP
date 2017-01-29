@@ -1,0 +1,11 @@
+#
+# sunxi arisc driver configuration.
+#
+config SUNXI_ARISC
+	tristate "sunxi arisc driver"
+	depends on ARCH_SUNXI && HWSPINLOCK_SUNXI
+	help
+	  Arisc driver support sunxi family SOCs.
+	  Previously known as "ar100" or "cpus".
+	  Set y here to support the sunxi arisc driver.
+	  If unsure, set N.

@@ -1,0 +1,64 @@
+menu "Allwinner SOC PINCTRL DRIVER"
+	depends on ARCH_SUNXI
+config PINCTRL_SUNXI_COMMON
+	bool
+	select PINMUX
+	select GENERIC_PINCONF
+
+config PINCTRL_SUNXI_TEST
+	tristate "pinctrl sunxi test driver"
+	default m
+
+config PINCTRL_SUN4I_A10
+	def_bool MACH_SUN4I
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN5I_A10S
+	def_bool MACH_SUN5I
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN5I_A13
+	def_bool MACH_SUN5I
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN6I_A31
+	def_bool MACH_SUN6I
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN6I_A31_R
+	def_bool MACH_SUN6I
+	depends on RESET_CONTROLLER
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN7I_A20
+	def_bool MACH_SUN7I
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN8I_A23
+	def_bool MACH_SUN8I
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN8I_A23_R
+	def_bool MACH_SUN8I
+	depends on RESET_CONTROLLER
+	select PINCTRL_SUNXI_COMMON
+
+config PINCTRL_SUN8IW10P1
+	def_bool ARCH_SUN8IW10
+        bool "Pinctrl sun8iw10p1 PIO controller"
+	select PINCTRL_SUNXI_COMMON
+	
+config PINCTRL_SUN8IW11P1
+	def_bool ARCH_SUN8IW11
+	depends on ARCH_SUN8IW11
+	bool "Pinctrl sun8iw11p1 PIO controller"
+	select PINCTRL_SUNXI_COMMON
+	
+config PINCTRL_SUN50IW1P1
+        bool "Pinctrl sun50i PIO controller"
+	select PINCTRL_SUNXI_COMMON
+config PINCTRL_SUN50IW1P1_R
+        bool "Pinctrl sun50i R_PIO controller"
+	#depends on RESET_CONTROLLER
+	select PINCTRL_SUNXI_COMMON
+endmenu

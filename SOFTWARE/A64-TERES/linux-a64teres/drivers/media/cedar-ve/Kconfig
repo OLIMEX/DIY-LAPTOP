@@ -1,0 +1,8 @@
+config VIDEO_ENCODER_DECODER_SUNXI
+	tristate "sunxi video encoder and decoder support"
+	default y
+	---help---
+	  This is the driver for sunxi video decoder, including h264/
+	  mpeg4/mpeg2/vc1/rmvb. 
+	  To compile this driver as a module, choose M here: the
+	  module will be called cedar_dev.

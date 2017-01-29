@@ -1,0 +1,1266 @@
+
+;; Function disp_delay_ms (disp_delay_ms, funcdef_no=1708, decl_uid=29757, cgraph_uid=1708)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 30 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 30 6 2 2 (set (reg:DI 82)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 30 3 2 (set (reg/v:SI 81 [ ms ])
+        (reg:SI 0 x0 [ ms ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:4 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 82)) drivers/video/sunxi/disp2/disp/de/disp_private.c:4 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:4 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:SI 0 x0)
+        (reg/v:SI 81 [ ms ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:6 -1
+     (nil))
+(call_insn 9 8 10 2 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("msecs_to_jiffies") [flags 0x41]  <function_decl 0x2aeffc82f400 msecs_to_jiffies>) [0 msecs_to_jiffies S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:6 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 0 x0))
+        (nil)))
+(insn 10 9 11 2 (set (reg:DI 73 [ D.29939 ])
+        (reg:DI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:6 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 77 [ current_stack_pointer.0 ])
+        (reg/v:DI 31 sp [ current_stack_pointer ])) /home/hehopmajieh/olinuxino/a64/rel1/new_/linux-a64olinuxino/arch/arm64/include/asm/thread_info.h:84 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 83 [ D.29939 ])
+        (and:DI (reg:DI 77 [ current_stack_pointer.0 ])
+            (const_int -16384 [0xffffffffffffc000]))) /home/hehopmajieh/olinuxino/a64/rel1/new_/linux-a64olinuxino/arch/arm64/include/asm/thread_info.h:84 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 74 [ D.29940 ])
+        (mem/f/j:DI (plus:DI (reg:DI 83 [ D.29939 ])
+                (const_int 16 [0x10])) [0 _13->task+0 S8 A128])) drivers/video/sunxi/disp2/disp/de/disp_private.c:8 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 84)
+        (const_int 2 [0x2])) drivers/video/sunxi/disp2/disp/de/disp_private.c:8 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/v/j:DI (reg/f:DI 74 [ D.29940 ]) [0 _5->state+0 S8 A128])
+        (reg:DI 84)) drivers/video/sunxi/disp2/disp/de/disp_private.c:8 -1
+     (nil))
+(insn 16 15 17 2 (parallel [
+            (asm_operands/v ("dmb ish") ("") 0 []
+                 []
+                 [] drivers/video/sunxi/disp2/disp/de/disp_private.c:8)
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:8 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 85 [ D.29939 ])
+        (and:DI (reg:DI 73 [ D.29939 ])
+            (const_int 4294967295 [0xffffffff]))) -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 0 x0)
+        (reg:DI 85 [ D.29939 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:9 -1
+     (nil))
+(call_insn 19 18 20 2 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("schedule_timeout") [flags 0x41]  <function_decl 0x2aeffcd6f700 schedule_timeout>) [0 schedule_timeout S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:9 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(insn 20 19 24 2 (set (reg:SI 80 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/disp_private.c:17 -1
+     (nil))
+(insn 24 20 27 2 (set (reg/i:SI 0 x0)
+        (reg:SI 80 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:18 -1
+     (nil))
+(insn 27 24 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:18 -1
+     (nil))
+
+;; Function disp_delay_us (disp_delay_us, funcdef_no=1709, decl_uid=29759, cgraph_uid=1709)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 21 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 21 6 2 2 (set (reg:DI 76)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 21 3 2 (set (reg/v:SI 75 [ us ])
+        (reg:SI 0 x0 [ us ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:22 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 76)) drivers/video/sunxi/disp2/disp/de/disp_private.c:22 -1
+     (nil))
+(call_insn 5 4 8 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:22 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 8 5 9 2 (set (reg:DI 77 [ D.29945 ])
+        (zero_extend:DI (reg/v:SI 75 [ us ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:24 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 0 x0)
+        (reg:DI 77 [ D.29945 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:24 -1
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("__udelay") [flags 0x41]  <function_decl 0x2aeffd688c00 __udelay>) [0 __udelay S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:24 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+        (nil)))
+(insn 11 10 15 2 (set (reg:SI 74 [ <retval> ])
+        (const_int 0 [0])) drivers/video/sunxi/disp2/disp/de/disp_private.c:34 -1
+     (nil))
+(insn 15 11 18 2 (set (reg/i:SI 0 x0)
+        (reg:SI 74 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:35 -1
+     (nil))
+(insn 18 15 0 2 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:35 -1
+     (nil))
+
+;; Function dump_layer_config (dump_layer_config, funcdef_no=1710, decl_uid=29811, cgraph_uid=1710)
+
+Partition 0: size 512 align 8
+	buf
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Edge 2->4 redirected to 13
+Edge 4->6 redirected to 14
+Edge 6->8 redirected to 15
+Edge 8->10 redirected to 16
+deleting block 12
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 22 NOTE_INSN_DELETED)
+(note 22 1 264 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 264 22 2 2 (set (reg:DI 177)
+        (reg:DI 30 x30)) -1
+     (nil))
+(insn 2 264 3 2 (set (reg/v/f:DI 176 [ data ])
+        (reg:DI 0 x0 [ data ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:38 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg:DI 0 x0)
+        (reg:DI 177)) drivers/video/sunxi/disp2/disp/de/disp_private.c:38 -1
+     (nil))
+(call_insn 5 4 24 2 (parallel [
+            (call (mem:DI (symbol_ref:DI ("_mcount")) [0  S8 A8])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:38 -1
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:DI 0 x0))
+        (nil)))
+(insn 24 5 25 2 (set (reg:SI 186)
+        (mem/j:SI (reg/v/f:DI 176 [ data ]) [0 data_6(D)->config.info.mode+0 S4 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 186)
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(jump_insn 26 25 27 2 (set (pc)
+        (if_then_else (ne (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref:DI 250)
+            (pc))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 3 {*condjump}
+     (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+        (nil))
+ -> 250)
+(note 27 26 6 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 6 27 7 4 (set (reg:DI 178)
+        (high:DI (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2aeffdb34e40 *.LC0>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 7 6 247 4 (set (reg/f:DI 73 [ iftmp.1 ])
+        (lo_sum:DI (reg:DI 178)
+            (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2aeffdb34e40 *.LC0>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x82]  <var_decl 0x2aeffdb34e40 *.LC0>)
+        (nil)))
+(jump_insn 247 7 248 4 (set (pc)
+        (label_ref 28)) -1
+     (nil)
+ -> 28)
+(barrier 248 247 250)
+(code_label 250 248 249 5 8 "" [1 uses])
+(note 249 250 8 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 8 249 9 5 (set (reg:DI 179)
+        (high:DI (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2aeffdb34ed8 *.LC1>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 9 8 28 5 (set (reg/f:DI 73 [ iftmp.1 ])
+        (lo_sum:DI (reg:DI 179)
+            (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2aeffdb34ed8 *.LC1>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x82]  <var_decl 0x2aeffdb34ed8 *.LC1>)
+        (nil)))
+(code_label 28 9 29 6 4 "" [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:DI 187)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:DI 189)
+        (high:DI (symbol_ref/f:DI ("*.LC8") [flags 0x82]  <var_decl 0x2aeffdb4f390 *.LC8>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 32 31 33 6 (set (reg/f:DI 188)
+        (lo_sum:DI (reg:DI 189)
+            (symbol_ref/f:DI ("*.LC8") [flags 0x82]  <var_decl 0x2aeffdb4f390 *.LC8>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC8") [flags 0x82]  <var_decl 0x2aeffdb4f390 *.LC8>)
+        (nil)))
+(insn 33 32 34 6 (set (reg:DI 0 x0)
+        (reg:DI 187)) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:DI 1 x1)
+        (reg/f:DI 188)) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:DI 2 x2)
+        (reg/f:DI 73 [ iftmp.1 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(call_insn 36 35 37 6 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 37 36 38 6 (set (reg:SI 78 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 79 [ D.29950 ])
+        (reg:SI 78 [ D.29949 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:42 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 190)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:DI 191 [ D.29951 ])
+        (zero_extend:DI (reg:SI 79 [ D.29950 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 41 40 42 6 (set (reg/f:DI 81 [ D.29952 ])
+        (plus:DI (reg:DI 190)
+            (reg:DI 191 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 42 41 43 6 (set (reg:SI 192)
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/v/f:DI 176 [ data ])
+                    (const_int 168 [0xa8])) [0 data_6(D)->config.enable+0 S1 A64]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 192)
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(jump_insn 44 43 45 6 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref:DI 254)
+            (pc))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 3 {*condjump}
+     (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+        (nil))
+ -> 254)
+(note 45 44 10 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 10 45 11 7 (set (reg:DI 180)
+        (high:DI (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2aeffdb4f000 *.LC2>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 11 10 251 7 (set (reg/f:DI 74 [ iftmp.2 ])
+        (lo_sum:DI (reg:DI 180)
+            (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2aeffdb4f000 *.LC2>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x82]  <var_decl 0x2aeffdb4f000 *.LC2>)
+        (nil)))
+(jump_insn 251 11 252 7 (set (pc)
+        (label_ref 46)) -1
+     (nil)
+ -> 46)
+(barrier 252 251 254)
+(code_label 254 252 253 8 9 "" [1 uses])
+(note 253 254 12 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 12 253 13 8 (set (reg:DI 181)
+        (high:DI (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2aeffdb4f098 *.LC3>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 13 12 46 8 (set (reg/f:DI 74 [ iftmp.2 ])
+        (lo_sum:DI (reg:DI 181)
+            (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2aeffdb4f098 *.LC3>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC3") [flags 0x82]  <var_decl 0x2aeffdb4f098 *.LC3>)
+        (nil)))
+(code_label 46 13 47 9 5 "" [1 uses])
+(note 47 46 48 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 9 (set (reg:DI 194)
+        (high:DI (symbol_ref/f:DI ("*.LC9") [flags 0x82]  <var_decl 0x2aeffdb4f428 *.LC9>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 49 48 50 9 (set (reg/f:DI 193)
+        (lo_sum:DI (reg:DI 194)
+            (symbol_ref/f:DI ("*.LC9") [flags 0x82]  <var_decl 0x2aeffdb4f428 *.LC9>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC9") [flags 0x82]  <var_decl 0x2aeffdb4f428 *.LC9>)
+        (nil)))
+(insn 50 49 51 9 (set (reg:DI 0 x0)
+        (reg/f:DI 81 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 51 50 52 9 (set (reg:DI 1 x1)
+        (reg/f:DI 193)) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 52 51 53 9 (set (reg:DI 2 x2)
+        (reg/f:DI 74 [ iftmp.2 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(call_insn 53 52 54 9 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 54 53 55 9 (set (reg:SI 83 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 55 54 56 9 (set (reg/v:SI 85 [ count ])
+        (plus:SI (reg:SI 83 [ D.29949 ])
+            (reg:SI 79 [ D.29950 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:43 -1
+     (nil))
+(insn 56 55 57 9 (set (reg:DI 195)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 57 56 58 9 (set (reg:DI 196 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 85 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 58 57 59 9 (set (reg:DI 197 [ D.29952 ])
+        (plus:DI (reg:DI 195)
+            (reg:DI 196 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 59 58 60 9 (set (reg:DI 199)
+        (high:DI (symbol_ref/f:DI ("*.LC10") [flags 0x82]  <var_decl 0x2aeffdb4f4c0 *.LC10>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 60 59 61 9 (set (reg/f:DI 198)
+        (lo_sum:DI (reg:DI 199)
+            (symbol_ref/f:DI ("*.LC10") [flags 0x82]  <var_decl 0x2aeffdb4f4c0 *.LC10>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC10") [flags 0x82]  <var_decl 0x2aeffdb4f4c0 *.LC10>)
+        (nil)))
+(insn 61 60 62 9 (set (reg:DI 0 x0)
+        (reg:DI 197 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 62 61 63 9 (set (reg:DI 1 x1)
+        (reg/f:DI 198)) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 63 62 64 9 (set (reg:SI 2 x2)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 172 [0xac])) [0 data_6(D)->config.channel+0 S4 A32])) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(call_insn 64 63 65 9 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 65 64 66 9 (set (reg:SI 89 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 66 65 67 9 (set (reg/v:SI 91 [ count ])
+        (plus:SI (reg/v:SI 85 [ count ])
+            (reg:SI 89 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:44 -1
+     (nil))
+(insn 67 66 68 9 (set (reg:DI 200)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 68 67 69 9 (set (reg:DI 201 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 91 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 69 68 70 9 (set (reg:DI 202 [ D.29952 ])
+        (plus:DI (reg:DI 200)
+            (reg:DI 201 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 70 69 71 9 (set (reg:DI 204)
+        (high:DI (symbol_ref/f:DI ("*.LC11") [flags 0x82]  <var_decl 0x2aeffdb4f558 *.LC11>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 71 70 72 9 (set (reg/f:DI 203)
+        (lo_sum:DI (reg:DI 204)
+            (symbol_ref/f:DI ("*.LC11") [flags 0x82]  <var_decl 0x2aeffdb4f558 *.LC11>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC11") [flags 0x82]  <var_decl 0x2aeffdb4f558 *.LC11>)
+        (nil)))
+(insn 72 71 73 9 (set (reg:DI 0 x0)
+        (reg:DI 202 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 73 72 74 9 (set (reg:DI 1 x1)
+        (reg/f:DI 203)) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 74 73 75 9 (set (reg:SI 2 x2)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 176 [0xb0])) [0 data_6(D)->config.layer_id+0 S4 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(call_insn 75 74 76 9 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 76 75 77 9 (set (reg:SI 95 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 77 76 78 9 (set (reg/v:SI 97 [ count ])
+        (plus:SI (reg/v:SI 91 [ count ])
+            (reg:SI 95 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:45 -1
+     (nil))
+(insn 78 77 79 9 (set (reg:DI 205)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 79 78 80 9 (set (reg:DI 206 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 97 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 80 79 81 9 (set (reg:DI 207 [ D.29952 ])
+        (plus:DI (reg:DI 205)
+            (reg:DI 206 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 81 80 82 9 (set (reg:DI 209)
+        (high:DI (symbol_ref/f:DI ("*.LC12") [flags 0x82]  <var_decl 0x2aeffdb4f5f0 *.LC12>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 82 81 83 9 (set (reg/f:DI 208)
+        (lo_sum:DI (reg:DI 209)
+            (symbol_ref/f:DI ("*.LC12") [flags 0x82]  <var_decl 0x2aeffdb4f5f0 *.LC12>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC12") [flags 0x82]  <var_decl 0x2aeffdb4f5f0 *.LC12>)
+        (nil)))
+(insn 83 82 84 9 (set (reg:SI 210 [ D.29949 ])
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/v/f:DI 176 [ data ])
+                    (const_int 4 [0x4])) [0 data_6(D)->config.info.zorder+0 S1 A32]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 84 83 85 9 (set (reg:DI 0 x0)
+        (reg:DI 207 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 85 84 86 9 (set (reg:DI 1 x1)
+        (reg/f:DI 208)) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 86 85 87 9 (set (reg:SI 2 x2)
+        (reg:SI 210 [ D.29949 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(call_insn 87 86 88 9 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 88 87 89 9 (set (reg:SI 102 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 89 88 90 9 (set (reg/v:SI 104 [ count ])
+        (plus:SI (reg/v:SI 97 [ count ])
+            (reg:SI 102 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:46 -1
+     (nil))
+(insn 90 89 91 9 (set (reg:DI 211)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 91 90 92 9 (set (reg:DI 212 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 104 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 92 91 93 9 (set (reg/f:DI 106 [ D.29952 ])
+        (plus:DI (reg:DI 211)
+            (reg:DI 212 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 93 92 94 9 (set (reg:SI 213)
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/v/f:DI 176 [ data ])
+                    (const_int 112 [0x70])) [0 data_6(D)->config.info.D.26060.fb.pre_multiply+0 S1 A64]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 94 93 95 9 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 213)
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(jump_insn 95 94 96 9 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref:DI 258)
+            (pc))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 3 {*condjump}
+     (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+        (nil))
+ -> 258)
+(note 96 95 14 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 14 96 15 10 (set (reg:DI 182)
+        (high:DI (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2aeffdb4f130 *.LC4>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 15 14 255 10 (set (reg/f:DI 75 [ iftmp.3 ])
+        (lo_sum:DI (reg:DI 182)
+            (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2aeffdb4f130 *.LC4>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC4") [flags 0x82]  <var_decl 0x2aeffdb4f130 *.LC4>)
+        (nil)))
+(jump_insn 255 15 256 10 (set (pc)
+        (label_ref 97)) -1
+     (nil)
+ -> 97)
+(barrier 256 255 258)
+(code_label 258 256 257 11 10 "" [1 uses])
+(note 257 258 16 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 16 257 17 11 (set (reg:DI 183)
+        (high:DI (symbol_ref/f:DI ("*.LC5") [flags 0x82]  <var_decl 0x2aeffdb4f1c8 *.LC5>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 17 16 97 11 (set (reg/f:DI 75 [ iftmp.3 ])
+        (lo_sum:DI (reg:DI 183)
+            (symbol_ref/f:DI ("*.LC5") [flags 0x82]  <var_decl 0x2aeffdb4f1c8 *.LC5>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC5") [flags 0x82]  <var_decl 0x2aeffdb4f1c8 *.LC5>)
+        (nil)))
+(code_label 97 17 98 12 6 "" [1 uses])
+(note 98 97 99 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 99 98 100 12 (set (reg:DI 215)
+        (high:DI (symbol_ref/f:DI ("*.LC13") [flags 0x82]  <var_decl 0x2aeffdb4f688 *.LC13>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 100 99 101 12 (set (reg/f:DI 214)
+        (lo_sum:DI (reg:DI 215)
+            (symbol_ref/f:DI ("*.LC13") [flags 0x82]  <var_decl 0x2aeffdb4f688 *.LC13>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC13") [flags 0x82]  <var_decl 0x2aeffdb4f688 *.LC13>)
+        (nil)))
+(insn 101 100 102 12 (set (reg:DI 0 x0)
+        (reg/f:DI 106 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 102 101 103 12 (set (reg:DI 1 x1)
+        (reg/f:DI 214)) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 103 102 104 12 (set (reg:DI 2 x2)
+        (reg/f:DI 75 [ iftmp.3 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(call_insn 104 103 105 12 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 105 104 106 12 (set (reg:SI 108 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 106 105 107 12 (set (reg/v:SI 110 [ count ])
+        (plus:SI (reg:SI 108 [ D.29949 ])
+            (reg/v:SI 104 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:47 -1
+     (nil))
+(insn 107 106 108 12 (set (reg:DI 216)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 108 107 109 12 (set (reg:DI 217 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 110 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 109 108 110 12 (set (reg/f:DI 112 [ D.29952 ])
+        (plus:DI (reg:DI 216)
+            (reg:DI 217 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 110 109 111 12 (set (reg:SI 218)
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/v/f:DI 176 [ data ])
+                    (const_int 5 [0x5])) [0 data_6(D)->config.info.alpha_mode+0 S1 A8]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 111 110 112 12 (set (reg:CC 66 cc)
+        (compare:CC (reg:SI 218)
+            (const_int 0 [0]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(jump_insn 112 111 113 12 (set (pc)
+        (if_then_else (eq (reg:CC 66 cc)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 3 {*condjump}
+     (expr_list:REG_BR_PROB (const_int 6100 [0x17d4])
+        (nil))
+ -> 262)
+(note 113 112 18 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 18 113 19 13 (set (reg:DI 184)
+        (high:DI (symbol_ref/f:DI ("*.LC6") [flags 0x82]  <var_decl 0x2aeffdb4f260 *.LC6>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 19 18 259 13 (set (reg/f:DI 76 [ iftmp.4 ])
+        (lo_sum:DI (reg:DI 184)
+            (symbol_ref/f:DI ("*.LC6") [flags 0x82]  <var_decl 0x2aeffdb4f260 *.LC6>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC6") [flags 0x82]  <var_decl 0x2aeffdb4f260 *.LC6>)
+        (nil)))
+(jump_insn 259 19 260 13 (set (pc)
+        (label_ref 114)) -1
+     (nil)
+ -> 114)
+(barrier 260 259 262)
+(code_label 262 260 261 14 11 "" [1 uses])
+(note 261 262 20 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 20 261 21 14 (set (reg:DI 185)
+        (high:DI (symbol_ref/f:DI ("*.LC7") [flags 0x82]  <var_decl 0x2aeffdb4f2f8 *.LC7>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 21 20 114 14 (set (reg/f:DI 76 [ iftmp.4 ])
+        (lo_sum:DI (reg:DI 185)
+            (symbol_ref/f:DI ("*.LC7") [flags 0x82]  <var_decl 0x2aeffdb4f2f8 *.LC7>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC7") [flags 0x82]  <var_decl 0x2aeffdb4f2f8 *.LC7>)
+        (nil)))
+(code_label 114 21 115 15 7 "" [1 uses])
+(note 115 114 116 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 116 115 117 15 (set (reg:DI 220)
+        (high:DI (symbol_ref/f:DI ("*.LC14") [flags 0x82]  <var_decl 0x2aeffdb4f720 *.LC14>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 117 116 118 15 (set (reg/f:DI 219)
+        (lo_sum:DI (reg:DI 220)
+            (symbol_ref/f:DI ("*.LC14") [flags 0x82]  <var_decl 0x2aeffdb4f720 *.LC14>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC14") [flags 0x82]  <var_decl 0x2aeffdb4f720 *.LC14>)
+        (nil)))
+(insn 118 117 119 15 (set (reg:SI 221 [ D.29949 ])
+        (zero_extend:SI (mem/j:QI (plus:DI (reg/v/f:DI 176 [ data ])
+                    (const_int 6 [0x6])) [0 data_6(D)->config.info.alpha_value+0 S1 A16]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 119 118 120 15 (set (reg:DI 0 x0)
+        (reg/f:DI 112 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 120 119 121 15 (set (reg:DI 1 x1)
+        (reg/f:DI 219)) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 121 120 122 15 (set (reg:DI 2 x2)
+        (reg/f:DI 76 [ iftmp.4 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 122 121 123 15 (set (reg:SI 3 x3)
+        (reg:SI 221 [ D.29949 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(call_insn 123 122 124 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+        (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+            (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                    (nil))))))
+(insn 124 123 125 15 (set (reg:SI 116 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 125 124 126 15 (set (reg/v:SI 118 [ count ])
+        (plus:SI (reg:SI 116 [ D.29949 ])
+            (reg/v:SI 110 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:48 -1
+     (nil))
+(insn 126 125 127 15 (set (reg:DI 222)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 127 126 128 15 (set (reg:DI 223 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 118 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 128 127 129 15 (set (reg:DI 224 [ D.29952 ])
+        (plus:DI (reg:DI 222)
+            (reg:DI 223 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 129 128 130 15 (set (reg:DI 226)
+        (high:DI (symbol_ref/f:DI ("*.LC15") [flags 0x82]  <var_decl 0x2aeffdb4f7b8 *.LC15>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 130 129 131 15 (set (reg/f:DI 225)
+        (lo_sum:DI (reg:DI 226)
+            (symbol_ref/f:DI ("*.LC15") [flags 0x82]  <var_decl 0x2aeffdb4f7b8 *.LC15>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC15") [flags 0x82]  <var_decl 0x2aeffdb4f7b8 *.LC15>)
+        (nil)))
+(insn 131 130 132 15 (set (reg:DI 0 x0)
+        (reg:DI 224 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 132 131 133 15 (set (reg:DI 1 x1)
+        (reg/f:DI 225)) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 133 132 134 15 (set (reg:SI 2 x2)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 92 [0x5c])) [0 data_6(D)->config.info.D.26060.fb.format+0 S4 A32])) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(call_insn 134 133 135 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 135 134 136 15 (set (reg:SI 122 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 136 135 137 15 (set (reg/v:SI 124 [ count ])
+        (plus:SI (reg/v:SI 118 [ count ])
+            (reg:SI 122 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:49 -1
+     (nil))
+(insn 137 136 138 15 (set (reg:SI 127 [ D.29950 ])
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 56 [0x38])) [0 data_6(D)->config.info.D.26060.fb.size[0].width+0 S4 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 138 137 139 15 (set (reg:SI 128 [ D.29950 ])
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 60 [0x3c])) [0 data_6(D)->config.info.D.26060.fb.size[0].height+0 S4 A32])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 139 138 140 15 (set (reg:DI 227)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 140 139 141 15 (set (reg:DI 228 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 124 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 141 140 142 15 (set (reg:DI 229 [ D.29952 ])
+        (plus:DI (reg:DI 227)
+            (reg:DI 228 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 142 141 143 15 (set (reg:DI 231)
+        (high:DI (symbol_ref/f:DI ("*.LC16") [flags 0x82]  <var_decl 0x2aeffdb4f850 *.LC16>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 143 142 144 15 (set (reg/f:DI 230)
+        (lo_sum:DI (reg:DI 231)
+            (symbol_ref/f:DI ("*.LC16") [flags 0x82]  <var_decl 0x2aeffdb4f850 *.LC16>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC16") [flags 0x82]  <var_decl 0x2aeffdb4f850 *.LC16>)
+        (nil)))
+(insn 144 143 145 15 (set (reg:DI 0 x0)
+        (reg:DI 229 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 145 144 146 15 (set (reg:DI 1 x1)
+        (reg/f:DI 230)) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 146 145 147 15 (set (reg:SI 2 x2)
+        (reg:SI 127 [ D.29950 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 147 146 148 15 (set (reg:SI 3 x3)
+        (reg:SI 128 [ D.29950 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 148 147 149 15 (set (reg:SI 4 x4)
+        (reg:SI 127 [ D.29950 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 149 148 150 15 (set (reg:SI 5 x5)
+        (reg:SI 128 [ D.29950 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 150 149 151 15 (set (reg:SI 6 x6)
+        (reg:SI 127 [ D.29950 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 151 150 152 15 (set (reg:SI 7 x7)
+        (reg:SI 128 [ D.29950 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(call_insn 152 151 153 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 7 x7))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 6 x6))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 5 x5))
+                (expr_list:REG_DEP_CONTROL (use (reg:SI 4 x4))
+                    (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+                        (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+                            (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                                (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                                    (nil))))))))))
+(insn 153 152 154 15 (set (reg:SI 129 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 154 153 155 15 (set (reg/v:SI 131 [ count ])
+        (plus:SI (reg/v:SI 124 [ count ])
+            (reg:SI 129 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:50 -1
+     (nil))
+(insn 155 154 156 15 (set (reg:DI 232)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 156 155 157 15 (set (reg:DI 233 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 131 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 157 156 158 15 (set (reg:DI 234 [ D.29952 ])
+        (plus:DI (reg:DI 232)
+            (reg:DI 233 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 158 157 159 15 (set (reg:DI 236)
+        (high:DI (symbol_ref/f:DI ("*.LC17") [flags 0x82]  <var_decl 0x2aeffdb4f8e8 *.LC17>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 159 158 160 15 (set (reg/f:DI 235)
+        (lo_sum:DI (reg:DI 236)
+            (symbol_ref/f:DI ("*.LC17") [flags 0x82]  <var_decl 0x2aeffdb4f8e8 *.LC17>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC17") [flags 0x82]  <var_decl 0x2aeffdb4f8e8 *.LC17>)
+        (nil)))
+(insn 160 159 161 15 (set (reg:DI 238)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 120 [0x78])) [0 data_6(D)->config.info.D.26060.fb.crop.x+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 161 160 162 15 (set (reg:DI 237 [ D.29956 ])
+        (ashiftrt:DI (reg:DI 238)
+            (const_int 32 [0x20]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 162 161 163 15 (set (reg:DI 240)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 128 [0x80])) [0 data_6(D)->config.info.D.26060.fb.crop.y+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 163 162 164 15 (set (reg:DI 239 [ D.29956 ])
+        (ashiftrt:DI (reg:DI 240)
+            (const_int 32 [0x20]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 164 163 165 15 (set (reg:DI 242)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 136 [0x88])) [0 data_6(D)->config.info.D.26060.fb.crop.width+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:53 -1
+     (nil))
+(insn 165 164 166 15 (set (reg:DI 241 [ D.29956 ])
+        (ashiftrt:DI (reg:DI 242)
+            (const_int 32 [0x20]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:53 -1
+     (nil))
+(insn 166 165 167 15 (set (reg:DI 244)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 144 [0x90])) [0 data_6(D)->config.info.D.26060.fb.crop.height+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:53 -1
+     (nil))
+(insn 167 166 168 15 (set (reg:DI 243 [ D.29956 ])
+        (ashiftrt:DI (reg:DI 244)
+            (const_int 32 [0x20]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:53 -1
+     (nil))
+(insn 168 167 169 15 (set (reg:DI 0 x0)
+        (reg:DI 234 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 169 168 170 15 (set (reg:DI 1 x1)
+        (reg/f:DI 235)) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 170 169 171 15 (set (reg:SI 2 x2)
+        (subreg:SI (reg:DI 237 [ D.29956 ]) 0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 171 170 172 15 (set (reg:SI 3 x3)
+        (subreg:SI (reg:DI 239 [ D.29956 ]) 0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 172 171 173 15 (set (reg:SI 4 x4)
+        (subreg:SI (reg:DI 241 [ D.29956 ]) 0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 173 172 174 15 (set (reg:SI 5 x5)
+        (subreg:SI (reg:DI 243 [ D.29956 ]) 0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(call_insn 174 173 175 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 5 x5))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 4 x4))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+                (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+                    (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                        (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                            (nil))))))))
+(insn 175 174 176 15 (set (reg:SI 146 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 176 175 177 15 (set (reg/v:SI 148 [ count ])
+        (plus:SI (reg/v:SI 131 [ count ])
+            (reg:SI 146 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:52 -1
+     (nil))
+(insn 177 176 178 15 (set (reg:DI 245)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 178 177 179 15 (set (reg:DI 246 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 148 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 179 178 180 15 (set (reg:DI 247 [ D.29952 ])
+        (plus:DI (reg:DI 245)
+            (reg:DI 246 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 180 179 181 15 (set (reg:DI 249)
+        (high:DI (symbol_ref/f:DI ("*.LC18") [flags 0x82]  <var_decl 0x2aeffdb4f980 *.LC18>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 181 180 182 15 (set (reg/f:DI 248)
+        (lo_sum:DI (reg:DI 249)
+            (symbol_ref/f:DI ("*.LC18") [flags 0x82]  <var_decl 0x2aeffdb4f980 *.LC18>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC18") [flags 0x82]  <var_decl 0x2aeffdb4f980 *.LC18>)
+        (nil)))
+(insn 182 181 183 15 (set (reg:DI 0 x0)
+        (reg:DI 247 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 183 182 184 15 (set (reg:DI 1 x1)
+        (reg/f:DI 248)) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 184 183 185 15 (set (reg:SI 2 x2)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 8 [0x8])) [0 data_6(D)->config.info.screen_win.x+0 S4 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 185 184 186 15 (set (reg:SI 3 x3)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 12 [0xc])) [0 data_6(D)->config.info.screen_win.y+0 S4 A32])) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 186 185 187 15 (set (reg:SI 4 x4)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 16 [0x10])) [0 data_6(D)->config.info.screen_win.width+0 S4 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 187 186 188 15 (set (reg:SI 5 x5)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 20 [0x14])) [0 data_6(D)->config.info.screen_win.height+0 S4 A32])) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(call_insn 188 187 189 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 5 x5))
+        (expr_list:REG_DEP_CONTROL (use (reg:SI 4 x4))
+            (expr_list:REG_DEP_CONTROL (use (reg:SI 3 x3))
+                (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+                    (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                        (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                            (nil))))))))
+(insn 189 188 190 15 (set (reg:SI 155 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 190 189 191 15 (set (reg/v:SI 157 [ count ])
+        (plus:SI (reg/v:SI 148 [ count ])
+            (reg:SI 155 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:54 -1
+     (nil))
+(insn 191 190 192 15 (set (reg:DI 250)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 192 191 193 15 (set (reg:DI 251 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 157 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 193 192 194 15 (set (reg:DI 252 [ D.29952 ])
+        (plus:DI (reg:DI 250)
+            (reg:DI 251 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 194 193 195 15 (set (reg:DI 254)
+        (high:DI (symbol_ref/f:DI ("*.LC19") [flags 0x82]  <var_decl 0x2aeffdb4fa18 *.LC19>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 195 194 196 15 (set (reg/f:DI 253)
+        (lo_sum:DI (reg:DI 254)
+            (symbol_ref/f:DI ("*.LC19") [flags 0x82]  <var_decl 0x2aeffdb4fa18 *.LC19>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC19") [flags 0x82]  <var_decl 0x2aeffdb4fa18 *.LC19>)
+        (nil)))
+(insn 196 195 197 15 (set (reg:DI 0 x0)
+        (reg:DI 252 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 197 196 198 15 (set (reg:DI 1 x1)
+        (reg/f:DI 253)) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 198 197 199 15 (set (reg:DI 2 x2)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 32 [0x20])) [0 data_6(D)->config.info.D.26060.fb.addr+0 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 199 198 200 15 (set (reg:DI 3 x3)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 40 [0x28])) [0 data_6(D)->config.info.D.26060.fb.addr+8 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 200 199 201 15 (set (reg:DI 4 x4)
+        (mem/j:DI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 48 [0x30])) [0 data_6(D)->config.info.D.26060.fb.addr+16 S8 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(call_insn 201 200 202 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (use (reg:DI 4 x4))
+        (expr_list:REG_BR_PROB (use (reg:DI 3 x3))
+            (expr_list:REG_BR_PROB (use (reg:DI 2 x2))
+                (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+                    (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                        (nil)))))))
+(insn 202 201 203 15 (set (reg:SI 163 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 203 202 204 15 (set (reg/v:SI 165 [ count ])
+        (plus:SI (reg/v:SI 157 [ count ])
+            (reg:SI 163 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:55 -1
+     (nil))
+(insn 204 203 205 15 (set (reg:DI 255)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 205 204 206 15 (set (reg:DI 256 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 165 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 206 205 207 15 (set (reg:DI 257 [ D.29952 ])
+        (plus:DI (reg:DI 255)
+            (reg:DI 256 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 207 206 208 15 (set (reg:DI 259)
+        (high:DI (symbol_ref/f:DI ("*.LC20") [flags 0x82]  <var_decl 0x2aeffdb4fab0 *.LC20>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 208 207 209 15 (set (reg/f:DI 258)
+        (lo_sum:DI (reg:DI 259)
+            (symbol_ref/f:DI ("*.LC20") [flags 0x82]  <var_decl 0x2aeffdb4fab0 *.LC20>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC20") [flags 0x82]  <var_decl 0x2aeffdb4fab0 *.LC20>)
+        (nil)))
+(insn 209 208 210 15 (set (reg:DI 0 x0)
+        (reg:DI 257 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 210 209 211 15 (set (reg:DI 1 x1)
+        (reg/f:DI 258)) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 211 210 212 15 (set (reg:SI 2 x2)
+        (mem/j:SI (plus:DI (reg/v/f:DI 176 [ data ])
+                (const_int 184 [0xb8])) [0 data_6(D)->flag+0 S4 A64])) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(call_insn 212 211 213 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2aeffc470200 sprintf>) [0 __builtin_sprintf S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 213 212 214 15 (set (reg:SI 169 [ D.29949 ])
+        (reg:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 214 213 215 15 (set (reg/v:SI 171 [ count ])
+        (plus:SI (reg/v:SI 165 [ count ])
+            (reg:SI 169 [ D.29949 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:56 -1
+     (nil))
+(insn 215 214 216 15 (set (reg:DI 260)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(insn 216 215 217 15 (set (reg:DI 261 [ D.29951 ])
+        (zero_extend:DI (reg/v:SI 171 [ count ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(insn 217 216 218 15 (set (reg:DI 262 [ D.29952 ])
+        (plus:DI (reg:DI 260)
+            (reg:DI 261 [ D.29951 ]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(insn 218 217 219 15 (set (reg:DI 264)
+        (high:DI (symbol_ref/f:DI ("*.LC21") [flags 0x82]  <var_decl 0x2aeffdb4fb48 *.LC21>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(insn 219 218 220 15 (set (reg/f:DI 263)
+        (lo_sum:DI (reg:DI 264)
+            (symbol_ref/f:DI ("*.LC21") [flags 0x82]  <var_decl 0x2aeffdb4fb48 *.LC21>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC21") [flags 0x82]  <var_decl 0x2aeffdb4fb48 *.LC21>)
+        (nil)))
+(insn 220 219 221 15 (set (reg:DI 0 x0)
+        (reg:DI 262 [ D.29952 ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(insn 221 220 222 15 (set (reg:DI 1 x1)
+        (reg/f:DI 263)) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(call_insn 222 221 223 15 (parallel [
+            (set (reg:DI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2aeffc467100 __builtin_strcpy>) [0 __builtin_strcpy S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_BR_PROB (set (reg:DI 0 x0)
+            (reg:DI 0 x0))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 223 222 224 15 (set (reg:DI 266)
+        (high:DI (symbol_ref/f:DI ("*.LC22") [flags 0x82]  <var_decl 0x2aeffdb4fbe0 *.LC22>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 224 223 225 15 (set (reg/f:DI 265)
+        (lo_sum:DI (reg:DI 266)
+            (symbol_ref/f:DI ("*.LC22") [flags 0x82]  <var_decl 0x2aeffdb4fbe0 *.LC22>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC22") [flags 0x82]  <var_decl 0x2aeffdb4fbe0 *.LC22>)
+        (nil)))
+(insn 225 224 226 15 (set (reg:DI 268)
+        (high:DI (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 226 225 227 15 (set (reg/f:DI 267)
+        (lo_sum:DI (reg:DI 268)
+            (symbol_ref:DI ("*.LANCHOR0") [flags 0x182]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 227 226 228 15 (set (reg:DI 0 x0)
+        (reg/f:DI 265)) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 228 227 229 15 (set (reg:DI 1 x1)
+        (reg/f:DI 267)) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 229 228 230 15 (set (reg:SI 2 x2)
+        (const_int 59 [0x3b])) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(call_insn 230 229 231 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aeffc65c000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil)
+    (expr_list:REG_DEP_CONTROL (use (reg:SI 2 x2))
+        (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+            (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+                (nil)))))
+(insn 231 230 232 15 (set (reg:DI 270)
+        (high:DI (symbol_ref/f:DI ("*.LC23") [flags 0x82]  <var_decl 0x2aeffdb4fc78 *.LC23>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 232 231 233 15 (set (reg/f:DI 269)
+        (lo_sum:DI (reg:DI 270)
+            (symbol_ref/f:DI ("*.LC23") [flags 0x82]  <var_decl 0x2aeffdb4fc78 *.LC23>))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC23") [flags 0x82]  <var_decl 0x2aeffdb4fc78 *.LC23>)
+        (nil)))
+(insn 233 232 234 15 (set (reg:DI 271)
+        (plus:DI (reg/f:DI 68 virtual-stack-vars)
+            (const_int -512 [0xfffffffffffffe00]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 234 233 235 15 (set (reg:DI 0 x0)
+        (reg/f:DI 269)) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(insn 235 234 236 15 (set (reg:DI 1 x1)
+        (reg:DI 271)) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil))
+(call_insn 236 235 237 15 (parallel [
+            (set (reg:SI 0 x0)
+                (call (mem:DI (symbol_ref:DI ("printk") [flags 0x41]  <function_decl 0x2aeffc65c000 printk>) [0 printk S8 A8])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:DI 30 x30))
+        ]) drivers/video/sunxi/disp2/disp/de/disp_private.c:59 -1
+     (nil)
+    (expr_list:REG_BR_PROB (use (reg:DI 1 x1))
+        (expr_list:REG_BR_PROB (use (reg:DI 0 x0))
+            (nil))))
+(insn 237 236 238 15 (set (reg:SI 272 [ count ])
+        (plus:SI (reg/v:SI 171 [ count ])
+            (const_int 1 [0x1]))) drivers/video/sunxi/disp2/disp/de/disp_private.c:57 -1
+     (nil))
+(insn 238 237 242 15 (set (reg:SI 175 [ <retval> ])
+        (reg:SI 272 [ count ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:60 -1
+     (nil))
+(insn 242 238 245 15 (set (reg/i:SI 0 x0)
+        (reg:SI 175 [ <retval> ])) drivers/video/sunxi/disp2/disp/de/disp_private.c:61 -1
+     (nil))
+(insn 245 242 0 15 (use (reg/i:SI 0 x0)) drivers/video/sunxi/disp2/disp/de/disp_private.c:61 -1
+     (nil))

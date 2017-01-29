@@ -1,0 +1,23 @@
+menuconfig AW_AXP
+	bool "AXP Power drivers"
+	depends on REGULATOR
+	default y
+	---help---
+	This option allows you to select AXP power driver
+
+if AW_AXP
+
+config AW_AXP81X
+	bool "AXP81X driver"
+	---help---
+	AXP81X driver
+
+config AXP_TWI_USED
+	bool "AXP use twi as transfer channel"
+	default n
+
+config AXP_NMI_USED
+	bool "AXP use NMI as IRQ SRC"
+	default n
+
+endif # !AW_AXP
