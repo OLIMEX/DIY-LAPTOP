@@ -1,0 +1,18 @@
+#
+# sunxi system information driver.
+#
+
+config SUNXI_SYS_INFO
+	tristate "sunxi system info driver"
+	default y
+	help
+	  This driver is used for query system informations.
+	  If you don't know whether need it, please select y.
+
+config SUNXI_SMC
+	bool "sunxi smc interfaces"
+	default n
+	help
+	  This driver support smc call interfaces depended on
+	  monitor/aft/SecureOs. If you don't know whether need
+	  it, please select y.

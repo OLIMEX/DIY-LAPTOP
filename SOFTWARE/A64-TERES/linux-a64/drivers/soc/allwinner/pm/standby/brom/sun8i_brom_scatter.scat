@@ -1,0 +1,55 @@
+;/*
+;************************************************************************************************************************
+;*                                                         eGON
+;*                                         the Embedded GO-ON Bootloader System
+;*
+;*                             Copyright(C), 2006-2008, SoftWinners Microelectronic Co., Ltd.
+;*											       All Rights Reserved
+;*
+;* File Name : resume0_scatter.sct
+;*
+;* Author : Gary.Wang
+;*
+;* Version : 1.1.0
+;*
+;* Date : 2007.11.6
+;*
+;* Description : scatter file of resume0
+;*
+;* Functions list :
+;*
+;* Others : None at present.
+;*
+;*
+;* History :
+;*
+;*  <Author>        <time>       <version>      <description>
+;*
+;* Gary.Wang       2007.11.6       1.1.0        build the file
+;*
+;************************************************************************************************************************
+;*/
+
+
+;/*---------------------------------------------------------------------------*/
+;/*                          --+++-- NOTE --+++--                             */
+;/*             RW and ZI datas MUST NOT appear in Resume project!              */
+;/*---------------------------------------------------------------------------*/
+OUTPUT_ARCH(arm)
+
+SECTIONS
+{
+	__resumes_start = . ;
+	.text  0x00000000:
+	{	drivers/soc/allwinner/pm/standby/brom/resume_head.o( .rodata )
+		drivers/soc/allwinner/pm/standby/brom/resumes.o( .text )
+		*(.text)
+	}
+	.rodata ALIGN(4) : { *(.rodata) }
+	.data  ALIGN(4)  : { *(.data) }
+
+	__bss_start = . ;
+	.bss ALIGN(4) : { *(.sbss) *(.scommon) *(.bss) *(COMMON) }
+	__bss_end = .;
+	__resumes_end = . ;
+}

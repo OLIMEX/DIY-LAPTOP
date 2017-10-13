@@ -1,0 +1,41 @@
+#
+# Video configuration for sunxi platform
+#
+
+menu "Video support for sunxi"
+	depends on FB
+
+config FB_CONSOLE_SUNXI
+  bool "Framebuffer Console Support(sunxi)"
+  select FB_CFB_FILLRECT
+  select FB_CFB_COPYAREA
+  select FB_CFB_IMAGEBLIT
+  default n
+  ---help---
+
+config DISP2_SUNXI
+  tristate "DISP Driver Support(sunxi-disp2)"
+  depends on (ARCH_SUN50I)
+  select FB_BACKLIGHT
+  default n
+  ---help---
+
+config HDMI_DISP2_SUNXI
+	tristate "HDMI Driver Support(sunxi-disp2)"
+	depends on (DISP2_SUNXI)
+	default n
+	---help---
+
+config DISP2_SUNXI_BOOT_COLORBAR
+  bool "boot colorbar for disp driver(sunxi-disp2)"
+  depends on DISP2_SUNXI
+  default n
+  ---help---
+
+config DISP2_SUNXI_DEBUG
+  bool "debugfs for disp driver(sunxi-disp2)"
+  depends on DISP2_SUNXI
+  default n
+  ---help---
+
+endmenu

@@ -1,0 +1,83 @@
+/*
+ * Allwinner Technology CO., Ltd. sun8iw10p1 fpga board.
+ *
+ * fpga board support.
+ */
+
+/dts-v1/;
+#include "sun8iw10p1.dtsi"
+
+/{
+
+	soc@01c00000 {
+		soc_timer0: timer@1c20c00 {
+			interrupts = <GIC_SPI 6 IRQ_TYPE_EDGE_RISING>;
+		};
+
+		pio: pinctrl@01c20800 {
+			interrupts = <GIC_SPI 3 4>,
+				     <GIC_SPI 3 4>,
+				     <GIC_SPI 3 4>,
+				     <GIC_SPI 3 4>;
+		};
+
+		dma0:dma-controller@01c02000 {
+			interrupts = <GIC_SPI 7 4>;
+		};
+
+		uart0: uart@01c28000 {
+			interrupts = <GIC_SPI 1 IRQ_TYPE_LEVEL_HIGH>;           /* uart0 is IRQ33 on fpga */
+			status = "okay";
+		};
+
+		twi0: twi@0x01c2ac00{
+			interrupts = <GIC_SPI 2 IRQ_TYPE_LEVEL_HIGH>;           /* twi0 is IRQ34 on fpga */
+			status = "okay";
+
+			eeprom@50 {
+				compatible = "atmel,24c16";
+				reg = <0x50>;
+			};
+			cs4385@30 {
+				compatible = "cirrus,cs4385";
+				reg = <0x18>;
+			};
+		};
+
+		spi0: spi@01c68000 {
+			interrupts = <GIC_SPI 12 IRQ_TYPE_LEVEL_HIGH>;          /* spi0 is IRQ44 on fpga */
+			status = "disabled";
+
+			nor_flash@0 {
+				#address-cells = <1>;
+				#size-cells = <1>;
+				compatible = "atmel,at25df641";
+				spi-max-frequency = <50000000>;
+				reg = <0>;	/* Chip select 0 */
+
+				partition@0 {
+					label = "NorFlash part0";
+					reg = <0x00000000 0x00800000>;
+				};
+			};
+		};
+		csi_cci0:cci@0x01cb3000 {
+			interrupts = <GIC_SPI 2 4>;/*SUNXI_IRQ_CSI0_CCI (SUNXI_GIC_START + 2) = 34 on fpga*/
+		};
+		csi0:vfe@0 {
+			interrupts = <GIC_SPI 5 4>;/*SUNXI_IRQ_CSI0 (SUNXI_GIC_START + 4 ) = 37 on fpga*/
+		};
+
+		udc:udc-controller@0x01c19000 {
+			interrupts = <GIC_SPI 17 IRQ_TYPE_LEVEL_HIGH>; /* udc is IRQ49 on fpga */
+		};
+
+		ehci0:ehci0-controller@0x01c1a000 {
+			interrupts = <GIC_SPI 18 IRQ_TYPE_LEVEL_HIGH>; /* ehci0 is IRQ50 on fpga */
+		};
+
+		ohci0:ohci0-controller@0x01c1a400 {
+			interrupts = <GIC_SPI 19 IRQ_TYPE_LEVEL_HIGH>; /* ohci0 is IRQ51 on fpga */
+		};
+	};
+};

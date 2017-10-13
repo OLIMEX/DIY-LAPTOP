@@ -1,0 +1,79 @@
+#
+# Allwinner device configuration
+#
+
+config NET_VENDOR_ALLWINNER
+	bool "Allwinner devices"
+	default y
+
+	depends on ARCH_SUNXI
+	---help---
+	  If you have a network (Ethernet) card belonging to this
+	  class, say Y and read the Ethernet-HOWTO, available from
+	  <http://www.tldp.org/docs.html#howto>.
+
+	  Note that the answer to this question doesn't directly
+	  affect the kernel: saying N will just cause the configurator
+	  to skip all the questions about Allwinner cards. If you say Y,
+	  you will be asked for your specific card in the following
+	  questions.
+
+if NET_VENDOR_ALLWINNER
+
+config SUN4I_EMAC
+        tristate "Allwinner A10 EMAC support"
+	depends on ARCH_SUNXI
+	depends on OF
+	select CRC32
+	select MII
+	select PHYLIB
+	select MDIO_SUN4I
+        ---help---
+          Support for Allwinner A10 EMAC ethernet driver.
+
+          To compile this driver as a module, choose M here.  The module
+          will be called sun4i-emac.
+
+config SUNXI_GMAC
+        tristate "Allwinner GMAC support"
+	depends on ARCH_SUNXI
+	depends on OF
+	select CRC32
+	select MII
+	select PHYLIB
+	select MDIO_SUNXI
+        ---help---
+          Support for Allwinner Gigabit ethernet driver.
+
+          To compile this driver as a module, choose M here.  The module
+          will be called sunxi-gmac.
+
+if SUNXI_GMAC
+config GETH_SCRIPT_SYS
+	bool "Use sunxi platform script"
+	depends on SUNXI_GMAC
+	default y
+	---help---
+	 The gabit ethernet gpio request and control by the script
+	 of sunxi platform. Select it, by script. If not, ioremap
+	 by drivers itself.
+
+config GETH_CLK_SYS
+	bool "Clock use system interface"
+	depends on SUNXI_GMAC
+	default y
+	---help---
+	 It select the clock controler is system or the driver itself.
+	 If you want to use the system interface, select it. If not, the
+	 driver will control the clock by ioremap.
+
+config GETH_PHY_POWER
+	bool "External PHY power control"
+	depends on SUNXI_GMAC && REGULATOR
+	default y
+	---help---
+	 If external PHY power is exist, and it want to be controled,
+	 select it.  If not, it mean the power of PHY already on.
+endif
+
+endif # NET_VENDOR_ALLWINNER

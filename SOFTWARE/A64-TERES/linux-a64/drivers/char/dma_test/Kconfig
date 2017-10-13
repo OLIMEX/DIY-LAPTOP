@@ -1,0 +1,9 @@
+#
+# sunxi dma test config.
+#
+config SUNXI_DMA_TEST
+	tristate "sunxi dma test driver"
+	default m
+	help
+	Nothing help.
+
