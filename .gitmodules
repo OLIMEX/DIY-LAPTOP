@@ -1,0 +1,21 @@
+[submodule "SOFTWARE/A64-TERES/scripts"]
+	path = SOFTWARE/A64-TERES/scripts
+	url = https://github.com/A64-TERES/scripts
+[submodule "SOFTWARE/A64-TERES/u-boot_new"]
+	path = SOFTWARE/A64-TERES/u-boot_new
+	url = https://github.com/A64-TERES/u-boot_new
+[submodule "SOFTWARE/A64-TERES/TERES-KBD-RELEASE"]
+	path = SOFTWARE/A64-TERES/TERES-KBD-RELEASE
+	url = https://github.com/A64-TERES/TERES-KBD-RELEASE
+[submodule "SOFTWARE/A64-TERES/blobs"]
+	path = SOFTWARE/A64-TERES/blobs
+	url = https://github.com/A64-TERES/blobs
+[submodule "SOFTWARE/A64-TERES/linux-a64"]
+	path = SOFTWARE/A64-TERES/linux-a64
+	url = https://github.com/A64-TERES/linux-a64
+[submodule "SOFTWARE/A64-TERES/sunxi-pack-tools"]
+	path = SOFTWARE/A64-TERES/sunxi-pack-tools
+	url = https://github.com/A64-TERES/sunxi-pack-tools
+[submodule "SOFTWARE/A64-TERES/teres1-ledctrl"]
+	path = SOFTWARE/A64-TERES/teres1-ledctrl
+	url = https://github.com/A64-TERES/teres1-ledctrl

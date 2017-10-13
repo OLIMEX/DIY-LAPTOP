@@ -1,3 +1,0 @@
-obj-$(CONFIG_VIDEO_ENCODER_DECODER_SUNXI) += cedar_ve.o
-
-

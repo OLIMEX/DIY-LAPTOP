@@ -1,9 +1,0 @@
-#
-# sunxi timer test configuration.
-#
-
-config SUNXI_TIMER_TEST
-	tristate "sunxi timer test driver"
-	default m
-	help
-	Nothing help.
