@@ -1,0 +1,3 @@
+# <file system>	<dir>	<type>	<options>			<dump>	<pass>
+/dev/mmcblk1p1	/boot	vfat	defaults			0		2
+/dev/mmcblk1p2	/		ext4	defaults,noatime	0		1
