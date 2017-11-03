@@ -1,0 +1,36 @@
+menu "SUNXI Clock Configuration"
+	depends on COMMON_CLK && ARCH_SUNXI
+config SUNXI_CLK_DEFAULT_INIT
+	bool "init clk rate from script config"
+	depends on COMMON_CLK && ARCH_SUNXI
+	---help---
+	init clk rate from script config.
+
+	If in doubt, say "N".
+config SUNXI_CLK_AHB_FROM_PLL6
+	bool "set ahb clock source to pll6"
+	depends on COMMON_CLK && ARCH_SUNXI
+	---help---
+	set ahb clock source to pll6.
+
+	If in doubt, say "N".
+config PLL6AHB1_CLK_DFT_VALUE
+    int "set pll6ahb1 clock default value"
+    depends on COMMON_CLK && ARCH_SUN8I
+    default "200000000" if ARCH_SUN8I
+config AHB1_CLK_DFT_VALUE
+    int "set ahb clock default value"
+    depends on COMMON_CLK && ARCH_SUN8I
+    default "200000000" if ARCH_SUN8I
+config APB1_CLK_DFT_VALUE
+    int "set apb clock default value"
+    depends on COMMON_CLK && ARCH_SUN8I
+    default "100000000" if ARCH_SUN8I
+config SUNXI_AC100_CLK
+	bool "support 32k clk in AC100"
+	depends on (SND_SOC_AC100_CODEC && SUNXI_ARISC && ARCH_SUN9IW1) || (SND_SOC_AC100DAPM_CODEC && SUNXI_ARISC && ARCH_SUN8IW6)
+	---help---
+    support 32k clk in AC100.
+
+	If in doubt, say "N".
+endmenu

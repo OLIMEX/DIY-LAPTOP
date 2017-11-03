@@ -1,0 +1,10 @@
+#
+#  Touchscreen driver configuration
+#
+config  TOUCHSCREEN_AW5X06_TS
+       tristate  "aw5x06 touchscreen driver"      
+       depends on INPUT && I2C
+       default m
+       help
+         aw5x06 touchscreen driver    
+

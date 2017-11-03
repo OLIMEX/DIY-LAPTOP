@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart NetworkManager after resume
+After=suspend.target
+ConditionFileIsExecutable=/usr/sbin/NetworkManager
+
+[Service]
+ExecStart=/bin/systemctl --no-block restart NetworkManager.service
+
+[Install]
+WantedBy=suspend.target

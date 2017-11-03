@@ -1,0 +1,91 @@
+[product]
+version = "100"
+
+[dram_para]
+; params for double face
+dram_clk        = 552
+dram_type       = 3
+dram_zq         = 0x3b3bbb
+dram_odt_en     = 0x1
+dram_para1      = 0x10e410f4
+dram_para2      = 0x8001000
+dram_mr0        = 0x1c70
+dram_mr1        = 0x40
+dram_mr2        = 0x18
+dram_mr3        = 0x2
+dram_tpr0       = 0x47194f
+dram_tpr1       = 0x1c2414b
+dram_tpr2       = 0x61043
+dram_tpr3       = 0x4b005dc
+dram_tpr4       = 0x0
+dram_tpr5       = 0x0
+dram_tpr6       = 0x0
+dram_tpr7       = 0x0
+dram_tpr8       = 0x0
+dram_tpr9       = 0x0
+dram_tpr10      = 0x8808
+dram_tpr11      = 0x20250000
+dram_tpr12      = 0x0
+dram_tpr13      = 0x4000803
+
+[card0_boot_para]
+card_ctrl       = 0
+card_high_speed = 1
+card_line       = 4
+sdc_d1          = port:PF0<2><1><2><default>
+sdc_d0          = port:PF1<2><1><2><default>
+sdc_clk         = port:PF2<2><1><2><default>
+sdc_cmd         = port:PF3<2><1><2><default>
+sdc_d3          = port:PF4<2><1><2><default>
+sdc_d2          = port:PF5<2><1><2><default>
+;sdc_2xmode = 0x0
+;sdc_ddrmode = 0x0
+;sdc_f_max = 0x0
+;sdc_ex_dly_used = 0x0
+;sdc_odly_25M = 0xff2fffff
+;sdc_sdly_25M = 0xd2fffff
+;sdc_odly_50M = 0xffffff00
+;sdc_sdly_50M = 0x0
+
+[card2_boot_para]
+sdc_io_1v8      = 1
+card_ctrl       = 2
+card_high_speed = 1
+card_line       = 8
+sdc_ds          = port:PC1<3><1><3><default>
+sdc_clk         = port:PC5<3><1><3><default>
+sdc_cmd         = port:PC6<3><1><3><default>
+sdc_d0          = port:PC8<3><1><3><default>
+sdc_d1          = port:PC9<3><1><3><default>
+sdc_d2          = port:PC10<3><1><3><default>
+sdc_d3          = port:PC11<3><1><3><default>
+sdc_d4          = port:PC12<3><1><3><default>
+sdc_d5          = port:PC13<3><1><3><default>
+sdc_d6          = port:PC14<3><1><3><default>
+sdc_d7          = port:PC15<3><1><3><default>
+sdc_emmc_rst    = port:PC16<3><1><3><default>
+;sdc_2xmode = 0x0
+;sdc_ddrmode = 0x0
+;sdc_f_max = 0x0
+;sdc_ex_dly_used = 0xffffffff
+;sdc_odly_25M = 0xff0dffff
+;sdc_sdly_25M = 0xffffffff
+;sdc_odly_50M = 0x8000000
+;sdc_sdly_50M = 0x0
+
+[twi_para]
+twi_port        = 0
+twi_scl         = port:PH0<2><default><default><default>
+twi_sda         = port:PH1<2><default><default><default>
+
+[uart_para]
+uart_debug_port = 0
+uart_debug_tx   = port:PB8<4><1><default><default>
+uart_debug_rx   = port:PB9<4><1><default><default>
+
+[jtag_para]
+jtag_enable     = 0
+jtag_ms         = port:PB0<4><default><default><default>
+jtag_ck         = port:PB1<4><default><default><default>
+jtag_do         = port:PB2<4><default><default><default>
+jtag_di         = port:PB3<4><default><default><default>

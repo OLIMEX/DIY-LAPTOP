@@ -1,0 +1,15 @@
+#
+# dump reg config.
+#
+config DUMP_REG
+	tristate "dump reg driver"
+	default y
+	help
+	  dump regs of devices.
+
+config DUMP_REG_MISC
+	tristate "dump reg misc driver"
+	depends on DUMP_REG
+	default y
+	help
+	  add misc driver, for open("/sys/class/...") call.

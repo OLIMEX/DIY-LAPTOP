@@ -1,0 +1,8 @@
+#
+config SUNXI_SRAM
+	bool "Allwinner SOC SRAM controlloer"
+	default ARCH_SUNXI
+	help
+	  Say y here to enable the SRAM controller support. This
+	  device is responsible on mapping the SRAM in the sunXi SoCs
+	  whether to the CPU/DMA, or to the devices.

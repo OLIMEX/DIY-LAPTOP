@@ -1,0 +1,11 @@
+#
+#  Touchscreen driver configuration
+#
+
+config  TOUCHSCREEN_ICN83XX_TS
+       tristate  "icn83xx touchscreen driver"      
+       depends on INPUT && I2C
+       default m
+       help
+         icn83xx touchscreen driver    
+

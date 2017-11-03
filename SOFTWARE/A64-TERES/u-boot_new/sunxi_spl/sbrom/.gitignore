@@ -1,0 +1,43 @@
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# Normal rules
+#
+
+*.rej
+*.orig
+*.a
+*.o
+*~
+*.swp
+*.patch
+*.bin
+*.axf
+
+#
+# Top-level generic files
+#
+
+/sboot
+/sboot.hex
+/sboot.imx
+/sboot.map
+/sboot.srec
+/sboot.ldr
+/sboot.ldr.hex
+/sboot.ldr.srec
+/sboot.img
+/sboot.kwb
+/sboot.sha1
+/sboot.dis
+/sboot.lds
+/sboot.ubl
+
+#
+# Generated files
+#
+
+*.depend
+

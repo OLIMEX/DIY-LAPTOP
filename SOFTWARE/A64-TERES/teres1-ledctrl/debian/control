@@ -1,0 +1,12 @@
+Source: teres1-ledctrl
+Section: unknown
+Priority: optional
+Maintainer: Stefan Saraev <stefan@saraev.ca>
+Build-Depends: debhelper (>= 8), dh-systemd
+Standards-Version: 3.9.8
+
+Package: teres1-ledctrl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: teres1-ledctrl
+ quick and dirty capsl/numl led trigger

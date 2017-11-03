@@ -1,0 +1,94 @@
+/*
+ * Sunxi platform smp source file.
+ * It contains platform specific fucntions needed for the linux smp kernel.
+ *
+ * Copyright (c) Allwinner.  All rights reserved.
+ * Sugar (shuge@allwinnertech.com)
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+
+#include <linux/delay.h>
+#include <asm/cacheflush.h>
+#include <asm/io.h>
+
+#include "platsmp.h"
+
+static cpumask_t dead_cpus;
+
+int sunxi_cpu_kill(unsigned int cpu)
+{
+	int k, tmp_cpu = get_cpu();
+
+	put_cpu();
+	pr_debug("%s: cpu%d try to kill cpu%d\n", __func__, tmp_cpu, cpu);
+
+	for (k = 0; k < 1000; k++) {
+		if (cpumask_test_cpu(cpu, &dead_cpus)) {
+			if (sunxi_is_wfi_mode(cpu)) {
+#ifndef CONFIG_ARCH_SUN8IW10
+				sunxi_disable_cpu(cpu);
+#endif
+				pr_debug("%s: cpu%d is killed!\n", __func__, cpu);
+				return 1;
+			}
+		}
+
+		mdelay(1);
+	}
+
+	pr_err("%s: try to kill cpu%d failed!\n", __func__, cpu);
+	return 0;
+}
+
+int sunxi_cpu_disable(unsigned int cpu)
+{
+	cpumask_clear_cpu(cpu, &dead_cpus);
+	return cpu == 0 ? -EPERM : 0;
+}
+
+void sunxi_cpu_die(unsigned int cpu)
+{
+	unsigned long actlr;
+
+	cpumask_set_cpu(cpu, &dead_cpus);
+
+	/* step1: disable the data cache */
+	asm("mrc p15, 0, %0, c1, c0, 0" : "=r" (actlr) );
+	actlr &= ~(1<<2);
+	asm volatile("mcr p15, 0, %0, c1, c0, 0\n" : : "r" (actlr));
+
+	/* step2: clean and ivalidate L1 cache */
+	flush_cache_all();
+
+	/* step3: execute a CLREX instruction */
+	asm("clrex" : : : "memory", "cc");
+
+	/* step4: switch cpu from SMP mode to AMP mode, aim is to disable cache coherency */
+	asm("mrc p15, 0, %0, c1, c0, 1" : "=r" (actlr) );
+	actlr &= ~(1<<6);
+	asm volatile("mcr p15, 0, %0, c1, c0, 1\n" : : "r" (actlr));
+
+	/* step5: execute an ISB instruction */
+	isb();
+
+	/* step6: execute a DSB instruction  */
+	dsb();
+
+	/* step7: execute a WFI instruction */
+	while (1) {
+		asm("wfi" : : : "memory", "cc");
+	}
+}
