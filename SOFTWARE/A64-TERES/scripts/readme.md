@@ -5,9 +5,9 @@
 ### 1. Getting source code and helper scripts
 	
 ```bash
-mkdir a64-olinuxino
-cd a64-olinuxino
+cd ~/
 git clone https://github.com/OLIMEX/DIY-LAPTOP
+cd DIY-LAPTOP/SOFTWARE/A64-TERES/
 ```
 ### 2. Setup toolchain
 ```bash
@@ -26,12 +26,6 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- LOCALVERSION= clean
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 LOCALVERSION= Image
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 LOCALVERSION= modules
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 LOCALVERSION= modules_install  INSTALL_MOD_PATH=out INSTALL_MOD_STRIP=1
-```
-#### ATF
-```bash
-cd ../arm-trusted-firmware-a64/
-make clean
-make ARCH=arm CROSS_COMPILE=aarch64-linux-gnu- PLAT=sun50iw1p1 bl31
 ```
 #### Allwinner Pack Tools 
 ```bash
