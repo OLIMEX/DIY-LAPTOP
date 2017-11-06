@@ -11,8 +11,8 @@ if [ "$(id -u)" -ne "0" ]; then
 	exit 1
 fi
 #get boot device 
-BOOT_PARTITION=`df -P / | tail -n 1 | awk '/.*/ { print substr($1,0,12); }'`
-EMMC_DEVICE="/dev/"`cat /proc/partitions | awk '{if ($4 ~ "boot")  print substr($4,0,7); }' | head -1`
+BOOT_PARTITION=`df -P / | tail -n 1 | awk '/.*/ { print substr($1,0,13); }'`
+EMMC_DEVICE="/dev/"`cat /proc/partitions | awk '{if ($4 ~ "boot")  print substr($4,0,8); }' | head -1`
 BLOBS_LOCATION="/blobs"
 boot0_position=8      # KiB
 uboot_position=19096  # KiB
