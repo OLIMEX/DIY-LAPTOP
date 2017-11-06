@@ -7,12 +7,7 @@
 ```bash
 mkdir a64-olinuxino
 cd a64-olinuxino
-git clone https://github.com/A64-TERES/linux-a64
-git clone https://github.com/A64-TERES/u-boot_new
-git clone https://github.com/hehopmajieh/arm-trusted-firmware-a64
-git clone https://github.com/A64-TERES/blobs
-git clone https://github.com/A64-TERES/sunxi-pack-tools sunxi-pack-tools -b pinebook
-git clone https://github.com/A64-TERES/scripts
+git clone https://github.com/OLIMEX/DIY-LAPTOP
 ```
 ### 2. Setup toolchain
 ```bash

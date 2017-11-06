@@ -1,5 +1,11 @@
 merge_uboot/merge_uboot
 update_uboot_fdt/update_uboot_fdt
 update_uboot/update_uboot
+update_boot0/update_boot0
+update_scp/update_scp
+update_toc0/update_toc0
 script/script
+.depend
 /bin
+*.o
+

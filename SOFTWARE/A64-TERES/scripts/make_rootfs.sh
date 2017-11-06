@@ -350,6 +350,12 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 EOF
+cat > "$DEST/etc/udev/hwdb.d/teres_kmap.hwdb" <<EOF
+evdev:input:b0003v15BAp003C*
+KEYBOARD_KEY_7006f=brightnessdown
+KEYBOARD_KEY_70070=brightnessup
+EOF
+
 		add_platform_scripts
 		add_systemd_services
 		add_udev_rules

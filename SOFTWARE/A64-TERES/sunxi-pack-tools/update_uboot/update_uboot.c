@@ -755,12 +755,9 @@ int align_uboot(char *source_uboot_name)
 	head = (struct spare_boot_ctrl_head *)buffer;
 	source_length = head->uboot_length;
 	align_size = head->align_size;
-	if(source_length & (align_size - 1))
-	{
-		total_length = (source_length + align_size) & (~(align_size - 1));
-	}
-	//printf("source length = %d\n", source_length);
-	//printf("total length = %d\n", total_length);
+	total_length = (source_length + align_size - 1) & (~(align_size - 1));
+	printf("source length = %d\n", source_length);
+	printf("total length = %d\n", total_length);
 	uboot_buf = (char *)malloc(total_length);
 	if(!uboot_buf)
 	{
