@@ -52,7 +52,7 @@
 //the wakeup source of assistant cpu: cpus
 #define CPUS_WAKEUP_LOWBATT     (1<<12 )
 #define CPUS_WAKEUP_USB         (1<<13 )
-#define CPUS_WAKEUP_AC          (1<<14 )
+//#define CPUS_WAKEUP_AC          (1<<14 )
 #define CPUS_WAKEUP_ASCEND      (1<<15 )
 #define CPUS_WAKEUP_DESCEND     (1<<16 )
 #define CPUS_WAKEUP_SHORT_KEY   (1<<17 )
@@ -451,9 +451,9 @@ typedef	struct normal_standby_para
 
 
 //define cpus wakeup src
-#define CPUS_MEM_WAKEUP              (CPUS_WAKEUP_LOWBATT | CPUS_WAKEUP_USB | CPUS_WAKEUP_AC | \
+#define CPUS_MEM_WAKEUP              (CPUS_WAKEUP_LOWBATT | CPUS_WAKEUP_USB |  \
 						CPUS_WAKEUP_DESCEND | CPUS_WAKEUP_ASCEND | CPUS_WAKEUP_ALM0 | CPUS_WAKEUP_GPIO)
-#define CPUS_BOOTFAST_WAKEUP         (CPUS_WAKEUP_LOWBATT | CPUS_WAKEUP_LONG_KEY |CPUS_WAKEUP_ALM0|CPUS_WAKEUP_USB|CPUS_WAKEUP_AC )
+#define CPUS_BOOTFAST_WAKEUP         (CPUS_WAKEUP_LOWBATT | CPUS_WAKEUP_LONG_KEY |CPUS_WAKEUP_ALM0|CPUS_WAKEUP_USB )
 
 /*used in normal standby*/
 #define CPU0_MEM_WAKEUP              (CPU0_WAKEUP_MSGBOX | CPU0_WAKEUP_EXINT)
