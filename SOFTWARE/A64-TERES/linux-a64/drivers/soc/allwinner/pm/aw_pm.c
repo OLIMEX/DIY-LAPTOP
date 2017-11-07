@@ -146,7 +146,7 @@ unsigned int parse_wakeup_event(char *s, unsigned int size, unsigned int event, 
 		case CPU0_WAKEUP_KEY	    : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPU0_WAKEUP_KEY      ", CPU0_WAKEUP_KEY      ); count++;    break;
 		case CPUS_WAKEUP_LOWBATT	    : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_LOWBATT  ", CPUS_WAKEUP_LOWBATT  ); count++;    break; 
 		case CPUS_WAKEUP_USB            : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_USB      ", CPUS_WAKEUP_USB      ); count++;    break; 
-		case CPUS_WAKEUP_AC             : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_AC       ", CPUS_WAKEUP_AC       ); count++;    break; 
+		//case CPUS_WAKEUP_AC             : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_AC       ", CPUS_WAKEUP_AC       ); count++;    break; 
 		case CPUS_WAKEUP_ASCEND         : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_ASCEND   ", CPUS_WAKEUP_ASCEND   ); count++;    break; 
 		case CPUS_WAKEUP_DESCEND        : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_DESCEND  ", CPUS_WAKEUP_DESCEND  ); count++;    break; 
 		case CPUS_WAKEUP_SHORT_KEY      : uk_printf(s, end - s, "%-36s bit 0x%x \t ", "CPUS_WAKEUP_SHORT_KEY", CPUS_WAKEUP_SHORT_KEY); count++;    break; 

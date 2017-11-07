@@ -66,7 +66,7 @@ typedef enum CPU_WAKEUP_SRC {
 /* the wakeup source of assistant cpu: cpus */
 	CPUS_LOWBATT_SRC	= CPUS_WAKEUP_LOWBATT,  /* low battery event */
 	CPUS_USB_SRC		= CPUS_WAKEUP_USB ,     /* usb insert event */
-	CPUS_AC_SRC		= CPUS_WAKEUP_AC,       /* charger insert event */
+/*	CPUS_AC_SRC		= CPUS_WAKEUP_AC,*/       /* charger insert event */
 	CPUS_ASCEND_SRC		= CPUS_WAKEUP_ASCEND,   /* power key ascend event */
 	CPUS_DESCEND_SRC	= CPUS_WAKEUP_DESCEND,  /* power key descend event */
 	CPUS_SHORT_KEY_SRC	= CPUS_WAKEUP_SHORT_KEY,/* power key short press event */
