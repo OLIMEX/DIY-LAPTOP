@@ -357,7 +357,7 @@ EOF
 evdev:input:b0003v15BAp003C*
   KEYBOARD_KEY_7006f=brightnessdown
   KEYBOARD_KEY_70070=brightnessup
-  KEYBOARD_KEY_70074=suspend
+  KEYBOARD_KEY_70071=suspend
 EOF
 		add_platform_scripts
 		add_systemd_services
