@@ -15,6 +15,8 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
 #include <linux/input.h>
 
@@ -69,34 +71,37 @@ int main (int argc, char **argv)
 
   device = argv[1];
 
-  if((fd = open(device, O_RDONLY)) == -1)
+  for (;;)
   {
-    perror("Could not open input device");
-    exit(255);
-  }
-
-  export_gpio(LED_NUM);
-  export_gpio(LED_CAPS);
-
-
-  while(read(fd, &ie, sizeof(struct input_event)))
-  {
-    switch (ie.type)
+    if((fd = open(device, O_RDONLY)) != -1)
     {
-    case 17: // EV_LED
-      switch (ie.code) {
-      case 0: // LED_NUML
-        printf("type %d\tcode %d\tvalue %d\n", ie.type, ie.code, ie.value);
-        set_gpio(LED_NUM, ie.value);
-        break;
-      case 1: // LED_CAPSL
-        printf("type %d\tcode %d\tvalue %d\n", ie.type, ie.code, ie.value);
-        set_gpio(LED_CAPS, ie.value);
-        break;
+      export_gpio(LED_NUM);
+      export_gpio(LED_CAPS);
+
+      while(read(fd, &ie, sizeof(struct input_event)) > 0)
+      {
+        switch (ie.type)
+        {
+          case 17: // EV_LED
+            switch (ie.code) {
+              case 0: // LED_NUML
+                printf("type %d\tcode %d\tvalue %d\n", ie.type, ie.code, ie.value);
+                set_gpio(LED_NUM, ie.value);
+                break;
+              case 1: // LED_CAPSL
+                printf("type %d\tcode %d\tvalue %d\n", ie.type, ie.code, ie.value);
+                set_gpio(LED_CAPS, ie.value);
+                break;
+            }
+            break;
+        }
       }
-      break;
     }
+
+    // something went wrong: rinse and repeat
+    close(fd);
+    usleep(65535u);
   }
 
-  return 0;
+  return 0; // never
 }
