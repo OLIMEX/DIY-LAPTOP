@@ -53,7 +53,9 @@ void usage(void)
 {
   extern char *program_invocation_short_name;
   printf("USAGE:\n");
-  printf("   %s /dev/input/eventX\n", program_invocation_short_name);
+  printf("   %s INPUT_DEVICE\n", program_invocation_short_name);
+  printf("for example,\n");
+  printf("   %s '/dev/input/by-path/platform-1c1b000.ehci1-controller-usb-0:1.4:1.0-event-kbd'\n", program_invocation_short_name);
   printf("\n");
 }
 
