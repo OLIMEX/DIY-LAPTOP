@@ -1,0 +1,13 @@
+[Unit]
+Description=teres1-audioselect
+After=basic.target
+
+[Service]
+ExecStart=/usr/bin/teres1-audioselect /dev/input/by-path/platform-sound.6-event
+TimeoutStopSec=1
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+
+[Install]
+WantedBy=basic.target
