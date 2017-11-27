@@ -5,7 +5,5 @@ clean:
 	$(RM) teres1-audioselect
 
 install: all
-	install -m0755 teres1-audioselect /usr/bin
-	install -m0644 teres1-audioselect.service /etc/systemd/system/teres1-audioselect.service && \
-		systemctl enable teres1-audioselect.service && \
-		systemctl start teres1-audioselect.service
+	if ( test ! -d $(DESTDIR)/usr/bin ) ; then mkdir -p $(DESTDIR)/usr/bin ; fi
+	install -m0755 teres1-audioselect $(DESTDIR)/usr/bin
