@@ -14,6 +14,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include <linux/input.h>
 
@@ -22,7 +23,9 @@ void usage(void)
 {
   extern char *program_invocation_short_name;
   printf("USAGE:\n");
-  printf("   %s /dev/input/eventX\n", program_invocation_short_name);
+  printf("   %s INPUT_DEVICE\n", program_invocation_short_name);
+  printf("for example,\n");
+  printf("   %s '/dev/input/by-path/platform-sound.6-event'\n", program_invocation_short_name);
   printf("\n");
 }
 
@@ -40,66 +43,66 @@ int main (int argc, char **argv)
 
   device = argv[1];
 
-  if((fd = open(device, O_RDONLY)) == -1)
+  for (;;)
   {
-    perror("Could not open input device");
-    exit(255);
-  }
-
-
-
-  while(read(fd, &ie, sizeof(struct input_event)))
-  {
-	  printf("type %d\tcode %d\tvalue %d\n", ie.type, ie.code, ie.value);
-    switch (ie.type)
+    if((fd = open(device, O_RDONLY)) == -1)
     {
-		
-    case 5: // pluged
-      switch (ie.code) {
-		  
-      case 2: // headphones
-        printf("Headphones: %d\n", ie.value);
-        if (ie.value == 0)
-        {
-			system("amixer -c 0 set \"External Speaker\" on > /dev/null");
-			system("amixer -c 0 set \"Headphone\" off > /dev/null");
-        }
-        else
-        {
-			system("amixer -c 0 set \"External Speaker\" off > /dev/null");  
-			system("amixer -c 0 set \"Headphone\" on > /dev/null");
-		}
-        break;
-        
-      case 4: // mice
-        printf("Microphone: %d\n", ie.value);
-                if (ie.value == 0)
-        {
-			system("amixer -c 0 sset \"RADC input Mixer MIC1 boost\" unmute > /dev/null" );
-			system("amixer -c 0 sset \"LADC input Mixer MIC1 boost\" unmute > /dev/null");
-			system("amixer -c 0 sset \"RADC input Mixer MIC2 boost\" mute > /dev/null");
-			system("amixer -c 0 sset \"LADC input Mixer MIC2 boost\" mute > /dev/null");
-			system("amixer -c 0 sset \"ADCL Mux\" ADC > /dev/null");
-			system("amixer -c 0 sset \"ADCR Mux\" ADC > /dev/null");
-			system("amixer -c 0 sset \"AIF1 AD0L Mixer ADCL\" ADC > /dev/null");
-			system("amixer -c 0 sset \"AIF1 AD0R Mixer ADCR\" ADC > /dev/null");						
-        }
-        else
-        {
-			system("amixer -c 0 sset \"RADC input Mixer MIC2 boost\" unmute > /dev/null");
-			system("amixer -c 0 sset \"LADC input Mixer MIC2 boost\" unmute > /dev/null");
-			system("amixer -c 0 sset \"RADC input Mixer MIC1 boost\" mute > /dev/null");
-			system("amixer -c 0 sset \"LADC input Mixer MIC1 boost\" mute > /dev/null");
-			system("amixer -c 0 sset \"ADCL Mux\" ADC > /dev/null");
-			system("amixer -c 0 sset \"ADCR Mux\" ADC > /dev/null");	
-			system("amixer -c 0 sset \"AIF1 AD0L Mixer ADCL\" ADC > /dev/null");
-			system("amixer -c 0 sset \"AIF1 AD0R Mixer ADCR\" ADC > /dev/null");								
-		}
-        break;
-      }
-      break;
+      perror("Could not open input device");
+      exit(255);
     }
-  }
 
+    while(read(fd, &ie, sizeof(struct input_event)) > 0)
+    {
+      printf("type %d\tcode %d\tvalue %d\n", ie.type, ie.code, ie.value);
+      switch (ie.type)
+      {
+        case 5: // plugged
+          switch (ie.code) {
+            case 2: // headphones
+              printf("Headphones: %d\n", ie.value);
+              if (ie.value == 0)
+              {
+                system("amixer -c 0 set \"External Speaker\" on > /dev/null");
+                system("amixer -c 0 set \"Headphone\" off > /dev/null");
+              }
+              else
+              {
+                system("amixer -c 0 set \"External Speaker\" off > /dev/null");  
+                system("amixer -c 0 set \"Headphone\" on > /dev/null");
+              }
+              break;
+            case 4: // mice
+              printf("Microphone: %d\n", ie.value);
+              if (ie.value == 0)
+              {
+                system("amixer -c 0 sset \"RADC input Mixer MIC1 boost\" unmute > /dev/null" );
+                system("amixer -c 0 sset \"LADC input Mixer MIC1 boost\" unmute > /dev/null");
+                system("amixer -c 0 sset \"RADC input Mixer MIC2 boost\" mute > /dev/null");
+                system("amixer -c 0 sset \"LADC input Mixer MIC2 boost\" mute > /dev/null");
+                system("amixer -c 0 sset \"ADCL Mux\" ADC > /dev/null");
+                system("amixer -c 0 sset \"ADCR Mux\" ADC > /dev/null");
+                system("amixer -c 0 sset \"AIF1 AD0L Mixer ADCL\" ADC > /dev/null");
+                system("amixer -c 0 sset \"AIF1 AD0R Mixer ADCR\" ADC > /dev/null");	
+              }
+              else
+              {
+                system("amixer -c 0 sset \"RADC input Mixer MIC2 boost\" unmute > /dev/null");
+                system("amixer -c 0 sset \"LADC input Mixer MIC2 boost\" unmute > /dev/null");
+                system("amixer -c 0 sset \"RADC input Mixer MIC1 boost\" mute > /dev/null");
+                system("amixer -c 0 sset \"LADC input Mixer MIC1 boost\" mute > /dev/null");
+                system("amixer -c 0 sset \"ADCL Mux\" ADC > /dev/null");
+                system("amixer -c 0 sset \"ADCR Mux\" ADC > /dev/null");	
+                system("amixer -c 0 sset \"AIF1 AD0L Mixer ADCL\" ADC > /dev/null");
+                system("amixer -c 0 sset \"AIF1 AD0R Mixer ADCR\" ADC > /dev/null");	
+              }
+              break;
+          }
+          break;
+      }
+    }
+    // something went wrong: rinse and repeat
+    close(fd);
+    usleep(65535u);
+  }
   return 0;
 }
