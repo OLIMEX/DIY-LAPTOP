@@ -1,1 +1,2 @@
+systemctl stop teres1-ledctrl
 ./hid_bootloader_cli KeyboardMouse.hex

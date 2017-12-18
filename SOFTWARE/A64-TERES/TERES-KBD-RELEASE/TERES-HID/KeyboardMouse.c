@@ -59,6 +59,7 @@ static uint8_t PrevKeyboardHIDReportBuffer[sizeof(USB_KeyboardReport_Data_t)];
 static uint8_t PrevMouseHIDReportBuffer[sizeof(USB_WheelMouseReport_Data_t)];
 
 
+
 int limited(int value)
 {
 if (value < 0)
@@ -803,6 +804,7 @@ itsDone = true;
 		*ReportSize = sizeof(USB_WheelMouseReport_Data_t);
 		return true;
 	}
+
 }
 
 
@@ -840,9 +842,9 @@ ISR(ADC_vect)
 				if (button < 0xe8)
 						{
    
-							if (button>0x94) mouse = MOUSE_RIGTH;
+							if (button>0xa0) mouse = MOUSE_RIGTH;
         
-								else if (button>0x78)  mouse = MOUSE_LEFT;
+								else if (button>0x80)  mouse = MOUSE_LEFT;
 
 									else mouse = MOUSE_MIDDLE;
 					

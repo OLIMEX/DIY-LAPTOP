@@ -1,0 +1,12 @@
+firmware171120.tar.gz
+
+fixed compose keycode
+stop ledctrl service before upgrade - avoid 100% proc usage after upgrade
+
+
+firmware171110.tar.gz
++++Fn-F1 = KEY_SUSPEND 
+---Fn-F1 = KEY_POWER
+
+
+firmware171106.tar.gz - initial commit

@@ -67,7 +67,7 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM MouseReport[] =
 	 *   Buttons: 3
 	 *   Absolute screen coordinates: false
 	 */
-	HID_DESCRIPTOR_MOUSE(-100, 100, -100,100, 3, false)
+	HID_DESCRIPTOR_WHEEL_MOUSE(-100, 100, -100,100, 3, false)
 };
 
 /** Same as the MouseReport structure, but defines the keyboard HID interface's report structure. */
@@ -228,7 +228,7 @@ const USB_Descriptor_String_t PROGMEM ProductString = USB_STRING_DESCRIPTOR(
  *  USB host.
  */
 uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
-                                    const uint8_t wIndex,
+                                    const uint16_t wIndex,
                                     const void** const DescriptorAddress)
 {
 	const uint8_t  DescriptorType   = (wValue >> 8);

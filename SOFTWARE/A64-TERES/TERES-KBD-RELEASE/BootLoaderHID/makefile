@@ -19,7 +19,7 @@ F_USB        = $(F_CPU)
 OPTIMIZATION = s
 TARGET       = BootloaderHID
 SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB)
-LUFA_PATH    = ../lufa-LUFA-151115/LUFA
+LUFA_PATH    = ../lufa-LUFA-170418/LUFA
 CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/
 LD_FLAGS     = -Wl,--section-start=.text=$(BOOT_START_OFFSET)
 

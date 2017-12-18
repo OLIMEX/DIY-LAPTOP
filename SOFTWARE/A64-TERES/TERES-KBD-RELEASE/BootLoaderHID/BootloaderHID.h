@@ -72,7 +72,7 @@
 		#define MAGIC_BOOT_KEY             0xDC42
 
 		#define	BOOTLOADER_TIMEOUT		20		
-		//  abt 10 sec
+		//  abt 2 sec
 		
 		
 	/* Function Prototypes: */
