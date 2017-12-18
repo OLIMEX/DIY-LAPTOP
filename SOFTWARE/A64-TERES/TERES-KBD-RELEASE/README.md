@@ -9,15 +9,15 @@ How to compile the keyboard and touchpad firmware for TERES-I:
 cd SOFTWARE/A64-TERES/TERES-KBD-RELEASE/
 ```
 3. Download Dean Camera's LUFA USB stack from http://www.fourwalledcubicle.com/ 
-   Extract the archive inside "avrspace/TERES-KBD-RELEASE/" to directory lufa-LUFA-170418
+   Extract the archive inside "TERES-KBD-RELEASE/" to directory lufa-LUFA-170418
 ```bash
 unzip lufa-LUFA-170418.zip
 ```
-4. The Olimex keyboard + touchpad code is located in "avrspace/TERES-KBD-RELEASE/TERES-HID/", navigate there to edit the build depndencies:
+4. The Olimex keyboard + touchpad code is located in "TERES-KBD-RELEASE/TERES-HID/", navigate there to edit the build depndencies:
 ```bash
 cd TERES-HID/
 ```
-5. Edit the makefile inside avrspace/TERES-KBD-RELEASE/TERES-HID/
+5. Edit the makefile inside TERES-KBD-RELEASE/TERES-HID/
 ```bash
 nano makefile
 ```
@@ -39,7 +39,7 @@ You will be prompted to press "fn+Tux+ESC" (function + penguin + escape) keys si
 
 8. Voila! Updade successful.
 
-Note 1: If you wish to play with the behavior yourself edit the sources in avrspace/TERES-KBD-RELEASE/TERES-HID/
+Note 1: If you wish to play with the behavior yourself edit the sources in TERES-KBD-RELEASE/TERES-HID/
 Note 2: If you have problems with the touchpad and it seems dead, make sure that you haven't disabled it with fn+F3
 
 The code is based on Dean Camera's LUFA USB stack. More info at:
