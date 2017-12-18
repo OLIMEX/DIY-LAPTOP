@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name TERES)(type Legacy)(uri ${KIPRJMOD}/../TERES.lib)(options "")(descr ""))
+)

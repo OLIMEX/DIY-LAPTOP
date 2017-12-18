@@ -1,0 +1,45 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATMEGA16U4-AU
+D TQFP44, 16K Flash, 1.25K SRAM, 512B EEPROM, USB2.0
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA16U4RC-AU
+D TQFP44, 16K Flash, 1.25K SRAM, 512B EEPROM, USB2.0, RC Osc
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA32U4-AU
+D TQFP44, 32K Flash, 2.5K SRAM, 1K EEPROM, USB2.0
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA32U4RC-AU
+D TQFP44, 32K Flash, 2.5K SRAM, 1K EEPROM, USB2.0
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+$CMP Conn_01x06
+D Generic connector, single row, 01x06
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x12
+D Generic connector, single row, 01x12
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x24
+D Generic connector, single row, 01x24
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library
