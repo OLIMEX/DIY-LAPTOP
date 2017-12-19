@@ -1,4 +1,4 @@
-How to update the touchscreen button firmware:
+How to update the touchpad and button firmware:
 
 Download and extract the tgz archive. Open a console and navigate to the folder where you placed the archive then extract with the follwing command:
 
@@ -8,7 +8,7 @@ tar -xvf firmware.tar.gz
 navigate to the firmware folder and then perform an update with the following commands: 
 ```bash
 cd firmware 
-sudo ./update    #standart firmware
+sudo ./update    #standard firmware
 
 or
 
@@ -16,9 +16,9 @@ sudo ./update-notap  #firmware with taps disabled
 ```
 Then follow the onscreen prompts: 
 
-Type the sudo password. 
+Type the super user password. 
 
-Then press Fn+TuXkey+escape together to
+Then press Fn+TuXkey+escape simultaneously to
 start the update.
 
 The firmware should now be updated.
