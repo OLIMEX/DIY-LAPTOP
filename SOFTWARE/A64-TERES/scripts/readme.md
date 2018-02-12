@@ -13,7 +13,7 @@ cd DIY-LAPTOP/SOFTWARE/A64-TERES/
 ```bash
 	sudo apt install gcc-aarch64-linux-gnu
         sudo apt install gcc-4.7-arm-linux-gnueabihf
-	sudo apt install kpartx bsdtar mtools dos2unix
+	sudo apt install kpartx bsdtar mtools dos2unix device-tree-compiler
 ```
 
 ### 3. Cross-compile sources
