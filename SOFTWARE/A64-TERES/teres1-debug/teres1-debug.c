@@ -19,6 +19,8 @@
 #include <unistd.h>
 #include <string.h>
 #include <linux/input.h>
+#include <unistd.h>
+#include <sys/types.h>
 
 #define DEBUGEN		361
 
@@ -37,6 +39,7 @@ void export_gpio(int gpio)
   fd = open(buf, O_WRONLY);
   write(fd, "out", 3);
   close(fd);
+
 }
 
 void set_gpio(int gpio, int value)
@@ -47,30 +50,36 @@ void set_gpio(int gpio, int value)
   sprintf(buf, "%d", value);
   write(fd, buf, 1);
   close(fd);
+
 }
 
 void usage(void)
 {
   extern char *program_invocation_short_name;
   printf("USAGE:\n");
-  printf("   %s on|off\n", program_invocation_short_name);
+  printf(" sudo %s on|off\n", program_invocation_short_name);
   printf("\n");
 }
 
 int main (int argc, char **argv)
 {
 int mode;
-  if (!argv[1])
-  {
-    usage();
+
+uid_t uid=getuid(), euid=geteuid();
+
+
+if (uid!=0 || uid!=euid || !argv[1]) {
+	 usage();
     exit(0);
-  }
+}else{
+	
+	
   if (strcmp(argv[1],"off")==0) mode = 1;
   else if (strcmp(argv[1],"on")==0) mode = 0;
   else { usage(); exit(0); }
-  //printf("Debug %d\r\n",mode);
   export_gpio(DEBUGEN);
   set_gpio(DEBUGEN, mode);
-
+  printf("Debuging via serial cable is %s\r\n",argv[1]);
   return 0;
+}
 }
