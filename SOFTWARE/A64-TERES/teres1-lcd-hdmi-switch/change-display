@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+	echo "This tool must run as root. Exiting..." >&2
+	exit 1
+fi
+
+choices=$(dialog \
+	--title "Configure display output" \
+	--menu "\nChoose an option: \n" 10 60 7 \
+	1 "Enable HDMI display output" \
+	2 "Enable LCD display output" 2>&1 >/dev/tty)
+
+for choice in $choices
+do
+	case $choice in
+	1)
+		[[ -e /boot/a64/a64-olinuxino-hdmi.dtb ]] && \
+		cp -f /boot/a64/a64-olinuxino-hdmi.dtb /boot/a64/a64-olinuxino.dtb
+		! grep -q "hdmi" /etc/modules && echo "hdmi" >> /etc/modules
+	;;
+
+	2)
+		[[ -e /boot/a64/a64-olinuxino-lcd.dtb ]] && \
+		cp -f /boot/a64/a64-olinuxino-lcd.dtb /boot/a64/a64-olinuxino.dtb
+		sed -i '/hdmi/d' /etc/modules
+	;;
+	esac
+done
+
+
+
+# Display reboot confirmation
+dialog \
+	--title "Almost done" \
+	--yes-label "Reboot" \
+	--no-label "Exit" \
+	--yesno "\nAll done.\nBoard must be rebooted to apply changes." 7 70
+[[ $? -ne 0 ]] && exit 0
+reboot
