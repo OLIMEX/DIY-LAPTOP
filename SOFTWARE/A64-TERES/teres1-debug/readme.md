@@ -24,8 +24,9 @@ or
 sudo debug_switch.sh off
 ```
 
-This file ("teres1-debug") is a part of the TERESI official image. However if you want to download just this file do following: 
 
+
+How to download and install:
 ```bash
 git clone https://github.com/d3v1c3nv11/teres1-debug.git
 cd teres1-debug
@@ -44,7 +45,8 @@ TX   RX
         GND
 ```
 
-# VERY IMPORTANT!!! 
-# Use 3.3V levels serial adaptor! 
-# DO NOT USE RS232 LEVEL ADAPTORS!
+## VERY IMPORTANT!!! 
+## Use 3.3V level serial adapter! Consider our TERES-USB-DEBUG cable: https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-USB-DEBUG/
+## DO NOT USE RS232 LEVEL ADAPTERS!
+
 
