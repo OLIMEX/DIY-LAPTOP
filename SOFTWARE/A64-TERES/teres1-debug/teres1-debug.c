@@ -79,7 +79,7 @@ if (uid!=0 || uid!=euid || !argv[1]) {
   else { usage(); exit(0); }
   export_gpio(DEBUGEN);
   set_gpio(DEBUGEN, mode);
-  printf("Debuging via serial cable is %s\r\n",argv[1]);
+  printf("Debuging via serial cable on headphone port is %s\r\n",argv[1]);
   return 0;
 }
 }
