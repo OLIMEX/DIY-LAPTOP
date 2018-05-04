@@ -1,10 +1,10 @@
-LCD(eDP)<->HDMI video switcher for Teres-I laptop
+#LCD(eDP)<->HDMI video switcher for Teres-I laptop
 
 Script and DTB files that allow to switch video output medium 
 from LCD(1366x768) to HDMI(1280x720) and the other way around.
 
-WARNING! You need cable with mini HDMI connector to connect your monitor or TV 
-(THE MINI HDMI CONNECTOR IS DIFFERENT FROM THE REGULAR HDMI CONNECTOR)
+**WARNING! You need cable with mini HDMI connector to connect your monitor or TV 
+(THE MINI HDMI CONNECTOR IS DIFFERENT FROM THE REGULAR HDMI CONNECTOR)**
 
 	Ensure that you have a cable with proper connector and native HDMI monitor
 	BEFORE YOU SET THE OUTPUT TO HDMI, ELSE IT WOULD BE HARD TO REVERT TO LCD.
@@ -18,23 +18,23 @@ How to install?
 
 1. Copy a64-olinuxino-hdmi.dtb and a64-olinuxino-lcd.dtb in /boot/a64/ directory,
 where the default a64-olinuxino.dtb file is located. The command should be:
-
+`
 # sudo cp _path_to_file/a64-olinuxino-hdmi.dtb /boot/a64/
 # sudo cp _path_to_file/a64-olinuxino-lcd.dtb /boot/a64/
-
+`
 2. copy change-display in /usr/sbin directory
-
+`
 # sudo cp path_to_file/change-display /usr/sbin
-
+`
 3. Start the script change-display with 
-
+`
 # sudo change-display 
-
+`
 and follow the on-screen instructions.
 
 4. Reboot the laptop.
 
-FAQ:
+##FAQ:
 
 1. Can I have HDMI and LCD working at the same time?
 
