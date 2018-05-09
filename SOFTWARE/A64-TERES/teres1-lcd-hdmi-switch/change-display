@@ -5,12 +5,26 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
+# Find root device
+for cmd in $(cat /proc/cmdline); do
+	[[ $(cut -d'=' -f1 <<< $cmd) == "root" ]] && \
+	root_device=$(cut -d'=' -f2 <<< $cmd) && \
+	boot_device="${root_device%?}1" && break
+done
+[[ -z $boot_device ]] && echo "Unknown boot device. Exiting..." >&2 && exit 1
+
+# Make sure correct boot partition is mounted
+df | grep -q $boot_device && umount /boot
+mount $boot_device /boot
+
 choices=$(dialog \
 	--title "Configure display output" \
 	--menu "\nChoose an option: \n" 10 60 7 \
 	1 "Enable HDMI display output" \
-	2 "Enable LCD display output" 2>&1 >/dev/tty)
+	2 "Enable LCD display output" \
+	2>&1 >/dev/tty)
 
+[[ -z $choices ]] && exit 0
 for choice in $choices
 do
 	case $choice in
@@ -27,8 +41,6 @@ do
 	;;
 	esac
 done
-
-
 
 # Display reboot confirmation
 dialog \
