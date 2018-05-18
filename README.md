@@ -1,4 +1,11 @@
+![OLIMEX Company Logo](doc/images/smflogo.png "OLIMEX Company Logo")
+<img align="right" src="doc/images/TERES-I/TERES-A64-BLACK/laptop-12.jpg">
+
+<br>
+
 # TERES-I Laptop
+
+<br><br>
 
 ## Overview
 
@@ -28,8 +35,9 @@ Assembling this DIY laptop you would probably learn a lot of new things.
 You can build it together with your kids or students, sparking interest in electronics and technology in general.
 You will know every bit of your laptop and will be able to fix if something doesn't suit your needs or gets damaged.
 
-TERES-I is also environmentally friendly by default; you can upgrade your main board and not waste everything when new faster and better processor is available.
-Spare parts are also available for purchase separately.
+TERES-I is environmentally friendly.
+The main board may be upgraded without major revisions to the design, vastly reducing waste and time when new faster and better processors become available.
+Spare parts are also available for purchase.
 
 TERES-I related pages and categories:
 
