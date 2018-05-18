@@ -3,7 +3,7 @@
 ## Overview
 
 TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware (FOSH) and Software (FOSS) laptop design leveraging ARM64 and x86 processors.
-The kit is ready-to-assemble using the instructions provided.
+DIY kits are ready-to-assemble using the instructions provided and may be found [here](https://www.olimex.com/Products/DIY-Laptop/KITS/).
 
 ## Hardware
 
