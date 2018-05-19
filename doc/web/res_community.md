@@ -1,11 +1,11 @@
 # Community Links
 
-![GitHub](../icon-github.png "GitHub")
+<img src="../images/misc/icon-github.png" alt="GitHub" style="width: 50px; height: 50px"/>
 
-![Twitter](../icon-twitter.png "Twitter")
+<img src="../images/misc/icon-twitter.png" alt="Twitter" style="width: 50px; height: 50px"/>
 
-![Wordpress](../icon-wordpress.png "Wordpress")
+<img src="../images/misc/icon-wordpress.png" alt="Wordpress" style="width: 50px; height: 50px"/>
 
-![Facebook](../icon-facebok.png "Facebook")
+<img src="../images/misc/icon-facebook.png" alt="Facebook" style="width: 50px; height: 50px"/>
 
-![IRC Web Chat](../icon-irc.png "IRC Web Chat")
+<img src="../images/misc/icon-irc.png" alt="IRC Web Chat" style="width: 50px; height: 50px"/>
