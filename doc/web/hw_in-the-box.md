@@ -34,5 +34,5 @@ Description                          | Images
 | Flat cable Main-IO | ![Main-IO cable 1](../images/TERES-I/hardware/049.jpg) ![Main-IO cable 2](../images/TERES-I/hardware/050.jpg)
 | Flat cable Power-Main, Flat cable Main-Keyboard | ![Flat cables 1](../images/TERES-I/hardware/051.jpg) ![Flat cables 2](../images/TERES-I/hardware/052.jpg)
 | Flat cable Touchpad-TouchButtons | ![Touchpad-TouchButtons 1](../images/TERES-I/hardware/053.jpg) ![Touchpad-TouchButtons 2](../images/TERES-I/hardware/054.jpg)
-| Flat cable Keyboard-TouchButtons | ![Keyboard-TouchButtons 1](../images/TERES-I/hardware/055.jpg) ![Keyboard-TouchButtons 2](../images/TERES-I/hardware/056.jpg)
+| Flat cable Keyboard-TouchButtons | ![Keyboard-TouchButtons 1](../images/TERES-I/hardware/055.jpg) ![Keyboard-TouchButtons 2](../images/TERES-I/hardware/054.jpg)
 | Power adapter EU Style 5V 3A with 3 meter cable and LED status GREEN/RED indicator with UK and US plug adapters | ![Power adapter 1](../images/TERES-I/hardware/057.jpg) ![Power adapter 2](../images/TERES-I/hardware/058.jpg) ![Power adapter 3](../images/TERES-I/hardware/059.jpg)
