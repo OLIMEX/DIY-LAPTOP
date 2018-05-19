@@ -228,3 +228,59 @@ Now place the panel.
 If you did the wiring correctly, the panel will snap tightly.
 You will have something like this:
 
+[TERES-008-LCD-Back 4](../images/TERES-I/hardware/105.jpg)
+
+If the panel doesn't snap properly and you have to remove the cover to re-do the wiring, please, be patient else the plastic locks can break.
+You can use a credit card or other similar card as a lever to separate the bottom and top parts of the display.
+
+Then fix the upper corners with M2x3 mm screws like this:
+
+[TERES-008-LCD-Back 5](../images/TERES-I/hardware/106.jpg)
+
+Now place the **TERES-020-Camera-Lens** above the camera sensor and rubber mats over the two screws:
+
+[TERES-008-LCD-Back 6](../images/TERES-I/hardware/107.jpg)
+
+Now assemble the LCD part with the keyboard body.
+Use 6 screws M2 x 4 mm for this purpose:
+
+[TERES-008-LCD-Back 7](../images/TERES-I/hardware/108.jpg)
+
+Note that there are four places on the hinges but only three get assembled with screws.
+The fourth hole should be left empty; the extra screw will come from the bottom plastic body attachment.
+The places where you have to put screws are stamped at the metal hinges with arrows.
+
+Next connect the WiFi antenna cable and LCD cable to **TERES-PCB1-A64**:
+
+[WiFi/LCD](../images/TERES-I/hardware/109.jpg)
+
+The next step is to attach four double adhesive mats that would hold the LiPo battery in place:
+
+[Battery 1](../images/TERES-I/hardware/110.jpg)
+
+Attach the battery and plug the battery connector to the PCB1.
+Mind the orientation of the cable and polarity!
+Red cables should go to the left side.
+
+[Battery 2](../images/TERES-I/hardware/111.jpg)
+
+Next put the **TERES-021-Dust-Protectors** at the openings of the bottom plastic **TERES-005-Bottom**:
+
+[TERES-005-Bottom 1](../images/TERES-I/hardware/112.jpg)
+
+In the next image, you see the dust covers placed over the two openings:
+
+[TERES-005-Bottom 2](../images/TERES-I/hardware/113.jpg)
+
+Next assemble the bottom plastic using 12 of M2 x 5 screws:
+
+[TERES-005-Bottom 3](../images/TERES-I/hardware/114.jpg)
+
+The final step is to attach the rubber mats to the four locations at the bottom:
+
+[TERES-005-Bottom 4](../images/TERES-I/hardware/115.jpg)
+
+The assembly is now complete.
+Now press the PWR button and the laptop will boot:
+
+Congratulations! You assembled your own laptop TERES-I!
