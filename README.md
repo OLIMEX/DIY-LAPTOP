@@ -12,11 +12,11 @@
 TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware (FOSH) and Software (FOSS) laptop design leveraging ARM64 and x86 processors.
 DIY kits are ready-to-assemble using the instructions provided and may be found [here](https://www.olimex.com/Products/DIY-Laptop/KITS/).
 
-* [What is TERES-I?](doc/manuals/web/intro_what-is-teres-i)
-* [Where does the name come from?](doc/manuals/web/intro_name-origin)
-* [What makes this laptop different?](doc/manuals/web/intro_what-is-unique)
-* [Why does open-source matter so much?](doc/manuals/web/intro_importance-of-open-source)
-* [Where are the sources?](doc/manuals/web/intro_sources)
+* [What is TERES-I?](doc/web/intro_what-is-teres-i.md)
+* [Where does the name come from?](doc/web/intro_name-origin.md)
+* [What makes this laptop different?](doc/web/intro_what-is-unique.md)
+* [Why does open-source matter so much?](doc/web/intro_importance-of-open-source.md)
+* [Where are the sources?](doc/web/intro_sources.md)
 
 ## Hardware
 
@@ -37,16 +37,16 @@ TERES-I is environmentally friendly.
 The main board may be upgraded without major revisions to the design, vastly reducing waste and time when new faster and better processors become available.
 Spare parts are also available for purchase.
 
-* [Introduction to the hardware of TERES-I](doc/manuals/web/hw_intro)
-* [What do you get in the package?](doc/manuals/web/hw_in-the-box)
+* [Introduction to the hardware of TERES-I](doc/web/hw_intro.md)
+* [What do you get in the package?](doc/web/hw_in-the-box.md)
 
 ## Software
 
 TERES-I primarily runs on Linux distributions, but Android and Windows are also possible.
 
-* [Installing a fresh official image to TERES-I](doc/manuals/web/sw_fresh-os)
-* [Updating the image](doc/manuals/web/sw_updating-os)
-* [Building the software](doc/manuals/web/sw_building)
+* [Installing a fresh official image to TERES-I](doc/web/sw_fresh-os.md)
+* [Updating the image](doc/web/sw_updating-os.md)
+* [Building the software](doc/web/sw_building.md)
 
 ## Laptop Assembly
 
@@ -54,7 +54,7 @@ Assembling this DIY laptop you would probably learn a lot of new things.
 You can build it together with your kids or students, sparking interest in electronics and technology in general.
 You will know every bit of your laptop and will be able to fix if something doesn't suit your needs or gets damaged.
 
-* [How do I assemble my TERES-I?](doc/manuals/web/hw_assembly)
+* [How do I assemble my TERES-I?](doc/web/hw_assembly.md)
 
 ## Resources
 
@@ -62,7 +62,8 @@ You will know every bit of your laptop and will be able to fix if something does
 * [TERES-A64-BLACK](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-BLACK/open-source-hardware)
 * [Spare parts](https://www.olimex.com/Products/DIY-Laptop/SPARE-PARTS/)
 
-* [FAQ](doc/manuals/web/res_faq)
-* [Troubleshooting](doc/manuals/web/res_troubleshooting)
-* [What's next?](doc/manuals/web/res_next-steps)
-* [Community Links](doc/manuals/web/res_community)
+* [FAQ](doc/web/res_faq.md)
+* [Troubleshooting](doc/web/res_troubleshooting.md)
+* [Download manuals](doc/manuals)
+* [What's next?](doc/web/res_next-steps.md)
+* [Community Links](doc/web/res_community.md)
