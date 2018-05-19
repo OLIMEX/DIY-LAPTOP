@@ -10,7 +10,7 @@ The procedure is as follows:
 A download link for the torrent with the latest image is available at the **SOFTWARE** section of the product's page.
 It looks like this:
 
-![Official OS Download](../TERES-I/software/screenshot-official-os.png "Official OS Download")
+![Official OS Download](../images/TERES-I/software/screenshot-official-os.png "Official OS Download")
 
 2. Remember to extract the image from the archive.
 3. Download the img file to a micro SD card (8GB or bigger) using a micro SD card writer hardware.
@@ -20,7 +20,7 @@ Select the image that you extracted.
 Then point to the drive of the micro SD card.
 It looks like this:
 
-![Etcher Download](../TERES-I/software/screenshot-etcher.png "Etcher Download")
+![Etcher Download](../images/TERES-I/software/screenshot-etcher.png "Etcher Download")
 
 4. Insert the card in the laptop and start the laptop from the power button; it will boot from the micro SD card.
 5. You will be asked for a username and password in a command line.
