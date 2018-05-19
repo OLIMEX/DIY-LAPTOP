@@ -185,3 +185,46 @@ The speaker connectors should be inserted in **TERES-PCB2-IO** and **TERES-PCB1-
 
 Now continue with LCD frame assembly using the **TERES-008-LCD-Back** as base:
 
+[TERES-008-LCD-Back 1](../images/TERES-I/hardware/094.jpg)
+
+First attach the metal hinges to the **TERES-016-Hinge-Set** using 8 pcs M2 x 4 screws:
+
+[TERES-008-LCD-Back 2](../images/TERES-I/hardware/095.jpg)
+
+Next attach **TERES-026-LCD-cable** to the **TERES-015-LCD** 11.6" panel:
+
+[TERES-008-LCD-Back 3](../images/TERES-I/hardware/096.jpg)
+
+With M2 x 1.5 screws assemble the LCD to the plastic.
+Note that only 4 screws are used!
+
+[TERES-008-LCD-Back 4](../images/TERES-I/hardware/097.jpg) [TERES-008-LCD-Back 5](../images/TERES-I/hardware/098.jpg) [TERES-008-LCD-Back 6](../images/TERES-I/hardware/099.jpg)
+
+Connect the **TERES-019-Camera** to the four pin connector of the **TERES-026-LCD-cable**.
+There are two holes in the camera board which attach to two pins on the plastic body.
+
+[TERES-019-Camera 1](../images/TERES-I/hardware/100.jpg)
+
+[TERES-019-Camera 2](../images/TERES-I/hardware/101.jpg)
+
+On the other side attach **TERES-025-WiFi-Antenna** with double-sided adhesive tape to the plastic body:
+
+[TERES-025-WiFi-Antenna](../images/TERES-I/hardware/102.jpg)
+
+Follow the wiring shown on the picture below for the correct path of the LCD and WiFi cables.
+Pay attention on how the cables go around the plastic locks and hinges!
+It is incredibly important to keep EXACTLY the same layout else the cover will NOT snap properly later.
+
+The LCD cable wiring is probably most difficult part of the whole assembly.
+If you do not do it correctly the LCD frame above it will not snap tight.
+
+[TERES-008-LCD-Back 3](../images/TERES-I/hardware/103.jpg)
+
+The **018-Magnet** is placed in special place on the left hand of the LCD:
+
+[018-Magnet](../images/TERES-I/hardware/104.jpg)
+
+Now place the panel.
+If you did the wiring correctly, the panel will snap tightly.
+You will have something like this:
+
