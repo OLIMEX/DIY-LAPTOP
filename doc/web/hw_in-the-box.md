@@ -1,3 +1,38 @@
 # What do you get in the package?
 
-# TODO: This is a long, tedious section. BBL
+With your DIY kit, you will receive:
+
+Description                          | Images
+:-----------------------------------:|:-----------------------------------:
+| PCB1 (PCB1-A64-MAIN) – main PCB with A64 processor, 2GB RAM, 16GB eMMC. It is in an ESD protective bag. Please handle with proper anti-static precautions | ![PCB1-A64-MAIN](../images/TERES-I/hardware/001.jpg)
+| PCB2 (TERES-PCB2-IO) – IO PCB with microphone, connectors for: speaker, USB, SD-card, headphones | ![TERES-PCB2-IO](../images/TERES-I/hardware/002.jpg)
+| PCB3 (TERES-PCB3-TOUCH-BTN) – TOUCH two button PCB | ![TERES-PCB3-TOUCH-BTN](../images/TERES-I/hardware/003.jpg)
+| PCB4 – PWR PCB (PCB4-PWR-BTN) with button for power on/off | ![PCB4-PWR-BTN](../images/TERES-I/hardware/004.jpg)
+| PCB5 (TERES-PCB5-KEYBOARD) – KEYBOARD PCB with controller of the keyboard and touchpad | ![TERES-PCB5-KEYBOARD](../images/TERES-I/hardware/005.jpg)
+| Bottom body plastic part, packed in bubble wrap to protect from scratches | ![Bottom body 1](../images/TERES-I/hardware/006.jpg) ![Bottom body 2](../images/TERES-I/hardware/007.jpg)
+| Keyboard body plastic assembly | ![Keyboard body 1](../images/TERES-I/hardware/008.jpg) ![Keyboard body 2](../images/TERES-I/hardware/009.jpg)
+| LCD plastic frame | ![LCD frame 1](../images/TERES-I/hardware/010.jpg) ![LCD frame 2](../images/TERES-I/hardware/011.jpg)
+| LCD back plastic body | ![LCD body 1](../images/TERES-I/hardware/012.jpg) ![LCD body 2](../images/TERES-I/hardware/013.jpg)
+| Plastic power button | ![Power button 1](../images/TERES-I/hardware/014.jpg) ![Power button 2](../images/TERES-I/hardware/015.jpg)
+| Plastic touch buttons | ![Touch button 1](../images/TERES-I/hardware/016.jpg) ![Touch button 2](../images/TERES-I/hardware/017.jpg)
+| Left speaker | ![Left speaker 1](../images/TERES-I/hardware/018.jpg) ![Left speaker 2](../images/TERES-I/hardware/019.jpg)
+| Right speaker | ![Right speaker 1](../images/TERES-I/hardware/020.jpg) ![Right speaker 2](../images/TERES-I/hardware/021.jpg)
+| Transparent LED pipe | ![LED Pipe 1](../images/TERES-I/hardware/022.jpg) ![LED Pipe 2](../images/TERES-I/hardware/023.jpg)
+| Set of screws: M2x1.5 mm – 4 pcs; M2x3 mm – 9 pcs; M2x4 mm – 17 pcs; M2x5 mm – 12 pcs | ![Screws 1](../images/TERES-I/hardware/024.jpg) ![Screws 2](../images/TERES-I/hardware/025.jpg)
+| LCD 11.6”. It has protective foil on top | ![LCD 1](../images/TERES-I/hardware/026.jpg) ![LCD 2](../images/TERES-I/hardware/027.jpg)
+| Left and right hinges | ![Hinges 1](../images/TERES-I/hardware/028.jpg) ![Hinges 2](../images/TERES-I/hardware/029.jpg)
+| Mat set. There are four rubber pads for the bottom of the laptop, two circular pads for LCD frame screws cover and four self adhesive mats for holding the battery. | ![Mat 1](../images/TERES-I/hardware/030.jpg) ![Mat 2](../images/TERES-I/hardware/031.jpg)
+| Magnet for the lid close sensor | ![Magnet 1](../images/TERES-I/hardware/032.jpg) ![Magnet 2](../images/TERES-I/hardware/033.jpg)
+| Camera | ![Camera 1](../images/TERES-I/hardware/034.jpg) ![Camera 2](../images/TERES-I/hardware/035.jpg)
+| Camera lens | ![Camera lens 1](../images/TERES-I/hardware/036.jpg) ![Camera lens 2](../images/TERES-I/hardware/037.jpg)
+| Two dust protectors – big and small | ![Dust protectors 1](../images/TERES-I/hardware/038.jpg) ![Dust protectors 2](../images/TERES-I/hardware/039.jpg)
+| Touchpad cover | ![Touchpad cover 1](../images/TERES-I/hardware/040.jpg) ![Touchpad cover 2](../images/TERES-I/hardware/041.jpg) ![Touchpad cover 3](../images/TERES-I/hardware/042.jpg)
+| Touchpad | ![Touchpad](../images/TERES-I/hardware/043.jpg)
+| LiPo battery 9500 mAh | ![Battery](../images/TERES-I/hardware/044.jpg)
+| WiFi/Bluetooth antenna | ![WiFi/Bluetooth 1](../images/TERES-I/hardware/045.jpg) ![WiFi/Bluetooth 2](../images/TERES-I/hardware/046.jpg)
+| LCD/camera cable | ![LCD/camera cable 1](../images/TERES-I/hardware/047.jpg) ![LCD/camera cable 2](../images/TERES-I/hardware/048.jpg)
+| Flat cable Main-IO | ![Main-IO cable 1](../images/TERES-I/hardware/049.jpg) ![Main-IO cable 2](../images/TERES-I/hardware/050.jpg)
+| Flat cable Power-Main, Flat cable Main-Keyboard | ![Flat cables 1](../images/TERES-I/hardware/051.jpg) ![Flat cables 2](../images/TERES-I/hardware/052.jpg)
+| Flat cable Touchpad-TouchButtons | ![Touchpad-TouchButtons 1](../images/TERES-I/hardware/053.jpg) ![Touchpad-TouchButtons 2](../images/TERES-I/hardware/054.jpg)
+| Flat cable Keyboard-TouchButtons | ![Keyboard-TouchButtons 1](../images/TERES-I/hardware/055.jpg) ![Keyboard-TouchButtons 2](../images/TERES-I/hardware/056.jpg)
+| Power adapter EU Style 5V 3A with 3 meter cable and LED status GREEN/RED indicator with UK and US plug adapters | ![Power adapter 1](../images/TERES-I/hardware/057.jpg) ![Power adapter 2](../images/TERES-I/hardware/058.jpg) ![Power adapter 3](../images/TERES-I/hardware/059.jpg)
