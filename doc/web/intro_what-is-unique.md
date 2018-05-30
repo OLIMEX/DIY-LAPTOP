@@ -16,8 +16,10 @@ We already have several ideas in mind.
 One of them is to expand the laptop capabilities with an FPGA module so it can act as a digital storage oscilloscope, and a logic analyzer, turning it into a powerful portable laboratory instrument.
 These FPGA expansion modules are currently work-in-progress and you can follow the development on web site at [www.olimex.com](https://www.olimex.com).
 
-Another advantage is that all the components of the laptop are available for purchase separately, so if a part fails you can replace just the broken part.
+TERES-I is environmentally friendly.
+All components of the TERES-I are available for individual purchase, so you can replace just the broken part if one were to fail.
 This lowers the maintenance costs and helps reducing the electronics waste.
+The main board may also be upgraded without major revisions to the design, vastly reducing waste and time when new faster and better processors become available.
 
 There are educational benefits in getting TERES-I – you can assemble it with your children and teach them about electronics or how computers work.
 Children may learn about basic computing components, how things are assembled together, and are able to learn to conduct repairs in case something goes wrong.
