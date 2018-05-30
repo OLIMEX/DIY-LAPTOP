@@ -42,7 +42,10 @@ Documentation can behave as living documents - aggregated reference materials to
 
 ## Education
 
-There is great educational value of open-source products, inherent in the availability of materials to study.
+There is great educational value of open-source products inherent in the availability of materials to study.
+You will likely learn many new things during assembly of this DIY laptop.
+You can build it together along with children or students, sparking interest in electronics and technology in general.
+You will know every bit of your laptop and will be able to fix if something doesn't suit your needs or gets damaged.
 
 ## Support
 
