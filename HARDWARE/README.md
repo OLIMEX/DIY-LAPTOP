@@ -30,7 +30,7 @@ The main board (PCB1-A64-MAIN) contains:
 
 It looks like this:
 
-![Main Board with Labels](../images/TERES-I/hardware/PCB-A64-MAIN-labeled.jpg "Main Board with Labels")
+![Main Board with Labels](../doc/images/TERES-I/hardware/PCB-A64-MAIN-labeled.jpg "Main Board with Labels")
 
 We expect to release extra main boards with different processors and memory configurations in the future.
 These should work with all other existing boards.
@@ -47,20 +47,23 @@ You can update the firmware of the keyboard/touch controller live on the board i
 It can also be programmed via an Arduino microcontroller.
 Touch screen parameters can also be changed.
 
-![Keyboard PCB with Labels](../images/TERES-I/hardware/TERES-PCB5-KEYBOARD-labeled.jpg "Keyboard PCB with Labels")
+![Keyboard PCB with Labels](../doc/images/TERES-I/hardware/TERES-PCB5-KEYBOARD-labeled.jpg "Keyboard PCB with Labels")
 
 ### I/O board (TERES-PCB2-IO)
 
 The **IO** board (**TERES-PCB2-IO**) contains the USB connector, headphone/debug connector, SD card, speaker connector and microphone.
 
-![Power Button PCB with Labels](../images/TERES-I/hardware/TERES-PCB2-IO-labeled.jpg "Power Button PCB with Labels")
+![Power Button PCB with Labels](../doc/images/TERES-I/hardware/TERES-PCB2-IO-labeled.jpg "Power Button PCB with Labels")
 
 ### Power button (PCB4-PWR-BTN)
 
 The **PWR** button board (**PCB4-PWR-BTN**) handles the keys for powering on and off the laptop.
 
+![Power Button PCB](../doc/images/TERES-I/hardware/076.jpg "Power Button PCB")
+
 ### Touch buttons (TERES-PCB3-TOUCH-BTN)
 
 The **TOUCH** buttons board (**TERES-PCB3-TOUCH-BTN**) contains two buttons for left and right mouse click emulation.
 
-![Touch Button PCB](../images/TERES-I/hardware/TERES-PCB3-TOUCH-BTN.jpg "Touch Button PCB")
+![Touch Button PCB - Front](../doc/images/TERES-I/hardware/066.jpg "Touch Button PCB - Front")
+![Touch Button PCB - Rear](../doc/images/TERES-I/hardware/065.jpg "Touch Button PCB - Rear")
