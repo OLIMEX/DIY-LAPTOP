@@ -1,6 +1,8 @@
-# Where are the sources?
+# Where may I find the source files?
 
 The TERES-I [GitHub repository](https://github.com/OLIMEX/DIY-LAPTOP) is the primary location of TERES-I source and design files.
+The entire laptop design consists of a single repository.
+There is currently no effort planned to split the design into additional projects.
 
 ## Hardware
 
