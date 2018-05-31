@@ -1,6 +1,6 @@
 # What's next?
 
-This product is a work-in-progress.
+This product is a [work-in-progress](evaluation-board-notice.md).
 
 ## More capability
 
@@ -21,3 +21,4 @@ The concept is to make templates which others may use to customize so other SOCs
 ## More adoption
 
 Being OSHW, community members are welcome to release their own ideas, software and hardware projects and designs compatible with the TERES-I.
+We would love for you to help [contribute](../../CONTRIBUTING.md)!
