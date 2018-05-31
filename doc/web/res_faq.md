@@ -19,7 +19,13 @@
 
 ## Software
 
-* Does the TERES-I have an upstream mainline kernel?
-  * The sunxi comunity is working on A64 mainline support. The results are documented [here](https://linux-sunxi.org/Linux_mainlining_effort), [here](https://linux-sunxi.org/A64), and [here](https://lkml.org/lkml/2018/4/30/288).
+* Does the TERES-I have an upstream mainline kernel? Upstream u-boot?
+  * "It works with mainline kernel. There is a debian image with mainline u-boot and kernel." [as of linux-image-4.16.0-rc6-arm64]
+  * References:
+    * [Olimex Teres-A64: Current Status](http://linux-sunxi.org/Olimex_Teres-A64#Current_status)
+    * [Linux mainlining effort](https://linux-sunxi.org/Linux_mainlining_effort)
+    * [A64](https://linux-sunxi.org/A64)
+    * [lkml.org patch](https://lkml.org/lkml/2018/4/30/288)
+    * [Debian bug report](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=892786)
 * How do I install operating system _____?
   * Please reference the [software documentation](../../SOFTWARE/README.md) section for details. If your desired operating system is not listed, it is most likely not yet supported. We'd love your help getting it to run on the TERES-I!
