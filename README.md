@@ -20,18 +20,14 @@ TERES-I is great for playing videos, browsing the web, or using a plethora of de
 
 DIY kits are ready-to-assemble using the [instructions provided](doc/web/hw_assembly.md) and may be purchased [here](https://www.olimex.com/Products/DIY-Laptop/KITS).
 
-## Assembling your TERES-I
-
-* [What do you get in the package?](doc/web/hw_in-the-box.md)
-* [Assembling your TERES-I laptop](doc/web/hw_assembly.md)
-
-## Hardware
+## [Hardware](HARDWARE)
 
 * [TERES-A64-WHITE](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-WHITE)
 * [TERES-A64-BLACK](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-BLACK)
 * [Spare parts](https://www.olimex.com/Products/DIY-Laptop/SPARE-PARTS)
+* [Assembling your TERES-I](doc/web/hw_assembly.md)
 
-## Software
+## [Software](SOFTWARE)
 
 TERES-I was designed to run on Linux distributions, but may also run Android and Windows operating systems.
 The laptop's mainboard has eMMC flash loaded with Ubuntu Mate and basic programs – Internet browser, Open Office, Arduino IDE, IceStorm FPGA Verilog tools, a video player, etc.
