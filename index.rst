@@ -34,7 +34,6 @@ TERES-I User Manual
 
    doc/manuals/web/sw_fresh-os
    doc/manuals/web/sw_updating-os
-   doc/manuals/web/sw_building
 
 .. toctree::
    :glob:
