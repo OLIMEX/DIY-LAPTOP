@@ -285,4 +285,6 @@ The final step is to attach the rubber mats to the four locations at the bottom:
 The assembly is now complete.
 Now press the PWR button and the laptop will boot:
 
+![TERES-Assembled](../images/TERES-I/hardware/116.jpg)
+
 Congratulations! You assembled your own laptop TERES-I!
