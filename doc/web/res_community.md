@@ -24,7 +24,7 @@
     </object>
 </a>
 <br>
-<a href="https://webchat.freenode.net" alt="IRC Web Chat" target="_blank" style="width: 50px; height: 50px" class="svg-link">
+<a href="https://webchat.freenode.net/?channels=olimex" alt="IRC Web Chat" target="_blank" style="width: 50px; height: 50px" class="svg-link">
     <object data="../images/misc/icon-irc.jpg" type="image/svg+xml">
         <img src="../images/misc/icon-irc-50x50.jpg"/>
     </object>
