@@ -43,10 +43,12 @@ Always write a clear log message for your commits.
 Simply saying "Update" is not adequate to understand what change(s) you made.
 One-line messages are fine for small changes, but bigger changes should look like this:
 
+```bash
   $ git commit -m "A brief summary of the commit (max 50 chars)
   > 
   > An optional paragraph describing what changed and its impact."
-  
+```
+
 Please ensure that all of your commits are atomic (one feature per commit).
 This helps prevent tons of headaches digging through code in an attempt to reproduce your steps.
 
