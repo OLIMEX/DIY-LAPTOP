@@ -9,14 +9,15 @@
 
 ## Overview
 
-TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware ([FOSH](https://wikipedia.org/wiki/Open-source_hardware)) and Software ([FOSS](https://wikipedia.org/wiki/Free_and_open-source_software)) laptop design leveraging ARM64 and x86 processors.
+TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware ([FOSH](https://wikipedia.org/wiki/Open-source_hardware)) and Software ([FOSS](https://wikipedia.org/wiki/Free_and_open-source_software)) laptop design.
+It runs Linux on 64-bit ARM64 and x86 processors.
+
 DIY kits are ready-to-assemble using the [instructions provided](doc/web/hw_assembly.md) and may be purchased [here](https://www.olimex.com/Products/DIY-Laptop/KITS).
 
-* [What is TERES-I?](doc/web/intro_what-is-teres-i.md)
-* [Where does the name TERES come from?](doc/web/intro_name-origin.md)
-* [What makes this laptop so different?](doc/web/intro_what-is-unique.md)
-* [Why does open-source matter so much?](doc/web/intro_importance-of-open-source.md)
-* [Where are the open-source materials?](doc/web/intro_sources.md)
+TERES-I has a stylish and elegant shape and an 11.6” LCD screen.
+It is also a very light product.
+Weighing less than one kilogram, it is convenient to carry when traveling.
+TERES-I is great for playing videos, browsing the web, or using a plethora of development suites.
 
 ## Assembling your TERES-I
 
@@ -25,15 +26,17 @@ DIY kits are ready-to-assemble using the [instructions provided](doc/web/hw_asse
 
 ## Hardware
 
-* [TERES-A64-WHITE](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-WHITE/open-source-hardware)
-* [TERES-A64-BLACK](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-BLACK/open-source-hardware)
-* [Spare parts](https://www.olimex.com/Products/DIY-Laptop/SPARE-PARTS/)
+* [TERES-A64-WHITE](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-WHITE)
+* [TERES-A64-BLACK](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-BLACK)
+* [Spare parts](https://www.olimex.com/Products/DIY-Laptop/SPARE-PARTS)
 
 ## Software
 
 TERES-I was designed to run on Linux distributions, but may also run Android and Windows operating systems.
+The laptop's mainboard has eMMC flash loaded with Ubuntu Mate and basic programs – Internet browser, Open Office, Arduino IDE, IceStorm FPGA Verilog tools, a video player, etc.
+Additional software is also available from Ubuntu repositories.
 
-* [Installing a fresh official image to TERES-I](doc/web/sw_fresh-os.md)
+* [Installing an image](doc/web/sw_fresh-os.md)
 * [Updating an image](doc/web/sw_updating-os.md)
 * [Building an image](SOFTWARE/A64-TERES/scripts/README.md)
 
