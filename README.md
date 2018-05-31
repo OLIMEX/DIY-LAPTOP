@@ -11,13 +11,14 @@
 
 TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware ([FOSH](https://wikipedia.org/wiki/Open-source_hardware)) and Software ([FOSS](https://wikipedia.org/wiki/Free_and_open-source_software)) laptop design.
 It runs Linux on 64-bit ARM64 and x86 processors.
-
-DIY kits are ready-to-assemble using the [instructions provided](doc/web/hw_assembly.md) and may be purchased [here](https://www.olimex.com/Products/DIY-Laptop/KITS).
+TERES-I is currently considered an [evaluation board](doc/web/evaluation-board-notice.md) and not yet an end-product.
 
 TERES-I has a stylish and elegant shape and an 11.6” LCD screen.
 It is also a very light product.
 Weighing less than one kilogram, it is convenient to carry when traveling.
 TERES-I is great for playing videos, browsing the web, or using a plethora of development suites.
+
+DIY kits are ready-to-assemble using the [instructions provided](doc/web/hw_assembly.md) and may be purchased [here](https://www.olimex.com/Products/DIY-Laptop/KITS).
 
 ## Assembling your TERES-I
 
