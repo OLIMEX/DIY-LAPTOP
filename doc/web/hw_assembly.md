@@ -4,6 +4,8 @@ Prepare your workplace before starting the assembly process – make sufficient 
 Do not rush during the assembly.
 Make sure to read and follow the instructions carefully since disassembling the finished unit to fix mistakes is considerably harder than assembling it.
 
+[What's included?](hw_in-the-box.md)
+
 The assembly process begins with the **TERES-006-Keyboard**:
 
 ![TERES-006-Keyboard 1](../images/TERES-I/hardware/009.jpg) ![TERES-006-Keyboard 2](../images/TERES-I/hardware/056.jpg)
