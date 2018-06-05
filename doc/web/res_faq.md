@@ -14,6 +14,7 @@
 
 * Where are the design files for a 3D-printed laptop enclosure?
   * None are currently available from the immediate developers, as they are less savvy with 3D-modeling. The boards were initially designed to fit an affordable plastic laptop enclosure for the time being.
+  * One may be available soon and include a [rear LCD panel](https://imgur.com/gallery/1fNuG) and LCD bezel. No guarantees.
 * Are there alternative keyboard options available?
   * None are currently available. Please test compatibility, design a 3-D printed keyboard bezel, and it may get implemented!
 
