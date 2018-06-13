@@ -220,7 +220,7 @@ It is incredibly important to keep EXACTLY the same layout else the cover will N
 The LCD cable wiring is probably most difficult part of the whole assembly.
 If you do not do it correctly the LCD frame above it will not snap tight.
 
-![TERES-008-LCD-Back 3](../images/TERES-I/hardware/103.jpg)
+![TERES-008-LCD-Back 3](../images/TERES-I/hardware/DSC_1672-Recovered.png)
 
 The **018-Magnet** is placed in special place on the left hand of the LCD:
 
