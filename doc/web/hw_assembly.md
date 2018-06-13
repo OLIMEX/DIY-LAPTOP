@@ -193,7 +193,7 @@ First attach the metal hinges to the **TERES-016-Hinge-Set** using 8 pcs M2 x 4 
 
 ![TERES-008-LCD-Back 2](../images/TERES-I/hardware/095.jpg)
 
-Next attach **TERES-026-LCD-cable** to the **TERES-015-LCD** 11.6" panel:
+Next attach **TERES-026-LCD-cable** to the [**TERES-015-LCD** 11.6" panel](../datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf):
 
 ![TERES-008-LCD-Back 3](../images/TERES-I/hardware/096.jpg)
 
