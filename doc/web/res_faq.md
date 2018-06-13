@@ -13,8 +13,7 @@
 ## Hardware
 
 * Where are the design files for a 3D-printed laptop enclosure?
-  * None are currently available from the immediate developers, as they are less savvy with 3D-modeling. The boards were initially designed to fit an affordable plastic laptop enclosure for the time being.
-  * One may be available soon and include a [rear LCD panel](https://imgur.com/gallery/1fNuG) and LCD bezel. No guarantees.
+  * A 3D-printed case design has been developed by [Fork Sand, Inc.](https://github.com/forksand) and the design files may be found [here.](https://github.com/forksand/olimex-teres-case)
 * Are there alternative keyboard options available?
   * None are currently available. Please test compatibility, design a 3-D printed keyboard bezel, and it may get implemented!
 
