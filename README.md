@@ -3,22 +3,33 @@
 
 <br>
 
-# TERES-I Laptop
+# TERES-I
 
 <br><br>
 
 ## Overview
 
-TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware ([FOSH](https://wikipedia.org/wiki/Open-source_hardware)) and Software ([FOSS](https://wikipedia.org/wiki/Free_and_open-source_software)) laptop design.
+TERES-I is a Do-It-Yourself (DIY) Free/Open Source Hardware ([FOSH](https://wikipedia.org/wiki/Open-source_hardware)) and Software ([FOSS](https://wikipedia.org/wiki/Free_and_open-source_software)) laptop.
+Stylish, elegant and lightweight, TERES-I is a convenient travel companion and is great for playing videos, browsing the web, or using a plethora of development suites.
 It runs Linux on 64-bit ARM64 and x86 processors.
-TERES-I is currently considered an [evaluation board](doc/web/evaluation-board-notice.md) and not yet an end-product.
 
-TERES-I has a stylish and elegant shape and an 11.6” LCD screen.
-It is also a very light product.
-Weighing less than one kilogram, it is convenient to carry when traveling.
-TERES-I is great for playing videos, browsing the web, or using a plethora of development suites.
+NOTE: TERES-I is currently considered an [evaluation board](doc/web/evaluation-board-notice.md) and not yet an end-product.
 
-DIY kits are ready-to-assemble using the [instructions provided](doc/web/hw_assembly.md) and may be purchased [here](https://www.olimex.com/Products/DIY-Laptop/KITS).
+[Purchase your TERES-I here!](https://www.olimex.com/Products/DIY-Laptop/KITS)
+
+| FEATURE          | DESCRIPTION                                                   |
+|:----------------:|:-------------------------------------------------------------:|
+| **CPU**          | Quad-Core Allwinner A64 64-bit Cortex-A53 processor           |
+| **Memory**       | 2GB DDR3L                                                     |
+| **Storage**      | 16GB eMMC flash memory                                        |
+| **Monitor**      | LCD 11.6" 1366x768 resolution                                 |
+| **Video In**     | Camera                                                        |
+| **Video Out**    | HDMI                                                          |
+| **Audio In/Out** | Stereo speakers; 3.5mm audio jack (stereo out, microphone in) |
+| **Wireless**     | WiFi 150Mb; BLE 4.0                                           |
+| **USB**          | 2 x USB                                                       |
+| **Power**        | 9500mAh battery; 5V/3A input                                  |
+| **Weight**       | 980 g                                                         |
 
 ## [Hardware](HARDWARE)
 
@@ -43,6 +54,6 @@ Additional software is also available from Ubuntu repositories.
 
 * [FAQ](doc/web/res_faq.md)
 * [Troubleshooting](doc/web/res_troubleshooting.md)
-* [Download manuals](doc/manuals)
+* [Assembly manuals (PDF)](doc/manuals)
 * [What's next?](doc/web/res_next-steps.md)
 * [Community Links](doc/web/res_community.md)
