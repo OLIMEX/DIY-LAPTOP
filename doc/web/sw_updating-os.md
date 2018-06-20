@@ -1,6 +1,6 @@
-# Updating the image
+# Updating the image (Linux)
 
-Once the Linux boots, connect to the Internet (either via the on-board WIFI adapter or using Ethernet cable).
+Once Linux boots, connect to the Internet either via on-board Wi-Fi adapter or by using an Ethernet cable.
 You might use the graphical network manager or edit the configuration files via command line.
 Then open a console terminal (press ALT+CTRL+T) and type:
 
@@ -11,4 +11,4 @@ sudo apt upgrade
 
 Insert your password if prompted and wait until each of the commands succeeds.
 
-If you decide to completely re-write the image at the eMMC memory, follow the advice in the next chapter.
+If you decide to completely re-write the image on the on-board [eMMC memory](glossary.md), follow the advice in the [next section](sw_fresh-os.md).
