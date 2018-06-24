@@ -1,39 +1,52 @@
-How to update the touchpad and button firmware:
+# Touchpad & button firmware update
 
-Download and extract the tgz archive. Open a console and navigate to the folder where you placed the archive then extract with the follwing command:
+1. Download and extract the tgz archive:
 
 ```bash
 tar -xvf firmware.tar.gz
 ```
-navigate to the firmware folder and then perform an update with the following commands: 
+
+2. Navigate into the newly created folder where the archive was extracted:
+
 ```bash
-cd firmware 
-sudo ./update    #standard firmware
+cd firmware/
+```
+
+3. Perform an update:
+
+```bash
+sudo ./update #standard firmware
+```
 
 or
 
-sudo ./update-notap  #firmware with taps disabled
+```bash
+sudo ./update-notap #firmware with taps disabled
 ```
-Then follow the onscreen prompts: 
 
-Type the super user password. 
+4. Follow the onscreen prompts: 
 
-Then press Fn+TuXkey+escape simultaneously to
-start the update.
+- Enter the superuser password
+- Press Fn+TuXkey+escape simultaneously to begin the update
 
 The firmware should now be updated.
 
+**Note**: To get Fn+F1 suspend mode working with older releases:
 
-Note: To get Fn+F1 suspend mode working with older releases:
+1. Run the following command:
 
-1. Add
 ```bash
-KEYBOARD_KEY_70071=suspend
+echo "KEYBOARD_KEY_70071=suspend" | sudo tee -a /etc/udev/hwdb.d/teres_kbd.hwdb
 ```
-at the end of file:
-```bash
-sudo nano /etc/udev/hwdb.d/teres_kbd.hwdb
-```
-2. You must create keyboard shortcut (System -> Preferences -> Hardware -> Keyboard Shortcuts -> Add) with name "Suspend" and command: "systemctl suspend" activated with key Fn+F1
 
-3. reboot...
+2. Map a keyboard shortcut (System -> Preferences -> Hardware -> Keyboard Shortcuts -> Add)
+
+- Name: `Suspend`
+- Command: `systemctl suspend`
+- Key binding: `Fn+F1`
+
+3. Reboot:
+
+```bash
+sudo shutdown -r now
+```
