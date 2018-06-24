@@ -29,9 +29,9 @@ sudo ./update-notap #firmware with taps disabled
 - Enter the superuser password
 - Press Fn+TuXkey+escape simultaneously to begin the update
 
-The firmware should now be updated.
+The firmware should now be updated!
 
-**Note**: To get Fn+F1 suspend mode working with older releases:
+## To get Fn+F1 suspend mode working with older releases
 
 1. Run the following command:
 
