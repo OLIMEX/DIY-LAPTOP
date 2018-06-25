@@ -14,7 +14,7 @@ The schematics are also available as PDF files for easier viewing and/or printin
 
 ## Introduction to the hardware of TERES-I
 
-TERES-I internal electronics consists of five boards:
+TERES-I internal electronics consists of the folowing boards:
 
 ### Main board ([PCB1-A64-MAIN](A64-TERES/TERES-PCB1-A64-MAIN))
 
@@ -70,3 +70,7 @@ The **TOUCH** buttons board (**TERES-PCB3-TOUCH-BTN**) contains two buttons for 
 
 ![Touch Button PCB - Front](../doc/images/TERES-I/hardware/066.jpg "Touch Button PCB - Front")
 ![Touch Button PCB - Rear](../doc/images/TERES-I/hardware/065.jpg "Touch Button PCB - Rear")
+
+### Camera (TERES-019-Camera)
+
+![Camera PCB](../doc/images/TERES-I/hardware/035.jpg "Camera PCB")
