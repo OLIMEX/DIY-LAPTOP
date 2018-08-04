@@ -1,10 +1,35 @@
-# How do I assemble my TERES-I?
+# TERES-I Assembly
 
-Prepare your workplace before starting the assembly process – make sufficient room and cover your desk with a soft textile to prevent scratching the laptop's plastic parts.
-Do not rush during the assembly.
-Make sure to read and follow the instructions carefully since disassembling the finished unit to fix mistakes is considerably harder than assembling it.
+## Table of Contents
 
-[What's included?](hw_in-the-box.md)
+* [Preparation](#preparation)
+* [Included Materials](#included-materials)
+* [Touchpad](#touchpad)
+* [Touchpad Buttons](#touchpad-buttons)
+* [Microphone](#microphone)
+* [Power Buton](#power-button)
+* [Mainboard](#mainboard)
+* [Cabling](#cabling)
+* [Speakers](#speakers)
+* [Body Panels](#body-panels)
+* [Camera](#camera)
+* [WiFi](#wifi)
+* [More Cabling](#more-cabling)
+* [Magnet](#magnet)
+* [Battery](#battery)
+* [FInal Steps](#final-steps)
+
+## Preparation
+
+First, prepare a workspace with enough room and light to assemble the laptop.
+Cover the workspace with soft material to prevent scratching the laptop's plastic parts.
+Ideally use a grounded electronics mat.
+Read and follow the instructions carefully and do not rush!
+Disassembling the finished unit to fix earlier mistakes is considerably harder than assembling the unit!
+
+## [Included Materials](hw_in-the-box.md)
+
+## Touchpad
 
 The assembly process begins with the **TERES-006-Keyboard**:
 
@@ -19,21 +44,23 @@ Remove the protective foil and place it on the top side of the keyboard body lik
 
 ![Tape install 1](../images/TERES-I/hardware/060.jpg) ![Tape install 2](../images/TERES-I/hardware/061.jpg)
 
-You must be careful about the orientation of the touchpad connector.
-The exposed pins of the connector must be pointing UP.
+Be careful to place the touchpad connector so that it faces the correct way!
+The exposed pins of the connector must be pointing **up**.
 
 ![Touchpad connector](../images/TERES-I/hardware/062.jpg)
 
-The touchpad snaps very tight to the upper side plastic.
-You should place it with on an even surface and make sure it is fully inserted.
+The touchpad snaps tightly to the upper side plastic.
+You should place the pastic cover on an even surface and make sure the touchpad connector is fully inserted.
 
 Next, turn over the cover and place **TERES-022-Touch-Cover** and **TERES-010-Touch-Btns** on top of the touchpad:
 
 ![TERES-022-Touch-Cover](../images/TERES-I/hardware/041.jpg) ![TERES-010-Touch-Btns](../images/TERES-I/hardware/017.jpg)
 
-The final result must look like these pictures:
+The final result looks like this:
 
 ![Keyboard top](../images/TERES-I/hardware/063.jpg) ![Keyboard bottom](../images/TERES-I/hardware/064.jpg)
+
+## Touchpad Buttons
 
 The next step is to attach the TERES printed circuit boards to the keyboard body.
 For this purpose use the **TERES-014-Screw-Set**.
@@ -44,21 +71,25 @@ Note that in this set there are 42 screws of different lengths:
 * M2 x 4   (17 pcs)
 * M2 x 5   (12 pcs)
 
-It is a good practice to first sort all the screws since each screw has its own location and you should put the exact length screw to the exact place as mentioned.
-All screws have same diameter M2 but different lengths – if you have difficulties determining the size, use a ruler.
-For example, the M2 x 5 screw would have 5mm length (without the head).
-Do not mix the lengths of the screws since doing so might damage the plastic parts.
-Do not screw as tight as possible, since this might break the plastic.
-Be gentle.
+It is a good practice to:
 
-For the PCB’s the M2 x 3 screws must be used.
+* Sort all the screws before you begin, as each screw must be placed in a specific location based on length
+* Do not mix the lengths of the screws during installation; doing so may damage the plastic parts
+* Be gentle! Do not torque the srews as tight as possible; this may break the plastic
+
+All screws have same diameter (**M2**), but different lengths.
+Use a metric ruler if you have difficulties determining the length.
+For example, the **M2 x 5** screw would have **5mm** thread length (i.e. not including the head).
+
+For the PCBs the **M2 x 3** screws must be used.
 
 Now we assemble the **TERES-PCB3-Touch** PCB:
 
 ![TERES-PCB3-Touch 1](../images/TERES-I/hardware/065.jpg) ![TERES-PCB3-Touch 2](../images/TERES-I/hardware/066.jpg)
 
 It is shown below, attached to the keyboard body.
-Note that only the middle screw is used; the other two screws will later be used when fixing the bottom plastic cover:
+Note that only the middle screw is used.
+The other two screws will later be used when fixing the bottom plastic cover:
 
 ![Keyboard bottom](../images/TERES-I/hardware/067.jpg)
 
@@ -68,19 +99,23 @@ The next PCB to attach is the **TERES-PCB2-IO**:
 
 The PCB2 board has a microphone which has to be placed in the side pocket specially designated for it.
 
+## Microphone
+
 ![Microphone](../images/TERES-I/hardware/070.jpg)
 
 After the microphone is put in place, slip the board at an angle into the side openings for the SD card, USB, and audio connector, then place it down.
 
 ![Placement](../images/TERES-I/hardware/071.jpg)
 
-Then use one M2 x 3 screw to fix the board:
+Then use one **M2 x 3** screw to fix the board:
 
 ![Keyboard bottom](../images/TERES-I/hardware/072.jpg)
 
 Please make sure that the side connectors are well aligned:
 
 ![Keyboard side](../images/TERES-I/hardware/073.jpg)
+
+## Power Button
 
 Next you put the PWR button plastic:
 
@@ -94,9 +129,11 @@ Next attach the TERES-PCB4-Btn (the power button):
 
 ![TERES-PCB4-Btn 1](../images/TERES-I/hardware/076.jpg) ![TERES-PCB4-Btn 2](../images/TERES-I/hardware/077.jpg)
 
-The TERES-PCB4-Btn is attached with two screws M2 x 3 mm, connector pointing to the right side:
+The TERES-PCB4-Btn is attached with two **M2 x 3** screws with the connector pointing to the right side:
 
 ![TERES-PCB4-Btn 3](../images/TERES-I/hardware/078.jpg)
+
+## Mainboard
 
 The next step is to assemble the big **TERES-PCB1-A64**:
 
@@ -104,17 +141,19 @@ The next step is to assemble the big **TERES-PCB1-A64**:
 
 This is the main board and you should handle it very carefully.
 Do not bend it, do not drop it, etc.
-This board is very sensitive to static electricity.
+This board is very sensitive to static electricity; a grounding strap is recommended for use during handling.
 
-It’s a bit tricky to put it in the correct position as you have to slide it right so the connectors enter properly in the side openings.
+It is a bit tricky to place the mainboard in the correct position as you must slide it in a way that the connectors enter properly in the plastic body side openings.
 If you succeed you will see all the PCB support nuts from the keyboard body pass exactly through the openings of the PCB.
-You need to use just two M2 x 3 screws to attach it:
+You need to use two **M2 x 3** screws to attach it:
 
 ![TERES-PCB1-A64 3](../images/TERES-I/hardware/081.jpg)
 
-Again, make sure that he side connectors are properly aligned:
+Again, ensure that the side connectors are properly aligned:
 
 ![Keyboard left](../images/TERES-I/hardware/082.jpg)
+
+## Cabling
 
 Now connect **TERES-PCB2-IO** with **TERES-PCB1-A64**.
 For this purpose, use the Flat Cable **TERES-027-FPC-IO-Main**. 
@@ -158,32 +197,36 @@ The connector on **TERES-PCB3-TOUCH** is also different so the cable is inserted
 ![TERES-023-Touch 3](../images/TERES-I/hardware/090.jpg)
 
 You have to bend the cable twice.
-Do not bend at a very sharp angle and don't bend it too hard, else it might break!
+Do not bend at a very sharp angle and don't bend it too hard, or else it might get damaged!
 
 The next step is to attach the **TERES-PCB5-KEYBOARD** to the keyboard flat cable as shown on the picture below.
 Note that the cable goes under the black sliding plastic of the connector:
 
 ![TERES-PCB5-KEYBOARD 1](../images/TERES-I/hardware/091.jpg)
 
-Do not assemble the keyboard PCB to the plastic base yet.
+Do not assemble the keyboard PCB to the plastic base at this time.
 
 The next step is to connect **TERES-PCB5-KEYBOARD** with **TERES-PCB3-TOUCH**.
-Use **TERES-031-FPC-Kbd-Btn** flat cable for this purpose.
-The cable is inserted with contacts up above the black plastic of the connector, the same as the power button and main board cables:
+Use the **TERES-031-FPC-Kbd-Btn** flat cable for this purpose.
+The cable is inserted with contacts up above the black plastic of the connector, in the same way as the power button and main board cables:
 
 ![TERES-PCB5-KEYBOARD 2](../images/TERES-I/hardware/092.jpg)
 
 ![TERES-PCB5-KEYBOARD 3](../images/TERES-I/hardware/093.jpg)
 
-Next connect **TERES-PCB5-KEYBOARD** with **TERES-PCB1-A64** and using one M2 x 3 screw attach **TERES-PCB5-KEYBOARD** to the plastic body.
+Next connect **TERES-PCB5-KEYBOARD** with **TERES-PCB1-A64** and using one **M2 x 3** screw attach **TERES-PCB5-KEYBOARD** to the plastic body.
 Note that only the left screw is placed.
-The right screw will come when attaching the bottom plastic.
+The right screw will be installed later when attaching the bottom plastic.
+
+## Speakers
 
 The final assembly step is to attach the left and right speakers.
-Look at the bottom side you will notice that Right speaker is assembled at the left hand side, and Left speaker – at the right hand side.
+Look at the bottom side you will notice that **right** speaker is assembled at the **left** hand side, and the **left** speaker at the **right** hand side.
 
-For this purpose use M2 x 4 screws and only the upper one is screwed.
+For this purpose use **M2 x 4** screws and only screw in the upper one.
 The speaker connectors should be inserted in **TERES-PCB2-IO** and **TERES-PCB1-A64** boards.
+
+## Body Panels
 
 Now continue with LCD frame assembly using the **TERES-008-LCD-Back** as base:
 
@@ -197,10 +240,12 @@ Next attach **TERES-026-LCD-cable** to the **TERES-015-LCD** 11.6" panel ([datas
 
 ![TERES-008-LCD-Back 3](../images/TERES-I/hardware/096.jpg)
 
-With M2 x 1.5 screws assemble the LCD to the plastic.
+With **M2 x 1.5** screws assemble the LCD to the plastic.
 Note that only 4 screws are used!
 
 ![TERES-008-LCD-Back 4](../images/TERES-I/hardware/097.jpg) ![TERES-008-LCD-Back 5](../images/TERES-I/hardware/098.jpg) ![TERES-008-LCD-Back 6](../images/TERES-I/hardware/099.jpg)
+
+## Camera
 
 Connect the **TERES-019-Camera** to the four pin connector of the **TERES-026-LCD-cable**.
 There are two holes in the camera board which attach to two pins on the plastic body.
@@ -209,18 +254,21 @@ There are two holes in the camera board which attach to two pins on the plastic 
 
 ![TERES-019-Camera 2](../images/TERES-I/hardware/101.jpg)
 
+## WiFi
+
 On the other side attach **TERES-025-WiFi-Antenna** with double-sided adhesive tape to the plastic body:
 
 ![TERES-025-WiFi-Antenna](../images/TERES-I/hardware/102.jpg)
 
+## More Cabling
+
 Follow the wiring shown on the picture below for the correct path of the LCD and WiFi cables.
 Pay attention on how the cables go around the plastic locks and hinges!
-It is incredibly important to keep EXACTLY the same layout else the cover will NOT snap properly later.
-
-The LCD cable wiring is probably most difficult part of the whole assembly.
-If you do not do it correctly the LCD frame above it will not snap tight.
+The LCD cable wiring is probably most difficult part of the whole assembly and it is **incredibly important** to keep **EXACTLY** the same layout else the cover will **NOT** snap together properly later.
 
 ![TERES-008-LCD-Back 3](../images/TERES-I/hardware/DSC_1672-Recovered.png)
+
+## Magnet
 
 The **018-Magnet** is placed in special place on the left hand of the LCD:
 
@@ -235,7 +283,7 @@ You will have something like this:
 If the panel doesn't snap properly and you have to remove the cover to re-do the wiring, please, be patient else the plastic locks can break.
 You can use a credit card or other similar card as a lever to separate the bottom and top parts of the display.
 
-Then fix the upper corners with M2x3 mm screws like this:
+Then fix the upper corners with **M2 x 3** mm screws like this:
 
 ![TERES-008-LCD-Back 5](../images/TERES-I/hardware/106.jpg)
 
@@ -244,7 +292,7 @@ Now place the **TERES-020-Camera-Lens** above the camera sensor and rubber mats 
 ![TERES-008-LCD-Back 6](../images/TERES-I/hardware/107.jpg)
 
 Now assemble the LCD part with the keyboard body.
-Use 6 screws M2 x 4 mm for this purpose:
+Use 6 screws **M2 x 4** mm for this purpose:
 
 ![TERES-008-LCD-Back 7](../images/TERES-I/hardware/108.jpg)
 
@@ -256,6 +304,8 @@ Next connect the WiFi antenna cable and LCD cable to **TERES-PCB1-A64**:
 
 ![WiFi/LCD](../images/TERES-I/hardware/109.jpg)
 
+## Battery
+
 The next step is to attach four double adhesive mats that would hold the LiPo battery in place:
 
 ![Battery 1](../images/TERES-I/hardware/110.jpg)
@@ -266,6 +316,8 @@ Red cables should go to the left side.
 
 ![Battery 2](../images/TERES-I/hardware/111.jpg)
 
+## Final Steps
+
 Next put the **TERES-021-Dust-Protectors** at the openings of the bottom plastic **TERES-005-Bottom**:
 
 ![TERES-005-Bottom 1](../images/TERES-I/hardware/112.jpg)
@@ -274,7 +326,7 @@ In the next image, you see the dust covers placed over the two openings:
 
 ![TERES-005-Bottom 2](../images/TERES-I/hardware/113.jpg)
 
-Next assemble the bottom plastic using 12 of M2 x 5 screws:
+Next assemble the bottom plastic using 12 **M2 x 5** screws:
 
 ![TERES-005-Bottom 3](../images/TERES-I/hardware/114.jpg)
 
@@ -283,8 +335,8 @@ The final step is to attach the rubber mats to the four locations at the bottom:
 ![TERES-005-Bottom 4](../images/TERES-I/hardware/115.jpg)
 
 The assembly is now complete.
-Now press the PWR button and the laptop will boot:
+Now press the power button and the laptop will boot:
 
 ![TERES-Assembled](../images/TERES-I/hardware/116.jpg)
 
-Congratulations! You assembled your own laptop TERES-I!
+Congratulations! You assembled your TERES-I laptop!
