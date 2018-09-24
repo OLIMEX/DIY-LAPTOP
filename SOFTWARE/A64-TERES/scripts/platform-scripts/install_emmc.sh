@@ -100,7 +100,7 @@ sync
 
 dialog --title "Confirmation" \
 --backtitle "eMMC Installer" \
---yesno "This script will reformat yuor internal eMMC Device. Are you sure ?" 7 60
+--yesno "This script will reformat your internal eMMC Device. Are you sure ?" 7 60
 
 response=$?
 
