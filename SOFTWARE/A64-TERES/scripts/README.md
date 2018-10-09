@@ -22,9 +22,9 @@ sudo apt install kpartx bsdtar mtools dos2unix device-tree-compiler
 cd linux-a64
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- olimex_teres1_defconfig
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- LOCALVERSION= clean
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 LOCALVERSION= Image
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 LOCALVERSION= modules
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 LOCALVERSION= modules_install  INSTALL_MOD_PATH=out INSTALL_MOD_STRIP=1
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc` LOCALVERSION= Image
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc` LOCALVERSION= modules
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc` LOCALVERSION= modules_install  INSTALL_MOD_PATH=out INSTALL_MOD_STRIP=1
 ```
 
 #### Allwinner Pack Tools 
@@ -63,8 +63,8 @@ file to `.config` of your Busybox folder.
 ```bash
 cp blobs/a64_config_busybox busybox/.config
 cd busybox 
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 oldconfig
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc` oldconfig
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc`
 ```
 
 ### Make initrd.gz
