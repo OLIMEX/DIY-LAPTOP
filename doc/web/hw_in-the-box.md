@@ -19,7 +19,7 @@ Description                          | Images
 | Right speaker | ![Right speaker 1](../images/TERES-I/hardware/020.jpg) ![Right speaker 2](../images/TERES-I/hardware/021.jpg)
 | Transparent LED pipe | ![LED Pipe 1](../images/TERES-I/hardware/022.jpg) ![LED Pipe 2](../images/TERES-I/hardware/023.jpg)
 | Set of screws: M2x1.5 mm – 4 pcs; M2x3 mm – 9 pcs; M2x4 mm – 17 pcs; M2x5 mm – 12 pcs | ![Screws 1](../images/TERES-I/hardware/024.jpg) ![Screws 2](../images/TERES-I/hardware/025.jpg)
-| LCD 11.6”. It has protective foil on top. [Datasheet](../datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf) | ![LCD 1](../images/TERES-I/hardware/026.jpg) ![LCD 2](../images/TERES-I/hardware/027.jpg)
+| [eDP](https://www.embedded.com/design/system-integration/4441940/eDP--A-better-embedded-display-ecosystem) 11.6" HD (1366x768) LCD. It has protective foil on top. [Datasheet](../datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf) | ![LCD 1](../images/TERES-I/hardware/026.jpg) ![LCD 2](../images/TERES-I/hardware/027.jpg)
 | Left and right hinges | ![Hinges 1](../images/TERES-I/hardware/028.jpg) ![Hinges 2](../images/TERES-I/hardware/029.jpg)
 | Mat set. There are four rubber pads for the bottom of the laptop, two circular pads for LCD frame screws cover and four self adhesive mats for holding the battery. | ![Mat 1](../images/TERES-I/hardware/030.jpg) ![Mat 2](../images/TERES-I/hardware/031.jpg)
 | Magnet for the lid close sensor | ![Magnet 1](../images/TERES-I/hardware/032.jpg) ![Magnet 2](../images/TERES-I/hardware/033.jpg)
