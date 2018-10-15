@@ -17,19 +17,19 @@ NOTE: TERES-I is currently considered an [evaluation board](doc/web/evaluation-b
 
 [Purchase your TERES-I here!](https://www.olimex.com/Products/DIY-Laptop/KITS)
 
-| FEATURE          | DESCRIPTION                                                   |
-|:----------------:|:-------------------------------------------------------------:|
-| **CPU**          | Quad-Core Allwinner A64 64-bit Cortex-A53 processor           |
-| **Memory**       | 2GB DDR3L                                                     |
-| **Storage**      | 16GB eMMC flash memory                                        |
-| **Monitor**      | LCD 11.6" 1366x768 resolution                                 |
-| **Video In**     | Camera                                                        |
-| **Video Out**    | HDMI                                                          |
-| **Audio In/Out** | Stereo speakers; 3.5mm audio jack (stereo out, microphone in) |
-| **Wireless**     | WiFi 150Mb; BLE 4.0                                           |
-| **USB**          | 2 x USB                                                       |
-| **Power**        | 9500mAh battery; 5V/3A input                                  |
-| **Weight**       | 980 g                                                         |
+| FEATURE              | DESCRIPTION                                                                       |
+|:--------------------:|:---------------------------------------------------------------------------------:|
+| **CPU**              | Quad-Core Allwinner A64 64-bit Cortex-A53 processor                               |
+| **Memory**           | 2GB DDR3L                                                                         |
+| **Internal Storage** | 16GB eMMC flash memory                                                            |
+| **Monitor**          | [LCD 11.6" 1366x768 resolution](doc/datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf) |
+| **Video In**         | 1x [Camera](HARDWARE/A64-TERES/TERES-019-Camera/N03A61B36DL32.pdf)                |
+| **Video Out**        | 1x HDMI                                                                           |
+| **Audio In/Out**     | 2x (stereo) speakers; 2x 3.5mm audio jack (1x microphone in, 1x stereo out)       |
+| **Wireless**         | WiFi 150Mb; BLE 4.0                                                               |
+| **USB**              | 2x USB 2.0                                                                        |
+| **Power**            | 1x 9500mAh battery; 5V/3A input                                                   |
+| **Weight**           | 980 g (2.16 lb)                                                                   |
 
 ## [Hardware](HARDWARE)
 
