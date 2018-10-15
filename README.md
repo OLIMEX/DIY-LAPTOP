@@ -23,7 +23,7 @@ NOTE: TERES-I is currently considered an [evaluation board](doc/web/evaluation-b
 | **Memory**           | 2GB DDR3L                                                                         |
 | **Internal Storage** | 16GB eMMC flash memory                                                            |
 | **Monitor**          | [LCD 11.6" 1366x768 resolution](doc/datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf) |
-| **Video In**         | 1x [Camera](HARDWARE/A64-TERES/TERES-019-Camera/N03A61B36DL32.pdf)                |
+| **Video In**         | 1x [VGA 640x480 camera](HARDWARE/A64-TERES/TERES-019-Camera/N03A61B36DL32.pdf)    |
 | **Video Out**        | 1x HDMI                                                                           |
 | **Audio In/Out**     | 2x (stereo) speakers; 2x 3.5mm audio jack (1x microphone in, 1x stereo out)       |
 | **Wireless**         | WiFi 150Mb; BLE 4.0                                                               |
