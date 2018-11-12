@@ -71,6 +71,6 @@ The **TOUCH** buttons board (**TERES-PCB3-TOUCH-BTN**) contains two buttons for 
 ![Touch Button PCB - Front](../doc/images/TERES-I/hardware/066.jpg "Touch Button PCB - Front")
 ![Touch Button PCB - Rear](../doc/images/TERES-I/hardware/065.jpg "Touch Button PCB - Rear")
 
-### Camera (TERES-019-Camera)
+### Camera ([TERES-019-Camera](A64-TERES/TERES-019-Camera))
 
 ![Camera PCB](../doc/images/TERES-I/hardware/035.jpg "Camera PCB")
