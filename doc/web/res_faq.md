@@ -13,7 +13,7 @@
 ## Hardware
 
 * Where are the design files for a 3D-printed laptop enclosure?
-  * A 3D-printed case design has been developed by [Fork Sand, Inc.](https://github.com/forksand) and the design files may be found [here.](https://github.com/forksand/olimex-teres-case)
+  * A 3D-printed case design has been developed by [Fork Sand, Inc.](https://www.forksand.com) and the design files may be found [here.](https://code.forksand.com/forksand/olimex-teres-case)
 * Are there alternative keyboard options available?
   * None are currently available. Please test compatibility, design a 3-D printed keyboard bezel, and it may get implemented!
 
