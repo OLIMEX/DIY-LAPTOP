@@ -347,7 +347,7 @@
 	"kernel_addr=41080000\0" \
 	"initrd_addr=45300000\0" \
 	"kernel_filename=a64/Image\0" \
-	"fdt_filename_prefix=a64/sun5oi-a64-\0" \
+	"fdt_filename_prefix=a64/sun50i-a64-\0" \
 	"fdt_filename_suffix=.dtb\0" \
 	"initrd_filename=initrd.img\0" \
 	"bootenv_filename=uEnv.txt\0" \
