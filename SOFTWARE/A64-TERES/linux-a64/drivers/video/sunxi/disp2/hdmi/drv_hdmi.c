@@ -304,6 +304,8 @@ static struct disp_hdmi_mode hdmi_mode_tbl[] = {
 	{DISP_TV_MOD_720P_60HZ_3D_FP,     HDMI720P_60_3D_FP, },
 	{DISP_TV_MOD_3840_2160P_30HZ,     HDMI3840_2160P_30, },
 	{DISP_TV_MOD_3840_2160P_25HZ,     HDMI3840_2160P_25, },
+	{DISP_TV_MOD_800_480P,            HDMI800_480P,      },
+  	{DISP_TV_MOD_1024_600P,           HDMI1024_600P,     },
 };
 
 static u32 hdmi_get_vic(u32 mode)
@@ -1041,6 +1043,12 @@ static ssize_t hdmi_hdcp_enable_store(struct device *dev,
 
 static DEVICE_ATTR(hdcp_enable, S_IRUGO|S_IWUSR|S_IWGRP,hdmi_hdcp_enable_show, hdmi_hdcp_enable_store);
 
+ssize_t hdmi_modeline_show(struct device *dev,struct device_attribute *attr, char *buf);
+ssize_t hdmi_modeline_store(struct device *dev,
+				struct device_attribute *attr,
+				const char *buf, size_t count);
+static DEVICE_ATTR(modeline, S_IRUGO|S_IWUSR|S_IWGRP, hdmi_modeline_show, hdmi_modeline_store);
+
 static int __init hdmi_probe(struct platform_device *pdev)
 {
 	__inf("hdmi_probe call\n");
@@ -1121,6 +1129,7 @@ static struct attribute *hdmi_attributes[] =
 	&dev_attr_hpd_mask.attr,
 	&dev_attr_edid.attr,
 	&dev_attr_hdcp_enable.attr,
+	&dev_attr_modeline.attr,
 	NULL
 };
 

@@ -36,6 +36,7 @@ struct video_para
 	unsigned char			is_hdmi;
 	unsigned char			is_yuv;
 	unsigned char			is_hcts;
+	unsigned int 			para[19];
 };
 
 enum audio_type
@@ -64,6 +65,7 @@ struct audio_para
 	unsigned int			sample_bit;
 	unsigned int			ch_num;
 	unsigned int 			vic;
+	unsigned int 			para[19];
 };
 
 int bsp_hdmi_set_func(hdmi_bsp_func *func);
