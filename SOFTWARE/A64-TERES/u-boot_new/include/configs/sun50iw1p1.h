@@ -347,28 +347,28 @@
 	"kernel_addr=41080000\0" \
 	"initrd_addr=45300000\0" \
 	"kernel_filename=a64/Image\0" \
-	"fdt_filename_prefix=a64/a64-\0" \
-	"fdt_filename_suffix=olinuxino.dtb\0" \
+	"fdt_filename_prefix=a64/sun5oi-a64-\0" \
+	"fdt_filename_suffix=.dtb\0" \
 	"initrd_filename=initrd.img\0" \
 	"bootenv_filename=uEnv.txt\0" \
 	"load_bootenv=" \
-		"fatload mmc ${boot_part} ${load_addr} ${bootenv_filename}\0" \
+		"load mmc ${boot_part} ${load_addr} /${bootenv_filename} || load mmc ${boot_part} ${load_addr} /boot/${bootenv_filename}\0" \
 	"import_bootenv=" \
 		"env import -t ${load_addr} ${filesize}\0" \
 	"load_dtb=" \
 		"if test ${fdt_filename} = \"\"; then " \
-			"setenv fdt_filename ${fdt_filename_prefix}${fdt_filename_suffix}; " \
+			"setenv fdt_filename ${fdt_filename_prefix}${olimex_model}${fdt_filename_suffix}; " \
 		"fi; " \
-		"fatload mmc ${boot_part} ${fdt_addr} ${fdt_filename}; " \
+		"load mmc ${boot_part} ${fdt_addr} ${fdt_filename}; " \
 		"fdt addr ${fdt_addr}; fdt resize\0" \
 	"load_kernel=" \
-		"fatload mmc ${boot_part} ${kernel_addr} ${kernel_filename}\0" \
+		"load mmc ${boot_part} ${kernel_addr} ${kernel_filename}\0" \
 	"boot_kernel=booti ${kernel_addr} ${initrd_addr}:${initrd_size} ${fdt_addr}\0" \
 	"load_initrd=" \
-		"fatload mmc ${boot_part} ${initrd_addr} ${initrd_filename}; "\
+		"load mmc ${boot_part} ${initrd_addr} ${initrd_filename}; "\
 		"setenv initrd_size ${filesize}\0" \
 	"load_bootscript=" \
-		"fatload mmc ${boot_part} ${load_addr} ${script}\0" \
+		"load mmc ${boot_part} ${load_addr} /${script} || load mmc ${boot_part} ${load_addr} /boot/${script}\0" \
 	"scriptboot=source ${load_addr}\0" \
 	"set_cmdline=" \
 		"setenv bootargs console=${console} ${optargs} " \
@@ -378,8 +378,7 @@
 	"mmcbootcmd=" \
 		"if run load_bootenv; then " \
 			"echo Loading boot environment ...; " \
-			"run import_bootenv;" \
-			"env_set_debug;" \
+			"run import_bootenv; " \
 		"fi; " \
 		"if run load_bootscript; then " \
 			"echo Booting with script ...; " \
@@ -389,7 +388,7 @@
 			"run mmcboot; " \
 		"fi\0"
 
-#define CONFIG_BOOTDELAY	3
+#define CONFIG_BOOTDELAY	1
 #define CONFIG_BOOTCOMMAND	"run mmcbootcmd"
 #define CONFIG_SYS_BOOT_GET_CMDLINE
 #define CONFIG_AUTO_COMPLETE

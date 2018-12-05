@@ -8,8 +8,8 @@
 VERSION = 2014
 PATCHLEVEL = 07
 SUBLEVEL =
-EXTRAVERSION = -4-pine64
-NAME = Pine64 longsleep Cuba Libre
+EXTRAVERSION = -5-a64
+NAME = Pine64 longsleep Cuba Libre Castro 
 
 
 #check gcc tools chain
