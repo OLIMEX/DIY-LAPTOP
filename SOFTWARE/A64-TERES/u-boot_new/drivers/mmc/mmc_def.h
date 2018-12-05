@@ -6,7 +6,7 @@
 #ifdef SUNXI_MMCDBG
 #define MMCINFO(fmt, args...)	printf("[mmc]: "fmt,##args)//err or info
 #define MMCDBG(fmt, args...)	printf("[mmc]: "fmt,##args)//dbg
-#define MMCPRINT(fmt,args...)	printf(fmt,##args)//data or register and so on
+#define MMCPRINT(fmt, args...)	printf(fmt,##args)//data or register and so on
 #else
 #define MMCINFO(fmt, args...)	printf("[mmc]: "fmt,##args)//err or info
 #define MMCDBG(fmt...)
@@ -16,7 +16,7 @@
 #define MMC_MSG_EN	(1U)
 #define MMCMSG(d, fmt, args...) do {if ((d)->msglevel & MMC_MSG_EN)  printf("[mmc]: "fmt,##args); } while(0)
 
-#define DRIVER_VER  "2015-06-03 13:50:00"
+#define DRIVER_VER  "2016-09-19 14:00:00"
 
 
 //secure storage relate

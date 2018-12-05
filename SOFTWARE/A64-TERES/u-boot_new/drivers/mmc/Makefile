@@ -36,8 +36,18 @@ obj-$(CONFIG_GENERIC_MMC) += mmc_write.o
 obj-$(CONFIG_MMC_SUNXI) += sunxi_mmc_interface.o
 obj-$(CONFIG_MMC_SUNXI) += sunxi_mmc_tuning.o
 obj-$(CONFIG_MMC_SUNXI) += mmc_test.o
+obj-$(CONFIG_MMC_SUNXI) += sunxi_mmc_ffu.o
 ifdef CONFIG_SPL_BUILD
 obj-$(CONFIG_SPL_MMC_BOOT) += fsl_esdhc_spl.o
 else
 #obj-$(CONFIG_GENERIC_MMC) += mmc_write.o
 endif
+
+obj-$(CONFIG_ARCH_SUN8IW6P1) += sun8iw6p1/sunxi_host0_2_v4p1.o sun8iw6p1/sunxi_host_mmc.o
+obj-$(CONFIG_ARCH_SUN8IW10P1) += sun8iw10p1/sunxi_host2_v5p1.o sun8iw10p1/sunxi_host0_3_v4p1.o sun8iw10p1/sunxi_host_mmc.o  
+obj-$(CONFIG_ARCH_SUN8IW11P1) += sun8iw11p1/sunxi_host0_2_v4p1.o sun8iw11p1/sunxi_host_mmc.o
+obj-$(CONFIG_ARCH_SUN50IW1P1) += sun50iw1p1/sunxi_host0_2_v4p1.o sun50iw1p1/sunxi_host_mmc.o  
+obj-$(CONFIG_ARCH_SUN50IW2P1) += sun50iw2p1/sunxi_host0_2_v4p1.o sun50iw2p1/sunxi_host_mmc.o 
+obj-$(CONFIG_ARCH_SUN50IW3P1) += sun50iw3p1/sunxi_host0_2_v4p1.o sun50iw3p1/sunxi_host_mmc.o 
+obj-$(CONFIG_ARCH_SUN50IW6P1) += sun50iw6p1/sunxi_host0_2_v4p1.o sun50iw6p1/sunxi_host_mmc.o
+

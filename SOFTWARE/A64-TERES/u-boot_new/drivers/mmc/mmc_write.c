@@ -267,6 +267,17 @@ unsigned int mmc_mmc_update_timeout(struct mmc *mmc)
 		mmc->secure_erase_timeout = mmc->erase_timeout * mmc_ext_csd.sec_erase_mult;
 		mmc->secure_trim_timeout  = mmc->erase_timeout * mmc_ext_csd.sec_trim_mult;
 	}
+	else
+	{
+		if (mmc_ext_csd.erase_group_def && mmc_ext_csd.hc_erase_timeout)
+			mmc->erase_timeout = mmc_ext_csd.hc_erase_timeout;
+		else
+			mmc->erase_timeout = mmc_mmc_def_erase_timeout(mmc);
+
+		mmc->trim_discard_timeout = 0x0;
+		mmc->secure_erase_timeout = 0x0;
+		mmc->secure_trim_timeout  = 0x0;
+	}
 
 ERR_RET:
 	MMCDBG("---%s %d\n", __FUNCTION__, ret);
@@ -278,15 +289,31 @@ unsigned int mmc_mmc_erase_timeout(struct mmc *mmc, unsigned int arg,
 {
 	unsigned int erase_timeout = 0;
 
-	if (arg == MMC_DISCARD_ARG || arg == MMC_TRIM_ARG)
+	if (arg == MMC_DISCARD_ARG || arg == MMC_TRIM_ARG) {
+		if (!mmc->trim_discard_timeout) {
+			MMCINFO("invalid trim_discard_timeout is %d\n", mmc->trim_discard_timeout);
+			goto ERR_RET;
+		}
 		erase_timeout = mmc->trim_discard_timeout;
-	else if (arg == MMC_ERASE_ARG)
+	} else if (arg == MMC_ERASE_ARG) {
+		if (!mmc->erase_timeout) {
+			MMCINFO("invalid erase_timeout is %d\n", mmc->erase_timeout);
+			goto ERR_RET;
+		}
 		erase_timeout = mmc->erase_timeout;
-	else if (arg == MMC_SECURE_ERASE_ARG)
+	} else if (arg == MMC_SECURE_ERASE_ARG) {
+		if (!mmc->secure_erase_timeout) {
+			MMCINFO("invalid secure_erase_timeout is %d\n", mmc->secure_erase_timeout);
+			goto ERR_RET;
+		}
 		erase_timeout = mmc->secure_erase_timeout;
-	else if (arg == MMC_SECURE_TRIM1_ARG || arg == MMC_SECURE_TRIM2_ARG)
+	} else if (arg == MMC_SECURE_TRIM1_ARG || arg == MMC_SECURE_TRIM2_ARG) {
+		if (!mmc->secure_trim_timeout) {
+			MMCINFO("invalid secure_trim_timeout is %d\n", mmc->secure_trim_timeout);
+			goto ERR_RET;
+		}
 		erase_timeout = mmc->secure_trim_timeout;
-	else {
+	} else {
 		MMCINFO("Unknown erase argument 0x%x\n", arg);
 		goto ERR_RET;
 	}
@@ -906,7 +933,7 @@ int mmc_mmc_secure_erase(int dev_num, unsigned int start,
 		MMCDBG("%s: some sectors in emmc are ignored!\n\n", __FUNCTION__);
 		for (i=0; i<2; i++)
 			if (skip_space[0] & (1<<i))
-				MMCDBG("--%d: from%d  nr%d \n",
+				MMCDBG("--%d: from%u  nr%u \n", i,
 					skip_space[i*2+1], skip_space[i*2+2]);
 	}
 
@@ -984,6 +1011,7 @@ static ulong mmc_write_blocks(struct mmc *mmc, lbaint_t start,
 		cmd.cmdarg = start * mmc->write_bl_len;
 
 	cmd.resp_type = MMC_RSP_R1;
+	cmd.flags = 0;
 
 	data.src = src;
 	data.blocks = blkcnt;

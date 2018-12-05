@@ -38,6 +38,8 @@ extern int mmc_init_blk_ops(struct mmc *mmc);
 extern unsigned int mmc_mmc_update_timeout(struct mmc *mmc);
 extern char *spd_name[];
 
+extern int sunxi_mmc_ffu(struct mmc *mmc);
+
 LIST_HEAD(mmc_devices);
 
 int __weak board_mmc_getwp(struct mmc *mmc)
@@ -477,8 +479,17 @@ int mmc_send_op_cond(struct mmc *mmc)
 		}
 
 		/* exit if not busy (flag seems to be inverted) */
-		if (mmc->op_cond_response & OCR_BUSY)
+		if (mmc->op_cond_response & OCR_BUSY) {
+
+			/* 2015-8-12, WJQ */
+			mmc->op_cond_pending = 0;
+			mmc->version = MMC_VERSION_UNKNOWN;
+			mmc->ocr = cmd.response[0];
+			mmc->high_capacity = ((mmc->ocr & OCR_HCS) == OCR_HCS);
+			mmc->rca = 1;
+
 			return 0;
+		}
 	}
 	return IN_PROGRESS;
 }
@@ -489,6 +500,10 @@ int mmc_complete_op_cond(struct mmc *mmc)
 	int timeout = 1000;
 	uint start;
 	int err;
+
+	/* 2015-8-12, WJQ */
+	if (mmc->op_cond_pending == 0)
+		return 0;
 
 	mmc->op_cond_pending = 0;
 	start = get_timer(0);
@@ -567,10 +582,10 @@ int mmc_decode_ext_csd(struct mmc *mmc,
 
 
 	dec_ext_csd->rev = ext_csd[EXT_CSD_REV];
-	if (dec_ext_csd->rev > 7) {
-		MMCINFO("unrecognised EXT_CSD revision %d\n", dec_ext_csd->rev);
-		err = -1;
-		goto out;
+	if (dec_ext_csd->rev > 8) {
+		MMCINFO("unrecognised EXT_CSD revision %d, maybe ver5.2 or later version!\n", dec_ext_csd->rev);
+		//err = -1;
+		//goto out;
 	}
 
 	dec_ext_csd->raw_sectors[0] = ext_csd[EXT_CSD_SEC_CNT + 0];
@@ -635,12 +650,14 @@ int mmc_decode_ext_csd(struct mmc *mmc,
 		dec_ext_csd->data_sector_size = 512;
 	}
 
-out:
+//out:
 	return err;
 }
 
 int mmc_update_phase(struct mmc *mmc)
 {
+	if(mmc->cfg->ops->update_phase == NULL)
+		return 0;
 	return mmc->cfg->ops->update_phase(mmc);
 }
 
@@ -674,7 +691,6 @@ int mmc_do_switch(struct mmc *mmc, u8 set, u8 index, u8 value, u32 timeout)
 		MMCINFO("update clock failed after send switch cmd\n");
 		return ret;
 	}
-
 	/* Waiting for the ready status */
 	ret = mmc_send_status(mmc, timeout);
 	if (ret) {
@@ -684,6 +700,45 @@ int mmc_do_switch(struct mmc *mmc, u8 set, u8 index, u8 value, u32 timeout)
 
 	return 0;
 }
+
+#ifdef SUPPORT_SUNXI_MMC_FFU
+int mmc_switch_ffu(struct mmc *mmc, u8 set, u8 index, u8 value, u32 timeout, u8 check_status)
+{
+	struct mmc_cmd cmd;
+	int ret;
+
+	cmd.cmdidx = MMC_CMD_SWITCH;
+	cmd.resp_type = MMC_RSP_R1b;
+	cmd.cmdarg = (MMC_SWITCH_MODE_WRITE_BYTE << 24) |
+				 (index << 16) |
+				 (value << 8);
+	cmd.flags = 0;
+
+	ret = mmc_send_cmd(mmc, &cmd, NULL);
+	if (ret) {
+		MMCINFO("mmc switch failed\n");
+	}
+
+	mmc_set_ios(mmc);
+
+	ret = mmc_update_phase(mmc);
+	if (ret) {
+		MMCINFO("update clock failed after send switch cmd\n");
+		return ret;
+	}
+
+	/* Waiting for the ready status */
+	if (check_status) {
+		ret = mmc_send_status(mmc, timeout);
+		if (ret) {
+			MMCINFO("mmc swtich status error\n");
+			return ret;
+		}
+	}
+
+	return 0;
+}
+#endif
 
 int mmc_switch(struct mmc *mmc, u8 set, u8 index, u8 value)
 {
@@ -1709,8 +1764,12 @@ static int mmc_startup(struct mmc *mmc)
 			break;
 		case 8:
 			mmc->version = MMC_VERSION_5_1;
+			break;
 		default:
-			MMCINFO("Invalid ext_csd revision %d\n", ext_csd[192]);
+			if (ext_csd[EXT_CSD_REV] > 8)
+				mmc->version = MMC_VERSION_NEW_VER;
+			else
+				MMCINFO("Invalid ext_csd revision %d\n", ext_csd[192]);
 			break;
 		}
 
@@ -2000,6 +2059,10 @@ static int mmc_startup(struct mmc *mmc)
 				break;
 			case MMC_VERSION_5_1:
 				MMCINFO("MMC v5.1\n");
+				break;
+			case MMC_VERSION_NEW_VER:
+				MMCINFO("MMC v5.2 or later version\n");
+				break;
 			default:
 				MMCINFO("Unknow MMC ver\n");
 				break;
@@ -2096,7 +2159,7 @@ struct mmc *mmc_create(const struct mmc_config *cfg, void *priv)
 	INIT_LIST_HEAD(&mmc->link);
 
 	list_add_tail(&mmc->link, &mmc_devices);
-
+	cur_dev_num++;
 	return mmc;
 }
 
@@ -2159,6 +2222,11 @@ int mmc_start_init(struct mmc *mmc)
 
 	/* The internal partition reset to user partition(0) at every CMD0*/
 	mmc->part_num = 0;
+
+	if ( (uboot_spare_head.boot_data.storage_type == STORAGE_EMMC) &&
+		(0 ==mmc->block_dev.dev)){
+		priv_info->card_type = CARD_TYPE_NULL;
+	}
 
 	if (work_mode == WORK_MODE_BOOT)
 	{
@@ -2243,8 +2311,6 @@ int mmc_start_init(struct mmc *mmc)
 		}
 	}
 
-
-
 	if (err == IN_PROGRESS)
 		mmc->init_in_progress = 1;
 
@@ -2254,6 +2320,7 @@ int mmc_start_init(struct mmc *mmc)
 static int mmc_complete_init(struct mmc *mmc)
 {
 	int err = 0;
+
 
 	if (mmc->op_cond_pending)
 		err = mmc_complete_op_cond(mmc);
@@ -2267,109 +2334,93 @@ static int mmc_complete_init(struct mmc *mmc)
 		mmc->has_init = 1;
 		MMCDBG("startup ok\n");
 	}
+
 	mmc->init_in_progress = 0;
-
-	err = sunxi_switch_to_best_bus(mmc);
-	if (err) {
-		MMCINFO("switch to best speed mode fail\n");
-		return err;
-	}
-
 	init_part(&mmc->block_dev); /* it will send cmd17 */
+
 	return err;
 }
 
-#if 0
-static int mmc_update_sdly_to_sysconfig(struct mmc *mmc)
+void mmc_update_config_for_dragonboard(int card_no)
 {
-	int rval = 0;
-	struct tune_sdly *sdly = (struct tune_sdly *)uboot_spare_head.boot_data.sdcard_spare_data;
-	u32 f3210, f7654;
+	int ret = 0;
+	int nodeoffset=0;
+	char prop_path[128] = {0};
 
-	f3210 = sdly->tm4_smx_fx[0*2 + 0]; //sdly->tm4_sm0_f3210;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm0_freq0", &f3210, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm0_freq0", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm0_freq0", rval);
-	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm0_freq0");
+	/* For dragon board test, boot sdc0 firstly, try sdc2 at uboot. if sdc2 is invalid(not emmc/sd), modify device tree to disable sdc2.
+	    Because boot from sdc0, there is no valid timing parameters for sdc2 in boot0's header. Updating timing parameters from boot0's header is wrong.
+	    Therefore, change sdc2's "sdc_ex_dly_used" in device tree to 0 to cancel update timing parameters.
+	    It is also necessary to delete flowing items from device tree:
+	    mmc-ddr-1_8v	   =
+	    mmc-hs200-1_8v	   =
+	    mmc-hs400-1_8v	   =
+	    max-frequency	   = 150000000
+	*/
+	if(card_no == 2)
+		nodeoffset = fdt_path_offset(working_fdt, FDT_PATH_CARD2_BOOT_PARA);
+	else
+		nodeoffset = fdt_path_offset(working_fdt, FDT_PATH_CARD3_BOOT_PARA);
+	if(nodeoffset < 0 ) {
+		MMCINFO("get card2_boot_para para fail --- 0\n");
+		return ;
 	}
 
-	f7654 = sdly->tm4_smx_fx[0*2 + 1]; // sdly->tm4_sm0_f7654;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm0_freq1", &f7654, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm0_freq1", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm0_freq1", rval);
-	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm0_freq1");
+	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_ex_dly_used", 0);
+	if(ret < 0) {
+		MMCINFO("update card2_boot_para:dtb sdc_ex_dly_used, %d\n", ret);
+		return ;
 	}
 
-	f3210 = sdly->tm4_smx_fx[1*2 + 0]; // sdly->tm4_sm1_f3210;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm1_freq0", &f3210, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm1_freq0", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm1_freq0", rval);
+	if (card_no == 2)
+		strcpy(prop_path, "mmc2");
+	else
+		strcpy(prop_path, "mmc3");
+
+	nodeoffset = fdt_path_offset(working_fdt, prop_path);
+	if (nodeoffset < 0) {
+		MMCINFO("can't find node \"%s\" \n", prop_path);
+		return ;
+	}
+	ret = fdt_delprop(working_fdt, nodeoffset, "mmc-hs400-1_8v");
+	if (ret == 0) {
+		MMCINFO("delete mmc-hs400-1_8v from dtb\n");
+	} else if (ret == -FDT_ERR_NOTFOUND){
+		MMCINFO("no mmc-hs400-1_8v!\n");
 	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm1_freq0");
+		MMCINFO("update dtb fail, delete mmc-hs400-1_8v fail\n");
 	}
 
-	f7654 = sdly->tm4_smx_fx[1*2 + 1]; //sdly->tm4_sm1_f7654;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm1_freq1", &f7654, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm1_freq1", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm1_freq1", rval);
+	ret = fdt_delprop(working_fdt, nodeoffset, "mmc-hs200-1_8v");
+	if (ret == 0) {
+		MMCINFO("delete mmc-hs200-1_8v from dtb\n");
+	} else if (ret == -FDT_ERR_NOTFOUND){
+		MMCINFO("no mmc-hs200-1_8v!\n");
 	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm1_freq1");
+		MMCINFO("update dtb fail, delete mmc-hs200-1_8v fail\n");
 	}
 
-	f3210 = sdly->tm4_smx_fx[2*2 + 0]; //sdly->tm4_sm2_f3210;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm2_freq0", &f3210, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm2_freq0", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm2_freq0", rval);
+	ret = fdt_delprop(working_fdt, nodeoffset, "mmc-ddr-1_8v");
+	if (ret == 0) {
+		MMCINFO("delete mmc-ddr-1_8v from dtb\n");
+	} else if (ret == -FDT_ERR_NOTFOUND){
+		MMCINFO("no mmc-ddr-1_8v!\n");
 	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm2_freq0");
+		MMCINFO("update dtb fail, delete mmc-ddr-1_8v fail\n");
 	}
 
-	f7654 = sdly->tm4_smx_fx[2*2 + 1]; //sdly->tm4_sm2_f7654;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm2_freq1", &f7654, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm2_freq1", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm2_freq1", rval);
+	ret = fdt_delprop(working_fdt, nodeoffset, "max-frequency");
+	if (ret == 0) {
+		MMCINFO("delete max-frequency from dtb\n");
+	} else if (ret == -FDT_ERR_NOTFOUND){
+		MMCINFO("no max-frequency!\n");
 	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm2_freq1");
+		MMCINFO("update dtb fail, delete max-frequency fail\n");
 	}
 
-	f3210 = sdly->tm4_smx_fx[3*2 + 0]; //sdly->tm4_sm3_f3210;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm3_freq0", &f3210, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm3_freq0", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm3_freq0", rval);
-	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm3_freq0");
-	}
-
-	f7654 = sdly->tm4_smx_fx[3*2 + 1]; //sdly->tm4_sm3_f7654;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm3_freq1", &f7654, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm3_freq1", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm3_freq1", rval);
-	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm3_freq1");
-	}
-
-	f3210 = sdly->tm4_smx_fx[4*2 + 0]; //sdly->tm4_sm4_f3210;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm4_freq0", &f3210, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm4_freq0", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm4_freq0", rval);
-	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm4_freq0");
-	}
-
-	f7654 = sdly->tm4_smx_fx[4*2 + 1]; //sdly->tm4_sm4_f7654;
-	if (script_parser_patch("mmc2_para", "sdc_tm4_sm4_freq1", &f7654, 1) == SCRIPT_PARSER_OK) {
-		script_parser_fetch("mmc2_para", "sdc_tm4_sm4_freq1", &rval, 1);
-		MMCINFO("set kernel %s %d ok\n", "sdc_tm4_sm4_freq1", rval);
-	} else {
-		MMCINFO("set kernel %s failed\n", "sdc_tm4_sm4_freq1");
-	}
-
-	return 0;
 }
-#else
-static void mmc_update_sdly_to_sysconfig(struct mmc *mmc)
+
+
+void mmc_update_config_for_sdly(struct mmc *mmc)
 {
 	int ret = 0;
 	int nodeoffset;
@@ -2379,92 +2430,250 @@ static void mmc_update_sdly_to_sysconfig(struct mmc *mmc)
 	struct tune_sdly *sdly = &(priv_info->tune_sdly);
 	u32 f3210, f7654;
 
-	strcpy(prop_path, "mmc2");
+	struct sunxi_mmc_host *host = (struct sunxi_mmc_host *)mmc->priv;
+	int imd, ifreq;
+	int dly, dsdly;
+	int null_hs200, null_hs400, null_hsddr;
+	int clear_hs200, clear_hs400, clear_hsddr;
+	u32 max_hs200=0, max_hs400=0, max_hsddr=0, min_val, defval;
+
+	if (host->mmc_no == 2)
+		strcpy(prop_path, "mmc2");
+	else
+		strcpy(prop_path, "mmc3");
 	nodeoffset = fdt_path_offset(working_fdt, prop_path);
 	if (nodeoffset < 0) {
 		MMCINFO("can't find node \"%s\",will add new node\n", prop_path);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
-
-#if 0
-	ret = fdt_getprop_u32(working_fdt, nodeoffset, "", &prop_val);
-	if(ret < 0){
-		goto __ERRRO_END;
-	}
-#endif
 
 	f3210 = sdly->tm4_smx_fx[0*2 + 0]; //sdly->tm4_sm0_f3210;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm0_freq0", f3210);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm0_freq0, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 	f7654 = sdly->tm4_smx_fx[0*2 + 1]; // sdly->tm4_sm0_f7654;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm0_freq1", f7654);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm0_freq1, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 
 	f3210 = sdly->tm4_smx_fx[1*2 + 0]; //sdly->tm4_sm0_f3210;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm1_freq0", f3210);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm1_freq0, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 	f7654 = sdly->tm4_smx_fx[1*2 + 1]; // sdly->tm4_sm0_f7654;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm1_freq1", f7654);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm1_freq1, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 
 	f3210 = sdly->tm4_smx_fx[2*2 + 0]; //sdly->tm4_sm0_f3210;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm2_freq0", f3210);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm2_freq0, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 	f7654 = sdly->tm4_smx_fx[2*2 + 1]; // sdly->tm4_sm0_f7654;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm2_freq1", f7654);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm2_freq1, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 
 	f3210 = sdly->tm4_smx_fx[3*2 + 0]; //sdly->tm4_sm0_f3210;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm3_freq0", f3210);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm3_freq0, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 	f7654 = sdly->tm4_smx_fx[3*2 + 1]; // sdly->tm4_sm0_f7654;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm3_freq1", f7654);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm3_freq1, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 
 	f3210 = sdly->tm4_smx_fx[4*2 + 0]; //sdly->tm4_sm0_f3210;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm4_freq0", f3210);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm4_freq0, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 	f7654 = sdly->tm4_smx_fx[4*2 + 1]; // sdly->tm4_sm0_f7654;
 	ret = fdt_setprop_u32(working_fdt, nodeoffset, "sdc_tm4_sm4_freq1", f7654);
 	if(ret < 0) {
 		MMCINFO("update dtb fail, sdc_tm4_sm4_freq1, %d\n", ret);
-		goto __ERRRO_END;
+		goto __ERROR_END;
 	}
 
+	if (host->cfg.platform_caps.tune_limit_kernel_timing == 0)
+	{
+		goto __NORMAL_RET;
+	}
+
+	/*
+	* 1. check sample point cfg for each hsddr/hs200/hs400.
+	* 2. don't support speed mode which has no valid sample point cfg.
+	* 3. decrease max frequency accroding sample point cfg.
+	*/
+	null_hsddr = 1;
+	if (mmc->card_caps & MMC_MODE_DDR_52MHz)
+	{
+		imd = HSDDR52_DDR50;
+		for (ifreq=2; ifreq>=2; ifreq--) /*1-25MHz; 2-50MHz; 3-100MHz; 4-150MHz; 5-200MHz*/
+		{
+			dly = host->tm4.sdly[imd*MAX_CLK_FREQ_NUM+ifreq];
+			if (dly != 0xFF){
+				max_hsddr = sunxi_select_freq(mmc, imd, ifreq);
+				MMCINFO("hsddr %d-%d\n", ifreq, max_hsddr);
+				null_hsddr = 0;
+				break;
+			}
+		}
+	}
+	null_hs200 = 1;
+	if (mmc->card_caps & MMC_MODE_HS200)
+	{
+		imd = HS200_SDR104;
+		for (ifreq=5; ifreq>=2; ifreq--) /*1-25MHz; 2-50MHz; 3-100MHz; 4-150MHz; 5-200MHz*/
+		{
+			dly = host->tm4.sdly[imd*MAX_CLK_FREQ_NUM+ifreq];
+			if (dly != 0xFF) {
+				max_hs200 = sunxi_select_freq(mmc, imd, ifreq);
+				MMCINFO("hs200 %d-%d\n", ifreq, max_hs200);
+				null_hs200= 0;
+				break;
+			}
+		}
+	}
+	null_hs400 = 1;
+	if ((mmc->card_caps & (MMC_MODE_HS400|MMC_MODE_8BIT))
+		== (MMC_MODE_HS400|MMC_MODE_8BIT))
+	{
+		imd = HS400;
+		for (ifreq=5; ifreq>=2; ifreq--) /*1-25MHz; 2-50MHz; 3-100MHz; 4-150MHz; 5-200MHz*/
+		{
+			imd = HS200_SDR104;
+			dly = host->tm4.sdly[imd*MAX_CLK_FREQ_NUM+ifreq];
+			imd = HS400;
+			dsdly = host->tm4.dsdly[ifreq];
+			if ((dly != 0xff) && (dsdly != 0xff)) {
+				max_hs400 = sunxi_select_freq(mmc, imd, ifreq);
+				MMCINFO("hs400 %d-%d\n", ifreq, max_hs400);
+				null_hs400 = 0;
+				break;
+			}
+		}
+	}
+
+	ret = fdt_getprop_u32(working_fdt, nodeoffset, "max-frequency", &defval);
+	if(ret < 0) {
+		MMCINFO("get max-frequency fail %d\n", ret);
+		goto __ERROR_END;
+	} else {
+		MMCINFO("get max-frequency ok %d Hz\n", defval);
+	}
+
+	if (null_hsddr || null_hs200 || null_hs400)
+		clear_hs400 = 1;
+	else if (!null_hs400)
+		clear_hs400 = 0;
+
+	if (null_hs200)
+		clear_hs200 = 1;
+	else
+		clear_hs200 = 0;
+
+	if (null_hsddr)
+		clear_hsddr = 1;
+	else
+		clear_hsddr = 0;
+
+	MMCINFO("%d %d %d: %d %d %d\n", null_hs200, null_hs400, null_hsddr, clear_hs200, clear_hs400, clear_hsddr);
+
+	if (clear_hs400)
+	{
+		ret = fdt_delprop(working_fdt, nodeoffset, "mmc-hs400-1_8v");
+		if (ret == 0) {
+			MMCINFO("delete mmc-hs400-1_8v from dtb\n");
+		} else if (ret == -FDT_ERR_NOTFOUND){
+			MMCINFO("no mmc-hs400-1_8v!\n");
+		} else {
+			MMCINFO("update dtb fail, delete mmc-hs400-1_8v fail\n");
+		}
+	}
+
+	if (clear_hs200)
+	{
+		ret = fdt_delprop(working_fdt, nodeoffset, "mmc-hs200-1_8v");
+		if (ret == 0) {
+			MMCINFO("delete mmc-hs200-1_8v from dtb\n");
+		} else if (ret == -FDT_ERR_NOTFOUND){
+			MMCINFO("no mmc-hs200-1_8v!\n");
+		} else {
+			MMCINFO("update dtb fail, delete mmc-hs200-1_8v fail\n");
+		}
+	}
+
+	if (clear_hsddr)
+	{
+		ret = fdt_delprop(working_fdt, nodeoffset, "mmc-ddr-1_8v");
+		if (ret == 0) {
+			MMCINFO("delete mmc-ddr-1_8v from dtb\n");
+		} else if (ret == -FDT_ERR_NOTFOUND){
+			MMCINFO("no mmc-ddr-1_8v!\n");
+		} else {
+			MMCINFO("update dtb fail, delete mmc-ddr-1_8v fail\n");
+		}
+	}
+
+	if (!clear_hs400)
+	{
+		if (max_hs200 > max_hs400)
+			min_val = max_hs400;
+		else
+			min_val = max_hs200;
+	}
+	else if (!clear_hs200)
+		min_val = max_hs200;
+	else if (!clear_hsddr)
+		min_val = max_hsddr;
+	else
+		min_val = 50000000; //25MHz
+
+	if (min_val < defval)
+	{
+		ret = fdt_setprop_u32(working_fdt, nodeoffset, "max-frequency", min_val);
+		if(ret < 0) {
+			MMCINFO("update dtb fail, max-frequency, %d\n", ret);
+			goto __ERROR_END;
+		} else {
+			ret = fdt_getprop_u32(working_fdt, nodeoffset, "max-frequency", &defval);
+			if(ret < 0) {
+				MMCINFO("get max-frequency fail %d\n", ret);
+				goto __ERROR_END;
+			} else {
+				MMCINFO("get max-frequency ok %d Hz\n", defval);
+			}
+			if (defval != min_val) {
+				MMCINFO("update max-frequency compare err!\n");
+			}
+		}
+	}
+
+__NORMAL_RET:
 	return ;
 
-__ERRRO_END:
+__ERROR_END:
 	MMCINFO("fdt err returned %s\n", fdt_strerror(ret));
 	return ;
 }
-#endif
 
 static void _mmc_life_time_est(u8 est_val)
 {
@@ -2569,6 +2778,9 @@ int mmc_init_boot(struct mmc *mmc)
 {
 	int err = 0;
 	int work_mode = uboot_spare_head.boot_data.work_mode;
+	struct boot_sdmmc_private_info_t *priv_info =
+		(struct boot_sdmmc_private_info_t *)(uboot_spare_head.boot_data.sdcard_spare_data);
+	int need_tuning = 0;
 
 	MMCDBG("=============== start mmc_init_boot...\n");
 
@@ -2580,9 +2792,76 @@ int mmc_init_boot(struct mmc *mmc)
 	if (!err || err == IN_PROGRESS)
 		err = mmc_complete_init(mmc);
 
+	if (err) {
+		MMCINFO("%s: mmc int fail\n", __FUNCTION__);
+		return err;
+	}
+
+#ifdef SUPPORT_SUNXI_MMC_FFU
+	if ( sunxi_mmc_ffu(mmc) ) {
+		MMCINFO("%s, try to execute ffu flow fail\n",  __FUNCTION__);
+		return err;
+	}
+#endif
+
+	if ((work_mode == WORK_MODE_BOOT)
+		&& (mmc->cfg->platform_caps.sample_mode == AUTO_SAMPLE_MODE))
+	{
+		if (mmc->cfg->platform_caps.force_boot_tuning)
+			need_tuning = 1;
+		else
+		{
+			if (((priv_info->ext_para0 & 0xFF000000) == EXT_PARA0_ID)
+				&& (priv_info->ext_para0 & EXT_PARA0_TUNING_SUCCESS_FLAG))
+				MMCINFO("%s: tuning procedure is executed!\n", __FUNCTION__);
+			else
+				need_tuning = 1;
+		}
+
+		if (need_tuning)
+		{
+			MMCINFO("%s: start tuning ...\n", __FUNCTION__);
+
+			mmc->msglevel = 0x0;
+			mmc->do_tuning = 0x1;
+			mmc->tuning_end = 0x0;
+			err = sunxi_mmc_tuning_init();
+			if (err) {
+				MMCINFO("%s: init tuning failed\n", __FUNCTION__);
+				return err;
+			}
+
+			err = sunxi_write_tuning(mmc);
+			if (err) {
+				MMCINFO("%s: write pattern failed\n", __FUNCTION__);
+				return err;
+			}
+
+			err = sunxi_bus_tuning(mmc);
+			if (err) {
+				MMCINFO("%s: bus tuning fail, err %d\n", __FUNCTION__, err);
+				return err;
+			}
+
+			mmc->msglevel = 0x1;
+			mmc->do_tuning = 0x0;
+			mmc->tuning_end = 0x1;
+		}
+	}
+
+	err = sunxi_switch_to_best_bus(mmc);
+	if (err) {
+		MMCINFO("%s: switch to best speed mode fail\n", __FUNCTION__);
+		return err;
+	}
+
 	if((work_mode == WORK_MODE_BOOT)
-		&& (mmc->cfg->platform_caps.sample_mode == AUTO_SAMPLE_MODE) )
-		mmc_update_sdly_to_sysconfig(mmc);
+		&& (mmc->cfg->platform_caps.sample_mode == AUTO_SAMPLE_MODE))
+	{
+		/*call this function in board_common.c*/
+		//mmc_update_config_for_sdly(mmc);
+	}
+
 
 	/* update some feature */
 	if (mmc->cfg->platform_caps.drv_wipe_feature & DRV_PARA_DISABLE_EMMC_SANITIZE)
@@ -2610,8 +2889,8 @@ int mmc_init_boot(struct mmc *mmc)
     }
     //MMCINFO("========================================\n\n");
 
-
 	MMCDBG("=============== end mmc_init_boot\n");
+
 	return err;
 }
 
@@ -2621,6 +2900,7 @@ int mmc_init_product(struct mmc *mmc)
 
 	mmc->msglevel = 0x0;
 	mmc->do_tuning = 0x1;
+	mmc->tuning_end = 0x0;
 
 retry:
 	MMCDBG("=============== start mmc_init_product...\n");
@@ -2692,6 +2972,12 @@ retry:
     	mmc_mmc_parse_health_report(mmc);
     }
 
+	err = sunxi_mmc_tuning_init();
+	if (err) {
+		MMCINFO("init tuning failed\n");
+		return err;
+	}
+
 	err = sunxi_write_tuning(mmc);
 	if (err) {
 		MMCINFO("Write pattern failed\n");
@@ -2706,6 +2992,13 @@ retry:
 
 	mmc->msglevel = 0x1;
 	mmc->do_tuning = 0x0;
+	mmc->tuning_end = 0x1; //comment this line for debug, test tuning during boot.
+
+	err = sunxi_mmc_tuning_exit();
+	if (err) {
+		MMCINFO("exit tuning failed\n");
+		return err;
+	}
 
 	err = sunxi_switch_to_best_bus(mmc);
 	if (err) {
@@ -2729,8 +3022,8 @@ int mmc_init(struct mmc *mmc)
 #endif
 
 	if (mmc->has_init) {
-		MMCINFO("Has init\n");
-		tick_printf("---%s %d %s\n", __FILE__, __LINE__, __FUNCTION__);
+		MMCDBG("Has init\n");
+		MMCDBG("---%s %d %s\n", __FILE__, __LINE__, __FUNCTION__);
 		return 0;
 	}
 
@@ -2850,7 +3143,17 @@ int mmc_exit(void)
 
 	if (mmc == NULL) {
 		MMCINFO("mmc %d not find, so not exit\n", sdc_no);
-		return -1;
+
+		#ifdef CONFIG_MMC3_SUPPORT
+			sdc_no = 3;
+			mmc = find_mmc_device(sdc_no);
+			if (mmc == NULL) {
+				MMCINFO("mmc %d not find, so not exit\n", sdc_no);
+				return -1;
+			}
+		#else
+			return -1;
+		#endif
 	}
 
 	MMCINFO("mmc exit start\n");
@@ -2908,6 +3211,7 @@ int mmc_exit(void)
 		}
 	}
 
+	mmc_clk_io_onoff( mmc->cfg->host_no,0,0);
 	MMCINFO("mmc %d exit ok\n", mmc->cfg->host_no);
 	return err;
 }

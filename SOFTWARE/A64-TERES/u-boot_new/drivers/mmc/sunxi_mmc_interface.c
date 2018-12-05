@@ -57,6 +57,7 @@ static ulong mmc_burn_boot(int dev_num, lbaint_t start, lbaint_t blkcnt, const v
 	if ((mmc->cfg->platform_caps.drv_burn_boot_pos & DRV_PARA_BURN_EMMC_BOOT_PART)
 		&& mmc->boot_support)
 	{
+		MMCDBG("%s: start burn emmc boot part: %d...\n", __func__, (int)start);
 		/* enable boot mode */
 		err = mmc_switch_boot_bus_cond(dev_num,
 										MMC_SWITCH_BOOT_SDR_NORMAL,
@@ -81,8 +82,13 @@ static ulong mmc_burn_boot(int dev_num, lbaint_t start, lbaint_t blkcnt, const v
 			MMCINFO("switch to boot1 partition failed\n");
 			goto DISABLE_BOOT_MODE;
 		}
-		/*In eMMC boot partition,boot0.bin start from 0 sector,so we must change start form 16 to 0*/
-		start_todo = 0;
+		/*for smhc2, in eMMC boot partition,boot0.bin start from 0 sector,so we must change start form 16 to 0
+		* for smhc3, in eMMC boot partition,boot0.bin start from 0 sector,so we must change start form 16 to 1
+		*/
+		if (dev_num == 3)
+			start_todo = 1;
+		else
+			start_todo = 0;
 		blocks_do_boot = mmc_do_burn_boot(dev_num, start_todo, blkcnt, src);
 		if (blocks_do_boot != blkcnt)
 			MMCINFO("burn boot to emmc boot1 partition failed" LBAF "\n", blocks_do_boot);
@@ -108,6 +114,7 @@ DISABLE_BOOT_MODE:
 	/* burn boot to user partition */
 	if (!(mmc->cfg->platform_caps.drv_burn_boot_pos & DRV_PARA_NOT_BURN_USER_PART))
 	{
+		MMCDBG("%s: start burn emmc user part: %d...\n", __func__, (int)start);
 		blocks_do_user = mmc_do_burn_boot(dev_num, start, blkcnt, src);
 		if (blocks_do_user != blkcnt)
 			MMCINFO("burn boot to user partition failed," LBAFU "\n", blocks_do_user);
@@ -119,7 +126,7 @@ DISABLE_BOOT_MODE:
 		return 0;
 }
 
-/* user same memory, if get a good boot0, exit.*/
+/* use same memory, if get a good boot0, exit.*/
 static ulong mmc_get_boot(int dev_num, lbaint_t start, lbaint_t blkcnt, void *dst)
 {
 	lbaint_t blocks_do = 0;
@@ -137,7 +144,7 @@ static ulong mmc_get_boot(int dev_num, lbaint_t start, lbaint_t blkcnt, void *ds
 		}
 	}
 
-	if (!(mmc->cfg->platform_caps.drv_burn_boot_pos & DRV_PARA_BURN_EMMC_BOOT_PART)
+	if ((mmc->cfg->platform_caps.drv_burn_boot_pos & DRV_PARA_BURN_EMMC_BOOT_PART)
 		&& mmc->boot_support)
 	{
 		if (mmc_switch_part(dev_num, MMC_SWITCH_PART_BOOT_PART_1))
@@ -146,8 +153,13 @@ static ulong mmc_get_boot(int dev_num, lbaint_t start, lbaint_t blkcnt, void *ds
 			goto RET;
 		}
 
-		/*In eMMC boot partition,boot0.bin start from 0 sector,so we must change start form 16 to 0*/
-		start_todo= 0;
+		/*for smhc2, in eMMC boot partition,boot0.bin start from 0 sector,so we must change start form 16 to 0
+		* for smhc3, in eMMC boot partition,boot0.bin start from 0 sector,so we must change start form 16 to 1
+		*/
+		if (dev_num == 3)
+			start_todo = 1;
+		else
+			start_todo = 0;
 
 		blocks_do = mmc_bread(dev_num, start_todo, blkcnt, dst);
 		if (blocks_do != blkcnt) {
@@ -169,9 +181,9 @@ RET:
 
 static ulong mmc_bwrite_mass_pro(int dev_num, ulong start, lbaint_t blkcnt, const void*src)
 {
-	MMCDBG("%s: dev %d, start %ld, blkcnt %ld src 0x%x\n", __FUNCTION__, dev_num, start, blkcnt, src);
+	MMCDBG("%s: dev %d, start %ld, blkcnt %ld src 0x%x\n", __FUNCTION__, dev_num, start, blkcnt, (u32)src);
 
-	if ((start == BOOT0_SDMMC_START_ADDR)
+	if ((((dev_num == 2) &&(start == BOOT0_SDMMC_START_ADDR)) || ((dev_num == 3) && (start == BOOT0_EMMC3_START_ADDR)))
 		&& ((start+blkcnt) < CONFIG_MMC_LOGICAL_OFFSET))
 	{
 		MMCDBG("%s: start burn boot data...\n", __FUNCTION__);
@@ -194,9 +206,9 @@ static ulong mmc_bwrite_mass_pro(int dev_num, ulong start, lbaint_t blkcnt, cons
 
 static ulong mmc_bread_mass_pro(int dev_num, ulong start, lbaint_t blkcnt, void *dst)
 {
-	MMCDBG("%s: dev %d, start %ld, blkcnt %ld src 0x%x\n", __FUNCTION__, dev_num, start, blkcnt, dst);
+	MMCDBG("%s: dev %d, start %ld, blkcnt %ld src 0x%x\n", __FUNCTION__, dev_num, start, blkcnt, (u32)dst);
 
-	if ((start == BOOT0_SDMMC_START_ADDR)
+	if ((((dev_num == 2) &&(start == BOOT0_SDMMC_START_ADDR)) || ((dev_num == 3) && (start == BOOT0_EMMC3_START_ADDR)))
 		&& ((start+blkcnt) < CONFIG_MMC_LOGICAL_OFFSET))
 	{
 		MMCDBG("%s: start read boot data...\n", __FUNCTION__);
@@ -482,6 +494,41 @@ out_fst:
 out:
 	return ret;
 }
+
+static int sdmmc_secure_storage_read_backup(s32 dev_num,u32 item,u8 *buf , lbaint_t blkcnt)
+{
+	s32 ret = 0;
+	s32 *sec_bak = (s32 *)buf;
+
+	if(buf == NULL){
+		MMCINFO("intput buf is NULL\n");
+		ret = -1;
+		goto out;
+
+	}
+
+	if(item > MAX_SECURE_STORAGE_MAX_ITEM){
+		MMCINFO("item exceed %d\n",MAX_SECURE_STORAGE_MAX_ITEM);
+		ret = -1;
+		goto out;
+	}
+
+	if(blkcnt > SDMMC_ITEM_SIZE){
+		MMCINFO("block count exceed %d\n",SDMMC_ITEM_SIZE);
+		ret = -1;
+		goto out;
+	}
+
+	//second backups
+	ret = mmc_bread(dev_num,SDMMC_SECURE_STORAGE_START_ADD+SDMMC_ITEM_SIZE*2*item+SDMMC_ITEM_SIZE,blkcnt,sec_bak);
+	if(ret != blkcnt){
+		MMCINFO("read second backup failed fun %s line %d\n",__FUNCTION__,__LINE__);
+		ret = -1;
+	}
+
+out:
+	return ret;
+}
 #endif
 
 
@@ -514,6 +561,7 @@ int mmc_init_blk_ops(struct mmc *mmc)
 	mmc->block_dev.block_write_mass_pro = mmc_bwrite_mass_pro_secure;
 
 	mmc->block_dev.block_read_secure 	= sdmmc_secure_storage_read;
+	mmc->block_dev.block_read_secure_backup 	= sdmmc_secure_storage_read_backup;
 	mmc->block_dev.block_write_secure	= sdmmc_secure_storage_write;
 	mmc->block_dev.block_get_item_secure= get_sdmmc_secure_storage_max_item;
 
