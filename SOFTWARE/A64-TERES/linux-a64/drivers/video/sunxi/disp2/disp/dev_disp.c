@@ -410,7 +410,7 @@ static s32 parser_disp_init_para(const struct device_node *np, disp_init_para * 
 	}
 
 	//fb0
-	init_para->buffer_num[0]= 2;
+	init_para->buffer_num[0]= 1;
 
 	if (of_property_read_u32(np, "fb0_format", &value) < 0) {
 		__wrn("of_property_read disp_init.fb0_format fail\n");
@@ -431,7 +431,7 @@ static s32 parser_disp_init_para(const struct device_node *np, disp_init_para * 
 	init_para->fb_height[0]= value;
 
 	//fb1
-	init_para->buffer_num[1]= 2;
+	init_para->buffer_num[1]= 1;
 
 	if (of_property_read_u32(np, "fb1_format", &value) < 0) {
 		__wrn("of_property_read disp_init.fb1_format fail\n");
@@ -449,7 +449,7 @@ static s32 parser_disp_init_para(const struct device_node *np, disp_init_para * 
 	init_para->fb_height[1]= value;
 
 	//fb2
-	init_para->buffer_num[2]= 2;
+	init_para->buffer_num[2]= 1;
 
 	if (of_property_read_u32(np, "fb2_format", &value) < 0) {
 		__inf("of_property_read disp_init.fb2_format fail\n");
@@ -587,7 +587,10 @@ static void start_work(struct work_struct *work)
 			__inf("sel=%d, output_type=%d, lcd_reg=%d, hdmi_reg=%d\n",
 				screen_id, output_type, lcd_registered, hdmi_registered);
 			if (((disp_mode	== DISP_INIT_MODE_SCREEN0) && (screen_id == 0))
-				|| ((disp_mode	== DISP_INIT_MODE_SCREEN1) && (screen_id == 1))) {
+				|| ((disp_mode  == DISP_INIT_MODE_SCREEN1) && (screen_id == 1))
+				|| ((disp_mode == DISP_INIT_MODE_TWO_DIFF_SCREEN || disp_mode == DISP_INIT_MODE_TWO_SAME_SCREEN)
+					&& (screen_id == 0 || screen_id == 1)))
+			{
 				if ((output_type == DISP_OUTPUT_TYPE_LCD)) {
 					if (lcd_registered	&& bsp_disp_get_output_type(screen_id) != DISP_OUTPUT_TYPE_LCD) {
 						bsp_disp_device_switch(screen_id, output_type, output_mode);

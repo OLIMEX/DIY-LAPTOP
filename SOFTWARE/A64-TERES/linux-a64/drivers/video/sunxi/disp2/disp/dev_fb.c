@@ -1224,10 +1224,36 @@ s32 fb_init(struct platform_device *pdev)
 
 	if (g_disp_drv.disp_init.b_init) {
 		u32 fb_num = 0;
+		u32 disp_mode = g_disp_drv.disp_init.disp_mode;
 
-		fb_num = 1;
+		switch (disp_mode) {
+		case DISP_INIT_MODE_TWO_DIFF_SCREEN:
+			fb_num = 2;
+			break;
+		case DISP_INIT_MODE_SCREEN0:
+		case DISP_INIT_MODE_SCREEN1:
+		case DISP_INIT_MODE_TWO_SAME_SCREEN:
+		case DISP_INIT_MODE_TWO_DIFF_SCREEN_SAME_CONTENTS:
+		default:
+			fb_num = 1;
+			break;
+		}
+
 		for (i = 0; i<fb_num; i++)	{
-			u32 screen_id = g_disp_drv.disp_init.disp_mode;
+			u32 screen_id = 0;
+			switch (disp_mode) {
+			case DISP_INIT_MODE_SCREEN0:
+			case DISP_INIT_MODE_TWO_SAME_SCREEN:
+			case DISP_INIT_MODE_TWO_DIFF_SCREEN_SAME_CONTENTS:
+				screen_id = 0;
+				break;
+			case DISP_INIT_MODE_SCREEN1:
+				screen_id = 1;
+				break;
+			case DISP_INIT_MODE_TWO_DIFF_SCREEN:
+				screen_id = i;
+				break;
+			}
 
 			if (g_disp_drv.para.boot_info.sync) {
 				screen_id = g_disp_drv.para.boot_info.disp;
@@ -1248,7 +1274,18 @@ s32 fb_init(struct platform_device *pdev)
 				    g_disp_drv.disp_init.output_type[screen_id], g_disp_drv.disp_init.output_mode[screen_id]);
 			fb_para.output_height = bsp_disp_get_screen_height_from_output_type(screen_id,
 				    g_disp_drv.disp_init.output_type[screen_id], g_disp_drv.disp_init.output_mode[screen_id]);
-			fb_para.fb_mode = screen_id;
+
+			switch (disp_mode) {
+			case DISP_INIT_MODE_TWO_SAME_SCREEN:
+				fb_para.fb_mode = FB_MODE_DUAL_SAME_SCREEN_TB;
+				break;
+			case DISP_INIT_MODE_TWO_DIFF_SCREEN_SAME_CONTENTS:
+				fb_para.fb_mode = FB_MODE_DUAL_DIFF_SCREEN_SAME_CONTENTS;
+				break;
+			default:
+				fb_para.fb_mode = screen_id;
+				break;
+			}
 
 			display_fb_request(i, &fb_para);
 #if defined(CONFIG_DISP2_SUNXI_BOOT_COLORBAR)

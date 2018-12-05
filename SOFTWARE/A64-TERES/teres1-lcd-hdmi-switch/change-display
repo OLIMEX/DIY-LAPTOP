@@ -20,8 +20,8 @@ mount $boot_device /boot
 choices=$(dialog \
 	--title "Configure display output" \
 	--menu "\nChoose an option: \n" 10 60 7 \
-	1 "Enable HDMI display output" \
-	2 "Enable LCD display output" \
+	1 "Enable LCD+HDMI display outputs" \
+	2 "Disable HDMI display output" \
 	2>&1 >/dev/tty)
 
 [[ -z $choices ]] && exit 0
@@ -30,14 +30,18 @@ do
 	case $choice in
 	1)
 		[[ -e /boot/a64/a64-olinuxino-hdmi.dtb ]] && \
-		cp -f /boot/a64/a64-olinuxino-hdmi.dtb /boot/a64/a64-olinuxino.dtb
+		cp -f /opt/teres/hdmi/a64-olinuxino.dtb /boot/a64/a64-olinuxino.dtb
 		! grep -q "hdmi" /etc/modules && echo "hdmi" >> /etc/modules
+		rm /etc/X11/xorg.conf.d/*
+		cp /opt/teres/hdmi/xorg/* /etc/X11/xorg.conf.d
 	;;
 
 	2)
 		[[ -e /boot/a64/a64-olinuxino-lcd.dtb ]] && \
-		cp -f /boot/a64/a64-olinuxino-lcd.dtb /boot/a64/a64-olinuxino.dtb
+		cp -f /opt/teres/lcd/a64-olinuxino.dtb /boot/a64/a64-olinuxino.dtb
 		sed -i '/hdmi/d' /etc/modules
+		rm /etc/X11/xorg.conf.d/*
+		cp /opt/teres/lcd/xorg/* /etc/X11/xorg.conf.d
 	;;
 	esac
 done
