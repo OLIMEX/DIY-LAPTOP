@@ -38,14 +38,21 @@
 #define   FDT_PATH_CARD0_BOOT_PARA           "/soc/card0_boot_para"
 #define   FDT_PATH_CARD2_BOOT_PARA           "/soc/card2_boot_para"
 #define   FDT_PATH_REGU                      "/soc/regu"
+/*
+  * mmc2 and mmc3 can be use only one at same time on sun8iw10, so put mmc3's config at the same
+  * place with mmc2 to be compatile with other platforms.
+  */
+#define   FDT_PATH_CARD3_BOOT_PARA           "/soc/card2_boot_para"
 
 //for disp alias
 #define   FDT_DISP_PATH  "disp"
 #define   FDT_HDMI_PATH  "hdmi"
 #define   FDT_LCD0_PATH  "lcd0"
 #define   FDT_LCD1_PATH  "lcd1"
+#define   FDT_AC200_PATH "ac200"
 #define   FDT_BOOT_DISP_PATH  "boot_disp"
-
+#define   FDT_TV0_PATH  "tv0"
+#define   FDT_TV1_PATH  "tv1"
 
 
 
@@ -159,7 +166,7 @@ int fdt_get_one_gpio(const char* node_path, const char* prop_name,user_gpio_set_
 int fdt_set_one_gpio(const char* node_path, const char* prop_name);
 //pin for use fdt
 //int fdt_get_pin_num(const char* node_path,const char* pinctrl_name);
-//int fdt_get_all_pin(const char* node_path,const char* pinctrl_name,user_gpio_set_t* gpio_list);
+int fdt_get_all_pin(int nodeoffset,const char* pinctrl_name,user_gpio_set_t* gpio_list);
 int fdt_set_all_pin(const char * node_path,const char * pinctrl_name);
 int fdt_set_all_pin_by_offset(int nodeoffset,const char* pinctrl_name);
 int fdt_set_pin_byname(user_gpio_set_t  *pin_list,int pin_count, const char* pin_name);
