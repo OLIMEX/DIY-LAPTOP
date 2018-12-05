@@ -25,7 +25,8 @@ BOOTLOGO="../blobs/bootlogo.bmp"
 BATTERY="../blobs/bat"
 BOOTLOGO_TARGET="bootlogo.bmp"
 BATTERY_TARGET="bat"
-
+BOOT_CMD="../blobs/boot.cmd"
+BOOT_SCR="../blobs/boot.scr"
 if [ -z "$out" ]; then
 	echo "Usage: $0 <image-file.img> [disk size in MiB] [<kernel-tarball>] [teres]"
 	exit 1
@@ -91,11 +92,13 @@ dd if=/dev/zero bs=1M count=${boot_size} of=${out}1
 mkfs.vfat -n BOOT ${out}1
 
 # Add boot support if there
-if [ -e "${kernel}/a64/Image" -a -e "${kernel}/a64/a64-olinuxino.dtb" ]; then
+if [ -e "${kernel}/a64/Image" -a -e "${kernel}/a64/sun50i-a64-teres.dtb" ]; then
 	mcopy -sm -i ${out}1 ${kernel}/a64 ::
 	mcopy -m -i ${out}1 ${kernel}/initrd.img :: || true
 	mcopy -m -i ${out}1 ${kernel}/uEnv.txt :: || true
 	mcopy -m -i ${out}1 ${BOOTLOGO} :: || true 
+	mcopy -m -i ${out}1 ${BOOT_CMD} :: || true
+	mcopy -m -i ${out}1 ${BOOT_SCR} :: || true
 	mcopy -sm -i ${out}1 ${BATTERY} ::
 fi
 dd if=${out}1 conv=notrunc oflag=append bs=1M seek=$((part_position/1024)) of="$out"

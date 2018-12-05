@@ -33,7 +33,7 @@ cp $UBOOT/fes1_sun50iw1p1.bin $BUILD/fes1_teres.bin.tmp
 $SUNXI_PACK_TOOLS/update_boot0 $BUILD/fes1_teres.bin.tmp $BUILD/sys_config_teres.bin sdmmc_card
 mv $BUILD/fes1_teres.bin.tmp $BUILD/fes1_teres.bin
 make -C $UBOOT ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
-dtc -Odtb -o $BUILD/a64-teres_uboot.dtb $BLOBS/a64-teres_uboot.dts
+dtc -Odtb -o $BUILD/sun50i-a64-teres_uboot.dtb $BLOBS/sun50i-a64-teres_uboot.dts
 cp $BLOBS/sys_config_uboot.fex $BUILD/sys_config_uboot.fex
 unix2dos $BUILD/sys_config_uboot.fex
 $SUNXI_PACK_TOOLS/script $BUILD/sys_config_uboot.fex
