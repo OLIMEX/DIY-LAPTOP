@@ -803,6 +803,14 @@ s32 bsp_disp_get_screen_height_from_output_type(u32 disp, u32 output_type, u32 o
 			width = 3840;
 			height = 2160;
 			break;
+		case DISP_TV_MOD_800_480P:
+			width = 800;
+			height = 480;
+			break;
+	case DISP_TV_MOD_1024_600P:
+			width = 1024;
+			height = 600;
+			break;
 		}
 	}
 	/* FIXME: add other output device res */
