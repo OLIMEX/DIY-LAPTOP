@@ -418,6 +418,10 @@
 #define CONFIG_VIDEO_SUNXI_V3
 //#define CONFIG_SYS_DCACHE_OFF
 
+#define CONFIG_AUTOBOOT_KEYED
+#define CONFIG_AUTOBOOT_STOP_STR "s"
+#define CONFIG_AUTOBOOT_PROMPT "autoboot in %d seconds, Press s to abort\n",bootdelay
+
 // Make it actually useful.
 #define CONFIG_SYS_BOOTMAPSZ 0x4000000
 #define CONFIG_SUPPORT_RAW_INITRD
