@@ -21,9 +21,9 @@
 
 ## Preparation
 
-First, prepare a workspace with enough room and light to assemble the laptop.
+Prepare a workspace with enough room and light to assemble the laptop.
 Cover the workspace with soft material to prevent scratching the laptop's plastic parts.
-Ideally use a grounded electronics mat.
+Ideally use a grounded electronics mat to protect the sensitive electronic components.
 Read and follow the instructions carefully and do not rush!
 Disassembling the finished unit to fix earlier mistakes is considerably harder than assembling the unit!
 
@@ -35,24 +35,31 @@ The assembly process begins with the **TERES-006-Keyboard**:
 
 ![TERES-006-Keyboard 1](../images/TERES-I/hardware/009.jpg) ![TERES-006-Keyboard 2](../images/TERES-I/hardware/056.jpg)
 
-First attach the touchpad **TERES-023-Touch** to the keyboard's body:
+Attach the touchpad **TERES-023-Touch** to the keyboard body:
 
 ![TERES-023-Touch 1](../images/TERES-I/hardware/043.jpg) ![TERES-023-Touch 2](../images/TERES-I/hardware/042.jpg)
 
-The touchpad uses double sided adhesive tape.
-Remove the protective foil and place it on the top side of the keyboard body like shown in the pictures below:
-
-![Tape install 1](../images/TERES-I/hardware/060.jpg) ![Tape install 2](../images/TERES-I/hardware/061.jpg)
-
+The touchpad uses double-sided adhesive tape.
+Remove the protective paper backing on the side of the sensor containing the white connector.
+Place the touchpad on the top side of TERES-006-Keyboard with the sensor facing underneath, as shown in the pictures below.
 Be careful to place the touchpad connector so that it faces the correct way!
-The exposed pins of the connector must be pointing **up**.
+The exposed pins of the connector must be pointing **upward**.
+The touchpad snaps tightly to the upper side plastic.
+You should place the TERES-006-Keyboard on an even surface and make sure the touchpad connector is fully inserted.
+
+![Tape install 2](../images/TERES-I/hardware/061.jpg)
 
 ![Touchpad connector](../images/TERES-I/hardware/062.jpg)
 
-The touchpad snaps tightly to the upper side plastic.
-You should place the pastic cover on an even surface and make sure the touchpad connector is fully inserted.
+Next, turn over the TERES-006-Keyboard so that the keyboard keys are facing upward.
+Remove the paper backing from **TERES-023-Touch** and **TERES-022-Touch-Cover**.
 
-Next, turn over the cover and place **TERES-022-Touch-Cover** and **TERES-010-Touch-Btns** on top of the touchpad:
+![Tape install 1](../images/TERES-I/hardware/060.jpg) 
+
+Align the top edge of the TERES-022-Touch-Cover over the TERES-023-Touch and carefully press it down over the sensor.
+With the TERES-006-Keyboard on a flat surface, firmly press down on all sections of the TERES-022-Touch-Cover to ensure complete adhesion.
+
+Now, orient the **TERES-010-Touch-Btns** the correct way and press the piece firmly into the touchpad button holes:
 
 ![TERES-022-Touch-Cover](../images/TERES-I/hardware/041.jpg) ![TERES-010-Touch-Btns](../images/TERES-I/hardware/017.jpg)
 
