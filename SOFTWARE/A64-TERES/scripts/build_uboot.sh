@@ -37,12 +37,12 @@ dtc -Odtb -o $BUILD/sun50i-a64-teres_uboot.dtb $BLOBS/sun50i-a64-teres_uboot.dts
 cp $BLOBS/sys_config_uboot.fex $BUILD/sys_config_uboot.fex
 unix2dos $BUILD/sys_config_uboot.fex
 $SUNXI_PACK_TOOLS/script $BUILD/sys_config_uboot.fex
-$SUNXI_PACK_TOOLS/update_uboot_fdt $UBOOT/u-boot-sun50iw1p1.bin $BUILD/a64-teres_uboot.dtb $BUILD/u-boot-sun50iw1p1-with-teres-dtb.bin.tmp
+$SUNXI_PACK_TOOLS/update_uboot_fdt $UBOOT/u-boot-sun50iw1p1.bin $BUILD/sun50i-a64-teres_uboot.dtb $BUILD/u-boot-sun50iw1p1-with-teres-dtb.bin.tmp
 $SUNXI_PACK_TOOLS/update_uboot $BUILD/u-boot-sun50iw1p1-with-teres-dtb.bin.tmp $BUILD/sys_config_uboot.bin
 mv $BUILD/u-boot-sun50iw1p1-with-teres-dtb.bin.tmp $BUILD/u-boot-sun50iw1p1-with-teres-dtb.bin
 $SUNXI_PACK_TOOLS/merge_uboot $UBOOT/u-boot-sun50iw1p1.bin $BLOBS/bl31.bin $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp secmonitor
 $SUNXI_PACK_TOOLS/merge_uboot $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp $BLOBS/scp.bin $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp2 scp
-$SUNXI_PACK_TOOLS/update_uboot_fdt $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp2 $BUILD/a64-teres_uboot.dtb $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp3
+$SUNXI_PACK_TOOLS/update_uboot_fdt $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp2 $BUILD/sun50i-a64-teres_uboot.dtb $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp3
 $SUNXI_PACK_TOOLS/update_uboot $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp3 $BUILD/sys_config_uboot.bin
 mv $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin.tmp3 $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin
 echo "Done - created $BUILD/u-boot-sun50iw1p1-secure-with-teres-dtb.bin"
