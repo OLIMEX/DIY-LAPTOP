@@ -91,7 +91,7 @@ selinux=permissive
 enforcing=0
 optargs=no_console_suspend
 kernel_filename=a64/Image
-initrd_filename=ramdisk.img
+initrd_filename=initrd.img
 recovery_initrd_filename=ramdisk-recovery.img
 hardware=sun50iw1p1
 
