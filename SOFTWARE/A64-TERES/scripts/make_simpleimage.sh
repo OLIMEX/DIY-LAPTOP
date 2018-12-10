@@ -106,7 +106,12 @@ rm -f ${out}1
 
 # Create additional ext4 file system for rootfs
 dd if=/dev/zero bs=1M count=$((disk_size-boot_size-part_position/1024)) of=${out}2
-mkfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}2
+ if [[ $(lsb_release -sc) == "bionic" ]]; then
+ mkfs.ext4 -F -O ^64bit,^csum_metadata -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}2
+ else
+ mkfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}2
+fi
+#kfs.ext4 -F -b 4096 -E stride=2,stripe-width=1024 -L rootfs ${out}2
 dd if=${out}2 conv=notrunc oflag=append bs=1M seek=$((part_position/1024+boot_size)) of="$out"
 rm -f ${out}2
 
