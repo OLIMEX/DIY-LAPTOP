@@ -4,8 +4,8 @@
 
 ### Olimex
 
-- Android - [[torrent](torrent/android/android_teres_rev4.torrent)][[ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.zip)]
-- GNU/Linux - [[torrent](torrent/linux/teres1-xenial-20181220-v1.4.torrent)][[ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux/teres1-xenial-20181220-v1.4.zip)]
+- Android - [torrent](torrent/android/android.latest.torrent) | [ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android)
+- Ubuntu MATE (xenial) - [torrent](torrent/linux/xenial.mate.latest.torrent) | [ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux)
 
 ### Third-party
 
