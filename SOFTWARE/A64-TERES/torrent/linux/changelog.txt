@@ -1,0 +1,34 @@
+Changes in release v1.4
+
+*Added
+- Dualhead display enabled
+- HDMI improved timing/resolution support
+- SPL boots from eMMC by default
+- DTS renamed to use mainline naming convension sun50i-*
+*Fixed
+- Prevent kernel lock on shutdown
+- Build scripts : mkfs.ext4  incompability with new kernel ext4 features
+- Initrd lock on rootfs
+*Updated
+- MMC Driver with bsp3
+- Disp driver
+- install_desktop script
+
+***
+
+Changes in release v1.3
+
+*Fixed :
+- headphone jack sense fixed (checks the state of headphones on boot)
+
+***
+
+Changes in release v1.2
+
+*Fixed :
+- teres1-ledctrl consumes 100% cpu
+- when suspended: wake up by power jack plug/unplug
+- suspend with Fn+F1 key (X86Suspend)
+
+
+
