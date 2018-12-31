@@ -16,20 +16,16 @@ This may be if the eMMC got corrupted, the original installation got damaged, or
 ## Procedure
 
 1. Download and extract the latest image provided by Olimex.
-A download link for the torrent with the latest image is available at the **SOFTWARE** section of the product's page, found at the following links:
+[Here are a few!](../../SOFTWARE/A64-TERES/torrent)
+Please see the corresponding [README](../../SOFTWARE/A64-TERES/README.md) for more.
+(If possible, please use torrents, as they reduce load on the primary asset server.)
 
-- [White TERES-I](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-WHITE/open-source-hardware)
-- [Black TERES-I](https://www.olimex.com/Products/DIY-Laptop/KITS/TERES-A64-BLACK/open-source-hardware)
-
-The download link looks like this:
-
-![Official OS Download](../images/TERES-I/software/screenshot-official-os.png "Official OS Download")
-
-2. Remember to extract the image from the archive.
+2. If compressed (not in a standard *.img format), extract the image from the archive.
 
 ```bash
 unzip <filename.zip>
 ```
+
 3. Insert a micro SD card into the port of the **host computer**.
 There is a micro SD port on the right side of the TERES-I.
 Alternatively, use an SD card port on a computer of your choice; you may require an adapter for your situation.
