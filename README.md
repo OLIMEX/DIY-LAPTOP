@@ -29,7 +29,7 @@ NOTE: TERES-I is currently considered an [evaluation board](doc/web/evaluation-b
 | **Wireless**         | WiFi 150Mb; BLE 4.0                                                                                 |
 | **USB**              | 2x USB 2.0                                                                                          |
 | **Battery**          | 1x [9500mAh LiPo](doc/datasheets/LiPo-Battery/JA426992P2P-Spec-Data-Sheet-3.7V-7000mAh--161201.pdf) |
-| **Power Supply**     | 5V/3A wall adapter to DC barrel jack (3.5mm OD x 1.35mm ID x 10mm length)                           |
+| **Power Supply**     | 5V/3A wall adapter to DC barrel jack (Type H: 3.5mm OD x 1.35mm ID x 10mm length)                   |
 | **Weight**           | 980 g (2.16 lb)                                                                                     |
 
 ## [Hardware](HARDWARE)
