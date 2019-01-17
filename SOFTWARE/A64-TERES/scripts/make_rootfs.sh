@@ -302,6 +302,7 @@ EOF
 				device-tree-compiler \
 				dialog	\
 				rsync \
+				blueman \
 			"
 		elif [ "$DISTRO" = "sid" -o "$DISTRO" = "jessie" ]; then
 			DEB=debian
