@@ -5,6 +5,8 @@
 # set_cmdline
 setenv bootargs "console=${console} enforcing=${enforcing} cma=${cma} ${optargs} androidboot.serialno=${sunxi_serial} androidboot.hardware=${hardware} androidboot.selinux=${selinux} earlyprintk=sunxi-uart,0x01c28000 loglevel=8 root=${root} eth0_speed=${eth0_speed}"
 
+env_set_debug
+
 run load_dtb
 
 # set display resolution from uEnv.txt or other environment file

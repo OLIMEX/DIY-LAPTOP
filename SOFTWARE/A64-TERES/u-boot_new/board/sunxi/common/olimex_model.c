@@ -122,8 +122,9 @@ int do_env_set_debug(cmd_tbl_t * cmdtp, int flag, int argc, char * const argv[])
 // nodeoffset =  fdt_path_offset(working_fdt,FDT_PATH_HDEBUG);
 	strcpy(debug_flag,getenv("debug"));
 	printf("Test %s \n",debug_flag);
-	if (strcmp(debug_flag,"on") == 0) {
-		enabled = 1;
+	if (strcmp(debug_flag,"off") == 0) {
+		enabled = 0;
+		        printf("Enabled %s \n",debug_flag);
 
 	} 
 
@@ -145,16 +146,17 @@ int do_env_set_debug(cmd_tbl_t * cmdtp, int flag, int argc, char * const argv[])
                                 return 1;
                         } else {
 
-                                 if (enabled == 0 ) {
-                                        ret1 =  gpio_write_one_pin_value(gpio_hd, 1, "debug_en_gpio");
-                                        }
-                                 if (enabled == 1 ) {
-                                         ret1 = gpio_write_one_pin_value(gpio_hd, 0, "debug_en_gpio");
-                                        // sprite_debug();
-                                        }
+				if (enabled ==0){
+				ret1 =  gpio_write_one_pin_value(gpio_hd, 1, "debug_en_gpio");
+					 if(!ret1) {
+				        
+
+					printf("reuqest gpio for headphone debug set to 1\n");
+					 }
+				}
+			}
 
 
-                                }
 
 
                 }
