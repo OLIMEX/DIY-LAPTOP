@@ -94,8 +94,9 @@ and run them on host machine :
 
 Close Docker and navigate to scripts directory:
 ```bash
-exit
+exit #from Docker container
 cd DIY-LAPTOP/SOFTWARE/A64-TERES/scripts
+sudo apt install kpartx bsdtar mtools dos2unix device-tree-compiler
 ```
 
 Create kernel tarball :
