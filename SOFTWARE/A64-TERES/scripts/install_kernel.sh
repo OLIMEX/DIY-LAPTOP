@@ -94,7 +94,7 @@ kernel_filename=a64/Image
 initrd_filename=initrd.img
 recovery_initrd_filename=ramdisk-recovery.img
 hardware=sun50iw1p1
-debug=off
+debug=on
 # INFO:
 # To enable one of below options,
 # uncomment them by removing # in front of name

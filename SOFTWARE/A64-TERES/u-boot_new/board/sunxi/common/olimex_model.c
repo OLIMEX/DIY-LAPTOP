@@ -124,11 +124,14 @@ int do_env_set_debug(cmd_tbl_t * cmdtp, int flag, int argc, char * const argv[])
 	printf("Test %s \n",debug_flag);
 	if (strcmp(debug_flag,"off") == 0) {
 		enabled = 0;
-		        printf("Enabled %s \n",debug_flag);
 
 	} 
+	if (strcmp(debug_flag,"on") == 0) {
+                enabled = 1;
 
+        }
 
+	 printf("Debug State: %d \n",enabled);
 
 
 
@@ -151,9 +154,18 @@ int do_env_set_debug(cmd_tbl_t * cmdtp, int flag, int argc, char * const argv[])
 					 if(!ret1) {
 				        
 
-					printf("reuqest gpio for headphone debug set to 1\n");
+					printf("Gpio state: 0\n");
 					 }
 				}
+				if (enabled ==1){
+                                ret1 =  gpio_write_one_pin_value(gpio_hd, 0, "debug_en_gpio");
+                                         if(!ret1) {
+
+
+                                        printf("GPIO State:\n");
+                                         }
+                                }
+
 			}
 
 
