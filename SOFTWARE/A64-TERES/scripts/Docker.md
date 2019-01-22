@@ -32,7 +32,7 @@ Now you can follow instructions in README, just skip  toolchain installation ste
 
 #### Linux
 ```bash
-cd linux-a64
+cd SOFTWARE/A64-TERES/linux-a64
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- olimex_teres1_defconfig
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- LOCALVERSION= clean
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j`nproc` LOCALVERSION= Image
@@ -128,12 +128,12 @@ Use these credentials to log in after first boot:
 
 Connection to the internet can be enabled via command-line by running:
 ```bash
-nmtui
+sudo nmtui
 ```
 
 Feel free to install everything you want, e.g., a graphical desktop environment: 
 ```bash
-./platform-scripts/install_desktop.sh mate # installs mate desktop
+sudo install_desktop.sh mate # installs mate desktop
 ```
 
 
