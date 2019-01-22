@@ -238,6 +238,27 @@ fi
 end
 EOF
 
+# Create directory if not present
+[ -d /etc/chromium-browser ] || mkdir /etc/chromium-browser
+
+# Set some default parameters for chromium.
+if [ ! -e "/etc/chromium-browser/default" ]; then
+	cat > "/etc/chromium-browser/default" <<EOF
+# Default settings for chromium-browser. This file is sourced by /bin/sh from
+# /usr/bin/chromium-browser
+# Options to pass to chromium-browser
+CHROMIUM_FLAGS="\
+--disable-smooth-scrolling \
+--disable-low-res-tiling \
+--enable-low-end-device-mode \
+--num-raster-threads=4 \
+--profiler-timing=0 \
+--disable-seccomp-filter-sandbox \
+--disable-composited-antialiasing \
+"
+EOF
+fi
+
 echo
 echo "Done - $DESKTOP installed - you should reboot now."
 
