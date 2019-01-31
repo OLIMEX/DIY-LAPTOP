@@ -1,3 +1,14 @@
+Changes in release v1.5
+
+*Fixed
+- debug_switch.sh script
+- install_emmc.sh script
+*Updated
+- description how to built the image using docker
+- install_desktop.sh script 
+
+***
+
 Changes in release v1.4
 
 *Added
