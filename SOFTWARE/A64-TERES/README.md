@@ -4,8 +4,9 @@
 
 ### Olimex
 
-- Android - [torrent](torrent/android/android.latest.torrent) | [ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android)
-- Ubuntu MATE (xenial) - [torrent](torrent/linux/xenial.mate.latest.torrent) | [ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux)
+- Ubuntu MATE (xenial) - [torrent](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux/xenial-teres-bspkernel-20190121_144941_EET-1_hdmi_out_v1_5.torrent) | [ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux/xenial-teres-bspkernel-20190121_144941_EET-1_hdmi_out_v1_5.zip)
+
+- Android - [torrent](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.torrent) | [ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.zip)
 
 ### Third-party
 
