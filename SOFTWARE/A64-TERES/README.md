@@ -6,7 +6,7 @@
 
 - Ubuntu MATE (xenial) - [torrent](https://bit.ly/2BcnYBH) | [FTP download](https://bit.ly/2HG98ZH)
 
-- Android - [torrent](https://bit.ly/2RqAqmE) | [ftp](https://bit.ly/2B7IZx5)
+- Android - [torrent](https://bit.ly/2RqAqmE) | [FTP download](https://bit.ly/2B7IZx5)
 
 ### Third-party
 
