@@ -48,7 +48,7 @@ Additional software is also available from Ubuntu repositories.
 * [Installing an image](doc/web/sw_fresh-os.md)
 * [Updating an image](doc/web/sw_updating-os.md)
 * Building an image
-  * [Internal script](SOFTWARE/A64-TERES/scripts/README.md)
+  * [Internal script](rel3/SOFTWARE/A64-TERES/scripts/README.md)
   * [Manual build reference](http://linux-sunxi.org/Manual_build_howto)
 
 ## Other resources
