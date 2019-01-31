@@ -48,6 +48,7 @@ Additional software is also available from Ubuntu repositories.
 * [Installing an image](doc/web/sw_fresh-os.md)
 * [Updating an image](doc/web/sw_updating-os.md)
 * Building an image
+  * [Using docker](https://github.com/OLIMEX/DIY-LAPTOP/blob/rel3/SOFTWARE/A64-TERES/scripts/Docker.md)
   * [Internal script](https://github.com/OLIMEX/DIY-LAPTOP/blob/rel3/SOFTWARE/A64-TERES/scripts/README.md)
   * [Manual build reference](http://linux-sunxi.org/Manual_build_howto)
 
