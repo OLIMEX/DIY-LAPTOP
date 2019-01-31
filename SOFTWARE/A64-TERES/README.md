@@ -4,9 +4,7 @@
 
 ### Olimex
 
-- Ubuntu MATE (xenial) - [torrent](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux/xenial-teres-bspkernel-20190121_144941_EET-1_hdmi_out_v1_5.torrent)
-
-[FTP download] (ftp://staging.olimex.com/Allwinner_Images/A64-Teres/linux/xenial-teres-bspkernel-20190121_144941_EET-1_hdmi_out_v1_5.zip)
+- Ubuntu MATE (xenial) - [torrent](https://bit.ly/2BcnYBH) | [FTP download] (https://bit.ly/2HG98ZH)
 
 - Android - [torrent](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.torrent)|[ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.zip)
 
