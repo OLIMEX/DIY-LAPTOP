@@ -4,9 +4,9 @@
 
 ### Olimex
 
-- Ubuntu MATE (xenial) - [torrent](https://bit.ly/2BcnYBH) | [FTP download] (https://bit.ly/2HG98ZH)
+- Ubuntu MATE (xenial) - [torrent](https://bit.ly/2BcnYBH) | [FTP download](https://bit.ly/2HG98ZH)
 
-- Android - [torrent](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.torrent)|[ftp](ftp://staging.olimex.com/Allwinner_Images/A64-Teres/android/android_teres_rev4.zip)
+- Android - [torrent](https://bit.ly/2RqAqmE) | [ftp](https://bit.ly/2B7IZx5)
 
 ### Third-party
 
