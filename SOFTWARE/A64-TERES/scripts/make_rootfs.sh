@@ -339,6 +339,7 @@ apt-get clean
 EOF
 		chmod +x "$DEST/second-phase"
 		do_chroot /second-phase
+		mkdir -p $DEST/etc/network/interfaces.d/
 		cat > "$DEST/etc/network/interfaces.d/eth0" <<EOF
 auto eth0
 iface eth0 inet dhcp
@@ -357,7 +358,8 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 EOF
-                cat > "$DEST/etc/udev/hwdb.d/teres_kmap.hwdb" <<EOF
+                mkdir -p  $DEST/etc/udev/hwdb.d/
+		cat > "$DEST/etc/udev/hwdb.d/teres_kmap.hwdb" <<EOF
 evdev:input:b0003v15BAp003C*
   KEYBOARD_KEY_7006f=brightnessdown
   KEYBOARD_KEY_70070=brightnessup
