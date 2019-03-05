@@ -1,0 +1,8 @@
+linux-a64
+u-boot_*
+scripts/*.img
+scripts/*.xz
+scripts/teres-build-*
+build/
+busybox/
+initrd.gz

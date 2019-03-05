@@ -77,6 +77,9 @@ case $DISTRO in
 	xenial)
 		ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/16.04.2/release/ubuntu-base-16.04.2-base-arm64.tar.gz"
 		;;
+	bionic)
+		ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/18.04.2/release/ubuntu-base-18.04-base-arm64.tar.gz"
+		;;
 	sid|jessie)
 		ROOTFS="${DISTRO}-base-arm64.tar.gz"
 		METHOD="debootstrap"
@@ -282,10 +285,10 @@ EOF
 		rm -f "$DEST/etc/resolv.conf"
 		mv "$DEST/etc/resolv.conf.dist" "$DEST/etc/resolv.conf"
 		;;
-	xenial|sid|jessie)
+	xenial|bionic|sid|jessie)
 		rm "$DEST/etc/resolv.conf"
 		cp /etc/resolv.conf "$DEST/etc/resolv.conf"
-		if [ "$DISTRO" = "xenial" ]; then
+		if [ "$DISTRO" = "xenial" -o "$DISTRO" = "bionic" ]; then
 			DEB=ubuntu
 			DEBUSER=olimex
 			DEBUSERPW=olimex
@@ -320,12 +323,12 @@ EOF
 #!/bin/sh
 set -ex
 export DEBIAN_FRONTEND=noninteractive
-locale-gen en_US.UTF-8
 $ADDPPACMD
 apt-get -y update
-apt-get -y install dosfstools curl xz-utils iw rfkill wpasupplicant openssh-server alsa-utils $EXTRADEBS
+apt-get -y install dosfstools curl xz-utils iw rfkill wpasupplicant openssh-server alsa-utils locales $EXTRADEBS
 apt-get -y remove --purge ureadahead
 apt-get -y update
+locale-gen en_US.UTF-8
 adduser --gecos $DEBUSER --disabled-login $DEBUSER --uid 1000
 chown -R 1000:1000 /home/$DEBUSER
 dpkg -i /home/prebuilt/*
@@ -336,6 +339,7 @@ apt-get clean
 EOF
 		chmod +x "$DEST/second-phase"
 		do_chroot /second-phase
+		mkdir -p $DEST/etc/network/interfaces.d/
 		cat > "$DEST/etc/network/interfaces.d/eth0" <<EOF
 auto eth0
 iface eth0 inet dhcp
@@ -354,7 +358,8 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 EOF
-                cat > "$DEST/etc/udev/hwdb.d/teres_kmap.hwdb" <<EOF
+                mkdir -p  $DEST/etc/udev/hwdb.d/
+		cat > "$DEST/etc/udev/hwdb.d/teres_kmap.hwdb" <<EOF
 evdev:input:b0003v15BAp003C*
   KEYBOARD_KEY_7006f=brightnessdown
   KEYBOARD_KEY_70070=brightnessup
@@ -371,7 +376,7 @@ EOF
 		rm -f "$DEST/second-phase"
 		rm -f "$DEST/etc/resolv.conf"
 		rm -f "$DEST"/etc/ssh/ssh_host_*
-		do_chroot ln -s /run/resolvconf/resolv.conf /etc/resolv.conf
+		do_chroot ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 		;;
 	*)
 		;;
