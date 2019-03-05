@@ -376,7 +376,7 @@ EOF
 		rm -f "$DEST/second-phase"
 		rm -f "$DEST/etc/resolv.conf"
 		rm -f "$DEST"/etc/ssh/ssh_host_*
-		do_chroot ln -s /run/resolvconf/resolv.conf /etc/resolv.conf
+		do_chroot ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 		;;
 	*)
 		;;
