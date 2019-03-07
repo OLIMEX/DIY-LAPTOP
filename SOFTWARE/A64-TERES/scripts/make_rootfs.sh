@@ -298,7 +298,7 @@ EOF
 			DEBUSERPW=olimex
 			ADDPPACMD="apt-get -y update && \
 				apt-get install -y software-properties-common && \
-				apt-add-repository -y ppa:longsleep/ubuntu-pine64-flavour-makers \
+				apt-add-repository -y ppa:ayufan/pine64-ppa \
 			"
 			EXTRADEBS="\
 				zram-config \
