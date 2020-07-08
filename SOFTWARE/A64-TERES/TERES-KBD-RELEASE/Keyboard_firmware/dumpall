@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# This script dumps the entire contents of all the memory types from the chip into a dated subfolder.
+
+dir="$(date --iso=minutes)".dump
+PORT=/dev/ttyACM0
+PROGRAMMER=stk500v2
+CHIP=m32u4
+AVRDUDE="avrdude -p $CHIP -c $PROGRAMMER -P $PORT"
+
+# test connection
+$AVRDUDE -U signature:r:/dev/stderr:i || exit 1
+
+# dump
+mkdir "$dir"
+cd "$dir"
+$AVRDUDE -n $(
+	# output memtype dumping parameters
+	for memtype in $(
+		# output memtypes
+		echo part |
+			$AVRDUDE -t -n |
+			sed -ne 's/^  \([a-z]*\).*/\1/p'
+	)
+	do
+		echo -U ${memtype}:r:${memtype}.raw:r
+	done
+)
