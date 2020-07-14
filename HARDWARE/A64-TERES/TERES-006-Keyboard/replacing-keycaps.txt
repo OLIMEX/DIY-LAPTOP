@@ -1,0 +1,133 @@
+This document was made by inspection, and is neither official nor complete.
+
+   Top   Bottom
+    =====* <- keycap connects with delicate plastic snaps to inner key retainer 
+        /
+     \ /
+      *  <-- slotted hinges in the inner key retainer snap from above (/), onto
+     / \     pegs in the outer key retainer below (\)
+    *   *
+        ^--- plastic hinges of outer key retainer connect with keyboard
+    ^------- tongue of inner key retainer hooks under metal lip in keyboard
+
+To remove a keycap:
+
+	As mentioned in "Components", do not lift the keycap from the lower edge.  This
+	can break the plastic snaps that connect the inner key retainer on that edge.
+
+	Place a small tool under the upper edge of the keycap and lift until it snaps
+	away a little.  This frees and angles the keycap enough to remove it more
+	safely.
+
+	It's likely that the key retainer is dislodged during removal of the keycap.
+	It should be reassembled before the keycap is replaced.
+
+To replace a keycap:
+
+	There are a few approaches to this.  Here's what seemed simple to me:
+
+	1. First make sure the retainer is fully assembled by snapping the hinge slots
+	on the inner part onto the hinge pegs of the outer part, so it lays flat as
+	described in "Components" below.
+
+	2. Use a small tool to slide the plastic tongue of the inner part of the
+	retainer underneath the metal lip near the top of the key area, designed to
+	hold it on the circuitboard.  The plastic slides underneath the metal lip from
+	above, downwards.
+
+	3. Orient and press the lower hinges to fit around the metal pegs on the main
+	board, making sure the plastic tongue stays underneath the metal lip on the
+	other side.
+
+	4. Use pressure to snap the keycap into place.
+
+Components:
+	1. Keycap
+
+	  The keycap has two plastic feet under the upper edge, and two delicate
+	plastic snaps under the lower edge.
+
+	  The delicate plastic snaps connect to the inner key retainer.
+
+	  Do not pull on the delicate snaps with the inner key retainer unless the
+	keycap is at a sufficiently large angle for the inner plastic to snap out from
+	the side.  Otherwise they will break.
+	  
+	     ___________
+	    | .       . | <-- feet (.)
+	    |           |
+	    |     A     |
+	    |           |
+	    | ,,     ,, | <-- delicate snaps (,,)
+	    |___________|
+	  
+
+	2. Inner retainer
+
+	  The inner key retainer floats between everything, hanging off the underside
+	of the keycap with hinges snapped into the outer key retainer and is shaped so
+	as to safely connect to the other parts only when force is applied at certain
+	orientations to each connection.
+
+	  The snaps at the bottom are shaped so as to safely pop out of the keycap only
+	when angled away.  The connecting material of these snaps is much thicker when
+	viewed from above than from the side, and will break the keycap snaps if forced
+	out in a parallel up-and-down manner, i.e. with the thick orientation forced
+	through the keycap snaps.  When removing a keycap, it must be initially lifted
+	from the upper edge only so as to avoid this.
+
+	  The hinges in the middle are slotted to snap into the outer key retainer
+	below them.  This makes the two key retainer parts separable.  They will only
+	snap back together if everything is at the right orientation and the inner key
+	retainer hinge snaps are resting on top of the outer key retainer hinge pegs.
+
+	  The tongue at the top of the inner key retainer slides under a metal lip on
+	the keyboard, holding the inner key retainer onto the keybaord.
+
+	          v------- thin plastic tongue on underside of top edge (_)
+	        .___.    
+	      //     \\
+	     =(       )= <--- asymmetrically slotted hinges in middle (=)
+	      \\     //  
+	      []=====[] <--- asymmetrically hinged snaps at bottom ([])
+
+	3. Outer retainer
+
+	  The outer key retainer rests underneath the inner key retainer, and
+	aroundside it.
+
+	  The hinge pegs of the outer key retainer snap into the underside of the
+	slotted hinges in the inner key retainer.
+
+	  The lower hinges connect to the larger keyboard, and have grooves inside them
+	for the upper keycap hinges from the inner key retainer to rest in to.
+
+	    _____________
+	     |/       \| 
+	    |           |
+	    |-         -| <--- hinge pegs in middle
+	    |           |
+	    []  _____  [] <--- lower hinges surround grooves for keycap hinges
+	                 
+	    
+
+	2 & 3. Assembled retainer
+
+	  The key retainer lays flat, with the two parts flush, when assembled together.
+	
+	    _____________
+	     |/ .___. \|  <- tongue on inner retainer is at top, on the underside
+	    | //     \\ |
+	    |=(       )=| <- inner hinge slots snap around outer hinge pegs from above
+	    | \\     // |
+	    [][]=====[][] <- keycap hinges rest on grooves between lower board hinges
+
+	4. Key pad
+
+	  The key pad is a circular bit of stretchy material that is removably glued to
+	the circuit board underneath everything else, and registers the keypress.
+
+
+	          =    
+	        ((o)) 
+	          =      
