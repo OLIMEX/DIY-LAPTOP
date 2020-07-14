@@ -77,7 +77,7 @@ case $DISTRO in
 	xenial)
 		ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/16.04.2/release/ubuntu-base-16.04.2-base-arm64.tar.gz"
 		;;
-	bionic)
+	bionic|kde|geek)
 		ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/18.04.2/release/ubuntu-base-18.04-base-arm64.tar.gz"
 		;;
 	sid|jessie)
@@ -238,6 +238,10 @@ EOF
 
 add_ubuntu_apt_sources() {
 	local release="$1"
+	# Use Ubuntu 18.04 bionic repositories for KDE image
+	if [ "$release" = "kde" -o "$release" = "geek" ]; then
+		release="bionic"
+	fi
 	cat > "$DEST/etc/apt/sources.list" <<EOF
 deb http://ports.ubuntu.com/ ${release} main restricted universe multiverse
 deb-src http://ports.ubuntu.com/ ${release} main restricted universe multiverse
@@ -285,16 +289,16 @@ EOF
 		rm -f "$DEST/etc/resolv.conf"
 		mv "$DEST/etc/resolv.conf.dist" "$DEST/etc/resolv.conf"
 		;;
-	xenial|bionic|sid|jessie)
+	xenial|bionic|sid|jessie|kde|geek)
 		rm "$DEST/etc/resolv.conf"
 		cp /etc/resolv.conf "$DEST/etc/resolv.conf"
-		if [ "$DISTRO" = "xenial" -o "$DISTRO" = "bionic" ]; then
+		if [ "$DISTRO" = "xenial" -o "$DISTRO" = "bionic" -o "$DISTRO" = "kde" -o "$DISTRO" = "geek" ]; then
 			DEB=ubuntu
 			DEBUSER=olimex
 			DEBUSERPW=olimex
 			ADDPPACMD="apt-get -y update && \
 				apt-get install -y software-properties-common && \
-				apt-add-repository -y ppa:longsleep/ubuntu-pine64-flavour-makers \
+				apt-add-repository -y ppa:ayufan/pine64-ppa \
 			"
 			EXTRADEBS="\
 				zram-config \
@@ -307,6 +311,20 @@ EOF
 				rsync \
 				blueman \
 			"
+			if [ "$DISTRO" = "kde" ]; then
+				# Additional KDE packages
+				EXTRADEBS+=" kde-plasma-desktop "
+			elif [ "$DISTRO" = "geek" ]; then
+				# Packages for a geek look & feel :)
+				EXTRADEBS+="\
+						xorg \
+						xdm \
+						dwm \
+						surf \
+						stterm \
+						vim \
+				"
+			fi
 		elif [ "$DISTRO" = "sid" -o "$DISTRO" = "jessie" ]; then
 			DEB=debian
 			DEBUSER=olimex
