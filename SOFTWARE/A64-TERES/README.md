@@ -4,16 +4,13 @@
 
 ### Olimex
 
-- Ubuntu MATE (xenial) - [torrent](https://bit.ly/2BcnYBH) | [FTP download](https://bit.ly/2HG98ZH)
+- Ubuntu MATE (xenial) - [FTP download](https://bit.ly/3yZfxVD)
 
-- Android - [torrent](https://bit.ly/2RqAqmE) | [FTP download](https://bit.ly/2B7IZx5)
+- Android - [FTP download](https://bit.ly/3wG9XpI)
 
 ### Third-party
 
-**DISCLAIMER**: No official support is provided by Olimex, implied or otherwise.
-Olimex takes no responsibility with any tangible or intangible damages incurred through the use of third-party operating system images.
-These links are provided solely as a convenience to you.
-Proceed with caution.
+**DISCLAIMER**: No official support is provided by Olimex, implied or otherwise. Olimex takes no responsibility with any tangible or intangible damages incurred through the use of third-party operating system images. These links are provided solely as a convenience to you. Proceed with caution.
 
 - [Armbian](https://www.armbian.com/olimex-teres-a64)
 - [Gentoo](https://github.com/khumarahn/teres1-gentoo), via contributor [khumarahn](https://github.com/khumarahn)
