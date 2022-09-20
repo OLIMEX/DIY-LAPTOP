@@ -6,7 +6,6 @@ All hardware schematics and board files are designed using [KiCad](http://kicad-
 
 > KiCad is free software. KiCad is made available under the [GNU General Public License (GPL) version 3](https://www.gnu.org/licenses/gpl-3.0.en.html) or greater.
 
-All KiCad design files are available within the [HARDWARE](HARDWARE) directory within this repository.
 You may download KiCad and open for reviewing or editing each of the PCB files.
 The schematics are also available as PDF files for easier viewing and/or printing.
 
