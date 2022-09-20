@@ -53,7 +53,7 @@ Additional software is also available from Ubuntu repositories.
 ## Other resources
 
 * [FAQ](doc/web/res_faq.md)
-* [Troubleshooting](doc/web/res_troubleshooting.md)
+* [Troubleshooting](https://www.olimex.com/forum/index.php?board=39.0)
 * [Assembly manuals (PDF)](doc/manuals)
 * [What's next?](doc/web/res_next-steps.md)
 * [Community Links](doc/web/res_community.md)
