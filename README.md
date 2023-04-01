@@ -57,3 +57,7 @@ Additional software is also available from Ubuntu repositories.
 * [Assembly manuals (PDF)](doc/manuals)
 * [What's next?](doc/web/res_next-steps.md)
 * [Community Links](doc/web/res_community.md)
+
+## Similar projects
+
+* [Power Progress Community's Tyche (powerpc)](https://gitlab.com/power-progress-community/oshw-powerpc-notebook)
