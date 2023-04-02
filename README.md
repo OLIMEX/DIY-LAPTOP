@@ -20,13 +20,13 @@ NOTE: TERES-I is currently considered an [evaluation board](doc/web/evaluation-b
 | FEATURE              | DESCRIPTION                                                                                                         |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------:|
 | **CPU**              | [Quad-Core Allwinner A64 64-bit Cortex-A53](doc/datasheets/Allwinner-A64/A64_Datasheet_V1.1.pdf)                    |
-| **Memory**           | 2GB DDR3L                                                                                                           |
-| **Internal Storage** | 16GB eMMC flash memory                                                                                              |
+| **Memory**           | 2x Hynix H5TC8G63AMR-PBA (1GB DDR3L)                                                                                |
+| **Internal Storage** | MTFC16GAKAENA-4M (TBGA-100 16GB eMMC flash memory                                                                   |
 | **Monitor**          | [LCD 11.6" 1366x768 resolution](doc/datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf)                                   |
-| **Video In**         | 1x [VGA 640x480 camera](HARDWARE/A64-TERES/TERES-019-Camera/N03A61B36DL32.pdf)                                      |
-| **Video Out**        | 1x HDMI                                                                                                             |
+| **Video In**         | [VGA 640x480 camera](HARDWARE/A64-TERES/TERES-019-Camera/N03A61B36DL32.pdf)                                         |
+| **Video Out**        | mini HDMI                                                                                                           |
 | **Audio In/Out**     | 2x (stereo) speakers; 2x 3.5mm audio jack (1x microphone in, 1x stereo out)                                         |
-| **Wireless**         | WiFi 150Mb; BLE 4.0                                                                                                 |
+| **Wireless**         | Realtek 8723BS (WiFi 150Mb, BLE 4.0)                                                                                |
 | **USB**              | 2x USB 2.0                                                                                                          |
 | **Power**            | 1x 9500mAh [battery](doc/datasheets/LiPo-Battery/JA426992P2P-Spec-Data-Sheet-3.7V-7000mAh--161201.pdf); 5V/3A input |
 | **Weight**           | 980 g (2.16 lb)                                                                                                     |
