@@ -20,8 +20,8 @@ NOTE: TERES-I is currently considered an [evaluation board](doc/web/evaluation-b
 | FEATURE              | DESCRIPTION                                                                                                         |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------:|
 | **CPU**              | [Quad-Core Allwinner A64 64-bit Cortex-A53](doc/datasheets/Allwinner-A64/A64_Datasheet_V1.1.pdf)                    |
-| **Memory**           | 2x Hynix H5TC8G63AMR-PBA (1GB DDR3L)                                                                                |
-| **Internal Storage** | MTFC16GAKAENA-4M (TBGA-100 16GB eMMC flash memory                                                                   |
+| **Memory**           | 2GB DDR3L RAM memory (2x Hynix H5TC8G63AMR-PBA (doc/datasheets/RAM/H5TC8G63AMR-PBA.pdf)                             |
+| **Internal Storage** | 16GB eMMC memory (MTFC16GAKAENA-4M doc/datasheets/eMMC/emmc_1664gb_ps8222_153b_v50_it.pdf)                          |
 | **Monitor**          | [LCD 11.6" 1366x768 resolution](doc/datasheets/TERES-015-LCD11.6/N116BGE-EA2.pdf)                                   |
 | **Video In**         | [VGA 640x480 camera](HARDWARE/A64-TERES/TERES-019-Camera/N03A61B36DL32.pdf)                                         |
 | **Video Out**        | mini HDMI                                                                                                           |
