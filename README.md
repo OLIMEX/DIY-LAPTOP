@@ -57,3 +57,7 @@ Additional software is also available from Ubuntu repositories.
 * [Assembly manuals (PDF)](doc/manuals)
 * [What's next?](doc/web/res_next-steps.md)
 * [Community Links](doc/web/res_community.md)
+* 
+## Community links
+
+* IRC: #teres on OFTC.net, [webchat](https://webchat.oftc.net/?channels=#teres)
