@@ -61,4 +61,5 @@ Additional software is also available from Ubuntu repositories.
 * 
 ## Community links
 
+* Discord: #teres on Olimex [discord](https://discord.com/invite/QQEBXZk7y8) server
 * IRC: #teres on OFTC.net, [webchat](https://webchat.oftc.net/?channels=#teres)
