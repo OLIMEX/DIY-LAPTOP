@@ -56,6 +56,7 @@ Additional software is also available from Ubuntu repositories.
 * [Troubleshooting](https://www.olimex.com/forum/index.php?board=39.0)
 * [Assembly manuals (PDF)](doc/manuals)
 * [What's next?](doc/web/res_next-steps.md)
+* [linux-sunxi Laptop Page](https://linux-sunxi.org/Olimex_Teres-A64) including hardware mods
 * [Community Links](doc/web/res_community.md)
 * 
 ## Community links
