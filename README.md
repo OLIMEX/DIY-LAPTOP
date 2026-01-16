@@ -1,7 +1,7 @@
 ![OLIMEX Company Logo](doc/images/smflogo.png "OLIMEX Company Logo")
 <img align="right" src="doc/images/TERES-I/TERES-A64-BLACK/laptop-12.jpg">
 
-<br>
+<br clear="right">
 
 # TERES-I
 
